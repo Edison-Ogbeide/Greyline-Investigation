@@ -206,61 +206,65 @@
 							<header>
 								<h3>Case Inquiry</h3>
 							</header>
-							<form id="inquiry-form">
-								<div class="row gtr-50">
-									<div class="col-6 col-12-mobile">
-										<input type="text" name="name" placeholder="Name" required />
-									</div>
-									<div class="col-6 col-12-mobile">
-										<input type="text" name="email" placeholder="Email" required />
-									</div>
-									<div class="col-12">
-										<input type="text" name="phone" placeholder="Phone Number" required />
-									</div>
-									<div class="col-12">
-										<select name="service-type" required>
-											<option value="">Select Type of Investigation</option>
-											<option value="marital">Adultery or Infidelity (Marital)</option>
-											<option value="nonmarital">Unfaithful Partner (Non-Marital)</option>
-											<option value="computer">Computer Forensics</option>
-											<option value="email">Email & SMS Tracing</option>
-											<option value="social">Social Media Investigation</option>
-											<option value="fraud">Financial Fraud Investigation</option>
-											<option value="realestate">Real Estate Fraud</option>
-											<option value="defamation">Internet Defamation/Slander</option>
-											<option value="identity">Identity Theft</option>
-											<option value="harassment">Stalking or Harassment</option>
-											<option value="surveillance">Surveillance (GPS Tracking)</option>
-											<option value="other">Other (Please Specify)</option>
-										</select>
-									</div>
-									<div class="col-12">
-										<select name="urgency" required>
-											<option value="">Select Urgency</option>
-											<option value="immediate">Immediate (24-48 hours)</option>
-											<option value="urgent">Urgent (Within 1 week)</option>
-											<option value="standard">Standard (1-2 weeks)</option>
-											<option value="flexible">Flexible Timeline</option>
-										</select>
-									</div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Case Details (Please provide as much relevant information as possible)" rows="6" required></textarea>
-									</div>
-									<div class="col-12">
-										<select name="preferred-contact" required>
-											<option value="">Select Preferred Contact Method</option>
-											<option value="email">Email</option>
-											<option value="phone">Phone Call</option>
-											<option value="text">Text Message</option>
-										</select>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" class="button custom-red" value="Submit Inquiry" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
+							<form name="inquiry-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="inquiry-form" />
+  <p class="hidden">
+    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+  </p>
+  <div class="row gtr-50">
+    <div class="col-6 col-12-mobile">
+      <input type="text" name="name" placeholder="Name" required />
+    </div>
+    <div class="col-6 col-12-mobile">
+      <input type="text" name="email" placeholder="Email" required />
+    </div>
+    <div class="col-12">
+      <input type="text" name="phone" placeholder="Phone Number" required />
+    </div>
+    <div class="col-12">
+      <select name="service-type" required>
+        <option value="">Select Type of Investigation</option>
+        <option value="marital">Adultery or Infidelity (Marital)</option>
+        <option value="nonmarital">Unfaithful Partner (Non-Marital)</option>
+        <option value="computer">Computer Forensics</option>
+        <option value="email">Email & SMS Tracing</option>
+        <option value="social">Social Media Investigation</option>
+        <option value="fraud">Financial Fraud Investigation</option>
+        <option value="realestate">Real Estate Fraud</option>
+        <option value="defamation">Internet Defamation/Slander</option>
+        <option value="identity">Identity Theft</option>
+        <option value="harassment">Stalking or Harassment</option>
+        <option value="surveillance">Surveillance (GPS Tracking)</option>
+        <option value="other">Other (Please Specify)</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <select name="urgency" required>
+        <option value="">Select Urgency</option>
+        <option value="immediate">Immediate (24-48 hours)</option>
+        <option value="urgent">Urgent (Within 1 week)</option>
+        <option value="standard">Standard (1-2 weeks)</option>
+        <option value="flexible">Flexible Timeline</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <textarea name="message" placeholder="Case Details (Please provide as much relevant information as possible)" rows="6" required></textarea>
+    </div>
+    <div class="col-12">
+      <select name="preferred-contact" required>
+        <option value="">Select Preferred Contact Method</option>
+        <option value="email">Email</option>
+        <option value="phone">Phone Call</option>
+        <option value="text">Text Message</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <ul class="actions">
+        <li><button type="submit" class="button custom-red">Submit Inquiry</button></li>
+      </ul>
+    </div>
+  </div>
+</form>
 						</div>
 					</div>
 				</section>
