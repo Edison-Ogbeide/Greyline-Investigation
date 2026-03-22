@@ -1,403 +1,1249 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Greyline Investigations | Professional Private Detective Services</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			:root {
-				--deep-red: #c0392b;
-			}
-			.custom-red {
-				color: #fff !important; /* Ensuring text is white and visible */
-				color: var(--deep-red) !important;
-			}
-			.button.custom-red {
-				background-color: var(--deep-red) !important;
-				color: #fff !important; /* Ensuring button text is always white */
-			}
-			.button.custom-red:hover {
-				background-color: #a93226 !important;
-			}
-			/* Fix for all buttons to ensure text visibility */
-			.button {
-				color: #fff !important; /* Making all button text white by default */
-			}
-			.service-item {
-				background-color: #f9f9f9;
-				padding: 20px;
-				border-radius: 5px;
-				border-left: 4px solid var(--deep-red);
-				margin-bottom: 15px;
-			}
-			.service-item h4 {
-				margin-bottom: 8px;
-				color: #2c3e50;
-			}
-			.service-item p {
-				color: #7f8c8d;
-			}
-		</style>
-		<link rel="icon" href="assets/images/greylinelogo.ico" type="image/x-icon">
-		<link rel="shortcut icon" href="assets/images/greylinelogo.ico" type="image/x-icon">
-		<link rel="apple-touch-icon" href="assets/images/greylinelogo.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="assets/images/greylinelogo-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="assets/images/greylinelogo-16x16.png">
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>Greyline Investigations | Digital Intelligence &amp; Private Investigation Services</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+	<style>
+		/* ── RESET & BASE ── */
+		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+		html { scroll-behavior: smooth; }
+		body {
+			font-family: 'DM Sans', sans-serif;
+			font-weight: 300;
+			background: #0a0a0a;
+			color: #d4cfc8;
+			line-height: 1.7;
+			overflow-x: hidden;
+		}
 
-			<!-- Header -->
-			<div id="header">
+		/* ── CSS VARIABLES ── */
+		:root {
+			--gold: #b8965a;
+			--gold-light: #d4b07a;
+			--gold-dim: #7a6038;
+			--cream: #f0ebe2;
+			--ink: #0a0a0a;
+			--ink-2: #141414;
+			--ink-3: #1e1e1e;
+			--ink-4: #2a2a2a;
+			--text: #d4cfc8;
+			--text-muted: #7a7570;
+			--text-dim: #4a4540;
+			--border: rgba(184,150,90,0.15);
+			--border-strong: rgba(184,150,90,0.35);
+		}
 
-				<!-- Inner -->
-				<div class="inner">
-					<header>
-						<h1><a href="index.html" id="logo">Greyline Investigations</a></h1>
-						<hr />
-						<p>Discreet. Professional. Thorough.</p>
-					</header>
-					
-				</div>
+		/* ── TYPOGRAPHY ── */
+		h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; letter-spacing: 0.02em; color: var(--cream); }
+		h1 { font-size: clamp(2.8rem, 6vw, 5rem); line-height: 1.05; }
+		h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.15; }
+		h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); }
+		h4 { font-size: 1.05rem; font-weight: 500; }
+		p { font-size: 0.92rem; line-height: 1.75; }
 
-				<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="#services">Services</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-			</div>
+		/* ── NOISE OVERLAY ── */
+		body::before {
+			content: '';
+			position: fixed; inset: 0;
+			background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+			pointer-events: none; z-index: 9999; opacity: 0.4;
+		}
 
-			<!-- Banner -->
-			
+		/* ── NAV ── */
+		#nav {
+			position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+			display: flex; align-items: center; justify-content: space-between;
+			padding: 1.25rem 4rem;
+			background: rgba(10,10,10,0.88);
+			backdrop-filter: blur(12px);
+			border-bottom: 1px solid var(--border);
+		}
+		.nav-logo {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.1rem;
+			color: var(--gold);
+			letter-spacing: 0.15em;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+		.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+		.nav-links a {
+			font-size: 0.75rem;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			color: var(--text-muted);
+			text-decoration: none;
+			transition: color 0.2s;
+		}
+		.nav-links a:hover { color: var(--gold); }
 
-			<!-- Services Section -->
-			<div class="wrapper style1" id="services">
-				<section class="container special">
-					<header>
-						<h2>Our Professional Investigative Services</h2>
-						<p>Comprehensive solutions for all your investigative needs with the highest level of confidentiality</p>
-					</header>
-					
-					<!-- First row of services -->
-					<div class="row">
-						<article class="col-4 col-12-mobile special">
-							
-							<header>
-								<h3>Relationship & Personal Investigations</h3>
-							</header>
-							<div class="service-item">
-								<h4>Adultery or Infidelity Investigations (Marital)</h4>
-								<p>Discreet adultery investigations in Nigeria using surveillance, OSINT, and undisclosed methods to uncover infidelity evidence for legal or personal use. 100% confidential.</p>
-							</div>
-							<div class="service-item">
-								<h4>Unfaithful or Cheating Partner (Non-Marital)</h4>
-								<p>Similar to infidelity investigations for married couples, we discreetly gather evidence for non-married partners using surveillance, OSINT, and undisclosed methods. 100% confidential.</p>
-							</div>
-							<div class="service-item">
-								<h4>Stalking and Harassment Investigations</h4>
-								<p>Tracking the source of repeated, unwanted attention or threats—online or in person—toward an individual.</p>
-							</div>
-							<div class="service-item">
-								<h4>Surveillance (Beacon or GPS Tracking)</h4>
-								<p>Discreet real-time GPS and beacon surveillance in Nigeria, using OSINT and undisclosed methods to track location data for infidelity, theft, or fraud cases. 100% confidential.</p>
-							</div>
-						</article>
-						
-						<article class="col-4 col-12-mobile special">
-							
-							<header>
-								<h3>Digital & Cyber Investigations</h3>
-							</header>
-							<div class="service-item">
-								<h4>Computer Forensics Investigation</h4>
-								<p>Extraction and analysis of digital evidence from computers and devices to uncover data theft, online fraud, unauthorized access, or digital tampering.</p>
-							</div>
-							<div class="service-item">
-								<h4>Email Tracking and SMS Tracing</h4>
-								<p>Monitoring or tracing the origin of suspicious emails or SMS messages, especially in cyberstalking, fraud, or extortion cases.</p>
-							</div>
-							<div class="service-item">
-								<h4>Online Social Networking Investigation</h4>
-								<p>Monitoring and analyzing a person's activities, contacts, or suspicious behavior on platforms like Tinder, Bumble, Grindr, Facebook, Instagram, WhatsApp, or Twitter.</p>
-							</div>
-							<div class="service-item">
-								<h4>Identity Theft</h4>
-								<p>Investigating the use of someone's personal information (name, ID, bank details) without consent, usually to commit fraud or impersonation.</p>
-							</div>
-						</article>
-						
-						<article class="col-4 col-12-mobile special">
-							
-							<header>
-								<h3>Fraud & Reputation Investigations</h3>
-							</header>
-							<div class="service-item">
-								<h4>Financial Fraud Investigations</h4>
-								<p>Uncovering deceptive financial schemes such as embezzlement, Ponzi schemes, or fake investment opportunities. Can involve tracing transactions and asset verification.</p>
-							</div>
-							<div class="service-item">
-								<h4>Real Estate Fraud Investigations</h4>
-								<p>Detecting property scams, fake titles, double sales, or misrepresented real estate deals—common in Nigeria's property market.</p>
-							</div>
-							<div class="service-item">
-								<h4>Internet Defamation and Slander Investigations</h4>
-								<p>Tracking the source of false, damaging statements made online to harm reputation, often involving legal action or cease-and-desist orders.</p>
-							</div>
-							<div class="service-item">
-								<h4>Unmasking an Online Bully/Scammer</h4>
-								<p>Reveals the true identity behind the digital disguise, stripping away anonymity to hold online predators accountable for their harassment and fraudulent activities.</p>
-							</div>
-						</article>
-					</div>
-					
-					<footer style="margin-top: 30px;">
-						<a href="#contact" class="button custom-red scrolly">Request Our Services</a>
-					</footer>
-				</section>
-			</div>
+		/* ── HERO ── */
+		#hero {
+			min-height: 100vh;
+			display: flex; align-items: center;
+			padding: 8rem 4rem 5rem;
+			position: relative;
+			background:
+				radial-gradient(ellipse 60% 50% at 80% 50%, rgba(184,150,90,0.06) 0%, transparent 60%),
+				linear-gradient(180deg, #0a0a0a 0%, #0f0e0c 100%);
+		}
+		.hero-inner { max-width: 720px; }
+		.hero-eyebrow {
+			font-size: 0.7rem;
+			letter-spacing: 0.22em;
+			text-transform: uppercase;
+			color: var(--gold);
+			margin-bottom: 1.5rem;
+			display: flex; align-items: center; gap: 0.75rem;
+		}
+		.hero-eyebrow::before {
+			content: '';
+			display: block; width: 32px; height: 1px;
+			background: var(--gold);
+		}
+		.hero h1 { margin-bottom: 1.5rem; }
+		.hero h1 em { font-style: italic; color: var(--gold-light); }
+		.hero-sub {
+			font-size: 0.95rem;
+			color: var(--text-muted);
+			max-width: 480px;
+			margin-bottom: 2.5rem;
+			line-height: 1.8;
+		}
+		.hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+		.btn-primary {
+			display: inline-block;
+			padding: 0.8rem 2rem;
+			background: var(--gold);
+			color: var(--ink);
+			font-family: 'DM Sans', sans-serif;
+			font-size: 0.78rem;
+			font-weight: 500;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			text-decoration: none;
+			transition: background 0.2s, transform 0.15s;
+			border: none; cursor: pointer;
+		}
+		.btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+		.btn-ghost {
+			display: inline-block;
+			padding: 0.8rem 2rem;
+			background: transparent;
+			color: var(--text-muted);
+			font-family: 'DM Sans', sans-serif;
+			font-size: 0.78rem;
+			font-weight: 400;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			text-decoration: none;
+			border: 1px solid var(--border-strong);
+			transition: color 0.2s, border-color 0.2s;
+		}
+		.btn-ghost:hover { color: var(--gold); border-color: var(--gold); }
+		.hero-rule {
+			position: absolute; right: 4rem; top: 50%;
+			transform: translateY(-50%);
+			display: flex; flex-direction: column; align-items: center; gap: 1rem;
+		}
+		.hero-rule span {
+			writing-mode: vertical-rl;
+			font-size: 0.65rem;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			color: var(--text-dim);
+		}
+		.hero-rule::before, .hero-rule::after {
+			content: ''; display: block; width: 1px; height: 60px;
+			background: var(--border-strong);
+		}
 
-			<!-- Main - About Us Section -->
-			<div class="wrapper style2">
-				<article id="main" class="container special">
-					
-					<header>
-						<h2>Discreet. Professional. Thorough.</h2>
-						<p>
-							The Greyline Investigations Approach
-						</p>
-					</header>
-					<p>
-						Looking for a trusted private investigation company in Nigeria? At GreyLine Investigations, we offer discreet, reliable, and affordable private investigation services in Lagos and across Nigeria. Our team of experienced private investigators in Lagos, Abuja, Port Harcourt, and Kano specialize in a range of services including Infidelity Investigations, Online Social Networking Investigation, Internet Defamation and Slander Investigations in Nigeria, and Surveillance (Beacon or GPS Tracking) services in Nigeria.
-					</p>
-					<p>
-						As a licensed and professional private detective agency in Nigeria, we understand the importance of confidentiality, legal compliance, and accurate reporting. Wondering how to hire a private investigator in Nigeria or is private investigation legal in Nigeria? GreyLine Investigations operates strictly within the laws of the Federal Republic of Nigeria, ensuring your investigations are handled legally and ethically.
-					</p>
-					<p>
-						Whether you’re searching for the best private investigators in Nigeria, need to hire a private investigator in Nigeria, or want to know how much it costs to hire a private investigator in Lagos, our expert team is ready to assist. From Stalking and Harassment Investigations to Email Tracking and SMS Tracing and Identity Theft investigations, we are your go-to private investigation firm in Nigeria.
-					</p>
-					<p>
-						Contact us today to discover who is the best private investigator in Nigeria and how to find a private investigator in Nigeria you can trust. GreyLine Investigations — delivering discreet, legal, and results-driven private investigation services in Lagos and beyond.
-					</p>
-					<footer>
-						<a href="#contact" class="button custom-red">Contact Us Today</a>
-					</footer>
-				</article>
-			</div>
+		/* ── SECTION WRAPPER ── */
+		section { padding: 6rem 4rem; }
+		.section-eyebrow {
+			font-size: 0.68rem;
+			letter-spacing: 0.22em;
+			text-transform: uppercase;
+			color: var(--gold);
+			margin-bottom: 1rem;
+			display: flex; align-items: center; gap: 0.75rem;
+		}
+		.section-eyebrow::before {
+			content: ''; display: block;
+			width: 24px; height: 1px; background: var(--gold);
+		}
+		.section-header { max-width: 560px; margin-bottom: 4rem; }
+		.section-header p { color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem; }
 
-			<!-- Contact -->
-			<div class="wrapper style1" id="contact">
-				<section id="features" class="container special">
-					<header>
-						<h2>Contact Us</h2>
-						<p>We understand the need for discretion. Contact us for a confidential consultation about your case.</p>
-					</header>
-					
-					<div class="row">
-						<div class="col-6 col-12-mobile">
-							<header>
-								<h3>Get In Touch</h3>
-							</header>
-							<p>All inquiries are kept strictly confidential. We operate with the highest standards of privacy and discretion.</p>
-							<p><strong>📱 Phone:</strong> +234 812 524 7802 (Whatsapp Only)</p>
-							<p><strong>✉️ Email:</strong> greylineinvestigations@atomicmail.io</p>
-							
-						</div>
-						
-						<div class="col-6 col-12-mobile">
-							<header>
-								<h3>Case Inquiry</h3>
-							</header>
-							<form name="inquiry-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-  <input type="hidden" name="form-name" value="inquiry-form" />
-  <p class="hidden">
-    <label>Don’t fill out this entry to the right if you’re human: <input name="bot-field" /></label>
-  </p>
-  <div class="row gtr-50">
-    <div class="col-6 col-12-mobile">
-      <input type="text" name="name" placeholder="Name" required />
-    </div>
-    <div class="col-6 col-12-mobile">
-      <input type="text" name="email" placeholder="Email" required />
-    </div>
-    <div class="col-12">
-      <input type="text" name="phone" placeholder="Phone Number" required />
-    </div>
-    <div class="col-12">
-      <select name="service-type" required>
-        <option value="">Select Type of Investigation</option>
-        <option value="marital">Adultery or Infidelity (Marital)</option>
-        <option value="nonmarital">Unfaithful Partner (Non-Marital)</option>
-        <option value="computer">Computer Forensics</option>
-        <option value="email">Email & SMS Tracing</option>
-        <option value="social">Social Media Investigation</option>
-        <option value="fraud">Financial Fraud Investigation</option>
-        <option value="realestate">Real Estate Fraud</option>
-        <option value="defamation">Internet Defamation/Slander</option>
-        <option value="identity">Identity Theft</option>
-        <option value="harassment">Stalking or Harassment</option>
-        <option value="surveillance">Surveillance (GPS Tracking)</option>
-        <option value="other">Other (Please Specify)</option>
-      </select>
-    </div>
-    <div class="col-12">
-      <select name="urgency" required>
-        <option value="">Select Urgency</option>
-        <option value="immediate">Immediate (24-48 hours)</option>
-        <option value="urgent">Urgent (Within 1 week)</option>
-        <option value="standard">Standard (1-2 weeks)</option>
-        <option value="flexible">Flexible Timeline</option>
-      </select>
-    </div>
-    <div class="col-12">
-      <textarea name="message" placeholder="Case Details (Please provide as much relevant information as possible)" rows="6" required></textarea>
-    </div>
-    <div class="col-12">
-      <select name="preferred-contact" required>
-        <option value="">Select Preferred Contact Method</option>
-        <option value="email">Email</option>
-        <option value="phone">Phone Call</option>
-        <option value="text">Text Message</option>
-      </select>
-    </div>
-    <div class="col-12">
-      <ul class="actions">
-        <li><button type="submit" class="button custom-red">Submit Inquiry</button></li>
-      </ul>
-    </div>
-  </div>
-</form>
-						</div>
-					</div>
-				</section>
-			</div>
+		/* ── LEGAL ASSURANCE BANNER ── */
+		#assurance {
+			background: var(--ink-2);
+			border-top: 1px solid var(--border);
+			border-bottom: 1px solid var(--border);
+			padding: 2.5rem 4rem;
+		}
+		.assurance-inner {
+			display: flex; align-items: flex-start; gap: 3rem;
+			flex-wrap: wrap;
+		}
+		.assurance-item { flex: 1; min-width: 200px; }
+		.assurance-item .a-label {
+			font-size: 0.68rem;
+			letter-spacing: 0.15em;
+			text-transform: uppercase;
+			color: var(--gold);
+			margin-bottom: 0.4rem;
+		}
+		.assurance-item p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
 
-			<!-- Footer -->
-			<div id="footer">
-				<div class="container">
-					<div class="row">
+		/* ── FLAGSHIP INFIDELITY SECTION ── */
+		#infidelity { background: var(--ink); }
+		.flagship-label {
+			display: inline-block;
+			font-size: 0.65rem;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+			color: var(--ink);
+			background: var(--gold);
+			padding: 0.3rem 0.75rem;
+			margin-bottom: 1.5rem;
+		}
+		.tier-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1px;
+			background: var(--border);
+			border: 1px solid var(--border);
+			margin-bottom: 3rem;
+		}
+		.tier {
+			background: var(--ink-2);
+			padding: 2rem;
+			position: relative;
+			transition: background 0.2s;
+		}
+		.tier:hover { background: var(--ink-3); }
+		.tier.featured {
+			background: var(--ink-3);
+			border-top: 2px solid var(--gold);
+		}
+		.tier-badge {
+			font-size: 0.62rem;
+			letter-spacing: 0.15em;
+			text-transform: uppercase;
+			color: var(--gold);
+			margin-bottom: 0.75rem;
+			display: block;
+		}
+		.tier-name { font-size: 1.3rem; margin-bottom: 0.25rem; }
+		.tier-price {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 2.4rem;
+			color: var(--cream);
+			line-height: 1;
+			margin-bottom: 0.25rem;
+		}
+		.tier-price sup { font-size: 1rem; vertical-align: super; }
+		.tier-cadence { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; }
+		.tier-desc { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); line-height: 1.6; }
+		.feat-list { list-style: none; }
+		.feat-list li {
+			font-size: 0.82rem;
+			color: var(--text-muted);
+			padding: 0.45rem 0;
+			border-bottom: 1px solid rgba(184,150,90,0.07);
+			display: flex; align-items: flex-start; gap: 0.6rem;
+			line-height: 1.45;
+		}
+		.feat-list li:last-child { border-bottom: none; }
+		.feat-list li::before {
+			content: '—';
+			color: var(--gold-dim);
+			flex-shrink: 0;
+			font-size: 0.7rem;
+			margin-top: 0.2rem;
+		}
 
-						<!-- Left Column - Quick Links -->
-						<section class="col-4 col-12-mobile">
-							<header>
-								<h2 class="icon solid fa-link circled"><span class="label">Quick Links</span></h2>
-							</header>
-							<ul class="divided">
-								<li><a href="#header">Home</a></li>
-								<li><a href="#services">Services</a></li>
-								<li><a href="#main">About Us</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</section>
+		/* ── SERVICE CATEGORY SECTIONS ── */
+		.services-alt { background: var(--ink-2); }
+		.card-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+			gap: 1px;
+			background: var(--border);
+			border: 1px solid var(--border);
+		}
+		.svc-card {
+			background: var(--ink-2);
+			padding: 1.75rem;
+			transition: background 0.2s;
+			cursor: default;
+		}
+		.svc-card:hover { background: var(--ink-3); }
+		.svc-cat {
+			font-size: 0.62rem;
+			letter-spacing: 0.16em;
+			text-transform: uppercase;
+			color: var(--gold-dim);
+			margin-bottom: 0.6rem;
+		}
+		.svc-name { font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--cream); }
+		.svc-price {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.6rem;
+			color: var(--gold);
+			margin-bottom: 0.75rem;
+			line-height: 1;
+		}
+		.svc-price span { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: var(--text-muted); }
+		.svc-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem; }
+		.svc-includes { list-style: none; }
+		.svc-includes li {
+			font-size: 0.78rem;
+			color: var(--text-dim);
+			padding: 0.3rem 0;
+			display: flex; gap: 0.5rem;
+			border-bottom: 1px solid rgba(184,150,90,0.06);
+		}
+		.svc-includes li:last-child { border-bottom: none; }
+		.svc-includes li::before { content: '·'; color: var(--gold-dim); flex-shrink: 0; }
+		.new-tag {
+			display: inline-block;
+			font-size: 0.58rem;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			background: rgba(184,150,90,0.12);
+			color: var(--gold);
+			border: 1px solid rgba(184,150,90,0.25);
+			padding: 0.15rem 0.5rem;
+			margin-left: 0.5rem;
+			vertical-align: middle;
+		}
 
-						<!-- Middle Column - Services -->
-						<section class="col-4 col-12-mobile">
-							<header>
-								<h2 class="icon solid fa-file circled"><span class="label">Services</span></h2>
-							</header>
-							<ul class="divided">
-								<li>Infidelity Investigations (Marital)</li>
-								<li>Computer Forensics</li>
-								<li>Financial Fraud Investigations</li>
-								<li>Internet Defamation Investigations</li>
-								<li>Identity Theft Investigations</li>
-							</ul>
-						</section>
+		/* ── ADD-ONS ── */
+		.addon-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			gap: 1px;
+			background: var(--border);
+			border: 1px solid var(--border);
+			margin-top: 3rem;
+		}
+		.addon-card {
+			background: var(--ink-2);
+			padding: 1.5rem;
+			transition: background 0.2s;
+		}
+		.addon-card:hover { background: var(--ink-3); }
+		.addon-price {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.4rem;
+			color: var(--gold);
+			margin-bottom: 0.4rem;
+		}
+		.addon-name { font-size: 0.9rem; color: var(--cream); margin-bottom: 0.4rem; }
+		.addon-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; }
 
-						<!-- Right Column - Office Hours -->
-						<section class="col-4 col-12-mobile">
-							<header>
-								<h2 class="icon solid fa-clock circled"><span class="label">Hours</span></h2>
-							</header>
-							<ul class="divided">
-								
-								<li>We operate discreetly and respond to inquiries promptly, any time, any day.</li>
-								<li>Confidential online consultations available 24/7.</li>
-								
-							</ul>
-						</section>
+		/* ── WHAT WE DON'T DO ── */
+		#limits {
+			background: var(--ink);
+			border-top: 1px solid var(--border);
+		}
+		.limits-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 3rem;
+		}
+		.limit-col h3 { margin-bottom: 1.5rem; font-size: 1.1rem; }
+		.limit-list { list-style: none; }
+		.limit-list li {
+			font-size: 0.85rem;
+			color: var(--text-muted);
+			padding: 0.65rem 0;
+			border-bottom: 1px solid var(--border);
+			display: flex; gap: 0.75rem;
+			line-height: 1.5;
+		}
+		.limit-list li::before { content: '✓'; color: var(--gold); flex-shrink: 0; font-size: 0.8rem; }
+		.limit-list.dont li::before { content: '✕'; color: var(--text-dim); }
 
-					</div>
-					<hr />
-					<div class="row">
-						<div class="col-12">
+		/* ── HOW IT WORKS ── */
+		#process { background: var(--ink-2); }
+		.process-steps {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			gap: 1px;
+			background: var(--border);
+			border: 1px solid var(--border);
+		}
+		.process-step { background: var(--ink-2); padding: 1.75rem 1.5rem; }
+		.step-num {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 2.5rem;
+			color: var(--border-strong);
+			line-height: 1;
+			margin-bottom: 0.75rem;
+		}
+		.step-title { font-size: 0.9rem; color: var(--cream); margin-bottom: 0.5rem; }
+		.step-body { font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; }
 
-							<!-- Contact -->
-							<section class="contact">
-								<header>
-									<h3>Need discreet investigation services?</h3>
-								</header>
-								<p>Greyline Investigations provides confidential, professional investigative services tailored to your specific needs.</p>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-								</ul>
-							</section>
+		/* ── ABOUT ── */
+		#about { background: var(--ink); }
+		.about-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 5rem;
+			align-items: start;
+		}
+		.about-text p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem; }
+		.about-stats {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1px;
+			background: var(--border);
+			border: 1px solid var(--border);
+		}
+		.stat-box { background: var(--ink-2); padding: 1.75rem; }
+		.stat-num {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 2.5rem;
+			color: var(--gold);
+			line-height: 1;
+			margin-bottom: 0.4rem;
+		}
+		.stat-label { font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.05em; }
 
-							<!-- Copyright -->
-							<div class="copyright">
-								<ul class="menu">
-									<li>&copy; 2025 Greyline Investigations. All Rights Reserved.</li>
-									<li>Licensed and Insured Private Investigation Agency</li>
-									
-								</ul>
-							</div>
+		/* ── CONTACT ── */
+		#contact {
+			background: var(--ink-2);
+			border-top: 1px solid var(--border);
+		}
+		.contact-grid {
+			display: grid;
+			grid-template-columns: 1fr 1.4fr;
+			gap: 5rem;
+		}
+		.contact-info h3 { margin-bottom: 1.5rem; }
+		.contact-info p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
+		.contact-detail {
+			display: flex; align-items: flex-start; gap: 0.75rem;
+			margin-bottom: 1rem;
+		}
+		.contact-detail .cd-label {
+			font-size: 0.65rem;
+			letter-spacing: 0.15em;
+			text-transform: uppercase;
+			color: var(--gold);
+			min-width: 60px;
+			margin-top: 0.15rem;
+		}
+		.contact-detail .cd-val { font-size: 0.85rem; color: var(--text); }
+		.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+		.form-grid .full { grid-column: 1 / -1; }
+		input, select, textarea {
+			width: 100%;
+			background: var(--ink);
+			border: 1px solid var(--border);
+			color: var(--text);
+			font-family: 'DM Sans', sans-serif;
+			font-size: 0.85rem;
+			padding: 0.75rem 1rem;
+			outline: none;
+			transition: border-color 0.2s;
+			appearance: none;
+		}
+		input::placeholder, textarea::placeholder { color: var(--text-dim); }
+		input:focus, select:focus, textarea:focus { border-color: var(--gold-dim); }
+		select { cursor: pointer; }
+		textarea { resize: vertical; min-height: 110px; }
+		option { background: var(--ink-3); }
 
-						</div>
-					</div>
-				</div>
-			</div>
+		/* ── FOOTER ── */
+		footer {
+			background: var(--ink);
+			border-top: 1px solid var(--border);
+			padding: 3rem 4rem;
+		}
+		.footer-inner {
+			display: grid;
+			grid-template-columns: 2fr 1fr 1fr;
+			gap: 3rem;
+			margin-bottom: 3rem;
+		}
+		.footer-brand .brand-name {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.2rem;
+			color: var(--gold);
+			letter-spacing: 0.1em;
+			margin-bottom: 0.75rem;
+		}
+		.footer-brand p { font-size: 0.8rem; color: var(--text-dim); max-width: 280px; line-height: 1.65; }
+		.footer-col h4 {
+			font-size: 0.65rem;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+			color: var(--gold);
+			margin-bottom: 1rem;
+			font-family: 'DM Sans', sans-serif;
+		}
+		.footer-col ul { list-style: none; }
+		.footer-col ul li { margin-bottom: 0.5rem; }
+		.footer-col ul li a { font-size: 0.82rem; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+		.footer-col ul li a:hover { color: var(--gold); }
+		.footer-bottom {
+			border-top: 1px solid var(--border);
+			padding-top: 1.5rem;
+			display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+		}
+		.footer-bottom p { font-size: 0.75rem; color: var(--text-dim); }
+		.social-links { display: flex; gap: 1rem; }
+		.social-links a {
+			font-size: 0.72rem;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: var(--text-dim);
+			text-decoration: none;
+			transition: color 0.2s;
+		}
+		.social-links a:hover { color: var(--gold); }
 
+		/* ── DIVIDERS ── */
+		.gold-rule {
+			width: 40px; height: 1px;
+			background: var(--gold);
+			margin: 1.5rem 0;
+		}
+		.section-divider {
+			border: none;
+			border-top: 1px solid var(--border);
+			margin: 0;
+		}
+
+		/* ── ANIMATIONS ── */
+		@keyframes fadeUp {
+			from { opacity: 0; transform: translateY(24px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+		.hero-inner > * {
+			animation: fadeUp 0.7s ease forwards;
+			opacity: 0;
+		}
+		.hero-inner > *:nth-child(1) { animation-delay: 0.1s; }
+		.hero-inner > *:nth-child(2) { animation-delay: 0.25s; }
+		.hero-inner > *:nth-child(3) { animation-delay: 0.4s; }
+		.hero-inner > *:nth-child(4) { animation-delay: 0.55s; }
+
+		/* ── RESPONSIVE ── */
+		@media (max-width: 900px) {
+			#nav { padding: 1rem 2rem; }
+			section { padding: 4rem 2rem; }
+			#hero { padding: 7rem 2rem 4rem; }
+			#assurance { padding: 2rem; }
+			footer { padding: 2.5rem 2rem; }
+			.tier-grid, .process-steps { grid-template-columns: 1fr; }
+			.about-grid, .contact-grid, .limits-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+			.footer-inner { grid-template-columns: 1fr 1fr; }
+			.hero-rule { display: none; }
+			.form-grid { grid-template-columns: 1fr; }
+		}
+		@media (max-width: 500px) {
+			.footer-inner { grid-template-columns: 1fr; }
+			.nav-links { gap: 1.25rem; }
+		}
+	</style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="nav">
+	<a href="#hero" class="nav-logo">Greyline Investigations</a>
+	<ul class="nav-links">
+		<li><a href="#infidelity">Infidelity</a></li>
+		<li><a href="#digital">Digital</a></li>
+		<li><a href="#fraud">Fraud</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+	<div class="hero-inner">
+		<div class="hero-eyebrow">Digital Intelligence Agency</div>
+		<h1>Evidence that<br><em>speaks clearly.</em></h1>
+		<p class="hero-sub">Professional OSINT and digital investigation services conducted entirely online — discreet, legal, and court-ready. Operating within Nigerian law and international data standards.</p>
+		<div class="hero-cta-row">
+			<a href="#contact" class="btn-primary">Begin a Case Inquiry</a>
+			<a href="#infidelity" class="btn-ghost">View Services</a>
 		</div>
+	</div>
+	<div class="hero-rule">
+		<span>Lagos · Abuja · Remote</span>
+	</div>
+</section>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.dropotron.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script>
-			// Form handling with email submission
-			document.getElementById('inquiry-form').addEventListener('submit', function(e) {
-				e.preventDefault();
-				
-				// Get form data
-				const formData = new FormData(e.target);
-				const formProps = Object.fromEntries(formData);
-				
-				// Prepare email content
-				const emailSubject = "New Investigation Inquiry: " + formProps.name;
-				const emailBody = `
-Name: ${formProps.name}
-Email: ${formProps.email}
-Phone: ${formProps.phone}
-Service Type: ${formProps.["service-type"]}
-Urgency: ${formProps.urgency}
-Preferred Contact Method: ${formProps["preferred-contact"]}
+<!-- ── LEGAL ASSURANCE ── -->
+<div id="assurance">
+	<div class="assurance-inner">
+		<div class="assurance-item">
+			<div class="a-label">Legal Compliance</div>
+			<p>All investigations conducted under the Nigeria Data Protection Act 2023, Cybercrimes Act 2015, and the Evidence Act.</p>
+		</div>
+		<div class="assurance-item">
+			<div class="a-label">Methods</div>
+			<p>We use only open-source intelligence (OSINT) and publicly available data. No private account access. No interception.</p>
+		</div>
+		<div class="assurance-item">
+			<div class="a-label">Delivery</div>
+			<p>Court-ready PDF reports with timestamped evidence, source documentation, and full chain of custody.</p>
+		</div>
+		<div class="assurance-item">
+			<div class="a-label">Confidentiality</div>
+			<p>Every case is covered by a signed NDA. Your identity and case details are never shared with third parties.</p>
+		</div>
+	</div>
+</div>
 
-Case Details:
-${formProps.message}
-				`;
-				
-				// Send email using mailto link
-				const mailtoLink = `mailto:greylineinvestigations@atomicmail.io?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-				
-				// Open email client
-				window.location.href = mailtoLink;
-				
-				// Show confirmation
-				alert('Thank you for your inquiry. Your default email client will open with your information. Please review and send the email to complete your submission.');
-			});
-		</script>
+<!-- ── FLAGSHIP: INFIDELITY ── -->
+<section id="infidelity">
+	<div class="section-header">
+		<div class="section-eyebrow">Flagship Service</div>
+		<span class="flagship-label">Most requested</span>
+		<h2>Relationship &amp;<br>Infidelity Intelligence</h2>
+		<p>Our most requested service. We build a complete digital picture of your partner's online activity — fully legally, using only public data, and packaged as evidence you can actually use.</p>
+	</div>
 
-	</body>
+	<div class="tier-grid">
+		<div class="tier">
+			<span class="tier-badge">Essential</span>
+			<div class="tier-name">Digital Trace</div>
+			<div class="tier-price"><sup>£</sup>49</div>
+			<div class="tier-cadence">one-time · delivered in 48 hours</div>
+			<div class="tier-desc">A thorough digital footprint check. Best for early suspicions when you need clarity before deciding your next step.</div>
+			<ul class="feat-list">
+				<li>Full social media profile audit (all major platforms)</li>
+				<li>Username &amp; alias search across 300+ platforms</li>
+				<li>Dating app activity indicators</li>
+				<li>Photo EXIF metadata analysis</li>
+				<li>PDF summary report with findings</li>
+			</ul>
+		</div>
+		<div class="tier featured">
+			<span class="tier-badge">Most Popular</span>
+			<div class="tier-name">Deep Intelligence</div>
+			<div class="tier-price"><sup>£</sup>120</div>
+			<div class="tier-cadence">one-time · delivered in 5 business days</div>
+			<div class="tier-desc">Full digital investigation with annotated, court-ready evidence packaging. For clients who need findings they can act on legally.</div>
+			<ul class="feat-list">
+				<li>Everything in Digital Trace</li>
+				<li>Link analysis — map associates &amp; contacts</li>
+				<li>Reverse image search &amp; face matching</li>
+				<li>Timeline reconstruction from public data</li>
+				<li>Third-party identification</li>
+				<li>Annotated court-ready PDF report</li>
+				<li>30-minute debrief call included</li>
+			</ul>
+		</div>
+		<div class="tier">
+			<span class="tier-badge">Retainer</span>
+			<div class="tier-name">Ongoing Watch</div>
+			<div class="tier-price"><sup>£</sup>65</div>
+			<div class="tier-cadence">per month · cancel anytime</div>
+			<div class="tier-desc">Continuous digital monitoring for clients who need sustained intelligence over time without committing to a one-off report.</div>
+			<ul class="feat-list">
+				<li>Weekly social media monitoring</li>
+				<li>New account &amp; alias detection alerts</li>
+				<li>Dating app activity change flags</li>
+				<li>Monthly intelligence briefing report</li>
+				<li>Priority WhatsApp investigator access</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Partner verification add-ons -->
+	<h3 style="margin-bottom:1.5rem; margin-top:3rem; font-size:1.1rem; color:var(--text-muted); font-weight:400; letter-spacing:0.05em;">Dating site &amp; partner verification</h3>
+	<div class="card-grid" style="margin-bottom:3rem;">
+		<div class="svc-card">
+			<div class="svc-cat">New service</div>
+			<div class="svc-name">Dating site sweep</div>
+			<div class="svc-price">£35 <span>· 24 hrs</span></div>
+			<div class="svc-desc">Check whether a partner or person of interest has active profiles across major dating platforms including Nigerian-specific apps.</div>
+			<ul class="svc-includes">
+				<li>Tinder, Bumble, Hinge, Badoo, Plenty of Fish</li>
+				<li>Afroromance &amp; Nairaland dating checks</li>
+				<li>Screenshots &amp; profile archive included</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">New service</div>
+			<div class="svc-name">Partner identity verify</div>
+			<div class="svc-price">£55 <span>· 48 hrs</span></div>
+			<div class="svc-desc">Confirm that the person you're dating is who they claim to be — name, location, employment, and relationship status checked.</div>
+			<ul class="svc-includes">
+				<li>Identity cross-check across public records</li>
+				<li>Employment &amp; location verification</li>
+				<li>Marital status indicators</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Infidelity add-ons -->
+	<h3 style="margin-bottom:1.25rem; font-size:1.1rem; color:var(--text-muted); font-weight:400; letter-spacing:0.05em;">Investigation add-ons</h3>
+	<div class="addon-grid">
+		<div class="addon-card">
+			<div class="addon-price">+ £15</div>
+			<div class="addon-name">Footprint scorecard</div>
+			<div class="addon-desc">Quick pre-investigation risk assessment. Scores a subject's digital presence for secrecy indicators before committing to a full package.</div>
+		</div>
+		<div class="addon-card">
+			<div class="addon-price">+ £40</div>
+			<div class="addon-name">Third-party deep check</div>
+			<div class="addon-desc">Full background check on an identified third party — who they are, where they work, their own relationship status.</div>
+		</div>
+		<div class="addon-card">
+			<div class="addon-price">+ £50</div>
+			<div class="addon-name">Legal evidence pack</div>
+			<div class="addon-desc">Report formatted to court standards with chain of custody documentation. For use in divorce or formal legal proceedings.</div>
+		</div>
+		<div class="addon-card">
+			<div class="addon-price">+ £80</div>
+			<div class="addon-name">Device forensics</div>
+			<div class="addon-desc">Client couriers a jointly-owned device. Deleted messages, app usage history, and location data extracted and documented. Full chain of custody maintained.</div>
+		</div>
+	</div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ── DIGITAL & CYBER ── -->
+<section id="digital" class="services-alt">
+	<div class="section-header">
+		<div class="section-eyebrow">Digital &amp; Cyber Investigations</div>
+		<h2>Online fraud, scams<br>&amp; identity threats</h2>
+		<p>From romance scams to crypto fraud to dark web data exposure — fully remote investigations delivered as structured evidence reports.</p>
+	</div>
+
+	<!-- Romance scam -->
+	<h3 style="margin-bottom:1rem; font-size:0.85rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-dim);">Romance scam detection</h3>
+	<div class="card-grid" style="margin-bottom:3rem;">
+		<div class="svc-card">
+			<div class="svc-cat">New service</div>
+			<div class="svc-name">Romance scam check</div>
+			<div class="svc-price">£45 <span>· one-time</span></div>
+			<div class="svc-desc">Verify whether someone you've met online is a real person or a scammer operating behind a stolen identity before you invest emotionally or financially.</div>
+			<ul class="svc-includes">
+				<li>Reverse image search — detect stolen photos</li>
+				<li>Profile age &amp; activity analysis</li>
+				<li>Cross-reference against known scam databases</li>
+				<li>Phone number &amp; email origin check</li>
+				<li>Clear verdict: real person or likely scammer</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">New service</div>
+			<div class="svc-name">Scam evidence pack</div>
+			<div class="svc-price">£95 <span>· one-time</span></div>
+			<div class="svc-desc">For victims who have already been scammed. Full perpetrator identification and evidence packaging for police or EFCC referral.</div>
+			<ul class="svc-includes">
+				<li>Full scammer identity trace</li>
+				<li>Network mapping — linked accounts &amp; associates</li>
+				<li>Transaction trail documentation</li>
+				<li>Formal evidence report for law enforcement</li>
+				<li>EFCC / police referral guidance included</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Dark web -->
+	<h3 style="margin-bottom:1rem; font-size:0.85rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-dim);">Dark web personal data monitoring</h3>
+	<div class="card-grid" style="margin-bottom:3rem;">
+		<div class="svc-card">
+			<div class="svc-cat">New service</div>
+			<div class="svc-name">Personal data scan</div>
+			<div class="svc-price">£29 <span>· one-time</span></div>
+			<div class="svc-desc">One-time sweep of dark web marketplaces and breach databases to check whether your personal data is already being sold.</div>
+			<ul class="svc-includes">
+				<li>Email address breach check</li>
+				<li>Phone number exposure check</li>
+				<li>BVN / NIN exposure check (Nigeria-specific)</li>
+				<li>Risk rating + recommended actions</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">New service</div>
+			<div class="svc-name">Dark web monitoring</div>
+			<div class="svc-price">£19 <span>· per month</span></div>
+			<div class="svc-desc">Continuous monitoring — get alerted the moment your data appears on dark web markets or in new breach dumps. Cancel anytime.</div>
+			<ul class="svc-includes">
+				<li>Real-time breach alerts</li>
+				<li>Up to 5 email addresses monitored</li>
+				<li>Credit card &amp; bank detail monitoring</li>
+				<li>Monthly dark web summary report</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">New service</div>
+			<div class="svc-name">Financial exposure report</div>
+			<div class="svc-price">£49 <span>· one-time</span></div>
+			<div class="svc-desc">Deep scan for bank details, card numbers, and financial credentials being offered on dark web forums and Telegram fraud channels.</div>
+			<ul class="svc-includes">
+				<li>Card &amp; account number dark web sweep</li>
+				<li>Telegram fraud channel monitoring</li>
+				<li>Source identification where possible</li>
+				<li>Immediate remediation steps provided</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Crypto -->
+	<h3 style="margin-bottom:1rem; font-size:0.85rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-dim);">Crypto scam tracing</h3>
+	<div class="card-grid" style="margin-bottom:3rem;">
+		<div class="svc-card">
+			<div class="svc-cat">New service</div>
+			<div class="svc-name">Investment platform check</div>
+			<div class="svc-price">£39 <span>· one-time</span></div>
+			<div class="svc-desc">Before you invest — verify whether a crypto platform, trading app, or investment scheme is legitimate or a scam. Pass/fail verdict.</div>
+			<ul class="svc-includes">
+				<li>Domain age &amp; registration analysis</li>
+				<li>Company registration verification</li>
+				<li>Scam database cross-reference</li>
+				<li>Red flag scoring &amp; clear verdict</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">New service</div>
+			<div class="svc-name">Wallet trace report</div>
+			<div class="svc-price">£85 <span>· one-time</span></div>
+			<div class="svc-desc">Trace a suspicious crypto wallet address — follow the money and identify where funds moved after a scam. Covers BTC, ETH, USDT.</div>
+			<ul class="svc-includes">
+				<li>Blockchain transaction trail analysis</li>
+				<li>Wallet clustering &amp; exchange identification</li>
+				<li>Flag if funds hit known scam addresses</li>
+				<li>PDF trace report with movement chain</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">New service</div>
+			<div class="svc-name">Crypto fraud evidence pack</div>
+			<div class="svc-price">£175 <span>· one-time</span></div>
+			<div class="svc-desc">Full investigation for victims of crypto investment scams — trace funds, identify operators, and prepare evidence for recovery or legal action.</div>
+			<ul class="svc-includes">
+				<li>Multi-hop wallet trace across chains</li>
+				<li>Scam platform OSINT (fake exchanges, Telegram)</li>
+				<li>Operator identity investigation</li>
+				<li>Legal-grade evidence report</li>
+				<li>Referral to crypto recovery legal partners</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Other digital services -->
+	<h3 style="margin-bottom:1rem; font-size:0.85rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-dim);">Digital forensics &amp; cyber</h3>
+	<div class="card-grid">
+		<div class="svc-card">
+			<div class="svc-cat">Core service</div>
+			<div class="svc-name">Computer forensics</div>
+			<div class="svc-price">From £150 <span>· quote on case</span></div>
+			<div class="svc-desc">Extraction and analysis of digital evidence from computers and devices. Client couriers an owned device; we return it with a full forensic report.</div>
+			<ul class="svc-includes">
+				<li>Deleted file &amp; message recovery</li>
+				<li>App usage &amp; browsing history</li>
+				<li>Court-admissible chain of custody</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">Core service</div>
+			<div class="svc-name">Email header &amp; source tracing</div>
+			<div class="svc-price">£55 <span>· one-time</span></div>
+			<div class="svc-desc">Trace the origin of suspicious emails — IP identification, sender geolocation, and spoofing detection for fraud and harassment cases.</div>
+			<ul class="svc-includes">
+				<li>Full email header analysis</li>
+				<li>IP address &amp; geolocation tracing</li>
+				<li>Spoofing &amp; phishing detection</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">Core service</div>
+			<div class="svc-name">SOCMINT investigation</div>
+			<div class="svc-price">£75 <span>· one-time</span></div>
+			<div class="svc-desc">Open-source social media intelligence. Monitor and map a subject's public activity, contacts, and digital behaviour across platforms.</div>
+			<ul class="svc-includes">
+				<li>Multi-platform public profile analysis</li>
+				<li>Contact &amp; associate mapping</li>
+				<li>Activity timeline report</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">Core service</div>
+			<div class="svc-name">Identity theft investigation</div>
+			<div class="svc-price">£95 <span>· one-time</span></div>
+			<div class="svc-desc">Investigate the misuse of your personal identity — NIN, BVN, bank details, or business name — and gather evidence for legal action or reclamation.</div>
+			<ul class="svc-includes">
+				<li>BVN / NIN misuse investigation</li>
+				<li>Dark web exposure check included</li>
+				<li>Evidence report for EFCC / police</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">Core service</div>
+			<div class="svc-name">Personal safety documentation</div>
+			<div class="svc-price">£85 <span>· one-time</span></div>
+			<div class="svc-desc">Track the source of repeated online harassment, threats, or stalking and compile documented evidence for police reports or restraining orders.</div>
+			<ul class="svc-includes">
+				<li>Harasser source identification</li>
+				<li>Evidence preservation &amp; archiving</li>
+				<li>Police report support documentation</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ── FRAUD & REPUTATION ── -->
+<section id="fraud">
+	<div class="section-header">
+		<div class="section-eyebrow">Fraud &amp; Reputation Investigations</div>
+		<h2>Financial fraud,<br>real estate &amp; defamation</h2>
+		<p>For individuals and businesses who need documented evidence of financial deception, property fraud, or reputational damage.</p>
+	</div>
+	<div class="card-grid">
+		<div class="svc-card">
+			<div class="svc-cat">Core service</div>
+			<div class="svc-name">Financial fraud investigation</div>
+			<div class="svc-price">From £120 <span>· quote on case</span></div>
+			<div class="svc-desc">Uncover deceptive financial schemes — Ponzi structures, fake investment platforms, embezzlement, and romance-linked financial fraud. Includes EFCC referral pathway.</div>
+			<ul class="svc-includes">
+				<li>Transaction trail analysis</li>
+				<li>Platform &amp; operator OSINT</li>
+				<li>Evidence report for EFCC referral</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">Core service</div>
+			<div class="svc-name">Real estate fraud check</div>
+			<div class="svc-price">From £95 <span>· quote on case</span></div>
+			<div class="svc-desc">Detect property scams, fake C-of-O documents, double sales, and misrepresented deals before you commit funds. Nigeria Land Registry verified.</div>
+			<ul class="svc-includes">
+				<li>Title deed &amp; C-of-O verification</li>
+				<li>Survey plan validation</li>
+				<li>Seller identity check</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">Core service</div>
+			<div class="svc-name">Online reputation &amp; defamation evidence</div>
+			<div class="svc-price">£85 <span>· one-time</span></div>
+			<div class="svc-desc">Track and archive the source of false, damaging statements made online. Evidence packaged for legal action, cease-and-desist, or platform takedown requests.</div>
+			<ul class="svc-includes">
+				<li>Source &amp; author identification</li>
+				<li>Evidence preservation &amp; archiving</li>
+				<li>Legal referral support</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">New service</div>
+			<div class="svc-name">Business due diligence</div>
+			<div class="svc-price">From £110 <span>· quote on case</span></div>
+			<div class="svc-desc">Pre-contract checks on companies, directors, and business partners. CAC registration, beneficial ownership, and litigation history verified before you sign anything.</div>
+			<ul class="svc-includes">
+				<li>CAC registration &amp; director check</li>
+				<li>Litigation &amp; court record search</li>
+				<li>Digital reputation audit</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">New service</div>
+			<div class="svc-name">Background checks</div>
+			<div class="svc-price">£49 <span>· one-time</span></div>
+			<div class="svc-desc">Employee and tenant screening for Nigerian businesses and landlords. Employment history, address verification, and public record checks.</div>
+			<ul class="svc-includes">
+				<li>Identity &amp; address verification</li>
+				<li>Employment history check</li>
+				<li>Public record &amp; court search</li>
+			</ul>
+		</div>
+		<div class="svc-card">
+			<div class="svc-cat">New service</div>
+			<div class="svc-name">Scammer identification &amp; reporting</div>
+			<div class="svc-price">£75 <span>· one-time</span></div>
+			<div class="svc-desc">Identify the real person behind an online scam or harassment campaign and prepare findings for submission to EFCC, NCCC, or platform trust &amp; safety teams.</div>
+			<ul class="svc-includes">
+				<li>Digital identity unmasking via OSINT</li>
+				<li>Evidence packaging for authorities</li>
+				<li>EFCC / NCCC referral documentation</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- ── WHAT WE DON'T DO ── -->
+<section id="limits">
+	<div class="section-header">
+		<div class="section-eyebrow">Transparency</div>
+		<h2>What we do —<br>and what we don't</h2>
+	</div>
+	<div class="limits-grid">
+		<div class="limit-col">
+			<h3 style="color:var(--gold); font-size:1rem; margin-bottom:1.25rem; letter-spacing:0.05em;">We always do</h3>
+			<ul class="limit-list">
+				<li>Use only publicly available open-source intelligence</li>
+				<li>Operate within Nigerian law and international data standards</li>
+				<li>Provide court-ready, timestamped evidence reports</li>
+				<li>Sign a mutual NDA before every case begins</li>
+				<li>Recommend legal counsel when findings warrant it</li>
+				<li>Refer to EFCC, NCCC, or police with full documentation</li>
+			</ul>
+		</div>
+		<div class="limit-col">
+			<h3 style="color:var(--text-dim); font-size:1rem; margin-bottom:1.25rem; letter-spacing:0.05em;">We never do</h3>
+			<ul class="limit-list dont">
+				<li>Access private accounts, emails, or messages</li>
+				<li>Intercept communications without a court order</li>
+				<li>Place tracking devices on vehicles without owner consent</li>
+				<li>Conduct physical surveillance or follow individuals</li>
+				<li>Publicly expose or confront any subject directly</li>
+				<li>Work against the interests of vulnerable individuals</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section id="process">
+	<div class="section-header">
+		<div class="section-eyebrow">Our Process</div>
+		<h2>From inquiry<br>to evidence</h2>
+		<p>Every case follows the same five-step process — fully remote, fully confidential.</p>
+	</div>
+	<div class="process-steps">
+		<div class="process-step">
+			<div class="step-num">01</div>
+			<div class="step-title">Secure intake</div>
+			<div class="step-body">Submit your case details via our encrypted inquiry form. No phone call needed to get started.</div>
+		</div>
+		<div class="process-step">
+			<div class="step-num">02</div>
+			<div class="step-title">NDA &amp; payment</div>
+			<div class="step-body">Digital NDA signed. Payment secured via Paystack or bank transfer. Your case opens immediately.</div>
+		</div>
+		<div class="process-step">
+			<div class="step-num">03</div>
+			<div class="step-title">Investigation</div>
+			<div class="step-body">Our investigator conducts the full digital trace. All findings documented with timestamps and source URLs.</div>
+		</div>
+		<div class="process-step">
+			<div class="step-num">04</div>
+			<div class="step-title">Evidence packaging</div>
+			<div class="step-body">Findings compiled into a branded PDF report — plain-English summary plus full technical appendix.</div>
+		</div>
+		<div class="process-step">
+			<div class="step-num">05</div>
+			<div class="step-title">Secure delivery</div>
+			<div class="step-body">Report delivered via encrypted email or secure download link. Optional debrief call available.</div>
+		</div>
+	</div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+	<div class="about-grid">
+		<div class="about-text">
+			<div class="section-eyebrow">About Greyline</div>
+			<h2>Digital-first investigation for a digital-first world</h2>
+			<div class="gold-rule"></div>
+			<p>Greyline Investigations is a professional OSINT and digital intelligence agency operating across Nigeria and serving clients in the diaspora. We specialise in investigations that can be conducted entirely online — delivering the same quality of evidence that once required physical surveillance, faster and at a fraction of the cost.</p>
+			<p>We operate strictly within the laws of the Federal Republic of Nigeria, including the Nigeria Data Protection Act 2023 and the Cybercrimes (Prohibition, Prevention, etc.) Act 2015. Every report we produce is prepared to the standard required for court submission.</p>
+			<p>Based in Lagos with investigators available across Abuja, Port Harcourt, and Kano — and remotely for international cases.</p>
+			<a href="#contact" class="btn-primary" style="margin-top:1rem;">Start a Confidential Inquiry</a>
+		</div>
+		<div>
+			<div class="about-stats">
+				<div class="stat-box">
+					<div class="stat-num">100%</div>
+					<div class="stat-label">Digital delivery — no physical surveillance required</div>
+				</div>
+				<div class="stat-box">
+					<div class="stat-num">24hr</div>
+					<div class="stat-label">Fastest service turnaround (dating sweep)</div>
+				</div>
+				<div class="stat-box">
+					<div class="stat-num">NDA</div>
+					<div class="stat-label">Signed before every single case begins</div>
+				</div>
+				<div class="stat-box">
+					<div class="stat-num">24/7</div>
+					<div class="stat-label">Confidential consultations available</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+	<div class="contact-grid">
+		<div class="contact-info">
+			<div class="section-eyebrow">Contact</div>
+			<h2>Begin a case inquiry</h2>
+			<div class="gold-rule"></div>
+			<p>All inquiries are kept strictly confidential. We operate with the highest standards of privacy and discretion. No obligation to proceed after your initial consultation.</p>
+			<div class="contact-detail">
+				<span class="cd-label">WhatsApp</span>
+				<span class="cd-val">+234 812 524 7802</span>
+			</div>
+			<div class="contact-detail">
+				<span class="cd-label">Email</span>
+				<span class="cd-val">greylineinvestigations@atomicmail.io</span>
+			</div>
+			<div class="contact-detail">
+				<span class="cd-label">Hours</span>
+				<span class="cd-val">Available 24/7 — we respond to all inquiries promptly</span>
+			</div>
+		</div>
+		<div>
+			<form name="inquiry-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="inquiry-form">
+				<input type="hidden" name="form-name" value="inquiry-form" />
+				<p style="display:none;"><label>Do not fill: <input name="bot-field" /></label></p>
+				<div class="form-grid">
+					<input type="text" name="name" placeholder="Full name" required />
+					<input type="email" name="email" placeholder="Email address" required />
+					<input type="text" name="phone" placeholder="Phone / WhatsApp number" class="full" required />
+					<select name="service-type" class="full" required>
+						<option value="">Select service</option>
+						<optgroup label="Infidelity &amp; Relationship">
+							<option value="digital-trace">Infidelity — Digital Trace (£49)</option>
+							<option value="deep-intel">Infidelity — Deep Intelligence (£120)</option>
+							<option value="ongoing-watch">Infidelity — Ongoing Watch (£65/mo)</option>
+							<option value="dating-sweep">Dating site sweep (£35)</option>
+							<option value="partner-verify">Partner identity verify (£55)</option>
+						</optgroup>
+						<optgroup label="Romance &amp; Online Scams">
+							<option value="romance-check">Romance scam check (£45)</option>
+							<option value="romance-evidence">Romance scam evidence pack (£95)</option>
+						</optgroup>
+						<optgroup label="Dark Web Monitoring">
+							<option value="data-scan">Personal data scan (£29)</option>
+							<option value="dark-web-monitor">Dark web monitoring (£19/mo)</option>
+							<option value="financial-exposure">Financial exposure report (£49)</option>
+						</optgroup>
+						<optgroup label="Crypto Scam Tracing">
+							<option value="platform-check">Investment platform check (£39)</option>
+							<option value="wallet-trace">Wallet trace report (£85)</option>
+							<option value="crypto-evidence">Crypto fraud evidence pack (£175)</option>
+						</optgroup>
+						<optgroup label="Digital &amp; Cyber">
+							<option value="computer-forensics">Computer forensics</option>
+							<option value="email-trace">Email header &amp; source tracing (£55)</option>
+							<option value="socmint">SOCMINT investigation (£75)</option>
+							<option value="identity-theft">Identity theft investigation (£95)</option>
+							<option value="harassment">Personal safety documentation (£85)</option>
+						</optgroup>
+						<optgroup label="Fraud &amp; Reputation">
+							<option value="financial-fraud">Financial fraud investigation</option>
+							<option value="real-estate">Real estate fraud check</option>
+							<option value="defamation">Online reputation &amp; defamation evidence (£85)</option>
+							<option value="due-diligence">Business due diligence</option>
+							<option value="background">Background checks (£49)</option>
+							<option value="scammer-id">Scammer identification &amp; reporting (£75)</option>
+						</optgroup>
+						<option value="other">Other — please describe</option>
+					</select>
+					<select name="urgency" class="full" required>
+						<option value="">Select urgency</option>
+						<option value="immediate">Immediate (24–48 hours)</option>
+						<option value="urgent">Urgent (within 1 week)</option>
+						<option value="standard">Standard (1–2 weeks)</option>
+						<option value="flexible">Flexible timeline</option>
+					</select>
+					<textarea name="message" placeholder="Case details — please share as much relevant information as possible. All information is kept strictly confidential." class="full" required></textarea>
+					<select name="preferred-contact" class="full" required>
+						<option value="">Preferred contact method</option>
+						<option value="email">Email</option>
+						<option value="whatsapp">WhatsApp</option>
+						<option value="text">Text message</option>
+					</select>
+					<div class="full">
+						<button type="submit" class="btn-primary" style="width:100%; padding:1rem; font-size:0.82rem;">Submit confidential inquiry</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+	<div class="footer-inner">
+		<div class="footer-brand">
+			<div class="brand-name">Greyline Investigations</div>
+			<p>Professional digital intelligence and OSINT investigation services. Operating within Nigerian law. Serving clients in Lagos, Abuja, Port Harcourt, Kano, and the diaspora.</p>
+		</div>
+		<div class="footer-col">
+			<h4>Services</h4>
+			<ul>
+				<li><a href="#infidelity">Infidelity investigations</a></li>
+				<li><a href="#infidelity">Dating site sweeps</a></li>
+				<li><a href="#digital">Romance scam detection</a></li>
+				<li><a href="#digital">Dark web monitoring</a></li>
+				<li><a href="#digital">Crypto scam tracing</a></li>
+				<li><a href="#fraud">Fraud investigations</a></li>
+				<li><a href="#fraud">Background checks</a></li>
+			</ul>
+		</div>
+		<div class="footer-col">
+			<h4>Company</h4>
+			<ul>
+				<li><a href="#about">About us</a></li>
+				<li><a href="#process">How it works</a></li>
+				<li><a href="#limits">Our standards</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<p>&copy; 2025 Greyline Investigations. All Rights Reserved. Licensed and Insured Private Investigation Agency.</p>
+		<div class="social-links">
+			<a href="#">Twitter</a>
+			<a href="#">Instagram</a>
+			<a href="#">LinkedIn</a>
+			<a href="#">Facebook</a>
+		</div>
+	</div>
+</footer>
+
+<script>
+document.getElementById('inquiry-form').addEventListener('submit', function(e) {
+	e.preventDefault();
+	const formData = new FormData(e.target);
+	const d = Object.fromEntries(formData);
+	const subject = encodeURIComponent('New Greyline Case Inquiry: ' + d.name + ' — ' + (d['service-type'] || 'General'));
+	const body = encodeURIComponent(
+		'Name: ' + d.name + '\n' +
+		'Email: ' + d.email + '\n' +
+		'Phone: ' + d.phone + '\n' +
+		'Service: ' + d['service-type'] + '\n' +
+		'Urgency: ' + d.urgency + '\n' +
+		'Preferred contact: ' + d['preferred-contact'] + '\n\n' +
+		'Case details:\n' + d.message
+	);
+	window.location.href = 'mailto:greylineinvestigations@atomicmail.io?subject=' + subject + '&body=' + body;
+	alert('Thank you. Your email client will open with your inquiry pre-filled. Please review and send to complete your submission.');
+});
+
+// Smooth nav highlight
+const sections = document.querySelectorAll('section[id], div[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+	let current = '';
+	sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+	navLinks.forEach(a => {
+		a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
+	});
+});
+</script>
+
+</body>
 </html>
