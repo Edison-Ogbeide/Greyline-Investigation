@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<title>Greyline Investigations | Digital Intelligence &amp; Private Investigation Services</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 	<style>
 		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 		html { scroll-behavior: smooth; }
@@ -26,20 +26,20 @@
 			--border:  rgba(13,27,42,0.1);
 			--border-2:rgba(13,27,42,0.18);
 		}
-		body { font-family:'IBM Plex Sans',sans-serif; font-weight:300; background:var(--white); color:var(--text); line-height:1.7; overflow-x:hidden; }
-		h1,h2,h3,h4 { font-family:'Playfair Display',serif; font-weight:400; color:var(--navy); line-height:1.1; }
-		h1 { font-size:clamp(3rem,6vw,5.5rem); }
-		h2 { font-size:clamp(2rem,3.5vw,3rem); }
-		h3 { font-size:clamp(1.3rem,2vw,1.7rem); }
+		body { font-family:'Inter',system-ui,sans-serif; font-weight:400; background:var(--white); color:var(--text); line-height:1.7; overflow-x:hidden; }
+		h1,h2,h3,h4 { font-family:'Cormorant Garamond',Georgia,serif; font-weight:400; color:var(--navy); line-height:1.1; }
+		h1 { font-size:clamp(3.2rem,6.5vw,6rem); letter-spacing:-0.01em; }
+		h2 { font-size:clamp(2.2rem,3.8vw,3.4rem); letter-spacing:-0.01em; }
+		h3 { font-size:clamp(1.4rem,2.2vw,1.9rem); }
 		h4 { font-size:1.1rem; font-weight:500; }
-		p  { font-size:1rem; line-height:1.75; color:var(--text-2); }
+		p  { font-size:1rem; line-height:1.75; color:var(--text-2); font-weight:400; }
 
 		/* NAV */
 		#nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:1.1rem 4rem; background:rgba(255,255,255,0.94); backdrop-filter:blur(14px); border-bottom:1px solid var(--border); }
-		.nav-logo { font-family:'Playfair Display',serif; font-size:1.05rem; font-weight:500; color:var(--navy); text-decoration:none; letter-spacing:0.04em; }
+		.nav-logo { font-family:'Cormorant Garamond',Georgia,serif; font-size:1.05rem; font-weight:500; color:var(--navy); text-decoration:none; letter-spacing:0.04em; }
 		.nav-logo span { color:var(--accent); }
 		.nav-links { display:flex; gap:2.5rem; list-style:none; }
-		.nav-links a { font-size:0.78rem; font-weight:400; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-3); text-decoration:none; transition:color 0.2s; }
+		.nav-links a { font-size:0.78rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-3); text-decoration:none; transition:color 0.2s; }
 		.nav-links a:hover { color:var(--navy); }
 		.nav-cta { font-size:0.75rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--white); background:var(--navy); padding:0.55rem 1.4rem; text-decoration:none; transition:background 0.2s; }
 		.nav-cta:hover { background:var(--slate); }
@@ -52,14 +52,14 @@
 		.hero-eyebrow { font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); margin-bottom:1.25rem; font-weight:500; }
 		#hero h1 { color:var(--navy); margin-bottom:1.5rem; }
 		#hero h1 em { font-style:italic; color:var(--slate); }
-		.hero-sub { font-size:1.05rem; color:var(--text-2); max-width:440px; margin-bottom:2.5rem; line-height:1.8; }
+		.hero-sub { font-size:1.05rem; color:var(--text-2); max-width:440px; margin-bottom:2.5rem; line-height:1.8; font-weight:400; }
 		.hero-cta-row { display:flex; gap:1rem; flex-wrap:wrap; }
-		.btn-primary { display:inline-block; padding:0.85rem 2.2rem; background:var(--accent); color:var(--white); font-family:'IBM Plex Sans',sans-serif; font-size:0.8rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; border:none; cursor:pointer; transition:background 0.2s,transform 0.15s; }
+		.btn-primary { display:inline-block; padding:0.85rem 2.2rem; background:var(--accent); color:var(--white); font-family:'Inter',system-ui,sans-serif; font-size:0.8rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; border:none; cursor:pointer; transition:background 0.2s,transform 0.15s; }
 		.btn-primary:hover { background:var(--accent-2); transform:translateY(-1px); }
-		.btn-outline { display:inline-block; padding:0.85rem 2.2rem; background:transparent; color:var(--navy); font-family:'IBM Plex Sans',sans-serif; font-size:0.8rem; font-weight:400; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; border:1.5px solid var(--navy); transition:all 0.2s; }
+		.btn-outline { display:inline-block; padding:0.85rem 2.2rem; background:transparent; color:var(--navy); font-family:'Inter',system-ui,sans-serif; font-size:0.8rem; font-weight:400; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; border:1.5px solid var(--navy); transition:all 0.2s; }
 		.btn-outline:hover { background:var(--navy); color:var(--white); }
 		.hero-stat { border-left:3px solid var(--accent); padding-left:1.25rem; }
-		.hero-stat .s-num { font-family:'Playfair Display',serif; font-size:2rem; color:var(--white); line-height:1; margin-bottom:0.2rem; }
+		.hero-stat .s-num { font-family:'Cormorant Garamond',Georgia,serif; font-size:2rem; color:var(--white); line-height:1; margin-bottom:0.2rem; }
 		.hero-stat .s-label { font-size:0.82rem; color:rgba(255,255,255,0.5); letter-spacing:0.04em; }
 
 		/* ASSURANCE */
@@ -85,12 +85,12 @@
 		.tier.featured { background:var(--navy); border-top:3px solid var(--accent); }
 		.tier-badge { font-size:0.65rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-3); margin-bottom:0.6rem; display:block; font-weight:500; }
 		.tier.featured .tier-badge { color:rgba(255,255,255,0.45); }
-		.tier-name { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--navy); margin-bottom:1rem; }
+		.tier-name { font-family:'Cormorant Garamond',Georgia,serif; font-size:1.5rem; color:var(--navy); margin-bottom:1rem; }
 		.tier.featured .tier-name { color:var(--white); }
 		.tier-desc { font-size:0.95rem; color:var(--text-2); margin-bottom:1.75rem; padding-bottom:1.75rem; border-bottom:1px solid var(--border); line-height:1.7; }
 		.tier.featured .tier-desc { color:rgba(255,255,255,0.5); border-bottom-color:rgba(255,255,255,0.1); }
 		.feat-list { list-style:none; }
-		.feat-list li { font-size:1.05rem; color:var(--text-2); padding:0.6rem 0; border-bottom:1px solid var(--border); display:flex; align-items:flex-start; gap:0.75rem; line-height:1.5; font-weight:300; }
+		.feat-list li { font-size:1.05rem; color:var(--text-2); padding:0.6rem 0; border-bottom:1px solid var(--border); display:flex; align-items:flex-start; gap:0.75rem; line-height:1.5; font-weight:400; }
 		.feat-list li:last-child { border-bottom:none; }
 		.feat-list li::before { content:'→'; color:var(--accent); flex-shrink:0; font-size:0.85rem; margin-top:0.18rem; }
 		.tier.featured .feat-list li { color:rgba(255,255,255,0.75); border-bottom-color:rgba(255,255,255,0.08); }
@@ -107,12 +107,12 @@
 		.svc-card.lc { background:var(--white); }
 		.svc-card.lc:hover { background:var(--ice-2); }
 		.svc-cat { font-size:0.62rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem; font-weight:500; }
-		.svc-name { font-family:'Playfair Display',serif; font-size:1.15rem; color:var(--white); margin-bottom:0.85rem; }
+		.svc-name { font-family:'Cormorant Garamond',Georgia,serif; font-size:1.15rem; color:var(--white); margin-bottom:0.85rem; }
 		.svc-name.dk { color:var(--navy); }
-		.svc-desc { font-size:0.92rem; color:rgba(255,255,255,0.45); line-height:1.7; margin-bottom:1.25rem; }
+		.svc-desc { font-size:0.92rem; color:rgba(255,255,255,0.45); line-height:1.7; margin-bottom:1.25rem; font-weight:400; }
 		.svc-desc.dk { color:var(--text-2); }
 		.svc-includes { list-style:none; }
-		.svc-includes li { font-size:1rem; color:rgba(255,255,255,0.65); padding:0.45rem 0; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; gap:0.6rem; line-height:1.5; font-weight:300; }
+		.svc-includes li { font-size:1rem; color:rgba(255,255,255,0.65); padding:0.45rem 0; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; gap:0.6rem; line-height:1.5; font-weight:400; }
 		.svc-includes li.dk { color:var(--text-2); border-bottom-color:var(--border); }
 		.svc-includes li:last-child { border-bottom:none; }
 		.svc-includes li::before { content:'—'; color:var(--accent); flex-shrink:0; font-size:0.75rem; margin-top:0.28rem; }
@@ -122,7 +122,7 @@
 		.addon-card { background:var(--white); padding:1.5rem; transition:background 0.2s; }
 		.addon-card:hover { background:var(--ice-2); }
 		.addon-label { font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-3); margin-bottom:0.5rem; font-weight:500; }
-		.addon-name { font-family:'Playfair Display',serif; font-size:1.05rem; color:var(--navy); margin-bottom:0.5rem; }
+		.addon-name { font-family:'Cormorant Garamond',Georgia,serif; font-size:1.05rem; color:var(--navy); margin-bottom:0.5rem; }
 		.addon-desc { font-size:0.92rem; color:var(--text-2); line-height:1.65; }
 
 		/* LIMITS */
@@ -140,8 +140,8 @@
 		#process .section-header p { color:rgba(255,255,255,0.4); }
 		.process-steps { display:grid; grid-template-columns:repeat(5,1fr); gap:1.5px; background:rgba(255,255,255,0.07); border:1.5px solid rgba(255,255,255,0.07); }
 		.process-step { background:var(--navy-2); padding:2rem 1.5rem; }
-		.step-num { font-family:'Playfair Display',serif; font-size:3rem; color:rgba(255,255,255,0.07); line-height:1; margin-bottom:1rem; }
-		.step-title { font-size:1rem; color:var(--white); margin-bottom:0.6rem; font-family:'Playfair Display',serif; }
+		.step-num { font-family:'Cormorant Garamond',Georgia,serif; font-size:3rem; color:rgba(255,255,255,0.07); line-height:1; margin-bottom:1rem; }
+		.step-title { font-size:1rem; color:var(--white); margin-bottom:0.6rem; font-family:'Cormorant Garamond',Georgia,serif; }
 		.step-body { font-size:0.85rem; color:rgba(255,255,255,0.4); line-height:1.65; }
 
 		/* ABOUT */
@@ -150,33 +150,33 @@
 		.about-text p { margin-bottom:1.25rem; }
 		.about-stats { display:grid; grid-template-columns:1fr 1fr; gap:1.5px; background:var(--border-2); border:1.5px solid var(--border-2); }
 		.stat-box { background:var(--ice-2); padding:2rem; }
-		.stat-num { font-family:'Playfair Display',serif; font-size:2.8rem; color:var(--navy); line-height:1; margin-bottom:0.4rem; }
+		.stat-num { font-family:'Cormorant Garamond',Georgia,serif; font-size:2.8rem; color:var(--navy); line-height:1; margin-bottom:0.4rem; }
 		.stat-label { font-size:0.8rem; color:var(--text-3); line-height:1.5; }
 
 		/* CONTACT */
 		#contact { background:var(--navy); }
 		#contact .section-eyebrow { color:var(--accent); }
 		#contact h2 { color:var(--white); }
-		.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+		.contact-grid { display:grid; grid-template-columns:1fr 1.5fr; gap:3rem; }
 		.contact-info p { color:rgba(255,255,255,0.45); }
 		.contact-rule { width:36px; height:2px; background:var(--accent); margin:1rem 0 1.75rem; }
 		.cd-row { display:flex; align-items:flex-start; gap:1rem; margin-bottom:1rem; }
 		.cd-label { font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); min-width:70px; margin-top:0.15rem; font-weight:500; }
 		.cd-val { font-size:0.88rem; color:rgba(255,255,255,0.6); }
-		.contact-cta-box { border:1.5px solid rgba(255,255,255,0.08); padding:2.5rem; }
-		.contact-cta-box h3 { color:var(--white); font-size:1.5rem; margin-bottom:0.75rem; }
-		.contact-cta-box p { color:rgba(255,255,255,0.45); font-size:0.95rem; margin-bottom:2rem; line-height:1.75; }
-		.cta-assurances { list-style:none; margin-bottom:2rem; }
-		.cta-assurances li { font-size:0.85rem; color:rgba(255,255,255,0.45); padding:0.5rem 0; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; gap:0.75rem; }
-		.cta-assurances li:last-child { border-bottom:none; }
-		.cta-assurances li::before { content:'→'; color:var(--accent); flex-shrink:0; font-size:0.8rem; margin-top:0.15rem; }
+		.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; }
+		.form-grid .full { grid-column:1/-1; }
+		input,select,textarea { width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.85); font-family:'Inter',system-ui,sans-serif; font-size:0.88rem; font-weight:300; padding:0.8rem 1rem; outline:none; transition:border-color 0.2s; appearance:none; }
+		input::placeholder,textarea::placeholder { color:rgba(255,255,255,0.25); }
+		input:focus,select:focus,textarea:focus { border-color:rgba(200,57,43,0.6); }
+		textarea { resize:vertical; min-height:120px; }
+		option { background:var(--navy-3); color:var(--white); }
 
 		/* FOOTER */
 		footer { background:var(--navy-2); border-top:1px solid rgba(255,255,255,0.06); padding:3rem 4rem; }
 		.footer-inner { display:grid; grid-template-columns:2fr 1fr 1fr; gap:3rem; margin-bottom:2.5rem; }
-		.footer-brand-name { font-family:'Playfair Display',serif; font-size:1.15rem; color:var(--white); margin-bottom:0.75rem; }
+		.footer-brand-name { font-family:'Cormorant Garamond',Georgia,serif; font-size:1.15rem; color:var(--white); margin-bottom:0.75rem; }
 		.footer-brand p { font-size:0.8rem; color:rgba(255,255,255,0.3); max-width:280px; line-height:1.7; }
-		.footer-col h4 { font-size:0.65rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; font-family:'IBM Plex Sans',sans-serif; font-weight:500; }
+		.footer-col h4 { font-size:0.65rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; font-family:'Inter',system-ui,sans-serif; font-weight:500; }
 		.footer-col ul { list-style:none; }
 		.footer-col ul li { margin-bottom:0.5rem; }
 		.footer-col ul li a { font-size:0.82rem; color:rgba(255,255,255,0.3); text-decoration:none; transition:color 0.2s; }
@@ -200,7 +200,7 @@
 			#nav{padding:1rem 1.5rem;} section{padding:2.5rem 1.5rem;} #hero{grid-template-columns:1fr;padding:6rem 1.5rem 3rem;} #hero::after{display:none;}
 			.hero-left{padding-right:0;} .hero-right{padding-left:0;} .hero-stat .s-num{color:var(--navy);} .hero-stat .s-label{color:var(--text-3);}
 			.tier-grid,.process-steps{grid-template-columns:1fr;} .about-grid,.contact-grid,.limits-grid{grid-template-columns:1fr;gap:2.5rem;}
-			#assurance{grid-template-columns:1fr 1fr;padding:2rem 1.5rem;} .footer-inner{grid-template-columns:1fr 1fr;}
+			#assurance{grid-template-columns:1fr 1fr;padding:2rem 1.5rem;} .footer-inner{grid-template-columns:1fr 1fr;} .form-grid{grid-template-columns:1fr;}
 		}
 		@media(max-width:540px){ .footer-inner{grid-template-columns:1fr;} #assurance{grid-template-columns:1fr;} .nav-cta{display:none;} }
 	</style>
@@ -216,16 +216,16 @@
 		<li><a href="#polygraph">Polygraph</a></li>
 		<li><a href="#about">About</a></li>
 	</ul>
-	<a href="inquiry.html" class="nav-cta">Begin Inquiry</a>
+	<a href="#contact" class="nav-cta">Begin Inquiry</a>
 </nav>
 
 <section id="hero">
 	<div class="hero-left">
-		<div class="hero-eyebrow">Digital Intelligence Agency — Nigeria · UK · USA · Canada · Remote</div>
+		<div class="hero-eyebrow">Digital Intelligence Agency — UK · Nigeria · USA · Canada · Worldwide</div>
 		<h1>Evidence that<br><em>speaks for itself.</em></h1>
-		<p class="hero-sub">Professional OSINT and digital investigation services for clients in Nigeria and the diaspora — UK, USA, Canada, and beyond. Fully online. Legally conducted. Court-ready reports delivered discreetly to your inbox.</p>
+		<p class="hero-sub">Professional OSINT and digital investigation services for clients across the UK, Nigeria, and the global diaspora — USA, Canada, Australia, and beyond. Fully online. Legally conducted. Court-ready reports delivered discreetly to your inbox.</p>
 		<div class="hero-cta-row">
-			<a href="inquiry.html" class="btn-primary">Begin a Case Inquiry</a>
+			<a href="#contact" class="btn-primary">Begin a Case Inquiry</a>
 			<a href="#infidelity" class="btn-outline">View Services</a>
 		</div>
 	</div>
@@ -233,12 +233,12 @@
 		<div class="hero-stat"><div class="s-num">100%</div><div class="s-label">100% digital — no physical surveillance anywhere</div></div>
 		<div class="hero-stat"><div class="s-num">NDA</div><div class="s-label">Signed before every case begins</div></div>
 		<div class="hero-stat"><div class="s-num">24/7</div><div class="s-label">Confidential consultations available</div></div>
-		<div class="hero-stat"><div class="s-num">🌍</div><div class="s-label">Serving Nigeria, UK, USA, Canada &amp; worldwide</div></div>
+		<div class="hero-stat"><div class="s-num">🌍</div><div class="s-label">Serving UK, Nigeria, USA, Canada &amp; worldwide</div></div>
 	</div>
 </section>
 
 <div id="assurance">
-	<div class="assurance-item"><div class="a-label">Legal Compliance</div><p>Operating under Nigerian law, UK GDPR, and US/Canadian data standards depending on client location.</p></div>
+	<div class="assurance-item"><div class="a-label">Legal Compliance</div><p>Operating under UK law, UK GDPR, and Nigerian &amp; international data standards.</p></div>
 	<div class="assurance-item"><div class="a-label">Methods</div><p>Open-source intelligence only. No account access. No communications interception.</p></div>
 	<div class="assurance-item"><div class="a-label">Delivery</div><p>Timestamped, court-ready PDF reports with full source documentation.</p></div>
 	<div class="assurance-item"><div class="a-label">Confidentiality</div><p>Your identity and case details are never shared with third parties — ever.</p></div>
@@ -251,7 +251,7 @@
 		<span class="flagship-badge">Most requested</span>
 		<div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;margin-top:0.75rem;">
 			<div><h2>Relationship &amp;<br>Infidelity Intelligence</h2><div class="section-rule"></div></div>
-			<p style="color:var(--text-2);font-size:1rem;line-height:1.75;padding-top:0.5rem;">Our most requested service. We build a complete digital picture of your partner's online activity — conducted legally using only public data, packaged as evidence you can act on. Available to clients in Nigeria, the UK, USA, Canada, and worldwide.</p>
+			<p style="color:var(--text-2);font-size:1rem;line-height:1.75;padding-top:0.5rem;">Our most requested service. We build a complete digital picture of your partner's online activity — conducted legally using only public data, packaged as evidence you can act on. Available to clients across the UK, Nigeria, USA, Canada, and worldwide.</p>
 		</div>
 	</div>
 
@@ -301,7 +301,7 @@
 		<div class="svc-card lc">
 			<div class="svc-cat">New service</div>
 			<div class="svc-name dk">Dating site sweep</div>
-			<div class="svc-desc dk">Check whether a partner or person of interest has active profiles across major dating platforms — including Nigerian-specific apps. Delivered in 24 hours.</div>
+			<div class="svc-desc dk">Check whether a partner or person of interest has active profiles across major dating platforms — including UK and Nigerian apps. Delivered in 24 hours.</div>
 			<ul class="svc-includes">
 				<li class="dk">Tinder, Bumble, Hinge, Badoo, Plenty of Fish</li>
 				<li class="dk">Afroromance, Nairaland &amp; diaspora-specific platform checks</li>
@@ -339,13 +339,13 @@
 			<h2 style="color:var(--white);">Online fraud, scams<br>&amp; identity threats</h2>
 			<div class="section-rule"></div>
 		</div>
-		<p style="color:rgba(255,255,255,0.45);font-size:1rem;line-height:1.75;padding-top:2rem;">From romance scams to crypto fraud to dark web data exposure — fully remote investigations delivered as structured evidence reports. Serving Nigeria, UK, USA, Canada, and diaspora clients globally.</p>
+		<p style="color:rgba(255,255,255,0.45);font-size:1rem;line-height:1.75;padding-top:2rem;">From romance scams to crypto fraud to dark web data exposure — fully remote investigations delivered as structured evidence reports. Serving clients across the UK, Nigeria, USA, Canada, and globally.</p>
 	</div>
 
 	<div class="sub-label">Romance scam detection</div>
 	<div class="card-grid" style="margin-bottom:3.5rem;">
 		<div class="svc-card"><div class="svc-cat">New service · 48 hours</div><div class="svc-name">Romance scam check</div><div class="svc-desc">Verify whether someone you've met online is real or a scammer — before you invest emotionally or financially.</div><ul class="svc-includes"><li>Reverse image search — detect stolen photos</li><li>Profile age &amp; activity analysis</li><li>Cross-reference against known scam databases</li><li>Phone number &amp; email origin check</li><li>Clear verdict: real person or likely scammer</li></ul></div>
-		<div class="svc-card"><div class="svc-cat">New service · 5 business days</div><div class="svc-name">Scam evidence pack</div><div class="svc-desc">For victims already scammed. Full perpetrator identification and evidence packaging for police or EFCC referral.</div><ul class="svc-includes"><li>Full scammer identity trace</li><li>Network mapping — linked accounts &amp; associates</li><li>Transaction trail documentation</li><li>Formal evidence report for law enforcement</li><li>EFCC / Action Fraud (UK) / FTC (USA) referral guidance included</li></ul></div>
+		<div class="svc-card"><div class="svc-cat">New service · 5 business days</div><div class="svc-name">Scam evidence pack</div><div class="svc-desc">For victims already scammed. Full perpetrator identification and evidence packaging for Action Fraud (UK), police, or EFCC referral.</div><ul class="svc-includes"><li>Full scammer identity trace</li><li>Network mapping — linked accounts &amp; associates</li><li>Transaction trail documentation</li><li>Formal evidence report for law enforcement</li><li>Action Fraud (UK) / EFCC (Nigeria) / FTC (USA) referral guidance included</li></ul></div>
 	</div>
 
 	<div class="sub-label">Dark web personal data monitoring</div>
@@ -367,7 +367,7 @@
 		<div class="svc-card"><div class="svc-cat">Core service · 5–7 business days</div><div class="svc-name">Computer forensics</div><div class="svc-desc">Client couriers an owned device; returned with a full forensic report and chain of custody.</div><ul class="svc-includes"><li>Deleted file &amp; message recovery</li><li>App usage &amp; browsing history</li><li>Court-admissible chain of custody</li></ul></div>
 		<div class="svc-card"><div class="svc-cat">Core service · 48 hours</div><div class="svc-name">Email header &amp; source tracing</div><div class="svc-desc">Trace the origin of suspicious emails — IP identification, geolocation, and spoofing detection.</div><ul class="svc-includes"><li>Full email header analysis</li><li>IP address &amp; geolocation tracing</li><li>Spoofing &amp; phishing detection</li></ul></div>
 		<div class="svc-card"><div class="svc-cat">Core service · 3–5 business days</div><div class="svc-name">SOCMINT investigation</div><div class="svc-desc">Open-source social media intelligence. Map a subject's public activity and contacts using only publicly available data.</div><ul class="svc-includes"><li>Multi-platform public profile analysis</li><li>Contact &amp; associate mapping</li><li>Activity timeline report</li></ul></div>
-		<div class="svc-card"><div class="svc-cat">Core service · 5 business days</div><div class="svc-name">Identity theft investigation</div><div class="svc-desc">Investigate misuse of your NIN, BVN, NI Number, SSN, or business identity — covers Nigerian, UK, and US identity systems.</div><ul class="svc-includes"><li>BVN / NIN misuse investigation</li><li>Dark web exposure check included</li><li>Evidence report for EFCC / police</li></ul></div>
+		<div class="svc-card"><div class="svc-cat">Core service · 5 business days</div><div class="svc-name">Identity theft investigation</div><div class="svc-desc">Investigate misuse of your NI Number, BVN, NIN, SSN, or business identity — covers UK, Nigerian, and US identity systems.</div><ul class="svc-includes"><li>NI Number / NIN / BVN misuse investigation</li><li>Dark web exposure check included</li><li>Evidence report for Action Fraud / police / EFCC</li></ul></div>
 		<div class="svc-card"><div class="svc-cat">Core service · 3–5 business days</div><div class="svc-name">Personal safety documentation</div><div class="svc-desc">Track the source of online harassment or stalking and compile evidence for police reports or restraining orders.</div><ul class="svc-includes"><li>Harasser source identification</li><li>Evidence preservation &amp; archiving</li><li>Police report support documentation</li></ul></div>
 	</div>
 </section>
@@ -382,15 +382,15 @@
 			<h2>Financial fraud, real estate<br>&amp; defamation</h2>
 			<div class="section-rule"></div>
 		</div>
-		<p style="color:var(--text-2);font-size:1rem;line-height:1.75;padding-top:2rem;">For individuals and businesses who need documented evidence of financial deception, property fraud, or reputational damage. We work with clients in Nigeria and the diaspora — including those investing in Nigerian assets from the UK, USA, and Canada.</p>
+		<p style="color:var(--text-2);font-size:1rem;line-height:1.75;padding-top:2rem;">For individuals and businesses who need documented evidence of financial deception, property fraud, or reputational damage. We work with clients across the UK, Nigeria, and the diaspora — including those investing in Nigerian assets from abroad.</p>
 	</div>
 	<div class="card-grid light">
-		<div class="svc-card lc"><div class="svc-cat">Core service · Quote on case</div><div class="svc-name dk">Financial fraud investigation</div><div class="svc-desc dk">Uncover Ponzi structures, fake investment platforms, embezzlement, and romance-linked financial fraud. Includes EFCC referral pathway.</div><ul class="svc-includes"><li class="dk">Transaction trail analysis</li><li class="dk">Platform &amp; operator OSINT</li><li class="dk">Evidence report for EFCC referral</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Core service · 5–7 business days</div><div class="svc-name dk">Real estate fraud check</div><div class="svc-desc dk">Detect property scams, fake C-of-O documents, and double sales before you commit funds. Particularly valuable for diaspora clients investing in Nigerian property from abroad.</div><ul class="svc-includes"><li class="dk">Title deed &amp; C-of-O verification</li><li class="dk">Survey plan validation</li><li class="dk">Seller identity check</li></ul></div>
+		<div class="svc-card lc"><div class="svc-cat">Core service · Quote on case</div><div class="svc-name dk">Financial fraud investigation</div><div class="svc-desc dk">Uncover Ponzi structures, fake investment platforms, embezzlement, and romance-linked financial fraud. Includes Action Fraud and EFCC referral pathways.</div><ul class="svc-includes"><li class="dk">Transaction trail analysis</li><li class="dk">Platform &amp; operator OSINT</li><li class="dk">Evidence report for Action Fraud / EFCC referral</li></ul></div>
+		<div class="svc-card lc"><div class="svc-cat">Core service · 5–7 business days</div><div class="svc-name dk">Real estate fraud check</div><div class="svc-desc dk">Detect property scams, fake C-of-O documents, and double sales before you commit funds. Particularly valuable for UK-based clients investing in Nigerian property.</div><ul class="svc-includes"><li class="dk">Title deed &amp; C-of-O verification</li><li class="dk">Survey plan validation</li><li class="dk">Seller identity check</li></ul></div>
 		<div class="svc-card lc"><div class="svc-cat">Core service · 3–5 business days</div><div class="svc-name dk">Online reputation &amp; defamation evidence</div><div class="svc-desc dk">Track and archive the source of false, damaging statements online. Evidence packaged for legal action or platform takedown.</div><ul class="svc-includes"><li class="dk">Source &amp; author identification</li><li class="dk">Evidence preservation &amp; archiving</li><li class="dk">Legal referral support</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">New service · 5–7 business days</div><div class="svc-name dk">Business due diligence</div><div class="svc-desc dk">Pre-contract checks on companies, directors, and business partners. Verified across Nigerian CAC, UK Companies House, and US state registries before you sign anything.</div><ul class="svc-includes"><li class="dk">CAC registration &amp; director check</li><li class="dk">Litigation &amp; court record search</li><li class="dk">Digital reputation audit</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">New service · 48 hours</div><div class="svc-name dk">Background checks</div><div class="svc-desc dk">Employee and tenant screening for clients in Nigeria, the UK, USA, and Canada. Employment history, address verification, and public record checks across jurisdictions.</div><ul class="svc-includes"><li class="dk">Identity &amp; address verification</li><li class="dk">Employment history check</li><li class="dk">Public record &amp; court search</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">New service · 3–5 business days</div><div class="svc-name dk">Scammer identification &amp; reporting</div><div class="svc-desc dk">Identify the person behind an online scam and prepare findings for EFCC (Nigeria), Action Fraud (UK), FTC (USA), or platform trust &amp; safety submission.</div><ul class="svc-includes"><li class="dk">Digital identity tracing via OSINT</li><li class="dk">Evidence packaging for authorities</li><li class="dk">EFCC / NCCC referral documentation</li></ul></div>
+		<div class="svc-card lc"><div class="svc-cat">New service · 5–7 business days</div><div class="svc-name dk">Business due diligence</div><div class="svc-desc dk">Pre-contract checks on companies, directors, and business partners. Verified across UK Companies House, Nigerian CAC, and US state registries before you sign anything.</div><ul class="svc-includes"><li class="dk">Companies House &amp; CAC director check</li><li class="dk">Litigation &amp; court record search</li><li class="dk">Digital reputation audit</li></ul></div>
+		<div class="svc-card lc"><div class="svc-cat">New service · 48 hours</div><div class="svc-name dk">Background checks</div><div class="svc-desc dk">Employee and tenant screening for clients across the UK, Nigeria, USA, and Canada. Employment history, address verification, and public record checks across jurisdictions.</div><ul class="svc-includes"><li class="dk">Identity &amp; address verification</li><li class="dk">Employment history check</li><li class="dk">Public record &amp; court search</li></ul></div>
+		<div class="svc-card lc"><div class="svc-cat">New service · 3–5 business days</div><div class="svc-name dk">Scammer identification &amp; reporting</div><div class="svc-desc dk">Identify the person behind an online scam and prepare findings for Action Fraud (UK), EFCC (Nigeria), FTC (USA), or platform trust &amp; safety submission.</div><ul class="svc-includes"><li class="dk">Digital identity tracing via OSINT</li><li class="dk">Evidence packaging for authorities</li><li class="dk">Action Fraud / EFCC / NCCC referral documentation</li></ul></div>
 	</div>
 </section>
 
@@ -400,11 +400,11 @@
 <section id="polygraph">
 	<div style="margin-bottom:2rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;">
 		<div>
-			<div class="section-eyebrow">In-Person Truth Verification · Nigeria</div>
+			<div class="section-eyebrow">In-Person Truth Verification · Nigeria-based Service</div>
 			<h2 style="color:var(--white);">Polygraph<br><em style="font-style:italic;color:rgba(255,255,255,0.5);">Testing Services</em></h2>
 			<div style="width:36px;height:2px;background:var(--accent);margin:1rem 0 1.5rem;"></div>
 		</div>
-		<p style="color:rgba(255,255,255,0.45);font-size:1rem;line-height:1.75;padding-top:2rem;">Conducted in Nigeria by our certified partner screening firm using professional-grade digital equipment. Results are personal truth-verification tools — not court-admissible evidence. Written informed consent is required from the subject before any examination is scheduled.</p>
+		<p style="color:rgba(255,255,255,0.45);font-size:1rem;line-height:1.75;padding-top:2rem;">Conducted in Nigeria by our certified partner screening firm using professional-grade equipment. Available to UK-based and international clients whose subjects are Nigeria-resident. Results are personal truth-verification tools — not court-admissible evidence. Written informed consent is required from the subject before any examination is scheduled.</p>
 	</div>
 	<div class="card-grid" style="margin-bottom:0;">
 		<div class="svc-card">
@@ -414,7 +414,7 @@
 			<ul class="svc-includes">
 				<li>Full identity, prior marriage &amp; criminal record check</li>
 				<li>Pre-test question design from investigation findings</li>
-				<li>Certified polygraph examination in Nigeria</li>
+				<li>Certified polygraph examination, Nigeria-based</li>
 				<li>Written examiner report within 24–48 hrs of test</li>
 				<li>Combined OSINT + polygraph evidence package</li>
 				<li>30-minute post-report consultation call</li>
@@ -423,7 +423,7 @@
 		<div class="svc-card">
 			<div class="svc-cat">Standalone examination · 3–5 business days</div>
 			<div class="svc-name">Fidelity verification polygraph</div>
-			<div class="svc-desc">For specific suspicions of infidelity in a Nigeria-based partner — a structured examination focused on agreed questions, administered by our certified examiner.</div>
+			<div class="svc-desc">For specific suspicions of infidelity — subject must be Nigeria-resident — a structured examination focused on agreed questions, administered by our certified examiner.</div>
 			<ul class="svc-includes">
 				<li>Pre-test OSINT to inform question design</li>
 				<li>Question review &amp; approval by client before test</li>
@@ -435,7 +435,7 @@
 		<div class="svc-card">
 			<div class="svc-cat">Diaspora · visa assurance · 3–5 business days</div>
 			<div class="svc-name">Pre-visa relationship integrity check</div>
-			<div class="svc-desc">For diaspora clients sponsoring a Nigerian partner for a UK, US, or Canadian visa — verifying the authenticity of the relationship for the sponsor's personal assurance only.</div>
+			<div class="svc-desc">For UK-based clients sponsoring a Nigerian partner for a UK, US, or Canadian visa — verifying the authenticity of the relationship for the sponsor's personal assurance only.</div>
 			<ul class="svc-includes">
 				<li>Full OSINT relationship history investigation</li>
 				<li>Polygraph on relationship authenticity &amp; intent</li>
@@ -447,7 +447,7 @@
 		<div class="svc-card">
 			<div class="svc-cat">Employers &amp; property owners · 2–3 business days</div>
 			<div class="svc-name">Staff &amp; domestic integrity screening</div>
-			<div class="svc-desc">For diaspora property owners and Nigerian employers — verify the integrity of domestic staff, property managers, or security personnel looking after your Nigerian assets.</div>
+			<div class="svc-desc">For UK-based property owners and employers with Nigerian operations — verify the integrity of domestic staff, property managers, or security personnel looking after your Nigerian assets.</div>
 			<ul class="svc-includes">
 				<li>Staff background check by Greyline</li>
 				<li>Polygraph on specific integrity concerns</li>
@@ -468,7 +468,7 @@
 		<div class="section-rule"></div>
 	</div>
 	<div class="limits-grid">
-		<div><h3 style="color:var(--navy);margin-bottom:1.5rem;font-size:1.2rem;">We always do</h3><ul class="limit-list"><li>Use only publicly available open-source intelligence</li><li>Operate within Nigerian law and international data standards</li><li>Provide court-ready, timestamped evidence reports</li><li>Sign a mutual NDA before every case begins</li><li>Recommend legal counsel when findings warrant it</li><li>Refer to EFCC, NCCC, or police with full documentation</li></ul></div>
+		<div><h3 style="color:var(--navy);margin-bottom:1.5rem;font-size:1.2rem;">We always do</h3><ul class="limit-list"><li>Use only publicly available open-source intelligence</li><li>Operate within UK law, UK GDPR, and applicable international data standards</li><li>Provide court-ready, timestamped evidence reports</li><li>Sign a mutual NDA before every case begins</li><li>Recommend legal counsel when findings warrant it</li><li>Refer to Action Fraud, EFCC, NCCC, or police with full documentation</li></ul></div>
 		<div><h3 style="color:var(--text-3);margin-bottom:1.5rem;font-size:1.2rem;">We never do</h3><ul class="limit-list dont"><li>Access private accounts, emails, or messages</li><li>Intercept communications without a court order</li><li>Place tracking devices on vehicles without owner consent</li><li>Conduct physical surveillance or follow individuals</li><li>Publicly expose or confront any subject directly</li><li>Work against the interests of vulnerable individuals</li></ul></div>
 	</div>
 </section>
@@ -499,10 +499,10 @@
 			<div class="section-eyebrow">About Greyline</div>
 			<h2>Digital-first investigation<br>for a digital-first world</h2>
 			<div class="gold-rule"></div>
-			<p>Greyline Investigations is a professional OSINT and digital intelligence agency serving clients in Nigeria and the global diaspora — including the UK, USA, Canada, and Australia. We specialise in investigations conducted entirely online, delivering the same quality of evidence that once required physical surveillance, faster and at a fraction of the cost.</p>
-			<p>We operate strictly within the laws of the Federal Republic of Nigeria, including the Nigeria Data Protection Act 2023 and the Cybercrimes Act 2015. Every report is prepared to the standard required for court submission.</p>
-			<p>Based in Lagos with investigators available across Abuja, Port Harcourt, and Kano. We operate fully remotely for all international and diaspora cases — UK clients can communicate via standard GMT hours, US and Canadian clients via flexible scheduling.</p>
-			<a href="inquiry.html" class="btn-primary" style="margin-top:1.5rem;display:inline-block;">Start a Confidential Inquiry</a>
+			<p>Greyline Investigations is a professional OSINT and digital intelligence agency, currently registering as a UK company and operating from the United Kingdom. We serve clients across the UK, Nigeria, and the wider diaspora — including the USA, Canada, and Australia. We specialise in investigations conducted entirely online, delivering the same quality of evidence that once required physical surveillance, faster and at a fraction of the cost.</p>
+			<p>We operate under UK law and in full compliance with the UK GDPR, the Data Protection Act 2018, and the Investigatory Powers Act 2016. For Nigerian client engagements we additionally adhere to the Nigeria Data Protection Act 2023 and the Cybercrimes (Prohibition, Prevention, Etc.) Act 2015. Every report is prepared to the standard required for court submission in the relevant jurisdiction.</p>
+			<p>Based in the United Kingdom, with partner investigators covering Nigeria (Lagos, Abuja, Port Harcourt, and Kano). All cases are handled fully remotely — clients communicate with us on UK GMT hours, with flexible scheduling available for US and Canadian clients.</p>
+			<a href="#contact" class="btn-primary" style="margin-top:1.5rem;display:inline-block;">Start a Confidential Inquiry</a>
 		</div>
 		<div>
 			<div class="about-stats">
@@ -524,20 +524,76 @@
 			<div class="contact-rule"></div>
 			<p>All inquiries are strictly confidential. No obligation to proceed after your initial consultation.</p>
 			<br>
-			<div class="cd-row"><span class="cd-label">WhatsApp</span><span class="cd-val">+234 812 524 7802</span></div>
-			<div class="cd-row"><span class="cd-label">Email</span><span class="cd-val">inquiries@greylineinvestigations.com.ng</span></div>
+			<div class="cd-row"><span class="cd-label">WhatsApp</span><span class="cd-val">+44 7700 900 461</span></div>
+			<div class="cd-row"><span class="cd-label">Email</span><span class="cd-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="187f6a7d617471767d71766e7d6b6c717f796c7177766b58796c7775717b75797174367177">[email&#160;protected]</a></span></div>
 			<div class="cd-row"><span class="cd-label">Hours</span><span class="cd-val">Available 24/7 — all inquiries answered promptly</span></div>
 		</div>
-		<div class="contact-cta-box">
-			<h3>Ready to start your investigation?</h3>
-			<p>Use our secure intake form to submit your case details. Fully encrypted. Takes less than 5 minutes.</p>
-			<ul class="cta-assurances">
-				<li>Mutual NDA signed before any case discussion begins</li>
-				<li>Your identity never disclosed to the subject or third parties</li>
-				<li>Response within 2 hours, 24/7 — all time zones</li>
-				<li>No obligation to proceed after your initial consultation</li>
-			</ul>
-			<a href="inquiry.html" class="btn-primary" style="display:inline-block;">Begin confidential inquiry →</a>
+		<div>
+			<form name="inquiry-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="inquiry-form">
+				<input type="hidden" name="form-name" value="inquiry-form" />
+				<p style="display:none;"><label>Do not fill: <input name="bot-field" /></label></p>
+				<div class="form-grid">
+					<input type="text" name="name" placeholder="Full name" required />
+					<input type="email" name="email" placeholder="Email address" required />
+					<input type="text" name="phone" placeholder="Phone / WhatsApp number" class="full" required />
+					<select name="service-type" class="full" required>
+						<option value="">Select service</option>
+						<optgroup label="Infidelity &amp; Relationship">
+							<option value="digital-trace">Infidelity — Digital Trace</option>
+							<option value="deep-intel">Infidelity — Deep Intelligence</option>
+							<option value="ongoing-watch">Infidelity — Ongoing Watch (monthly)</option>
+							<option value="dating-sweep">Dating site sweep</option>
+							<option value="partner-verify">Partner identity verification</option>
+						</optgroup>
+						<optgroup label="Romance &amp; Online Scams">
+							<option value="romance-check">Romance scam check</option>
+							<option value="romance-evidence">Romance scam evidence pack</option>
+						</optgroup>
+						<optgroup label="Dark Web Monitoring">
+							<option value="data-scan">Personal data scan</option>
+							<option value="dark-web-monitor">Dark web monitoring (monthly)</option>
+							<option value="financial-exposure">Financial exposure report</option>
+						</optgroup>
+						<optgroup label="Crypto Scam Tracing">
+							<option value="platform-check">Investment platform check</option>
+							<option value="wallet-trace">Wallet trace report</option>
+							<option value="crypto-evidence">Crypto fraud evidence pack</option>
+						</optgroup>
+						<optgroup label="Digital &amp; Cyber">
+							<option value="computer-forensics">Computer forensics</option>
+							<option value="email-trace">Email header &amp; source tracing</option>
+							<option value="socmint">SOCMINT investigation</option>
+							<option value="identity-theft">Identity theft investigation</option>
+							<option value="harassment">Personal safety documentation</option>
+						</optgroup>
+						<optgroup label="Fraud &amp; Reputation">
+							<option value="financial-fraud">Financial fraud investigation</option>
+							<option value="real-estate">Real estate fraud check</option>
+							<option value="defamation">Online reputation &amp; defamation evidence</option>
+							<option value="due-diligence">Business due diligence</option>
+							<option value="background">Background checks</option>
+							<option value="scammer-id">Scammer identification &amp; reporting</option>
+						</optgroup>
+						</optgroup>
+						<optgroup label="Polygraph Testing (Nigeria)">
+							<option value="poly-marriage">Pre-marriage truth verification</option>
+							<option value="poly-fidelity">Fidelity verification polygraph</option>
+							<option value="poly-visa">Pre-visa relationship integrity check</option>
+							<option value="poly-staff">Staff &amp; domestic integrity screening</option>
+						</optgroup>
+						<option value="other">Other — please describe below</option>
+					</select>
+
+					<textarea name="message" placeholder="Case details — please share as much relevant information as possible. Everything is kept strictly confidential." class="full" required></textarea>
+					<select name="preferred-contact" class="full" required>
+						<option value="">Preferred contact method</option>
+						<option value="email">Email</option>
+						<option value="whatsapp">WhatsApp</option>
+						<option value="text">Text message</option>
+					</select>
+					<div class="full"><button type="submit" class="btn-primary" style="width:100%;padding:1rem;font-size:0.82rem;">Submit confidential inquiry</button></div>
+				</div>
+			</form>
 		</div>
 	</div>
 </section>
@@ -546,7 +602,7 @@
 	<div class="footer-inner">
 		<div class="footer-brand">
 			<div class="footer-brand-name">Greyline Investigations</div>
-			<p>Professional digital intelligence and OSINT investigation services. Serving clients in Nigeria (Lagos, Abuja, Port Harcourt, Kano) and the diaspora — UK, USA, Canada, Australia, and beyond.</p>
+			<p>Professional digital intelligence and OSINT investigation services. UK-registered agency serving clients across the UK, Nigeria, USA, Canada, Australia, and beyond.</p>
 		</div>
 		<div class="footer-col">
 			<h4>Services</h4>
@@ -567,7 +623,6 @@
 				<li><a href="#process">How it works</a></li>
 				<li><a href="#limits">Our standards</a></li>
 				<li><a href="#contact">Contact</a></li>
-				<li><a href="inquiry.html">Begin inquiry</a></li>
 			</ul>
 		</div>
 	</div>
@@ -577,19 +632,16 @@
 	</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.getElementById('inquiry-form').addEventListener('submit', function(e) {
+	e.preventDefault();
+	const d = Object.fromEntries(new FormData(e.target));
+	const subject = encodeURIComponent('New Greyline Case Inquiry: ' + d.name + ' — ' + (d['service-type'] || 'General'));
+	const body = encodeURIComponent('Name: ' + d.name + '\nEmail: ' + d.email + '\nPhone: ' + d.phone + '\nService: ' + d['service-type'] + '\nPreferred contact: ' + d['preferred-contact'] + '\n\nCase details:\n' + d.message);
+	window.location.href = 'mailto:inquiries@greylineinvestigations.co.uk?subject=' + subject + '&body=' + body;
+	alert('Thank you. Your email client will open with your inquiry pre-filled. Please review and send to complete your submission.');
+});
 const navLinks = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
 	let current = '';
-	document.querySelectorAll('section[id]').forEach(s => {
-		if (window.scrollY >= s.offsetTop - 120) current = s.id;
-	});
-	navLinks.forEach(a => {
-		a.style.color = a.getAttribute('href') === '#' + current ? 'var(--navy)' : '';
-	});
-	const nav = document.getElementById('nav');
-	if (nav) nav.style.boxShadow = window.scrollY > 10 ? '0 1px 12px rgba(13,27,42,0.08)' : '';
-});
-</script>
-</body>
-</html>
+	document
