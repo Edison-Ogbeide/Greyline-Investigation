@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>Begin a Case Inquiry — Greyline Investigations</title>
+	<meta name="description" content="Submit a confidential case inquiry to Greyline Investigations. Encrypted intake. NDA before every case. Court-ready reports." />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+	<style>
+		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+		html { scroll-behavior: smooth; }
+		:root {
+			--navy:    #0d1b2a;
+			--navy-2:  #162336;
+			--navy-3:  #1e2f45;
+			--slate:   #2c4a6e;
+			--ice:     #e8f0f8;
+			--ice-2:   #f4f7fb;
+			--white:   #ffffff;
+			--mist:    #d0dcea;
+			--accent:  #c8392b;
+			--accent-2:#e04535;
+			--text:    #0d1b2a;
+			--text-2:  #3a5068;
+			--text-3:  #6a869e;
+			--border:  rgba(13,27,42,0.1);
+			--border-2:rgba(13,27,42,0.18);
+		}
+		body { font-family:'IBM Plex Sans',sans-serif; font-weight:300; background:var(--white); color:var(--text); line-height:1.7; overflow-x:hidden; }
+		h1,h2,h3,h4 { font-family:'Playfair Display',serif; font-weight:400; color:var(--navy); line-height:1.1; }
+		h1 { font-size:clamp(2.4rem,5vw,4.2rem); }
+		h2 { font-size:clamp(1.8rem,3vw,2.6rem); }
+		h3 { font-size:clamp(1.05rem,1.8vw,1.25rem); }
+		p  { font-size:1rem; line-height:1.75; color:var(--text-2); }
+
+		/* NAV */
+		#nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:1.1rem 4rem; background:rgba(255,255,255,0.96); backdrop-filter:blur(14px); border-bottom:1px solid var(--border); }
+		.nav-logo { font-family:'Playfair Display',serif; font-size:1.05rem; font-weight:500; color:var(--navy); text-decoration:none; letter-spacing:0.04em; }
+		.nav-logo span { color:var(--accent); }
+		.nav-links { display:flex; gap:2.5rem; list-style:none; }
+		.nav-links a { font-size:0.78rem; font-weight:400; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-3); text-decoration:none; transition:color 0.2s; }
+		.nav-links a:hover { color:var(--navy); }
+		.nav-cta { font-size:0.75rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--white); background:var(--navy); padding:0.55rem 1.4rem; text-decoration:none; transition:background 0.2s; }
+		.nav-cta:hover { background:var(--slate); }
+
+		/* PAGE HERO */
+		.page-hero { background:var(--navy); padding:8rem 4rem 3.5rem; position:relative; overflow:hidden; }
+		.page-hero::after { content:''; position:absolute; right:0; top:0; bottom:0; width:3px; background:var(--accent); }
+		.hero-eyebrow { font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); margin-bottom:1.25rem; font-weight:500; display:block; }
+		.page-hero h1 { color:var(--white); margin-bottom:1.25rem; max-width:640px; }
+		.page-hero h1 em { font-style:italic; color:rgba(255,255,255,0.5); }
+		.page-hero p { color:rgba(255,255,255,0.45); max-width:560px; margin-bottom:2rem; font-size:1.05rem; }
+		.hero-badges { display:inline-flex; flex-wrap:wrap; border:1px solid rgba(255,255,255,0.08); }
+		.h-badge { font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); padding:0.6rem 1.4rem; border-right:1px solid rgba(255,255,255,0.08); font-weight:400; display:flex; align-items:center; gap:0.5rem; }
+		.h-badge:last-child { border-right:none; }
+		.h-badge::before { content:''; width:4px; height:4px; background:var(--accent); flex-shrink:0; }
+
+		/* ASSURANCE STRIP */
+		.assurance-strip { background:var(--ice-2); border-bottom:1px solid var(--border-2); padding:1.5rem 4rem; display:grid; grid-template-columns:repeat(5,1fr); }
+		.as-item { padding:0 1.5rem; border-left:1px solid var(--border-2); }
+		.as-item:first-child { border-left:none; padding-left:0; }
+		.as-label { font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent); margin-bottom:0.3rem; font-weight:500; }
+		.as-item p { font-size:0.78rem; color:var(--text-3); line-height:1.5; }
+
+		/* STEP INDICATOR */
+		.step-wrap { background:var(--ice-2); border-bottom:1px solid var(--border-2); padding:0 4rem; display:flex; }
+		.step-tab { flex:1; padding:1.1rem 0.85rem; display:flex; align-items:center; gap:0.75rem; border-bottom:3px solid transparent; transition:all 0.25s; border-right:1px solid var(--border); }
+		.step-tab:last-child { border-right:none; }
+		.step-tab.active { border-bottom-color:var(--accent); background:var(--white); }
+		.step-tab.done { border-bottom-color:var(--slate); }
+		.step-num-c { width:26px; height:26px; border:1.5px solid var(--border-2); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:0.8rem; color:var(--text-3); flex-shrink:0; transition:all 0.25s; }
+		.step-tab.active .step-num-c { border-color:var(--accent); color:var(--accent); }
+		.step-tab.done .step-num-c { background:var(--navy); border-color:var(--navy); color:var(--white); font-size:0.65rem; }
+		.step-tab-name { font-size:0.7rem; font-weight:500; color:var(--text-3); text-transform:uppercase; letter-spacing:0.07em; display:block; line-height:1.2; transition:color 0.25s; }
+		.step-tab.active .step-tab-name { color:var(--navy); }
+		.step-tab.done .step-tab-name { color:var(--slate); }
+		.step-tab-desc { font-size:0.65rem; color:var(--text-3); display:block; margin-top:0.12rem; line-height:1.3; }
+
+		/* PROGRESS */
+		.prog-wrap { height:3px; background:var(--border); }
+		.prog-fill { height:100%; background:var(--accent); transition:width 0.4s ease; }
+
+		/* LAYOUT */
+		.page-body { display:grid; grid-template-columns:1fr 340px; align-items:start; max-width:1300px; padding:0 4rem; margin:0 auto; }
+
+		/* FORM COL */
+		.form-col { border-right:1px solid var(--border); padding:3rem 3rem 3rem 0; }
+		.panel { display:none; }
+		.panel.active { display:block; }
+
+		/* FORM ELEMENTS */
+		.section-eyebrow { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:0.6rem; font-weight:500; display:block; }
+		.section-rule { width:36px; height:2px; background:var(--accent); margin:0.6rem 0 1.5rem; }
+		.form-section { margin-bottom:2.5rem; }
+		.form-section h3 { color:var(--navy); }
+
+		.field { margin-bottom:1rem; }
+		.field label { display:block; font-size:0.68rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-3); margin-bottom:0.4rem; }
+		.opt-tag { font-size:0.6rem; color:var(--text-3); background:var(--ice-2); border:1px solid var(--border-2); padding:0.1rem 0.35rem; letter-spacing:0.05em; margin-left:0.3rem; vertical-align:middle; text-transform:uppercase; font-weight:300; }
+		.inp { width:100%; background:var(--ice-2); border:1px solid var(--border-2); color:var(--text); font-family:'IBM Plex Sans',sans-serif; font-size:0.9rem; font-weight:300; padding:0.72rem 0.95rem; outline:none; transition:border-color 0.2s,background 0.2s; appearance:none; -webkit-appearance:none; }
+		.inp:focus { border-color:rgba(200,57,43,0.5); background:var(--white); }
+		.inp::placeholder { color:var(--text-3); font-weight:300; }
+		.inp.err { border-color:var(--accent); }
+		select.inp { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%236a869e' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 14px center; padding-right:2.2rem; cursor:pointer; }
+		select.inp option { background:var(--navy-3); color:var(--white); }
+		textarea.inp { resize:vertical; min-height:110px; line-height:1.7; }
+		.inp-err { font-size:0.72rem; color:var(--accent); margin-top:0.3rem; display:none; }
+		.char-count { font-size:0.68rem; color:var(--text-3); text-align:right; margin-top:0.25rem; }
+		.char-warn { color:var(--accent); }
+		.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:0.85rem; }
+		.grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.75rem; }
+
+		/* SERVICE CARDS */
+		.svc-sel-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5px; background:var(--border-2); border:1.5px solid var(--border-2); }
+		.svc-sel-card { background:var(--white); padding:1.4rem; cursor:pointer; transition:background 0.15s; position:relative; user-select:none; }
+		.svc-sel-card:hover { background:var(--ice-2); }
+		.svc-sel-card.on { background:var(--navy); }
+		.sc-cat { font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-3); margin-bottom:0.35rem; font-weight:500; display:block; transition:color 0.15s; }
+		.svc-sel-card.on .sc-cat { color:rgba(255,255,255,0.3); }
+		.sc-name { font-family:'Playfair Display',serif; font-size:1rem; color:var(--navy); margin-bottom:0.4rem; display:block; line-height:1.2; transition:color 0.15s; }
+		.svc-sel-card.on .sc-name { color:var(--white); }
+		.sc-detail { font-size:0.8rem; color:var(--text-3); display:block; line-height:1.5; transition:color 0.15s; }
+		.svc-sel-card.on .sc-detail { color:rgba(255,255,255,0.38); }
+		.sc-tick { position:absolute; top:0.85rem; right:0.85rem; width:16px; height:16px; background:var(--accent); display:none; align-items:center; justify-content:center; }
+		.svc-sel-card.on .sc-tick { display:flex; }
+		.sc-tick svg { width:8px; height:8px; }
+
+		/* TAB GRIDS */
+		.tab-row { display:grid; gap:1.5px; background:var(--border-2); border:1.5px solid var(--border-2); }
+		.tab-4 { grid-template-columns:repeat(4,1fr); }
+		.tab-3 { grid-template-columns:repeat(3,1fr); }
+		.tab-6 { grid-template-columns:repeat(3,1fr); }
+		.r-tab { background:var(--white); padding:0.85rem 1rem; cursor:pointer; transition:background 0.15s; user-select:none; text-align:center; }
+		.r-tab:hover { background:var(--ice-2); }
+		.r-tab.on { background:var(--navy); }
+		.r-main { font-size:0.82rem; font-weight:400; color:var(--text-2); display:block; transition:color 0.15s; }
+		.r-tab.on .r-main { color:var(--white); }
+		.r-sub { font-size:0.7rem; color:var(--text-3); display:block; margin-top:0.12rem; transition:color 0.15s; }
+		.r-tab.on .r-sub { color:rgba(255,255,255,0.38); }
+
+		/* RADIO CARDS */
+		.radio-grid { display:grid; gap:1.5px; background:var(--border-2); border:1.5px solid var(--border-2); }
+		.rg2 { grid-template-columns:1fr 1fr; }
+		.rg3 { grid-template-columns:1fr 1fr 1fr; }
+		.rc { background:var(--white); padding:0.9rem 1.1rem; cursor:pointer; transition:all 0.15s; display:flex; align-items:flex-start; gap:0.8rem; user-select:none; border-left:3px solid transparent; }
+		.rc:hover { background:var(--ice-2); }
+		.rc.on { background:var(--ice-2); border-left-color:var(--accent); }
+		.rc-dot { width:14px; height:14px; border:1.5px solid var(--border-2); flex-shrink:0; margin-top:0.26rem; display:flex; align-items:center; justify-content:center; transition:all 0.15s; }
+		.rc.on .rc-dot { border-color:var(--accent); background:var(--accent); }
+		.rc-main { font-size:0.83rem; color:var(--text-2); font-weight:400; display:block; line-height:1.3; }
+		.rc.on .rc-main { color:var(--navy); }
+		.rc-sub { font-size:0.72rem; color:var(--text-3); margin-top:0.18rem; display:block; line-height:1.35; }
+
+		/* PILLS */
+		.pill-row { display:flex; flex-wrap:wrap; gap:0.45rem; }
+		.pill { background:var(--ice-2); border:1px solid var(--border-2); padding:0.42rem 0.95rem; font-size:0.78rem; color:var(--text-2); cursor:pointer; transition:all 0.15s; font-family:'IBM Plex Sans',sans-serif; font-weight:300; white-space:nowrap; user-select:none; }
+		.pill:hover { border-color:var(--navy); color:var(--navy); }
+		.pill.on { background:var(--navy); border-color:var(--navy); color:var(--white); }
+
+		/* ALERT */
+		.alert-note { border-left:3px solid var(--accent); background:var(--ice-2); padding:1rem 1.2rem; margin-bottom:2rem; }
+		.alert-note p { font-size:0.88rem; color:var(--text-2); line-height:1.65; }
+
+		/* FORM NAV */
+		.form-nav { display:flex; align-items:center; justify-content:space-between; margin-top:2.5rem; padding-top:1.75rem; border-top:1px solid var(--border); }
+		.btn-back { background:transparent; border:1.5px solid var(--border-2); padding:0.72rem 1.6rem; font-family:'IBM Plex Sans',sans-serif; font-size:0.78rem; font-weight:400; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-3); cursor:pointer; transition:all 0.2s; }
+		.btn-back:hover { border-color:var(--navy); color:var(--navy); }
+		.btn-primary { display:inline-flex; align-items:center; gap:0.55rem; padding:0.82rem 1.9rem; background:var(--accent); color:var(--white); font-family:'IBM Plex Sans',sans-serif; font-size:0.8rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; border:none; cursor:pointer; transition:background 0.2s,transform 0.15s; }
+		.btn-primary:hover { background:var(--accent-2); transform:translateY(-1px); }
+		.btn-primary:active { transform:scale(0.98); }
+		.btn-primary svg { width:12px; height:12px; flex-shrink:0; }
+
+		/* REVIEW */
+		.review-group { margin-bottom:1.75rem; }
+		.review-group-title { font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); font-weight:500; margin-bottom:0.6rem; }
+		.rtbl { width:100%; border-collapse:collapse; border:1.5px solid var(--border-2); }
+		.rtbl td { padding:0.6rem 0.95rem; border-bottom:1px solid var(--border); font-size:0.87rem; vertical-align:top; }
+		.rtbl td:first-child { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--text-3); width:34%; background:var(--ice-2); font-weight:500; border-right:1px solid var(--border); white-space:nowrap; }
+		.rtbl td:last-child { color:var(--text-2); }
+		.rtbl tr:last-child td { border-bottom:none; }
+
+		/* SUCCESS */
+		.success-wrap { padding:2.5rem 0; }
+		.success-icon-box { width:52px; height:52px; background:var(--navy); display:flex; align-items:center; justify-content:center; margin-bottom:1.4rem; }
+		.success-icon-box svg { width:24px; height:24px; }
+		.success-wrap h2 { color:var(--navy); margin-bottom:0.75rem; }
+		.success-wrap > p { max-width:520px; margin-bottom:1.75rem; }
+		.ref-box { display:inline-flex; align-items:stretch; border:1.5px solid var(--border-2); margin-bottom:2.5rem; }
+		.ref-inner { padding:1.1rem 1.5rem; background:var(--ice-2); }
+		.ref-label { font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--text-3); display:block; margin-bottom:0.3rem; font-weight:500; }
+		.ref-code { font-family:'Playfair Display',serif; font-size:1.8rem; color:var(--navy); letter-spacing:0.06em; display:block; }
+		.ref-accent { width:3px; background:var(--accent); }
+		.ref-note-col { padding:1.1rem 1.4rem; display:flex; align-items:center; }
+		.ref-note-col p { font-size:0.78rem; color:var(--text-3); max-width:180px; line-height:1.55; }
+		.ns-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px; background:var(--border-2); border:1.5px solid var(--border-2); margin-top:2rem; }
+		.ns { background:var(--white); padding:1.4rem; }
+		.ns-num { font-family:'Playfair Display',serif; font-size:2rem; color:rgba(13,27,42,0.07); line-height:1; margin-bottom:0.6rem; }
+		.ns-title { font-size:0.88rem; font-weight:500; color:var(--navy); margin-bottom:0.3rem; font-family:'Playfair Display',serif; }
+		.ns-body { font-size:0.8rem; color:var(--text-3); line-height:1.6; }
+
+		/* SIDEBAR */
+		.sidebar-col { padding:3rem 0 3rem 2.5rem; }
+		.sb-block { margin-bottom:2.25rem; border:1.5px solid var(--border-2); }
+		.sb-head { background:var(--navy); padding:0.8rem 1.2rem; font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent); font-weight:500; }
+		.trust-row { padding:0.9rem 1.2rem; border-bottom:1px solid var(--border); display:flex; align-items:flex-start; gap:0.9rem; }
+		.trust-row:last-child { border-bottom:none; }
+		.trust-icon { width:28px; height:28px; background:var(--ice-2); border:1px solid var(--border-2); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+		.trust-icon svg { width:13px; height:13px; }
+		.trust-title { font-size:0.8rem; font-weight:500; color:var(--navy); display:block; margin-bottom:0.18rem; }
+		.trust-desc { font-size:0.75rem; color:var(--text-3); line-height:1.5; }
+		.process-row { padding:0.8rem 1.2rem; border-bottom:1px solid var(--border); display:flex; align-items:flex-start; gap:0.9rem; }
+		.process-row:last-child { border-bottom:none; }
+		.pr-num { font-family:'Playfair Display',serif; font-size:1.4rem; color:rgba(13,27,42,0.1); flex-shrink:0; width:22px; text-align:right; line-height:1.2; }
+		.pr-title { font-size:0.8rem; font-weight:500; color:var(--navy); display:block; margin-bottom:0.18rem; }
+		.pr-desc { font-size:0.73rem; color:var(--text-3); line-height:1.5; }
+		.contact-row { padding:0.8rem 1.2rem; border-bottom:1px solid var(--border); display:flex; align-items:flex-start; gap:0.85rem; }
+		.contact-row:last-child { border-bottom:none; }
+		.cr-label { font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); min-width:58px; margin-top:0.1rem; font-weight:500; }
+		.cr-val { font-size:0.82rem; color:var(--text-2); }
+		.cr-sub { font-size:0.7rem; color:var(--text-3); display:block; margin-top:0.12rem; }
+		.legal-strip { background:var(--ice-2); border-top:1px solid var(--border-2); padding:0.8rem 1.2rem; }
+		.legal-strip p { font-size:0.7rem; color:var(--text-3); line-height:1.6; }
+
+		.hp { display:none !important; }
+
+		/* FOOTER */
+		footer { background:var(--navy-2); border-top:1px solid rgba(255,255,255,0.06); padding:3rem 4rem; }
+		.footer-inner { display:grid; grid-template-columns:2fr 1fr 1fr; gap:3rem; margin-bottom:2.5rem; }
+		.footer-brand-name { font-family:'Playfair Display',serif; font-size:1.15rem; color:var(--white); margin-bottom:0.75rem; }
+		.footer-brand p { font-size:0.8rem; color:rgba(255,255,255,0.3); max-width:280px; line-height:1.7; }
+		.footer-col h4 { font-size:0.65rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; font-family:'IBM Plex Sans',sans-serif; font-weight:500; }
+		.footer-col ul { list-style:none; }
+		.footer-col ul li { margin-bottom:0.5rem; }
+		.footer-col ul li a { font-size:0.82rem; color:rgba(255,255,255,0.3); text-decoration:none; transition:color 0.2s; }
+		.footer-col ul li a:hover { color:var(--white); }
+		.footer-bottom { border-top:1px solid rgba(255,255,255,0.06); padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+		.footer-bottom p { font-size:0.75rem; color:rgba(255,255,255,0.2); }
+		.social-links { display:flex; gap:1.25rem; }
+		.social-links a { font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.25); text-decoration:none; transition:color 0.2s; }
+		.social-links a:hover { color:var(--white); }
+
+		@media(max-width:1100px){
+			.page-body{grid-template-columns:1fr;padding:0 2rem;}
+			.form-col{border-right:none;padding:2.5rem 0;}
+			.sidebar-col{padding:0 0 2.5rem;border-top:1px solid var(--border);}
+		}
+		@media(max-width:780px){
+			#nav{padding:1rem 1.5rem;}
+			.nav-links{display:none;}
+			.page-hero{padding:6rem 1.5rem 2.5rem;}
+			.assurance-strip{grid-template-columns:1fr 1fr;padding:1.2rem 1.5rem;}
+			.step-wrap{padding:0 1.5rem;overflow-x:auto;}
+			.step-tab-desc{display:none;}
+			.page-body{padding:0 1.5rem;}
+			.svc-sel-grid,.grid2,.tab-4,.tab-6,.rg2,.rg3{grid-template-columns:1fr;}
+			.tab-3{grid-template-columns:1fr 1fr 1fr;}
+			.ns-grid{grid-template-columns:1fr;}
+			footer{padding:2rem 1.5rem;}
+			.footer-inner{grid-template-columns:1fr;gap:2rem;}
+		}
+		@media(max-width:480px){
+			.assurance-strip{grid-template-columns:1fr;}
+			.tab-3{grid-template-columns:1fr;}
+			.hero-badges{flex-direction:column;}
+			.h-badge{border-right:none;border-bottom:1px solid rgba(255,255,255,0.08);}
+		}
+	</style>
+</head>
+<body>
+
+<nav id="nav">
+	<a href="index.html" class="nav-logo">Greyline <span>Investigations</span></a>
+	<ul class="nav-links">
+		<li><a href="index.html#infidelity">Infidelity</a></li>
+		<li><a href="index.html#digital">Digital</a></li>
+		<li><a href="index.html#fraud">Fraud</a></li>
+		<li><a href="index.html#polygraph">Polygraph</a></li>
+		<li><a href="index.html#about">About</a></li>
+	</ul>
+	<a href="index.html" class="nav-cta">← Back to site</a>
+</nav>
+
+<section class="page-hero">
+	<span class="hero-eyebrow">Confidential Case Intake — Encrypted &amp; Secure</span>
+	<h1>Begin your <em>confidential</em> inquiry</h1>
+	<p>Complete this secure intake form to start your case. All information is handled under strict NDA and never disclosed to third parties. No obligation to proceed after your initial consultation.</p>
+	<div class="hero-badges">
+		<div class="h-badge">NDA before every case</div>
+		<div class="h-badge">Encrypted intake</div>
+		<div class="h-badge">Response within 2 hours</div>
+		<div class="h-badge">Court-ready reports</div>
+		<div class="h-badge">Identity never disclosed</div>
+	</div>
+</section>
+
+<div class="assurance-strip">
+	<div class="as-item"><div class="as-label">Legal framework</div><p>Nigerian Data Protection Act 2023, UK GDPR, US &amp; Canadian data standards</p></div>
+	<div class="as-item"><div class="as-label">Methods</div><p>Open-source intelligence only. No account access. No interception.</p></div>
+	<div class="as-item"><div class="as-label">Delivery</div><p>Timestamped, court-ready PDF with full source documentation</p></div>
+	<div class="as-item"><div class="as-label">Confidentiality</div><p>Your identity is never shared with the subject or any third party — ever</p></div>
+	<div class="as-item"><div class="as-label">Response</div><p>All inquiries acknowledged within 2 hours, 24/7, all time zones</p></div>
+</div>
+
+<div class="step-wrap" id="stepWrap">
+	<div class="step-tab active" id="st1"><div class="step-num-c">1</div><div><span class="step-tab-name">Service &amp; Urgency</span><span class="step-tab-desc">Category, timeline &amp; add-ons</span></div></div>
+	<div class="step-tab" id="st2"><div class="step-num-c">2</div><div><span class="step-tab-name">Subject Details</span><span class="step-tab-desc">Identity &amp; digital presence</span></div></div>
+	<div class="step-tab" id="st3"><div class="step-num-c">3</div><div><span class="step-tab-name">Case Background</span><span class="step-tab-desc">Narrative, evidence &amp; financials</span></div></div>
+	<div class="step-tab" id="st4"><div class="step-num-c">4</div><div><span class="step-tab-name">Your Information</span><span class="step-tab-desc">Contact &amp; security preferences</span></div></div>
+	<div class="step-tab" id="st5"><div class="step-num-c">5</div><div><span class="step-tab-name">Review &amp; Submit</span><span class="step-tab-desc">Confirm before sending</span></div></div>
+</div>
+<div class="prog-wrap"><div class="prog-fill" id="progFill" style="width:20%"></div></div>
+
+<div class="page-body">
+<div class="form-col">
+
+<!-- PANEL 1 -->
+<div class="panel active" id="panel1">
+	<div class="form-section">
+		<span class="section-eyebrow">Investigation category</span>
+		<h3>Select all services that apply to your case</h3>
+		<div class="section-rule"></div>
+		<div class="svc-sel-grid">
+			<div class="svc-sel-card" onclick="toggleSvc(this,'Infidelity &amp; Relationship Intelligence')">
+				<div class="sc-tick"><svg viewBox="0 0 9 7" fill="none"><path d="M1 3.5L3.5 6L8 1" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+				<span class="sc-cat">Relationships</span><span class="sc-name">Infidelity &amp; relationship intelligence</span>
+				<span class="sc-detail">Digital trace · deep intelligence · ongoing watch · partner verification · dating site sweep</span>
+			</div>
+			<div class="svc-sel-card" onclick="toggleSvc(this,'Romance Scam &amp; Fraud Investigation')">
+				<div class="sc-tick"><svg viewBox="0 0 9 7" fill="none"><path d="M1 3.5L3.5 6L8 1" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+				<span class="sc-cat">Financial crime</span><span class="sc-name">Romance scam &amp; fraud investigation</span>
+				<span class="sc-detail">Scam check · perpetrator ID · evidence pack · EFCC / Action Fraud / FTC referral</span>
+			</div>
+			<div class="svc-sel-card" onclick="toggleSvc(this,'Crypto &amp; Financial Fraud Tracing')">
+				<div class="sc-tick"><svg viewBox="0 0 9 7" fill="none"><path d="M1 3.5L3.5 6L8 1" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+				<span class="sc-cat">Crypto &amp; assets</span><span class="sc-name">Crypto &amp; financial fraud tracing</span>
+				<span class="sc-detail">Wallet trace · blockchain trail · investment platform check · crypto fraud evidence pack</span>
+			</div>
+			<div class="svc-sel-card" onclick="toggleSvc(this,'Dark Web &amp; Data Exposure Monitoring')">
+				<div class="sc-tick"><svg viewBox="0 0 9 7" fill="none"><path d="M1 3.5L3.5 6L8 1" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+				<span class="sc-cat">Data security</span><span class="sc-name">Dark web &amp; data exposure monitoring</span>
+				<span class="sc-detail">Personal data scan · dark web monitoring · financial exposure report · breach alerts</span>
+			</div>
+			<div class="svc-sel-card" onclick="toggleSvc(this,'Cyber &amp; Digital Forensics')">
+				<div class="sc-tick"><svg viewBox="0 0 9 7" fill="none"><path d="M1 3.5L3.5 6L8 1" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+				<span class="sc-cat">Digital forensics</span><span class="sc-name">Cyber &amp; digital forensics</span>
+				<span class="sc-detail">SOCMINT · email header tracing · device forensics · identity theft · harassment documentation</span>
+			</div>
+			<div class="svc-sel-card" onclick="toggleSvc(this,'Financial Fraud &amp; Real Estate Investigation')">
+				<div class="sc-tick"><svg viewBox="0 0 9 7" fill="none"><path d="M1 3.5L3.5 6L8 1" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+				<span class="sc-cat">Fraud &amp; property</span><span class="sc-name">Financial fraud &amp; real estate investigation</span>
+				<span class="sc-detail">Ponzi schemes · title deed &amp; C-of-O check · embezzlement · diaspora property fraud</span>
+			</div>
+			<div class="svc-sel-card" onclick="toggleSvc(this,'Background Check &amp; Business Due Diligence')">
+				<div class="sc-tick"><svg viewBox="0 0 9 7" fill="none"><path d="M1 3.5L3.5 6L8 1" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+				<span class="sc-cat">Due diligence</span><span class="sc-name">Background check &amp; business due diligence</span>
+				<span class="sc-detail">Individuals · businesses · CAC / Companies House / US registries · litigation records</span>
+			</div>
+			<div class="svc-sel-card" onclick="toggleSvc(this,'Polygraph Testing (Nigeria)')">
+				<div class="sc-tick"><svg viewBox="0 0 9 7" fill="none"><path d="M1 3.5L3.5 6L8 1" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+				<span class="sc-cat">Polygraph · Nigeria only</span><span class="sc-name">Polygraph testing</span>
+				<span class="sc-detail">Pre-marriage · fidelity verification · pre-visa relationship check · staff integrity screening</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-section">
+		<span class="section-eyebrow">Urgency &amp; timeline</span>
+		<h3>How quickly do you need results?</h3>
+		<div class="section-rule"></div>
+		<div class="tab-row tab-4">
+			<div class="r-tab" onclick="pickR(this,'.urg-t','urgency','Immediate (24–48 hours)')"><span class="r-main">Immediate</span><span class="r-sub">24 – 48 hours</span></div>
+			<div class="r-tab urg-t" onclick="pickR(this,'.urg-t','urgency','Urgent (within 1 week)')"><span class="r-main">Urgent</span><span class="r-sub">Within 1 week</span></div>
+			<div class="r-tab urg-t" onclick="pickR(this,'.urg-t','urgency','Standard (1–2 weeks)')"><span class="r-main">Standard</span><span class="r-sub">1 – 2 weeks</span></div>
+			<div class="r-tab urg-t" onclick="pickR(this,'.urg-t','urgency','Flexible')"><span class="r-main">Flexible</span><span class="r-sub">No fixed deadline</span></div>
+		</div>
+	</div>
+
+	<div class="form-section">
+		<span class="section-eyebrow">Client jurisdiction</span>
+		<h3>Where are you located?</h3>
+		<div class="section-rule"></div>
+		<div class="tab-row tab-6">
+			<div class="r-tab" onclick="pickR(this,'.juris-t','jurisdiction','Nigeria')"><span class="r-main">Nigeria</span></div>
+			<div class="r-tab juris-t" onclick="pickR(this,'.juris-t','jurisdiction','United Kingdom')"><span class="r-main">United Kingdom</span></div>
+			<div class="r-tab juris-t" onclick="pickR(this,'.juris-t','jurisdiction','United States')"><span class="r-main">United States</span></div>
+			<div class="r-tab juris-t" onclick="pickR(this,'.juris-t','jurisdiction','Canada')"><span class="r-main">Canada</span></div>
+			<div class="r-tab juris-t" onclick="pickR(this,'.juris-t','jurisdiction','Australia')"><span class="r-main">Australia</span></div>
+			<div class="r-tab juris-t" onclick="pickR(this,'.juris-t','jurisdiction','Other')"><span class="r-main">Other</span></div>
+		</div>
+	</div>
+
+	<div class="form-section">
+		<span class="section-eyebrow">Investigation add-ons</span>
+		<h3>Select any additional services required</h3>
+		<div class="section-rule"></div>
+		<div class="pill-row" id="addonPills">
+			<div class="pill" onclick="this.classList.toggle('on')">Footprint scorecard</div>
+			<div class="pill" onclick="this.classList.toggle('on')">Third-party deep check</div>
+			<div class="pill" onclick="this.classList.toggle('on')">Legal evidence pack</div>
+			<div class="pill" onclick="this.classList.toggle('on')">Device forensics</div>
+			<div class="pill" onclick="this.classList.toggle('on')">EFCC referral documentation</div>
+			<div class="pill" onclick="this.classList.toggle('on')">Action Fraud (UK) referral</div>
+			<div class="pill" onclick="this.classList.toggle('on')">FTC (USA) referral</div>
+			<div class="pill" onclick="this.classList.toggle('on')">Court chain-of-custody pack</div>
+			<div class="pill" onclick="this.classList.toggle('on')">30-minute debrief call</div>
+			<div class="pill" onclick="this.classList.toggle('on')">Ongoing monthly watch</div>
+		</div>
+	</div>
+
+	<div class="form-nav">
+		<div></div>
+		<button class="btn-primary" onclick="goTo(2)">Continue to subject details <svg viewBox="0 0 13 13" fill="none"><path d="M2.5 6.5H10.5M7.5 3.5L10.5 6.5L7.5 9.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+	</div>
+</div>
+
+<!-- PANEL 2 -->
+<div class="panel" id="panel2">
+	<div class="alert-note"><p>All subject information is handled under operational security. Details are used solely for investigation purposes and never disclosed externally.</p></div>
+	<div class="form-section">
+		<span class="section-eyebrow">Subject identity</span><h3>Who is being investigated?</h3><div class="section-rule"></div>
+		<div class="grid2">
+			<div class="field"><label>Full name <span class="opt-tag">or alias</span></label><input class="inp" id="subName" placeholder="e.g. John Adeyemi or @johndoe" /></div>
+			<div class="field"><label>Other names / aliases</label><input class="inp" id="subAlias" placeholder="Nicknames, usernames, pseudonyms" /></div>
+		</div>
+		<div class="grid2">
+			<div class="field"><label>Phone number <span class="opt-tag">if known</span></label><input class="inp" id="subPhone" placeholder="+234 or +44..." /></div>
+			<div class="field"><label>Email address <span class="opt-tag">if known</span></label><input class="inp" id="subEmail" placeholder="Subject's email" /></div>
+		</div>
+		<div class="grid2">
+			<div class="field"><label>Age / year of birth <span class="opt-tag">approx</span></label><input class="inp" id="subAge" placeholder="e.g. 34 or circa 1989" /></div>
+			<div class="field"><label>Known location</label><input class="inp" id="subLoc" placeholder="e.g. Lagos or London, UK" /></div>
+		</div>
+	</div>
+	<div class="form-section">
+		<span class="section-eyebrow">Digital presence</span><h3>Online accounts &amp; identifiers</h3><div class="section-rule"></div>
+		<div class="field"><label>Social media profiles &amp; usernames</label><textarea class="inp" style="min-height:85px" id="subSocial" placeholder="List all known profiles — Instagram @username, Facebook URL, LinkedIn, TikTok, Snapchat, X/Twitter, WhatsApp, Telegram, etc. Full URLs where possible."></textarea></div>
+		<div class="grid2">
+			<div class="field"><label>Primary platform of concern</label>
+				<select class="inp" id="subPlatform">
+					<option value="">Select platform...</option>
+					<option>Instagram</option><option>WhatsApp</option><option>Telegram</option><option>Facebook</option>
+					<option>X / Twitter</option><option>TikTok</option><option>Snapchat</option><option>LinkedIn</option>
+					<option>Dating app</option><option>Crypto platform / exchange</option><option>Email only</option><option>Unknown / multiple</option>
+				</select>
+			</div>
+			<div class="field"><label>Known crypto wallet <span class="opt-tag">optional</span></label><input class="inp" id="subWallet" placeholder="0x... or bc1... or T..." /></div>
+		</div>
+		<div class="field"><label>Photos / profile images / physical description <span class="opt-tag">optional</span></label><input class="inp" id="subPhotos" placeholder="Photo URL or description of distinguishing features — used for reverse image search" /></div>
+	</div>
+	<div class="form-section">
+		<span class="section-eyebrow">Relationship to you</span><h3>How do you know this person or entity?</h3><div class="section-rule"></div>
+		<div class="radio-grid rg2">
+			<div class="rc" onclick="pickR(this,'.rel-rc','relationship','Romantic partner / spouse')"><div class="rc-dot"></div><div><span class="rc-main">Romantic partner / spouse</span></div></div>
+			<div class="rc rel-rc" onclick="pickR(this,'.rel-rc','relationship','Someone I met online')"><div class="rc-dot"></div><div><span class="rc-main">Someone I met online</span></div></div>
+			<div class="rc rel-rc" onclick="pickR(this,'.rel-rc','relationship','Business contact / partner')"><div class="rc-dot"></div><div><span class="rc-main">Business contact / partner</span></div></div>
+			<div class="rc rel-rc" onclick="pickR(this,'.rel-rc','relationship','Investment platform or entity')"><div class="rc-dot"></div><div><span class="rc-main">Investment platform or entity</span></div></div>
+			<div class="rc rel-rc" onclick="pickR(this,'.rel-rc','relationship','Family member')"><div class="rc-dot"></div><div><span class="rc-main">Family member</span></div></div>
+			<div class="rc rel-rc" onclick="pickR(this,'.rel-rc','relationship','Unknown / investigating anonymously')"><div class="rc-dot"></div><div><span class="rc-main">Unknown / anonymously</span></div></div>
+		</div>
+	</div>
+	<div class="form-nav">
+		<button class="btn-back" onclick="goTo(1)">Back</button>
+		<button class="btn-primary" onclick="goTo(3)">Continue to case background <svg viewBox="0 0 13 13" fill="none"><path d="M2.5 6.5H10.5M7.5 3.5L10.5 6.5L7.5 9.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+	</div>
+</div>
+
+<!-- PANEL 3 -->
+<div class="panel" id="panel3">
+	<div class="form-section">
+		<span class="section-eyebrow">Case narrative</span><h3>Describe the situation in full</h3><div class="section-rule"></div>
+		<div class="field">
+			<label>What needs investigating — provide as much detail as possible</label>
+			<textarea class="inp" style="min-height:160px" id="caseDesc" placeholder="Describe what happened, when it started, your suspicions or concerns, specific incidents, any amounts of money involved, and what outcome you are hoping for. The more detail you provide, the faster and more accurately we can assess and begin your case. Everything is strictly confidential." oninput="charCount(this,'cc1',1500)"></textarea>
+			<div class="char-count" id="cc1">0 / 1500</div>
+		</div>
+		<div class="grid2">
+			<div class="field"><label>Approximate start date</label><input class="inp" type="date" id="caseStart" /></div>
+			<div class="field"><label>Is this situation still ongoing?</label>
+				<select class="inp" id="caseOngoing">
+					<option value="">Select...</option>
+					<option>Yes — actively happening</option>
+					<option>Yes — but contact has stopped</option>
+					<option>Resolved — need retrospective evidence</option>
+					<option>Uncertain</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="form-section">
+		<span class="section-eyebrow">Financial details</span><h3>Complete if financial fraud or loss is involved</h3><div class="section-rule"></div>
+		<div class="grid2">
+			<div class="field"><label>Total amount involved <span class="opt-tag">if applicable</span></label><input class="inp" id="finAmount" placeholder="e.g. ₦500,000 or £2,500 or $10,000" /></div>
+			<div class="field"><label>Currency &amp; payment method</label>
+				<select class="inp" id="finMethod">
+					<option value="">Select if applicable...</option>
+					<option>Nigerian Naira (₦) — bank transfer</option>
+					<option>GBP (£) — bank transfer</option>
+					<option>USD ($) — bank transfer</option>
+					<option>Bitcoin (BTC)</option><option>Ethereum (ETH)</option>
+					<option>USDT / stablecoin</option><option>Gift cards / vouchers</option>
+					<option>Multiple methods</option><option>Not applicable</option>
+				</select>
+			</div>
+		</div>
+		<div class="grid2">
+			<div class="field"><label>Transaction reference / wallet address <span class="opt-tag">optional</span></label><input class="inp" id="finRef" placeholder="Bank reference, transaction hash, or wallet address" /></div>
+			<div class="field"><label>Platform / scheme name <span class="opt-tag">optional</span></label><input class="inp" id="finPlatform" placeholder="Investment platform, exchange, or company name" /></div>
+		</div>
+	</div>
+	<div class="form-section">
+		<span class="section-eyebrow">Evidence &amp; prior action</span><h3>What exists and what steps have been taken?</h3><div class="section-rule"></div>
+		<div class="grid2">
+			<div class="field"><label>Existing evidence in your possession</label>
+				<select class="inp" id="existEvidence">
+					<option value="">Select...</option>
+					<option>Yes — screenshots / chat logs</option>
+					<option>Yes — financial records / receipts</option>
+					<option>Yes — device or files to submit</option>
+					<option>Yes — multiple types</option>
+					<option>No existing evidence</option><option>Unsure</option>
+				</select>
+			</div>
+			<div class="field"><label>Have you reported to police or authorities?</label>
+				<select class="inp" id="policeRpt">
+					<option value="">Select...</option>
+					<option>No — not yet</option>
+					<option>Yes — Nigeria Police Force</option>
+					<option>Yes — EFCC</option>
+					<option>Yes — UK Police / Action Fraud</option>
+					<option>Yes — US Law Enforcement / FTC</option>
+					<option>Considering reporting</option>
+					<option>Not applicable</option>
+				</select>
+			</div>
+		</div>
+		<div class="grid2">
+			<div class="field"><label>Legal action planned or underway?</label>
+				<select class="inp" id="legalAction">
+					<option value="">Select...</option>
+					<option>Yes — civil proceedings</option>
+					<option>Yes — criminal prosecution</option>
+					<option>Yes — divorce proceedings</option>
+					<option>Possibly — depends on findings</option>
+					<option>No — for personal knowledge only</option>
+				</select>
+			</div>
+			<div class="field"><label>Report format required</label>
+				<select class="inp" id="reportFmt">
+					<option value="">Select...</option>
+					<option>Court-ready PDF with chain of custody</option>
+					<option>Summary report — personal use only</option>
+					<option>Full technical appendix + summary</option>
+					<option>Evidence pack for law enforcement</option>
+					<option>Advise me based on findings</option>
+				</select>
+			</div>
+		</div>
+		<div class="field"><label>Additional context or specific questions for our team <span class="opt-tag">optional</span></label>
+			<textarea class="inp" style="min-height:80px" id="addContext" placeholder="Anything else that helps us understand your case, or specific questions you need the investigation to answer." oninput="charCount(this,'cc2',600)"></textarea>
+			<div class="char-count" id="cc2">0 / 600</div>
+		</div>
+	</div>
+	<div class="form-nav">
+		<button class="btn-back" onclick="goTo(2)">Back</button>
+		<button class="btn-primary" onclick="goTo(4)">Continue to your information <svg viewBox="0 0 13 13" fill="none"><path d="M2.5 6.5H10.5M7.5 3.5L10.5 6.5L7.5 9.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+	</div>
+</div>
+
+<!-- PANEL 4 -->
+<div class="panel" id="panel4">
+	<div class="alert-note"><p>A mutual NDA will be sent to you before any case details are discussed. You may use an alias at this stage — we confirm your full identity only when the NDA is countersigned. Your details are never disclosed to the subject or any third party.</p></div>
+	<div class="form-section">
+		<span class="section-eyebrow">Your identity</span><h3>Who are we reporting to?</h3><div class="section-rule"></div>
+		<div class="grid2">
+			<div class="field"><label>First name <span class="opt-tag">or alias</span></label><input class="inp" id="cFirst" placeholder="First name or alias" /><div class="inp-err" id="errFirst">Please enter a name or alias to continue.</div></div>
+			<div class="field"><label>Last name <span class="opt-tag">optional</span></label><input class="inp" id="cLast" placeholder="Last name" /></div>
+		</div>
+		<div class="grid2">
+			<div class="field"><label>Country of residence</label>
+				<select class="inp" id="cCountry">
+					<option value="">Select country...</option>
+					<option>Nigeria</option><option>United Kingdom</option><option>United States</option>
+					<option>Canada</option><option>Australia</option><option>Other</option>
+				</select>
+			</div>
+			<div class="field"><label>City <span class="opt-tag">optional</span></label><input class="inp" id="cCity" placeholder="e.g. Lagos, London, Toronto" /></div>
+		</div>
+	</div>
+	<div class="form-section">
+		<span class="section-eyebrow">Contact details</span><h3>How should we reach you?</h3><div class="section-rule"></div>
+		<div class="field"><label>Email address</label><input class="inp" id="cEmail" type="email" placeholder="your@email.com — use a private address if concerned about monitoring" /><div class="inp-err" id="errEmail">Please enter a valid email address.</div></div>
+		<div class="grid2">
+			<div class="field"><label>WhatsApp number <span class="opt-tag">optional</span></label><input class="inp" id="cWhatsApp" type="tel" placeholder="+234 800 000 0000 or +44 7000 000000" /></div>
+			<div class="field"><label>Signal number <span class="opt-tag">most secure</span></label><input class="inp" id="cSignal" type="tel" placeholder="+44 7000 000000" /></div>
+		</div>
+		<div class="grid2">
+			<div class="field"><label>Best time to contact you</label>
+				<select class="inp" id="cBestTime">
+					<option value="">Select...</option>
+					<option>Any time — 24/7 is fine</option>
+					<option>Morning (6am – 12pm local)</option>
+					<option>Afternoon (12pm – 6pm local)</option>
+					<option>Evening (6pm – 10pm local)</option>
+					<option>By message only — no calls</option>
+				</select>
+			</div>
+			<div class="field"><label>How did you find us?</label>
+				<select class="inp" id="cReferral">
+					<option value="">Select...</option>
+					<option>Google search</option><option>Referral / recommendation</option>
+					<option>Social media</option><option>Returning client</option><option>Other</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="form-section">
+		<span class="section-eyebrow">Preferred contact method</span><h3>How should we send your NDA and updates?</h3><div class="section-rule"></div>
+		<div class="radio-grid rg3">
+			<div class="rc" onclick="pickR(this,'.cm-rc','contactMethod','Email')"><div class="rc-dot"></div><div><span class="rc-main">Email</span><span class="rc-sub">Secure, documented thread</span></div></div>
+			<div class="rc cm-rc" onclick="pickR(this,'.cm-rc','contactMethod','WhatsApp')"><div class="rc-dot"></div><div><span class="rc-main">WhatsApp</span><span class="rc-sub">Fast, familiar messaging</span></div></div>
+			<div class="rc cm-rc" onclick="pickR(this,'.cm-rc','contactMethod','Signal')"><div class="rc-dot"></div><div><span class="rc-main">Signal</span><span class="rc-sub">Maximum privacy &amp; encryption</span></div></div>
+		</div>
+	</div>
+	<div class="form-section">
+		<span class="section-eyebrow">Security preferences</span><h3>Any special privacy or security concerns?</h3><div class="section-rule"></div>
+		<div class="field"><label>Notes for our team <span class="opt-tag">optional</span></label>
+			<textarea class="inp" style="min-height:75px" id="secNotes" placeholder="e.g. shared devices, monitoring concerns, preferred encryption, language preference, time-zone restrictions, or anything else we should be aware of." oninput="charCount(this,'cc3',400)"></textarea>
+			<div class="char-count" id="cc3">0 / 400</div>
+		</div>
+		<div class="field"><label>Case sensitivity level</label>
+			<div class="radio-grid rg3">
+				<div class="rc" onclick="pickR(this,'.sens-rc','sensitivity','Standard — no special concerns')"><div class="rc-dot"></div><div><span class="rc-main">Standard</span><span class="rc-sub">No special concerns</span></div></div>
+				<div class="rc sens-rc" onclick="pickR(this,'.sens-rc','sensitivity','High — extra care required')"><div class="rc-dot"></div><div><span class="rc-main">High sensitivity</span><span class="rc-sub">Handle with extra care</span></div></div>
+				<div class="rc sens-rc" onclick="pickR(this,'.sens-rc','sensitivity','Maximum — encrypted comms only')"><div class="rc-dot"></div><div><span class="rc-main">Maximum</span><span class="rc-sub">Encrypted comms only</span></div></div>
+			</div>
+		</div>
+	</div>
+	<input type="text" class="hp" id="hpf" tabindex="-1" autocomplete="off" />
+	<div class="form-nav">
+		<button class="btn-back" onclick="goTo(3)">Back</button>
+		<button class="btn-primary" onclick="goTo(5)">Review my inquiry <svg viewBox="0 0 13 13" fill="none"><path d="M2.5 6.5H10.5M7.5 3.5L10.5 6.5L7.5 9.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+	</div>
+</div>
+
+<!-- PANEL 5 -->
+<div class="panel" id="panel5">
+	<div class="alert-note"><p>Please review your inquiry carefully. By submitting, you confirm all information is truthful to the best of your knowledge. A mutual NDA will be sent within 2 hours. No investigation work begins until the NDA is countersigned.</p></div>
+	<div id="reviewContent"></div>
+	<div class="form-nav">
+		<button class="btn-back" onclick="goTo(4)">Back</button>
+		<button class="btn-primary" onclick="submitForm()" style="background:var(--navy);">Submit confidential inquiry <svg viewBox="0 0 13 13" fill="none"><path d="M2.5 6.5H10.5M7.5 3.5L10.5 6.5L7.5 9.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+	</div>
+</div>
+
+<!-- PANEL 6 SUCCESS -->
+<div class="panel" id="panel6">
+	<div class="success-wrap">
+		<div class="success-icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12.5L9 18.5L21 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+		<h2>Inquiry received</h2>
+		<p>Your case has been logged securely. Our team will review your details and respond within 2 hours with a mutual NDA and case confirmation. Please check your email — and your spam folder just in case.</p>
+		<div class="ref-box">
+			<div class="ref-inner"><span class="ref-label">Case reference number</span><span class="ref-code" id="refCode">GL-000000</span></div>
+			<div class="ref-accent"></div>
+			<div class="ref-note-col"><p>Keep this reference for all follow-up communications with Greyline Investigations.</p></div>
+		</div>
+		<div class="ns-grid">
+			<div class="ns"><div class="ns-num">01</div><div class="ns-title">NDA within 2 hours</div><div class="ns-body">A mutual NDA arrives to your email. No case discussion begins until both parties have signed.</div></div>
+			<div class="ns"><div class="ns-num">02</div><div class="ns-title">Case assessment &amp; quote</div><div class="ns-body">We confirm feasibility, timeline, and pricing. You receive a full breakdown before any payment is taken.</div></div>
+			<div class="ns"><div class="ns-num">03</div><div class="ns-title">Investigation begins</div><div class="ns-body">Once confirmed, your investigator begins work and provides regular status updates throughout.</div></div>
+		</div>
+		<div id="successSummary" style="margin-top:2rem;"></div>
+	</div>
+</div>
+
+</div><!-- /form-col -->
+
+<!-- SIDEBAR -->
+<aside class="sidebar-col">
+	<div class="sb-block">
+		<div class="sb-head">Why clients trust Greyline</div>
+		<div class="trust-row"><div class="trust-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M7 1L1.5 3.5V7.5C1.5 10.5 3.9 13.2 7 13.8C10.1 13.2 12.5 10.5 12.5 7.5V3.5L7 1Z" stroke="#c8392b" stroke-width="1"/><path d="M4.5 7.2L6.5 9.2L9.5 5.5" stroke="#c8392b" stroke-width="1" stroke-linecap="round"/></svg></div><div><span class="trust-title">NDA before every case</span><span class="trust-desc">A mutual NDA is signed before any case details are discussed — no exceptions.</span></div></div>
+		<div class="trust-row"><div class="trust-icon"><svg viewBox="0 0 14 14" fill="none"><rect x="2.5" y="6.5" width="9" height="6" rx="1" stroke="#c8392b" stroke-width="1"/><path d="M4.5 6.5V4.5a2.5 2.5 0 015 0v2" stroke="#c8392b" stroke-width="1" stroke-linecap="round"/></svg></div><div><span class="trust-title">Encrypted &amp; confidential</span><span class="trust-desc">All intake data is encrypted. Your identity is never disclosed to the subject or any third party.</span></div></div>
+		<div class="trust-row"><div class="trust-icon"><svg viewBox="0 0 14 14" fill="none"><path d="M1.5 10L4.5 7.5 7 9.5 12.5 4" stroke="#c8392b" stroke-width="1" stroke-linecap="round"/></svg></div><div><span class="trust-title">Court-ready PDF reports</span><span class="trust-desc">Timestamped, source-documented reports prepared to court submission standard.</span></div></div>
+		<div class="trust-row"><div class="trust-icon"><svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="#c8392b" stroke-width="1"/><path d="M7 4V7.5L9 9" stroke="#c8392b" stroke-width="1" stroke-linecap="round"/></svg></div><div><span class="trust-title">24/7 — 2-hour response</span><span class="trust-desc">All inquiries acknowledged within 2 hours. No time-zone restrictions worldwide.</span></div></div>
+		<div class="trust-row"><div class="trust-icon"><svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="5" r="2.5" stroke="#c8392b" stroke-width="1"/><path d="M2 13c0-2.8 2.2-5 5-5s5 2.2 5 5" stroke="#c8392b" stroke-width="1" stroke-linecap="round"/></svg></div><div><span class="trust-title">OSINT only — fully legal</span><span class="trust-desc">Open-source intelligence only. No account access. No interception. No surveillance.</span></div></div>
+	</div>
+
+	<div class="sb-block">
+		<div class="sb-head">How it works</div>
+		<div class="process-row"><div class="pr-num">01</div><div><span class="pr-title">Submit this inquiry</span><span class="pr-desc">Fill in as much detail as possible. More context = faster, more accurate case assessment.</span></div></div>
+		<div class="process-row"><div class="pr-num">02</div><div><span class="pr-title">NDA &amp; confirmation</span><span class="pr-desc">Mutual NDA sent within 2 hours. Work begins only after both parties sign.</span></div></div>
+		<div class="process-row"><div class="pr-num">03</div><div><span class="pr-title">Investigation</span><span class="pr-desc">Your investigator conducts the digital trace with regular status updates throughout.</span></div></div>
+		<div class="process-row"><div class="pr-num">04</div><div><span class="pr-title">Evidence packaging</span><span class="pr-desc">Findings compiled into a court-ready PDF with full source documentation.</span></div></div>
+		<div class="process-row"><div class="pr-num">05</div><div><span class="pr-title">Secure delivery</span><span class="pr-desc">Report delivered via encrypted email or secure download. Optional debrief call.</span></div></div>
+	</div>
+
+	<div class="sb-block">
+		<div class="sb-head">Direct contact</div>
+		<div class="contact-row"><span class="cr-label">WhatsApp</span><div><span class="cr-val">+234 812 524 7802</span><span class="cr-sub">Available 24/7</span></div></div>
+		<div class="contact-row"><span class="cr-label">Email</span><div><span class="cr-val">inquiries@greylineinvestigations.com.ng</span><span class="cr-sub">Response within 2 hours</span></div></div>
+		<div class="contact-row"><span class="cr-label">Hours</span><div><span class="cr-val">24/7</span><span class="cr-sub">All time zones accommodated</span></div></div>
+		<div class="legal-strip"><p>Operating under Nigerian Data Protection Act 2023, Cybercrimes Act 2015, UK GDPR, and applicable US/Canadian data standards depending on client jurisdiction.</p></div>
+	</div>
+</aside>
+
+</div><!-- /page-body -->
+
+<footer>
+	<div class="footer-inner">
+		<div class="footer-brand">
+			<div class="footer-brand-name">Greyline <span style="color:var(--accent)">Investigations</span></div>
+			<p>Professional digital intelligence and OSINT investigation services. Serving clients in Nigeria (Lagos, Abuja, Port Harcourt, Kano) and the diaspora — UK, USA, Canada, Australia, and beyond.</p>
+		</div>
+		<div class="footer-col"><h4>Services</h4><ul>
+			<li><a href="index.html#infidelity">Infidelity investigations</a></li>
+			<li><a href="index.html#infidelity">Dating site sweeps</a></li>
+			<li><a href="index.html#digital">Romance scam detection</a></li>
+			<li><a href="index.html#digital">Dark web monitoring</a></li>
+			<li><a href="index.html#digital">Crypto scam tracing</a></li>
+			<li><a href="index.html#fraud">Fraud investigations</a></li>
+			<li><a href="index.html#fraud">Background checks</a></li>
+			<li><a href="index.html#polygraph">Polygraph testing</a></li>
+		</ul></div>
+		<div class="footer-col"><h4>Company</h4><ul>
+			<li><a href="index.html#about">About us</a></li>
+			<li><a href="index.html#process">How it works</a></li>
+			<li><a href="index.html#limits">Our standards</a></li>
+			<li><a href="index.html#contact">Contact</a></li>
+			<li><a href="inquiry.html">Begin inquiry</a></li>
+		</ul></div>
+	</div>
+	<div class="footer-bottom">
+		<p>&copy; 2026 Greyline Investigations. All Rights Reserved. Licensed and Insured Private Investigation Agency.</p>
+		<div class="social-links"><a href="#">Twitter</a><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Facebook</a></div>
+	</div>
+</footer>
+
+<script>
+var cur=1;
+var S={services:[],urgency:'',jurisdiction:'',relationship:'',contactMethod:'',sensitivity:''};
+function toggleSvc(el,v){el.classList.toggle('on');var i=S.services.indexOf(v);if(i>-1)S.services.splice(i,1);else S.services.push(v);}
+function pickR(el,sel,key,val){document.querySelectorAll(sel).forEach(function(c){c.classList.remove('on');});el.classList.add('on');S[key]=val;}
+function charCount(el,id,max){var d=document.getElementById(id);var n=el.value.length;d.textContent=n+' / '+max;d.className='char-count'+(n>max*0.85?' char-warn':'');}
+function gv(id){var e=document.getElementById(id);return e?e.value.trim():'';}
+function goTo(n){
+	if(n===5){
+		var f=document.getElementById('cFirst'),e=document.getElementById('cEmail');
+		var ef=document.getElementById('errFirst'),ee=document.getElementById('errEmail');
+		var ok=true;
+		if(!f.value.trim()){ef.style.display='block';f.classList.add('err');ok=false;}else{ef.style.display='none';f.classList.remove('err');}
+		if(!e.value.trim()||!e.value.includes('@')){ee.style.display='block';e.classList.add('err');ok=false;}else{ee.style.display='none';e.classList.remove('err');}
+		if(!ok)return;
+		buildReview();
+	}
+	document.getElementById('panel'+cur).classList.remove('active');
+	cur=n;
+	document.getElementById('panel'+cur).classList.add('active');
+	for(var i=1;i<=5;i++){var t=document.getElementById('st'+i);if(!t)continue;t.classList.remove('active','done');if(i<n)t.classList.add('done');if(i===n)t.classList.add('active');}
+	document.getElementById('progFill').style.width=(Math.min(n,5)*20)+'%';
+	window.scrollTo({top:document.getElementById('stepWrap').getBoundingClientRect().top+window.scrollY-75,behavior:'smooth'});
+}
+function buildReview(){
+	var addons=Array.from(document.querySelectorAll('#addonPills .pill.on')).map(function(p){return p.textContent.trim();});
+	var groups=[
+		{title:'Service &amp; Urgency',rows:[['Services',S.services.join(' · ')||'—'],['Add-ons',addons.join(', ')||'None'],['Urgency',S.urgency||'—'],['Jurisdiction',S.jurisdiction||'—']]},
+		{title:'Subject Details',rows:[['Name',gv('subName')||'—'],['Aliases',gv('subAlias')||'—'],['Phone',gv('subPhone')||'—'],['Email',gv('subEmail')||'—'],['Location',gv('subLoc')||'—'],['Platform',gv('subPlatform')||'—'],['Social profiles',gv('subSocial')||'—'],['Relationship',S.relationship||'—']]},
+		{title:'Case Background',rows:[['Summary',(gv('caseDesc')||'—').substring(0,160)+(gv('caseDesc').length>160?'…':'')],['Start date',gv('caseStart')||'—'],['Ongoing?',gv('caseOngoing')||'—'],['Amount',gv('finAmount')||'—'],['Payment method',gv('finMethod')||'—'],['Evidence',gv('existEvidence')||'—'],['Police report',gv('policeRpt')||'—'],['Legal action',gv('legalAction')||'—'],['Report format',gv('reportFmt')||'—']]},
+		{title:'Your Information',rows:[['Name',(gv('cFirst')+' '+gv('cLast')).trim()||'—'],['Country',gv('cCountry')||'—'],['City',gv('cCity')||'—'],['Email',gv('cEmail')||'—'],['WhatsApp',gv('cWhatsApp')||'—'],['Signal',gv('cSignal')||'—'],['Contact via',S.contactMethod||'—'],['Best time',gv('cBestTime')||'—'],['Sensitivity',S.sensitivity||'—']]}
+	];
+	var html='';
+	groups.forEach(function(g){
+		var rows=g.rows.filter(function(r){return r[1]&&r[1]!=='—';});
+		if(!rows.length)return;
+		html+='<div class="review-group"><div class="review-group-title">'+g.title+'</div><table class="rtbl">';
+		rows.forEach(function(r){html+='<tr><td>'+r[0]+'</td><td>'+r[1]+'</td></tr>';});
+		html+='</table></div>';
+	});
+	document.getElementById('reviewContent').innerHTML=html;
+}
+function submitForm(){
+	if(document.getElementById('hpf').value)return;
+	var ref='GL-'+Math.floor(100000+Math.random()*900000);
+	document.getElementById('refCode').textContent=ref;
+	var name=gv('cFirst')+(gv('cLast')?' '+gv('cLast'):'');
+	document.getElementById('successSummary').innerHTML='<table class="rtbl" style="max-width:480px"><tr><td>Reference</td><td style="font-family:\'Playfair Display\',serif;font-size:1.1rem;color:var(--navy);">'+ref+'</td></tr><tr><td>Name</td><td>'+name+'</td></tr><tr><td>Email</td><td>'+gv('cEmail')+'</td></tr><tr><td>Services</td><td>'+(S.services.join(' · ')||'—')+'</td></tr><tr><td>Urgency</td><td>'+(S.urgency||'—')+'</td></tr></table>';
+	document.getElementById('panel5').classList.remove('active');
+	cur=6;document.getElementById('panel6').classList.add('active');
+	for(var i=1;i<=5;i++){var t=document.getElementById('st'+i);if(t){t.classList.remove('active');t.classList.add('done');}}
+	document.getElementById('progFill').style.width='100%';
+	window.scrollTo({top:0,behavior:'smooth'});
+}
+window.addEventListener('scroll',function(){var nav=document.getElementById('nav');if(nav)nav.style.boxShadow=window.scrollY>10?'0 1px 12px rgba(13,27,42,0.1)':'';});
+</script>
+</body>
+</html>
