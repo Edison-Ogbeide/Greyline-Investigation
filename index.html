@@ -27,19 +27,19 @@
 			--border-2:rgba(13,27,42,0.18);
 		}
 		body { font-family:'Inter',system-ui,sans-serif; font-weight:400; background:var(--white); color:var(--text); line-height:1.7; overflow-x:hidden; }
-		h1,h2,h3,h4 { font-family:'Cormorant Garamond',Georgia,serif; font-weight:400; color:var(--navy); line-height:1.1; }
+		h1,h2,h3,h4 { font-family:'Cormorant Garamond',Georgia,serif; font-weight:500; color:var(--navy); line-height:1.1; }
 		h1 { font-size:clamp(3.2rem,6.5vw,6rem); letter-spacing:-0.01em; }
 		h2 { font-size:clamp(2.2rem,3.8vw,3.4rem); letter-spacing:-0.01em; }
 		h3 { font-size:clamp(1.4rem,2.2vw,1.9rem); }
 		h4 { font-size:1.1rem; font-weight:500; }
-		p  { font-size:1rem; line-height:1.75; color:var(--text-2); font-weight:400; }
+		p  { font-size:1rem; line-height:1.75; color:var(--text-2); }
 
 		/* NAV */
 		#nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:1.1rem 4rem; background:rgba(255,255,255,0.94); backdrop-filter:blur(14px); border-bottom:1px solid var(--border); }
 		.nav-logo { font-family:'Cormorant Garamond',Georgia,serif; font-size:1.05rem; font-weight:500; color:var(--navy); text-decoration:none; letter-spacing:0.04em; }
 		.nav-logo span { color:var(--accent); }
 		.nav-links { display:flex; gap:2.5rem; list-style:none; }
-		.nav-links a { font-size:0.78rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-3); text-decoration:none; transition:color 0.2s; }
+		.nav-links a { font-size:0.78rem; font-weight:400; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-3); text-decoration:none; transition:color 0.2s; }
 		.nav-links a:hover { color:var(--navy); }
 		.nav-cta { font-size:0.75rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--white); background:var(--navy); padding:0.55rem 1.4rem; text-decoration:none; transition:background 0.2s; }
 		.nav-cta:hover { background:var(--slate); }
@@ -52,7 +52,7 @@
 		.hero-eyebrow { font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); margin-bottom:1.25rem; font-weight:500; }
 		#hero h1 { color:var(--navy); margin-bottom:1.5rem; }
 		#hero h1 em { font-style:italic; color:var(--slate); }
-		.hero-sub { font-size:1.05rem; color:var(--text-2); max-width:440px; margin-bottom:2.5rem; line-height:1.8; font-weight:400; }
+		.hero-sub { font-size:1.05rem; color:var(--text-2); max-width:440px; margin-bottom:2.5rem; line-height:1.8; }
 		.hero-cta-row { display:flex; gap:1rem; flex-wrap:wrap; }
 		.btn-primary { display:inline-block; padding:0.85rem 2.2rem; background:var(--accent); color:var(--white); font-family:'Inter',system-ui,sans-serif; font-size:0.8rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; border:none; cursor:pointer; transition:background 0.2s,transform 0.15s; }
 		.btn-primary:hover { background:var(--accent-2); transform:translateY(-1px); }
@@ -90,7 +90,7 @@
 		.tier-desc { font-size:0.95rem; color:var(--text-2); margin-bottom:1.75rem; padding-bottom:1.75rem; border-bottom:1px solid var(--border); line-height:1.7; }
 		.tier.featured .tier-desc { color:rgba(255,255,255,0.5); border-bottom-color:rgba(255,255,255,0.1); }
 		.feat-list { list-style:none; }
-		.feat-list li { font-size:1.05rem; color:var(--text-2); padding:0.6rem 0; border-bottom:1px solid var(--border); display:flex; align-items:flex-start; gap:0.75rem; line-height:1.5; font-weight:400; }
+		.feat-list li { font-size:1.05rem; color:var(--text-2); padding:0.6rem 0; border-bottom:1px solid var(--border); display:flex; align-items:flex-start; gap:0.75rem; line-height:1.5; font-weight:300; }
 		.feat-list li:last-child { border-bottom:none; }
 		.feat-list li::before { content:'→'; color:var(--accent); flex-shrink:0; font-size:0.85rem; margin-top:0.18rem; }
 		.tier.featured .feat-list li { color:rgba(255,255,255,0.75); border-bottom-color:rgba(255,255,255,0.08); }
@@ -109,10 +109,10 @@
 		.svc-cat { font-size:0.62rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem; font-weight:500; }
 		.svc-name { font-family:'Cormorant Garamond',Georgia,serif; font-size:1.15rem; color:var(--white); margin-bottom:0.85rem; }
 		.svc-name.dk { color:var(--navy); }
-		.svc-desc { font-size:0.92rem; color:rgba(255,255,255,0.45); line-height:1.7; margin-bottom:1.25rem; font-weight:400; }
+		.svc-desc { font-size:0.92rem; color:rgba(255,255,255,0.45); line-height:1.7; margin-bottom:1.25rem; }
 		.svc-desc.dk { color:var(--text-2); }
 		.svc-includes { list-style:none; }
-		.svc-includes li { font-size:1rem; color:rgba(255,255,255,0.65); padding:0.45rem 0; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; gap:0.6rem; line-height:1.5; font-weight:400; }
+		.svc-includes li { font-size:1rem; color:rgba(255,255,255,0.65); padding:0.45rem 0; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; gap:0.6rem; line-height:1.5; font-weight:300; }
 		.svc-includes li.dk { color:var(--text-2); border-bottom-color:var(--border); }
 		.svc-includes li:last-child { border-bottom:none; }
 		.svc-includes li::before { content:'—'; color:var(--accent); flex-shrink:0; font-size:0.75rem; margin-top:0.28rem; }
@@ -157,19 +157,19 @@
 		#contact { background:var(--navy); }
 		#contact .section-eyebrow { color:var(--accent); }
 		#contact h2 { color:var(--white); }
-		.contact-grid { display:grid; grid-template-columns:1fr 1.5fr; gap:3rem; }
+		.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
 		.contact-info p { color:rgba(255,255,255,0.45); }
 		.contact-rule { width:36px; height:2px; background:var(--accent); margin:1rem 0 1.75rem; }
 		.cd-row { display:flex; align-items:flex-start; gap:1rem; margin-bottom:1rem; }
 		.cd-label { font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); min-width:70px; margin-top:0.15rem; font-weight:500; }
 		.cd-val { font-size:0.88rem; color:rgba(255,255,255,0.6); }
-		.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; }
-		.form-grid .full { grid-column:1/-1; }
-		input,select,textarea { width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.85); font-family:'Inter',system-ui,sans-serif; font-size:0.88rem; font-weight:300; padding:0.8rem 1rem; outline:none; transition:border-color 0.2s; appearance:none; }
-		input::placeholder,textarea::placeholder { color:rgba(255,255,255,0.25); }
-		input:focus,select:focus,textarea:focus { border-color:rgba(200,57,43,0.6); }
-		textarea { resize:vertical; min-height:120px; }
-		option { background:var(--navy-3); color:var(--white); }
+		.contact-cta-box { border:1.5px solid rgba(255,255,255,0.08); padding:2.5rem; }
+		.contact-cta-box h3 { color:var(--white); font-size:1.5rem; margin-bottom:0.75rem; }
+		.contact-cta-box p { color:rgba(255,255,255,0.45); font-size:0.95rem; margin-bottom:2rem; line-height:1.75; font-weight:400; }
+		.cta-assurances { list-style:none; margin-bottom:2rem; }
+		.cta-assurances li { font-size:0.85rem; color:rgba(255,255,255,0.45); padding:0.5rem 0; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; gap:0.75rem; font-weight:400; }
+		.cta-assurances li:last-child { border-bottom:none; }
+		.cta-assurances li::before { content:'→'; color:var(--accent); flex-shrink:0; font-size:0.8rem; margin-top:0.15rem; }
 
 		/* FOOTER */
 		footer { background:var(--navy-2); border-top:1px solid rgba(255,255,255,0.06); padding:3rem 4rem; }
@@ -200,7 +200,7 @@
 			#nav{padding:1rem 1.5rem;} section{padding:2.5rem 1.5rem;} #hero{grid-template-columns:1fr;padding:6rem 1.5rem 3rem;} #hero::after{display:none;}
 			.hero-left{padding-right:0;} .hero-right{padding-left:0;} .hero-stat .s-num{color:var(--navy);} .hero-stat .s-label{color:var(--text-3);}
 			.tier-grid,.process-steps{grid-template-columns:1fr;} .about-grid,.contact-grid,.limits-grid{grid-template-columns:1fr;gap:2.5rem;}
-			#assurance{grid-template-columns:1fr 1fr;padding:2rem 1.5rem;} .footer-inner{grid-template-columns:1fr 1fr;} .form-grid{grid-template-columns:1fr;}
+			#assurance{grid-template-columns:1fr 1fr;padding:2rem 1.5rem;} .footer-inner{grid-template-columns:1fr 1fr;}
 		}
 		@media(max-width:540px){ .footer-inner{grid-template-columns:1fr;} #assurance{grid-template-columns:1fr;} .nav-cta{display:none;} }
 	</style>
@@ -216,7 +216,7 @@
 		<li><a href="#polygraph">Polygraph</a></li>
 		<li><a href="#about">About</a></li>
 	</ul>
-	<a href="#contact" class="nav-cta">Begin Inquiry</a>
+	<a href="inquiry.html" class="nav-cta">Begin Inquiry</a>
 </nav>
 
 <section id="hero">
@@ -225,7 +225,7 @@
 		<h1>Evidence that<br><em>speaks for itself.</em></h1>
 		<p class="hero-sub">Professional OSINT and digital investigation services for clients across the UK, Nigeria, and the global diaspora — USA, Canada, Australia, and beyond. Fully online. Legally conducted. Court-ready reports delivered discreetly to your inbox.</p>
 		<div class="hero-cta-row">
-			<a href="#contact" class="btn-primary">Begin a Case Inquiry</a>
+			<a href="inquiry.html" class="btn-primary">Begin a Case Inquiry</a>
 			<a href="#infidelity" class="btn-outline">View Services</a>
 		</div>
 	</div>
@@ -502,7 +502,7 @@
 			<p>Greyline Investigations is a professional OSINT and digital intelligence agency, currently registering as a UK company and operating from the United Kingdom. We serve clients across the UK, Nigeria, and the wider diaspora — including the USA, Canada, and Australia. We specialise in investigations conducted entirely online, delivering the same quality of evidence that once required physical surveillance, faster and at a fraction of the cost.</p>
 			<p>We operate under UK law and in full compliance with the UK GDPR, the Data Protection Act 2018, and the Investigatory Powers Act 2016. For Nigerian client engagements we additionally adhere to the Nigeria Data Protection Act 2023 and the Cybercrimes (Prohibition, Prevention, Etc.) Act 2015. Every report is prepared to the standard required for court submission in the relevant jurisdiction.</p>
 			<p>Based in the United Kingdom, with partner investigators covering Nigeria (Lagos, Abuja, Port Harcourt, and Kano). All cases are handled fully remotely — clients communicate with us on UK GMT hours, with flexible scheduling available for US and Canadian clients.</p>
-			<a href="#contact" class="btn-primary" style="margin-top:1.5rem;display:inline-block;">Start a Confidential Inquiry</a>
+			<a href="inquiry.html" class="btn-primary" style="margin-top:1.5rem;display:inline-block;">Start a Confidential Inquiry</a>
 		</div>
 		<div>
 			<div class="about-stats">
@@ -524,76 +524,20 @@
 			<div class="contact-rule"></div>
 			<p>All inquiries are strictly confidential. No obligation to proceed after your initial consultation.</p>
 			<br>
+			<div class="cd-row"><span class="cd-label">Email</span><span class="cd-val">cases@greylineinvestigations.co.uk</span></div>
 			<div class="cd-row"><span class="cd-label">WhatsApp</span><span class="cd-val">+44 7700 900 461</span></div>
-			<div class="cd-row"><span class="cd-label">Email</span><span class="cd-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="187f6a7d617471767d71766e7d6b6c717f796c7177766b58796c7775717b75797174367177">[email&#160;protected]</a></span></div>
 			<div class="cd-row"><span class="cd-label">Hours</span><span class="cd-val">Available 24/7 — all inquiries answered promptly</span></div>
 		</div>
-		<div>
-			<form name="inquiry-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="inquiry-form">
-				<input type="hidden" name="form-name" value="inquiry-form" />
-				<p style="display:none;"><label>Do not fill: <input name="bot-field" /></label></p>
-				<div class="form-grid">
-					<input type="text" name="name" placeholder="Full name" required />
-					<input type="email" name="email" placeholder="Email address" required />
-					<input type="text" name="phone" placeholder="Phone / WhatsApp number" class="full" required />
-					<select name="service-type" class="full" required>
-						<option value="">Select service</option>
-						<optgroup label="Infidelity &amp; Relationship">
-							<option value="digital-trace">Infidelity — Digital Trace</option>
-							<option value="deep-intel">Infidelity — Deep Intelligence</option>
-							<option value="ongoing-watch">Infidelity — Ongoing Watch (monthly)</option>
-							<option value="dating-sweep">Dating site sweep</option>
-							<option value="partner-verify">Partner identity verification</option>
-						</optgroup>
-						<optgroup label="Romance &amp; Online Scams">
-							<option value="romance-check">Romance scam check</option>
-							<option value="romance-evidence">Romance scam evidence pack</option>
-						</optgroup>
-						<optgroup label="Dark Web Monitoring">
-							<option value="data-scan">Personal data scan</option>
-							<option value="dark-web-monitor">Dark web monitoring (monthly)</option>
-							<option value="financial-exposure">Financial exposure report</option>
-						</optgroup>
-						<optgroup label="Crypto Scam Tracing">
-							<option value="platform-check">Investment platform check</option>
-							<option value="wallet-trace">Wallet trace report</option>
-							<option value="crypto-evidence">Crypto fraud evidence pack</option>
-						</optgroup>
-						<optgroup label="Digital &amp; Cyber">
-							<option value="computer-forensics">Computer forensics</option>
-							<option value="email-trace">Email header &amp; source tracing</option>
-							<option value="socmint">SOCMINT investigation</option>
-							<option value="identity-theft">Identity theft investigation</option>
-							<option value="harassment">Personal safety documentation</option>
-						</optgroup>
-						<optgroup label="Fraud &amp; Reputation">
-							<option value="financial-fraud">Financial fraud investigation</option>
-							<option value="real-estate">Real estate fraud check</option>
-							<option value="defamation">Online reputation &amp; defamation evidence</option>
-							<option value="due-diligence">Business due diligence</option>
-							<option value="background">Background checks</option>
-							<option value="scammer-id">Scammer identification &amp; reporting</option>
-						</optgroup>
-						</optgroup>
-						<optgroup label="Polygraph Testing (Nigeria)">
-							<option value="poly-marriage">Pre-marriage truth verification</option>
-							<option value="poly-fidelity">Fidelity verification polygraph</option>
-							<option value="poly-visa">Pre-visa relationship integrity check</option>
-							<option value="poly-staff">Staff &amp; domestic integrity screening</option>
-						</optgroup>
-						<option value="other">Other — please describe below</option>
-					</select>
-
-					<textarea name="message" placeholder="Case details — please share as much relevant information as possible. Everything is kept strictly confidential." class="full" required></textarea>
-					<select name="preferred-contact" class="full" required>
-						<option value="">Preferred contact method</option>
-						<option value="email">Email</option>
-						<option value="whatsapp">WhatsApp</option>
-						<option value="text">Text message</option>
-					</select>
-					<div class="full"><button type="submit" class="btn-primary" style="width:100%;padding:1rem;font-size:0.82rem;">Submit confidential inquiry</button></div>
-				</div>
-			</form>
+		<div class="contact-cta-box">
+			<h3>Ready to start your investigation?</h3>
+			<p>Use our secure intake form to submit your case. Takes less than 3 minutes. Fully confidential.</p>
+			<ul class="cta-assurances">
+				<li>Mutual NDA signed before any case discussion begins</li>
+				<li>Your identity never disclosed to the subject or third parties</li>
+				<li>Response within 2 hours, 24/7 — all time zones</li>
+				<li>No obligation to proceed after your initial consultation</li>
+			</ul>
+			<a href="inquiry.html" class="btn-primary" style="display:inline-block;">Begin confidential inquiry →</a>
 		</div>
 	</div>
 </section>
@@ -623,25 +567,29 @@
 				<li><a href="#process">How it works</a></li>
 				<li><a href="#limits">Our standards</a></li>
 				<li><a href="#contact">Contact</a></li>
+				<li><a href="inquiry.html">Begin inquiry</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="footer-bottom">
-		<p>&copy; 2026 Greyline Investigations. All Rights Reserved. Licensed and Insured Private Investigation Agency.</p>
+		<p>&copy; 2026 Greyline Investigations Limited. All Rights Reserved.</p>
 		<div class="social-links"><a href="#">Twitter</a><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Facebook</a></div>
 	</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-document.getElementById('inquiry-form').addEventListener('submit', function(e) {
-	e.preventDefault();
-	const d = Object.fromEntries(new FormData(e.target));
-	const subject = encodeURIComponent('New Greyline Case Inquiry: ' + d.name + ' — ' + (d['service-type'] || 'General'));
-	const body = encodeURIComponent('Name: ' + d.name + '\nEmail: ' + d.email + '\nPhone: ' + d.phone + '\nService: ' + d['service-type'] + '\nPreferred contact: ' + d['preferred-contact'] + '\n\nCase details:\n' + d.message);
-	window.location.href = 'mailto:inquiries@greylineinvestigations.co.uk?subject=' + subject + '&body=' + body;
-	alert('Thank you. Your email client will open with your inquiry pre-filled. Please review and send to complete your submission.');
-});
+<script>
 const navLinks = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
 	let current = '';
-	document
+	document.querySelectorAll('section[id]').forEach(s => {
+		if (window.scrollY >= s.offsetTop - 120) current = s.id;
+	});
+	navLinks.forEach(a => {
+		a.style.color = a.getAttribute('href') === '#' + current ? 'var(--navy)' : '';
+	});
+	const nav = document.getElementById('nav');
+	if (nav) nav.style.boxShadow = window.scrollY > 10 ? '0 1px 12px rgba(13,27,42,0.08)' : '';
+});
+</script>
+</body>
+</html>
