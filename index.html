@@ -157,19 +157,19 @@
 		#contact { background:var(--navy); }
 		#contact .section-eyebrow { color:var(--accent); }
 		#contact h2 { color:var(--white); }
-		.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+		.contact-grid { display:grid; grid-template-columns:1fr 1.5fr; gap:3rem; }
 		.contact-info p { color:rgba(255,255,255,0.45); }
 		.contact-rule { width:36px; height:2px; background:var(--accent); margin:1rem 0 1.75rem; }
 		.cd-row { display:flex; align-items:flex-start; gap:1rem; margin-bottom:1rem; }
 		.cd-label { font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); min-width:70px; margin-top:0.15rem; font-weight:500; }
 		.cd-val { font-size:0.88rem; color:rgba(255,255,255,0.6); }
-		.contact-cta-box { border:1.5px solid rgba(255,255,255,0.08); padding:2.5rem; }
-		.contact-cta-box h3 { color:var(--white); font-size:1.5rem; margin-bottom:0.75rem; }
-		.contact-cta-box p { color:rgba(255,255,255,0.45); font-size:0.95rem; margin-bottom:2rem; line-height:1.75; }
-		.cta-assurances { list-style:none; margin-bottom:2rem; }
-		.cta-assurances li { font-size:0.85rem; color:rgba(255,255,255,0.45); padding:0.5rem 0; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; gap:0.75rem; }
-		.cta-assurances li:last-child { border-bottom:none; }
-		.cta-assurances li::before { content:'→'; color:var(--accent); flex-shrink:0; font-size:0.8rem; margin-top:0.15rem; }
+		.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; }
+		.form-grid .full { grid-column:1/-1; }
+		input,select,textarea { width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.85); font-family:'IBM Plex Sans',sans-serif; font-size:0.88rem; font-weight:300; padding:0.8rem 1rem; outline:none; transition:border-color 0.2s; appearance:none; }
+		input::placeholder,textarea::placeholder { color:rgba(255,255,255,0.25); }
+		input:focus,select:focus,textarea:focus { border-color:rgba(200,57,43,0.6); }
+		textarea { resize:vertical; min-height:120px; }
+		option { background:var(--navy-3); color:var(--white); }
 
 		/* FOOTER */
 		footer { background:var(--navy-2); border-top:1px solid rgba(255,255,255,0.06); padding:3rem 4rem; }
@@ -200,7 +200,7 @@
 			#nav{padding:1rem 1.5rem;} section{padding:2.5rem 1.5rem;} #hero{grid-template-columns:1fr;padding:6rem 1.5rem 3rem;} #hero::after{display:none;}
 			.hero-left{padding-right:0;} .hero-right{padding-left:0;} .hero-stat .s-num{color:var(--navy);} .hero-stat .s-label{color:var(--text-3);}
 			.tier-grid,.process-steps{grid-template-columns:1fr;} .about-grid,.contact-grid,.limits-grid{grid-template-columns:1fr;gap:2.5rem;}
-			#assurance{grid-template-columns:1fr 1fr;padding:2rem 1.5rem;} .footer-inner{grid-template-columns:1fr 1fr;}
+			#assurance{grid-template-columns:1fr 1fr;padding:2rem 1.5rem;} .footer-inner{grid-template-columns:1fr 1fr;} .form-grid{grid-template-columns:1fr;}
 		}
 		@media(max-width:540px){ .footer-inner{grid-template-columns:1fr;} #assurance{grid-template-columns:1fr;} .nav-cta{display:none;} }
 	</style>
@@ -216,7 +216,7 @@
 		<li><a href="#polygraph">Polygraph</a></li>
 		<li><a href="#about">About</a></li>
 	</ul>
-	<a href="inquiry.html" class="nav-cta">Begin Inquiry</a>
+	<a href="#contact" class="nav-cta">Begin Inquiry</a>
 </nav>
 
 <section id="hero">
@@ -225,7 +225,7 @@
 		<h1>Evidence that<br><em>speaks for itself.</em></h1>
 		<p class="hero-sub">Professional OSINT and digital investigation services for clients in Nigeria and the diaspora — UK, USA, Canada, and beyond. Fully online. Legally conducted. Court-ready reports delivered discreetly to your inbox.</p>
 		<div class="hero-cta-row">
-			<a href="inquiry.html" class="btn-primary">Begin a Case Inquiry</a>
+			<a href="#contact" class="btn-primary">Begin a Case Inquiry</a>
 			<a href="#infidelity" class="btn-outline">View Services</a>
 		</div>
 	</div>
@@ -502,7 +502,7 @@
 			<p>Greyline Investigations is a professional OSINT and digital intelligence agency serving clients in Nigeria and the global diaspora — including the UK, USA, Canada, and Australia. We specialise in investigations conducted entirely online, delivering the same quality of evidence that once required physical surveillance, faster and at a fraction of the cost.</p>
 			<p>We operate strictly within the laws of the Federal Republic of Nigeria, including the Nigeria Data Protection Act 2023 and the Cybercrimes Act 2015. Every report is prepared to the standard required for court submission.</p>
 			<p>Based in Lagos with investigators available across Abuja, Port Harcourt, and Kano. We operate fully remotely for all international and diaspora cases — UK clients can communicate via standard GMT hours, US and Canadian clients via flexible scheduling.</p>
-			<a href="inquiry.html" class="btn-primary" style="margin-top:1.5rem;display:inline-block;">Start a Confidential Inquiry</a>
+			<a href="#contact" class="btn-primary" style="margin-top:1.5rem;display:inline-block;">Start a Confidential Inquiry</a>
 		</div>
 		<div>
 			<div class="about-stats">
@@ -525,19 +525,75 @@
 			<p>All inquiries are strictly confidential. No obligation to proceed after your initial consultation.</p>
 			<br>
 			<div class="cd-row"><span class="cd-label">WhatsApp</span><span class="cd-val">+234 812 524 7802</span></div>
-			<div class="cd-row"><span class="cd-label">Email</span><span class="cd-val">inquiries@greylineinvestigations.com.ng</span></div>
+			<div class="cd-row"><span class="cd-label">Email</span><span class="cd-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="187f6a7d617471767d71766e7d6b6c717f796c7177766b58796c7775717b75797174367177">[email&#160;protected]</a></span></div>
 			<div class="cd-row"><span class="cd-label">Hours</span><span class="cd-val">Available 24/7 — all inquiries answered promptly</span></div>
 		</div>
-		<div class="contact-cta-box">
-			<h3>Ready to start your investigation?</h3>
-			<p>Use our secure intake form to submit your case details. Fully encrypted. Takes less than 5 minutes.</p>
-			<ul class="cta-assurances">
-				<li>Mutual NDA signed before any case discussion begins</li>
-				<li>Your identity never disclosed to the subject or third parties</li>
-				<li>Response within 2 hours, 24/7 — all time zones</li>
-				<li>No obligation to proceed after your initial consultation</li>
-			</ul>
-			<a href="inquiry.html" class="btn-primary" style="display:inline-block;">Begin confidential inquiry →</a>
+		<div>
+			<form name="inquiry-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="inquiry-form">
+				<input type="hidden" name="form-name" value="inquiry-form" />
+				<p style="display:none;"><label>Do not fill: <input name="bot-field" /></label></p>
+				<div class="form-grid">
+					<input type="text" name="name" placeholder="Full name" required />
+					<input type="email" name="email" placeholder="Email address" required />
+					<input type="text" name="phone" placeholder="Phone / WhatsApp number" class="full" required />
+					<select name="service-type" class="full" required>
+						<option value="">Select service</option>
+						<optgroup label="Infidelity &amp; Relationship">
+							<option value="digital-trace">Infidelity — Digital Trace</option>
+							<option value="deep-intel">Infidelity — Deep Intelligence</option>
+							<option value="ongoing-watch">Infidelity — Ongoing Watch (monthly)</option>
+							<option value="dating-sweep">Dating site sweep</option>
+							<option value="partner-verify">Partner identity verification</option>
+						</optgroup>
+						<optgroup label="Romance &amp; Online Scams">
+							<option value="romance-check">Romance scam check</option>
+							<option value="romance-evidence">Romance scam evidence pack</option>
+						</optgroup>
+						<optgroup label="Dark Web Monitoring">
+							<option value="data-scan">Personal data scan</option>
+							<option value="dark-web-monitor">Dark web monitoring (monthly)</option>
+							<option value="financial-exposure">Financial exposure report</option>
+						</optgroup>
+						<optgroup label="Crypto Scam Tracing">
+							<option value="platform-check">Investment platform check</option>
+							<option value="wallet-trace">Wallet trace report</option>
+							<option value="crypto-evidence">Crypto fraud evidence pack</option>
+						</optgroup>
+						<optgroup label="Digital &amp; Cyber">
+							<option value="computer-forensics">Computer forensics</option>
+							<option value="email-trace">Email header &amp; source tracing</option>
+							<option value="socmint">SOCMINT investigation</option>
+							<option value="identity-theft">Identity theft investigation</option>
+							<option value="harassment">Personal safety documentation</option>
+						</optgroup>
+						<optgroup label="Fraud &amp; Reputation">
+							<option value="financial-fraud">Financial fraud investigation</option>
+							<option value="real-estate">Real estate fraud check</option>
+							<option value="defamation">Online reputation &amp; defamation evidence</option>
+							<option value="due-diligence">Business due diligence</option>
+							<option value="background">Background checks</option>
+							<option value="scammer-id">Scammer identification &amp; reporting</option>
+						</optgroup>
+						</optgroup>
+						<optgroup label="Polygraph Testing (Nigeria)">
+							<option value="poly-marriage">Pre-marriage truth verification</option>
+							<option value="poly-fidelity">Fidelity verification polygraph</option>
+							<option value="poly-visa">Pre-visa relationship integrity check</option>
+							<option value="poly-staff">Staff &amp; domestic integrity screening</option>
+						</optgroup>
+						<option value="other">Other — please describe below</option>
+					</select>
+
+					<textarea name="message" placeholder="Case details — please share as much relevant information as possible. Everything is kept strictly confidential." class="full" required></textarea>
+					<select name="preferred-contact" class="full" required>
+						<option value="">Preferred contact method</option>
+						<option value="email">Email</option>
+						<option value="whatsapp">WhatsApp</option>
+						<option value="text">Text message</option>
+					</select>
+					<div class="full"><button type="submit" class="btn-primary" style="width:100%;padding:1rem;font-size:0.82rem;">Submit confidential inquiry</button></div>
+				</div>
+			</form>
 		</div>
 	</div>
 </section>
@@ -567,7 +623,6 @@
 				<li><a href="#process">How it works</a></li>
 				<li><a href="#limits">Our standards</a></li>
 				<li><a href="#contact">Contact</a></li>
-				<li><a href="inquiry.html">Begin inquiry</a></li>
 			</ul>
 		</div>
 	</div>
@@ -577,19 +632,16 @@
 	</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.getElementById('inquiry-form').addEventListener('submit', function(e) {
+	e.preventDefault();
+	const d = Object.fromEntries(new FormData(e.target));
+	const subject = encodeURIComponent('New Greyline Case Inquiry: ' + d.name + ' — ' + (d['service-type'] || 'General'));
+	const body = encodeURIComponent('Name: ' + d.name + '\nEmail: ' + d.email + '\nPhone: ' + d.phone + '\nService: ' + d['service-type'] + '\nPreferred contact: ' + d['preferred-contact'] + '\n\nCase details:\n' + d.message);
+	window.location.href = 'mailto:greylineinvestigations@atomicmail.io?subject=' + subject + '&body=' + body;
+	alert('Thank you. Your email client will open with your inquiry pre-filled. Please review and send to complete your submission.');
+});
 const navLinks = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
 	let current = '';
-	document.querySelectorAll('section[id]').forEach(s => {
-		if (window.scrollY >= s.offsetTop - 120) current = s.id;
-	});
-	navLinks.forEach(a => {
-		a.style.color = a.getAttribute('href') === '#' + current ? 'var(--navy)' : '';
-	});
-	const nav = document.getElementById('nav');
-	if (nav) nav.style.boxShadow = window.scrollY > 10 ? '0 1px 12px rgba(13,27,42,0.08)' : '';
-});
-</script>
-</body>
-</html>
+	document
