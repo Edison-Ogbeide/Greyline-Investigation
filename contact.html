@@ -8,17 +8,11 @@
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 	<style>
-		.page-hero { padding:8rem 4rem 3.5rem; background:var(--navy); }
-		.page-hero .hero-eyebrow { font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); margin-bottom:1.25rem; font-weight:500; }
-		.page-hero h1 { color:var(--white); font-size:clamp(2.6rem,5vw,4.5rem); margin-bottom:1.25rem; }
-		.page-hero p { color:rgba(255,255,255,0.45); max-width:620px; }
 		.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
-		.contact-info h2 { margin-bottom:0.5rem; }
-		.contact-info p { margin-bottom:1.5rem; }
-		.contact-form-box { border:1.5px solid var(--border-2); padding:2.5rem; background:var(--ice-2); }
-		.contact-form-box h3 { margin-bottom:0.75rem; }
-		.contact-form-box > p { margin-bottom:2rem; }
-		@media(max-width:960px){ .page-hero{padding:6rem 1.5rem 2.5rem;} .contact-grid{grid-template-columns:1fr;gap:2.5rem;} }
+		.redirect-box { border:1.5px solid var(--border-2); padding:2.5rem; background:var(--ice-2); margin-bottom:3rem; }
+		.redirect-box h3 { margin-bottom:0.75rem; }
+		.redirect-box p { font-size:0.92rem; margin-bottom:1.5rem; }
+		@media(max-width:960px){ .contact-grid{grid-template-columns:1fr;gap:2.5rem;} }
 	</style>
 </head>
 <body>
@@ -31,89 +25,86 @@
 		<li><a href="about.html">About</a></li>
 		<li><a href="contact.html" class="active">Contact</a></li>
 	</ul>
-	<a href="inquiry.html" class="nav-cta">Begin Inquiry</a>
+	<a href="inquiry.html" class="nav-cta hot">Submit Inquiry</a>
 </nav>
 
 <div class="page-hero">
 	<div class="hero-eyebrow">Contact</div>
 	<h1>Get in touch</h1>
-	<p>All inquiries are strictly confidential. No obligation to proceed after your initial consultation.</p>
+	<p>For general questions, partnership inquiries, or media requests. All communications are handled confidentially.</p>
 </div>
 
 <section>
+	<!-- REDIRECT BOX — case inquiries go to inquiry page -->
+	<div class="redirect-box">
+		<h3>Have a case to discuss?</h3>
+		<p>For all case-related inquiries, please use our Confidential Inquiry process. This ensures your information is handled securely and that a confidentiality agreement is in place before any detailed discussion.</p>
+		<a href="inquiry.html" class="btn-primary" style="font-size:0.72rem;padding:0.7rem 1.6rem;">Go to Confidential Inquiry →</a>
+	</div>
+
 	<div class="contact-grid">
-		<div class="contact-info">
-			<div class="section-eyebrow">Contact Details</div>
+		<div>
+			<div class="section-eyebrow">General Contact</div>
 			<h2>Reach us directly</h2>
 			<div class="gold-rule"></div>
-			<p>Whether you have a question about our services, need advice on your situation, or are ready to begin a case — we're here to help. All communications are strictly confidential.</p>
+			<p>For non-case-related questions — partnerships, media inquiries, collaboration, or general information about our services.</p>
 
-			<div class="cd-row" style="border-bottom:1px solid var(--border);padding-bottom:1rem;"><span class="cd-label" style="color:var(--accent);">Email</span><span class="cd-val" style="color:var(--text-2);">inquiries@greylineinvestigations.co.uk</span></div>
-			<div class="cd-row" style="border-bottom:1px solid var(--border);padding-bottom:1rem;"><span class="cd-label" style="color:var(--accent);">WhatsApp</span><span class="cd-val" style="color:var(--text-2);">+44 7700 900 461</span></div>
-			<div class="cd-row" style="border-bottom:1px solid var(--border);padding-bottom:1rem;"><span class="cd-label" style="color:var(--accent);">Hours</span><span class="cd-val" style="color:var(--text-2);">Available 24/7 — all inquiries answered promptly</span></div>
-			<div class="cd-row"><span class="cd-label" style="color:var(--accent);">Location</span><span class="cd-val" style="color:var(--text-2);">United Kingdom (remote service — global coverage)</span></div>
-
-			<div style="margin-top:2.5rem;padding:1.75rem;background:var(--ice-2);border:1px solid var(--border);">
-				<h4 style="font-size:0.95rem;margin-bottom:0.5rem;">Prefer to submit a case directly?</h4>
-				<p style="font-size:0.88rem;margin-bottom:1rem;">Use our secure intake form to begin a confidential investigation. Takes less than 3 minutes.</p>
-				<a href="inquiry.html" class="btn-primary" style="font-size:0.72rem;padding:0.7rem 1.6rem;">Begin confidential inquiry →</a>
+			<div style="margin-top:2rem;">
+				<div class="cd-row" style="border-bottom:1px solid var(--border);padding-bottom:1rem;">
+					<span class="cd-label" style="color:var(--accent);">Email</span>
+					<span class="cd-val" style="color:var(--text-2);">inquiries@greylineinvestigations.co.uk</span>
+				</div>
+				<div class="cd-row" style="border-bottom:1px solid var(--border);padding-bottom:1rem;">
+					<span class="cd-label" style="color:var(--accent);">WhatsApp</span>
+					<span class="cd-val" style="color:var(--text-2);">+44 7700 900 461</span>
+				</div>
+				<div class="cd-row" style="border-bottom:1px solid var(--border);padding-bottom:1rem;">
+					<span class="cd-label" style="color:var(--accent);">Hours</span>
+					<span class="cd-val" style="color:var(--text-2);">Available 24/7 — all inquiries answered promptly</span>
+				</div>
+				<div class="cd-row">
+					<span class="cd-label" style="color:var(--accent);">Location</span>
+					<span class="cd-val" style="color:var(--text-2);">United Kingdom (remote service — global coverage)</span>
+				</div>
 			</div>
 		</div>
 
-		<div class="contact-form-box">
-			<h3>Send us a message</h3>
-			<p style="font-size:0.92rem;">For general questions, partnership inquiries, or to discuss your situation before submitting a formal case.</p>
-			<form>
-				<div class="form-row">
-					<div class="form-group"><label class="form-label">Full name</label><input type="text" class="form-input" placeholder="Your full name"></div>
-					<div class="form-group"><label class="form-label">Email address</label><input type="email" class="form-input" placeholder="your@email.com"></div>
-				</div>
-				<div class="form-group"><label class="form-label">Phone (optional)</label><input type="tel" class="form-input" placeholder="+44 or international"></div>
-				<div class="form-group">
-					<label class="form-label">Subject</label>
-					<select class="form-select">
-						<option value="">Select a topic</option>
-						<option>General inquiry</option>
-						<option>Service question</option>
-						<option>Partnership / collaboration</option>
-						<option>Media / press inquiry</option>
-						<option>Other</option>
-					</select>
-				</div>
-				<div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Tell us how we can help..."></textarea></div>
-				<button type="submit" class="btn-primary" style="width:100%;text-align:center;border:none;cursor:pointer;">Send message</button>
-			</form>
-		</div>
-	</div>
-</section>
-
-<!-- ASSURANCE -->
-<section style="background:var(--ice-2);">
-	<div style="margin-bottom:2rem;">
-		<div class="section-eyebrow">Confidentiality</div>
-		<h2>Your privacy is absolute</h2>
-		<div class="section-rule"></div>
-	</div>
-	<div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
 		<div>
-			<p>Every interaction with Greyline — from your first message to your final report — is protected by strict confidentiality protocols. We sign a mutual NDA before any case discussion begins, and your identity is never disclosed to the subject or any third party.</p>
+			<div style="border:1.5px solid var(--border-2);padding:2.5rem;">
+				<h3 style="margin-bottom:0.75rem;">Send a general message</h3>
+				<p style="font-size:0.92rem;margin-bottom:2rem;">For non-case inquiries only. Do not include sensitive or case-related information in this form.</p>
+				<form>
+					<div class="form-row" style="margin-bottom:1.5rem;">
+						<div class="form-group"><label class="form-label">Full name</label><input type="text" class="form-input" placeholder="Your full name"></div>
+						<div class="form-group"><label class="form-label">Email address</label><input type="email" class="form-input" placeholder="your@email.com"></div>
+					</div>
+					<div class="form-group">
+						<label class="form-label">Subject</label>
+						<select class="form-select">
+							<option value="">Select a topic</option>
+							<option>General inquiry</option>
+							<option>Partnership / collaboration</option>
+							<option>Media / press inquiry</option>
+							<option>Training inquiry</option>
+							<option>Other</option>
+						</select>
+					</div>
+					<div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="How can we help?"></textarea></div>
+					<button type="submit" class="btn-primary" style="width:100%;text-align:center;border:none;cursor:pointer;">Send message</button>
+				</form>
+			</div>
 		</div>
-		<ul class="cta-assurances" style="list-style:none;">
-			<li style="color:var(--text-2);border-bottom-color:var(--border);font-size:0.92rem;">Mutual NDA signed before any case discussion begins</li>
-			<li style="color:var(--text-2);border-bottom-color:var(--border);font-size:0.92rem;">Your identity never disclosed to the subject or third parties</li>
-			<li style="color:var(--text-2);border-bottom-color:var(--border);font-size:0.92rem;">Response within 2 hours, 24/7 — all time zones</li>
-			<li style="color:var(--text-2);border-bottom-color:var(--border);font-size:0.92rem;">No obligation to proceed after your initial consultation</li>
-		</ul>
 	</div>
 </section>
 
 <footer>
 	<div class="footer-inner">
-		<div class="footer-brand"><div class="footer-brand-name">Greyline Investigations</div><p>Cyber intelligence, risk, and investigation services. UK-registered agency serving clients worldwide.</p></div>
-		<div class="footer-col"><h4>Services</h4><ul><li><a href="services.html#infidelity">Relationship intelligence</a></li><li><a href="services.html#cybersecurity">Cybersecurity</a></li><li><a href="services.html#threat-intel">Threat intelligence</a></li><li><a href="services.html#corporate">Corporate intelligence</a></li><li><a href="services.html#digital">Digital forensics &amp; fraud</a></li><li><a href="services.html#litigation">Litigation &amp; training</a></li></ul></div>
-		<div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About us</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li><li><a href="inquiry.html">Begin inquiry</a></li></ul></div>
+		<div class="footer-brand"><div class="footer-brand-name">Greyline Investigations</div><p>Cyber intelligence, risk, and investigation services. UK-registered. Confidential by design.</p></div>
+		<div class="footer-col"><h4>Services</h4><ul><li><a href="services.html#fraud">Fraud investigations</a></li><li><a href="services.html#forensics">Digital forensics</a></li><li><a href="services.html#cybersecurity">Cybersecurity</a></li><li><a href="services.html#intelligence">Intelligence &amp; tracing</a></li></ul></div>
+		<div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="inquiry.html">Confidential inquiry</a></li><li><a href="contact.html">Contact</a></li></ul></div>
 	</div>
-	<div class="footer-bottom"><p>&copy; 2026 Greyline Investigations Limited. All Rights Reserved.</p><div class="social-links"><a href="#">Twitter</a><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Facebook</a></div></div>
+	<div class="footer-legal">Greyline Investigations operates under strict confidentiality and data protection standards. Sensitive information is only processed under formal agreement.</div>
+	<div class="footer-bottom"><p>&copy; 2026 Greyline Investigations Limited. All Rights Reserved.</p><div class="social-links"><a href="#">LinkedIn</a><a href="#">Twitter</a></div></div>
 </footer>
 
 </body>
