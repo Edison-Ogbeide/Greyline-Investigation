@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Greyline Investigations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --navy: #0a0f1a;
+            --navy-light: #111827;
+            --navy-mid: #1a2332;
+            --red: #c0392b;
+            --red-dark: #a5311f;
+            --off-white: #e8e6e1;
+            --grey-text: #9ca3af;
+            --grey-light: #d1d5db;
+            --grey-border: #1f2937;
+            --white: #ffffff;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--navy);
+            color: var(--off-white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- NAV ---- */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.25rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(10, 15, 26, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--grey-border);
+        }
+        .nav-logo {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            color: var(--off-white);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+        .nav-logo span { color: var(--red); font-weight: 600; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--grey-text);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--off-white); }
+        .nav-cta {
+            background: var(--red);
+            color: var(--white) !important;
+            padding: 0.55rem 1.25rem;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.8rem;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover { background: var(--red-dark); }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--off-white);
+            transition: 0.3s;
+        }
+
+        /* ---- POLICY PAGE LAYOUT ---- */
+        .policy-hero {
+            padding: 10rem 2.5rem 4rem;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .policy-hero .label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 1.25rem;
+        }
+        .policy-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: var(--off-white);
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+        .policy-hero h1 em {
+            font-style: italic;
+            color: var(--off-white);
+        }
+        .policy-hero .red-line {
+            width: 60px;
+            height: 3px;
+            background: var(--red);
+            margin: 1.5rem 0;
+        }
+        .policy-hero .intro {
+            font-size: 1rem;
+            color: var(--grey-text);
+            line-height: 1.8;
+            max-width: 680px;
+        }
+        .policy-meta {
+            margin-top: 2rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--navy-light);
+            border: 1px solid var(--grey-border);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            line-height: 2;
+        }
+        .policy-meta strong {
+            color: var(--off-white);
+            font-weight: 600;
+        }
+        .policy-meta span {
+            color: var(--grey-text);
+        }
+
+        /* ---- POLICY CONTENT ---- */
+        .policy-content {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 2.5rem 6rem;
+        }
+        .clause-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-top: 3.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .clause-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--off-white);
+            margin-bottom: 1rem;
+        }
+        .policy-content p {
+            font-size: 0.95rem;
+            color: var(--grey-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .policy-content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+        .policy-content ul li {
+            font-size: 0.95rem;
+            color: var(--grey-light);
+            line-height: 1.8;
+            padding-left: 1.25rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        .policy-content ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--red);
+            font-weight: 600;
+        }
+        .policy-content .note {
+            margin-top: 3rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--navy-light);
+            border-left: 3px solid var(--red);
+            font-size: 0.8rem;
+            color: var(--grey-text);
+            line-height: 1.7;
+            border-radius: 0 6px 6px 0;
+        }
+
+        /* ---- FOOTER ---- */
+        .site-footer {
+            border-top: 1px solid var(--grey-border);
+            padding: 4rem 2.5rem 2rem;
+            background: var(--navy);
+        }
+        .footer-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+        .footer-brand p {
+            font-size: 0.85rem;
+            color: var(--grey-text);
+            line-height: 1.7;
+            margin-top: 0.75rem;
+        }
+        .footer-brand .logo-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 1.05rem;
+            color: var(--off-white);
+        }
+        .footer-brand .logo-text span { color: var(--red); font-weight: 600; }
+        .footer-col h4 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--off-white);
+            margin-bottom: 1rem;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-col ul li::before {
+            content: none;
+        }
+        .footer-col ul li a {
+            font-size: 0.85rem;
+            color: var(--grey-text);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-col ul li a:hover { color: var(--off-white); }
+        .footer-legal {
+            max-width: 1100px;
+            margin: 3rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--grey-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-legal p {
+            font-size: 0.75rem;
+            color: var(--grey-text);
+            margin: 0;
+        }
+        .footer-legal-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .footer-legal-links a {
+            font-size: 0.75rem;
+            color: var(--grey-text);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-legal-links a:hover { color: var(--off-white); }
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+        .footer-social a {
+            color: var(--grey-text);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover { color: var(--off-white); }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 768px) {
+            .nav { padding: 1rem 1.25rem; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--navy);
+                border-bottom: 1px solid var(--grey-border);
+                padding: 1.5rem;
+                gap: 1rem;
+            }
+            .policy-hero { padding: 7rem 1.25rem 2.5rem; }
+            .policy-hero h1 { font-size: 2rem; }
+            .policy-content { padding: 0 1.25rem 4rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-legal { flex-direction: column; text-align: center; }
+            .footer-legal-links { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">Greyline <span>Investigations</span></a>
+        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="inquiry.html" class="nav-cta">Submit Inquiry</a></li>
+        </ul>
+    </nav>
+
+    <section class="policy-hero">
+        <div class="label">Greyline Investigations Limited</div>
+        <h1>Privacy <em>Policy</em></h1>
+        <div class="red-line"></div>
+        <p class="intro">This Privacy Policy explains how Greyline Investigations Limited collects, uses, stores, and protects your personal data. We are committed to handling all personal information with the utmost care, in strict compliance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+        <div class="policy-meta">
+            <strong>Data Controller:</strong> <span>Greyline Investigations Limited</span><br>
+            <strong>Company Number:</strong> <span>17121990</span><br>
+            <strong>Contact:</strong> <span>cases@greylineinvestigations.co.uk</span><br>
+            <strong>Website:</strong> <span>greylineinvestigations.co.uk</span><br>
+            <strong>Last updated:</strong> <span>March 2026</span><br>
+            <strong>Applies to:</strong> <span>Website visitors, inquiry submitters, and clients</span><br>
+        </div>
+    </section>
+    <section class="policy-content">
+        <div class="clause-label">Section 1</div>
+        <h2 class="clause-title">Who We Are</h2>
+        <p>Greyline Investigations Limited is a professional OSINT and digital intelligence agency providing investigation services to clients across the UK, Nigeria, and internationally. We are a company incorporated in England and Wales (Company Number 17121990) and operate as the data controller in respect of personal data processed through our website and client engagements.</p>
+        <p>Where we process personal data relating to the subject of an investigation on behalf of a client, we act as a data processor on that client's instructions. In all other respects we are the data controller.</p>
+        <div class="clause-label">Section 2</div>
+        <h2 class="clause-title">What Personal Data We Collect</h2>
+        <p><strong>2.1 Data you provide directly</strong></p>
+        <ul>
+            <li>Identity data: name or alias, contact email address, WhatsApp or phone number</li>
+            <li>Case data: details of the investigation requested, including information about the subject of investigation</li>
+            <li>Communication data: emails, messages, and correspondence sent to us</li>
+            <li>Contractual data: signed NDAs and Client Services Agreements</li>
+        </ul>
+        <p><strong>2.2 Data we collect automatically</strong></p>
+        <ul>
+            <li>Technical data: IP address, browser type, and pages visited on our website, collected via standard web server logs</li>
+            <li>Usage data: how you interact with our website (page visits, time spent, referral source)</li>
+        </ul>
+        <p><strong>2.3 Data about third parties (investigation subjects)</strong></p>
+        <p>When conducting investigations, we process personal data about the subject of the investigation. This data is collected from publicly available open sources only (OSINT). We do not access private accounts, intercept communications, or obtain data through unlawful means. The legal basis for processing this data is our legitimate interests in providing the contracted service and, where relevant, the vital interests or legal claims of the commissioning client.</p>
+        <div class="clause-label">Section 3</div>
+        <h2 class="clause-title">Legal Basis for Processing</h2>
+        <p>We process personal data only where we have a valid legal basis under UK GDPR:</p>
+        <ul>
+            <li><strong>Contract performance:</strong> processing necessary to deliver investigation services to clients who have engaged us.</li>
+            <li><strong>Legitimate interests:</strong> processing for fraud prevention, security, improving our services, and conducting OSINT investigations on behalf of clients — balanced against individuals' rights and freedoms.</li>
+            <li><strong>Legal obligation:</strong> where we are required to process data to comply with applicable law, including any law enforcement disclosure requirement.</li>
+            <li><strong>Consent:</strong> where you have given specific, informed consent — for example, when subscribing to communications. Consent may be withdrawn at any time.</li>
+        </ul>
+        <div class="clause-label">Section 4</div>
+        <h2 class="clause-title">How We Use Your Personal Data</h2>
+        <p>We use personal data for the following purposes:</p>
+        <ul>
+            <li>To respond to case inquiries and assess feasibility of requested services</li>
+            <li>To prepare, execute, and deliver investigation services under a Client Services Agreement</li>
+            <li>To send NDA documents and contractual correspondence</li>
+            <li>To process payments and maintain financial records</li>
+            <li>To communicate case updates, findings, and reports</li>
+            <li>To comply with legal and regulatory obligations</li>
+            <li>To protect Greyline's legitimate business interests and defend against legal claims</li>
+            <li>To improve our website and services using aggregated, anonymised analytics</li>
+        </ul>
+        <p>We do not use your personal data for automated decision-making or profiling that produces legal or similarly significant effects.</p>
+        <div class="clause-label">Section 5</div>
+        <h2 class="clause-title">Who We Share Your Data With</h2>
+        <p>We do not sell, rent, or share your personal data with third parties for marketing purposes. We may share data in the following limited circumstances:</p>
+        <ul>
+            <li><strong>Service providers:</strong> trusted third-party suppliers who process data on our behalf under strict data processing agreements (e.g. secure email providers, encrypted cloud storage). These parties may only process data on our instructions.</li>
+            <li><strong>Legal and regulatory authorities:</strong> where we are required by law, court order, or regulatory requirement to disclose data. We will notify you where legally permitted to do so.</li>
+            <li><strong>Law enforcement:</strong> where we have a legal obligation or reasonable belief that disclosure is necessary to prevent crime or protect a person's safety.</li>
+            <li><strong>Professional advisers:</strong> solicitors, accountants, and insurers, where necessary and subject to professional confidentiality obligations.</li>
+        </ul>
+        <p><strong>We will never disclose your identity or case details to the subject of an investigation without your express prior written consent.</strong></p>
+        <div class="clause-label">Section 6</div>
+        <h2 class="clause-title">International Data Transfers</h2>
+        <p>Greyline serves clients globally, including in Nigeria, the USA, Canada, and Australia. Where we transfer personal data outside the UK, we ensure appropriate safeguards are in place in accordance with UK GDPR Chapter V, including:</p>
+        <ul>
+            <li>Transfer to countries with an adequacy decision from the UK Secretary of State</li>
+            <li>Use of International Data Transfer Agreements (IDTAs) or Standard Contractual Clauses</li>
+            <li>Binding Corporate Rules where applicable</li>
+        </ul>
+        <p>For Nigerian client engagements, we additionally adhere to the Nigeria Data Protection Act 2023 (NDPA) requirements where applicable.</p>
+        <div class="clause-label">Section 7</div>
+        <h2 class="clause-title">How Long We Keep Your Data</h2>
+        <p>We retain personal data only for as long as necessary for the purpose for which it was collected, or as required by law:</p>
+        <ul>
+            <li><strong>Inquiry data (no engagement):</strong> 90 days from inquiry submission, then permanently deleted</li>
+            <li><strong>Client data and case files:</strong> 12 months from case closure, then permanently deleted unless the client requests extended retention in writing</li>
+            <li><strong>Signed contracts and financial records:</strong> 7 years in accordance with UK company law and HMRC requirements</li>
+            <li><strong>Website analytics data:</strong> aggregated and anonymised; individual session data retained for no more than 13 months</li>
+        </ul>
+        <p>On expiry of the retention period, data is securely and permanently deleted from all systems and backups.</p>
+        <div class="clause-label">Section 8</div>
+        <h2 class="clause-title">Your Rights Under UK GDPR</h2>
+        <p>You have the following rights in relation to your personal data:</p>
+        <ul>
+            <li><strong>Right of access:</strong> to obtain a copy of the personal data we hold about you (Subject Access Request).</li>
+            <li><strong>Right to rectification:</strong> to have inaccurate data corrected.</li>
+            <li><strong>Right to erasure:</strong> to request deletion of your data where there is no legitimate reason for continued processing.</li>
+            <li><strong>Right to restriction:</strong> to request that we limit how we use your data in certain circumstances.</li>
+            <li><strong>Right to data portability:</strong> to receive your data in a structured, commonly used format.</li>
+            <li><strong>Right to object:</strong> to processing based on legitimate interests or for direct marketing.</li>
+            <li><strong>Right to withdraw consent:</strong> where processing is based on consent, to withdraw it at any time without affecting the lawfulness of prior processing.</li>
+        </ul>
+        <p>To exercise any of these rights, contact us at cases@greylineinvestigations.co.uk. We will respond within one calendar month. We may need to verify your identity before processing your request.</p>
+        <p>You also have the right to lodge a complaint with the Information Commissioner's Office (ICO) at ico.org.uk or by calling 0303 123 1113.</p>
+        <div class="clause-label">Section 9</div>
+        <h2 class="clause-title">How We Protect Your Data</h2>
+        <p>We implement appropriate technical and organisational measures to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorised disclosure, or access. These measures include:</p>
+        <ul>
+            <li>End-to-end encrypted communications for all client and case correspondence</li>
+            <li>Access controls limiting data access to authorised personnel only</li>
+            <li>Encrypted storage for all case files and personal data</li>
+            <li>Regular review of security practices and procedures</li>
+            <li>Immediate notification procedures in the event of a data breach</li>
+        </ul>
+        <p>In the event of a personal data breach that is likely to result in a risk to your rights and freedoms, we will notify you and the ICO without undue delay and within 72 hours of becoming aware of the breach, as required by UK GDPR Article 33.</p>
+        <div class="clause-label">Section 10</div>
+        <h2 class="clause-title">Cookies and Website Tracking</h2>
+        <p>Our website may use essential cookies and standard web server logging to ensure the site functions correctly and to understand aggregate visitor patterns. We do not use advertising, tracking, or third-party analytics cookies. For full details, see our <a href='cookie-policy.html' style='color: var(--red);'>Cookie Policy</a>.</p>
+        <div class="clause-label">Section 11</div>
+        <h2 class="clause-title">Children's Data</h2>
+        <p>Our services are not directed at individuals under the age of 18. We do not knowingly collect personal data from children. If you believe we have inadvertently collected data about a child, please contact us immediately at cases@greylineinvestigations.co.uk and we will delete it promptly.</p>
+        <div class="clause-label">Section 12</div>
+        <h2 class="clause-title">Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or services. The current version will always be available on our website. We will notify active clients of any material changes by email.</p>
+        <div class="clause-label">Section 13</div>
+        <h2 class="clause-title">Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, wish to exercise your data rights, or want to raise a concern about how we handle your personal data, please contact us:</p>
+        <ul>
+            <li>Email: cases@greylineinvestigations.co.uk</li>
+            <li>Website: greylineinvestigations.co.uk</li>
+            <li>Subject line: Data Protection Enquiry — [Your Name]</li>
+        </ul>
+        <p>We take all privacy enquiries seriously and aim to respond within five working days.</p>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo-text">Greyline <span>Investigations</span></div>
+                <p>Cyber intelligence, risk, and investigation services. UK-registered. Confidential by design.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html#fraud">Fraud investigations</a></li>
+                    <li><a href="services.html#forensics">Digital forensics</a></li>
+                    <li><a href="services.html#cybersecurity">Cybersecurity</a></li>
+                    <li><a href="services.html#intelligence">Intelligence &amp; tracing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="inquiry.html">Confidential inquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-use.html">Terms of Use</a></li>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="aml-policy.html">AML Policy</a></li>
+                    <li><a href="payment-refund-policy.html">Payment &amp; Refund</a></li>
+                    <li><a href="data-protection.html">Data Protection</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <p>Greyline Investigations operates under strict confidentiality and data protection standards. All activities comply with UK GDPR, the Data Protection Act 2018, and applicable international data protection laws.</p>
+            <div class="footer-legal-links">
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="terms-of-use.html">Terms</a>
+                <a href="cookie-policy.html">Cookies</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-legal" style="border-top: none; margin-top: 1rem; padding-top: 0;">
+            <p>&copy; 2026 Greyline Investigations Limited. All Rights Reserved. Company No. 17121990.</p>
+            <div class="footer-social">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

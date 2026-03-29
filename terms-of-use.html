@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use | Greyline Investigations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --navy: #0a0f1a;
+            --navy-light: #111827;
+            --navy-mid: #1a2332;
+            --red: #c0392b;
+            --red-dark: #a5311f;
+            --off-white: #e8e6e1;
+            --grey-text: #9ca3af;
+            --grey-light: #d1d5db;
+            --grey-border: #1f2937;
+            --white: #ffffff;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--navy);
+            color: var(--off-white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- NAV ---- */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.25rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(10, 15, 26, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--grey-border);
+        }
+        .nav-logo {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            color: var(--off-white);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+        .nav-logo span { color: var(--red); font-weight: 600; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--grey-text);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--off-white); }
+        .nav-cta {
+            background: var(--red);
+            color: var(--white) !important;
+            padding: 0.55rem 1.25rem;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.8rem;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover { background: var(--red-dark); }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--off-white);
+            transition: 0.3s;
+        }
+
+        /* ---- POLICY PAGE LAYOUT ---- */
+        .policy-hero {
+            padding: 10rem 2.5rem 4rem;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .policy-hero .label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 1.25rem;
+        }
+        .policy-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: var(--off-white);
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+        .policy-hero h1 em {
+            font-style: italic;
+            color: var(--off-white);
+        }
+        .policy-hero .red-line {
+            width: 60px;
+            height: 3px;
+            background: var(--red);
+            margin: 1.5rem 0;
+        }
+        .policy-hero .intro {
+            font-size: 1rem;
+            color: var(--grey-text);
+            line-height: 1.8;
+            max-width: 680px;
+        }
+        .policy-meta {
+            margin-top: 2rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--navy-light);
+            border: 1px solid var(--grey-border);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            line-height: 2;
+        }
+        .policy-meta strong {
+            color: var(--off-white);
+            font-weight: 600;
+        }
+        .policy-meta span {
+            color: var(--grey-text);
+        }
+
+        /* ---- POLICY CONTENT ---- */
+        .policy-content {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 2.5rem 6rem;
+        }
+        .clause-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-top: 3.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .clause-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--off-white);
+            margin-bottom: 1rem;
+        }
+        .policy-content p {
+            font-size: 0.95rem;
+            color: var(--grey-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .policy-content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+        .policy-content ul li {
+            font-size: 0.95rem;
+            color: var(--grey-light);
+            line-height: 1.8;
+            padding-left: 1.25rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        .policy-content ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--red);
+            font-weight: 600;
+        }
+        .policy-content .note {
+            margin-top: 3rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--navy-light);
+            border-left: 3px solid var(--red);
+            font-size: 0.8rem;
+            color: var(--grey-text);
+            line-height: 1.7;
+            border-radius: 0 6px 6px 0;
+        }
+
+        /* ---- FOOTER ---- */
+        .site-footer {
+            border-top: 1px solid var(--grey-border);
+            padding: 4rem 2.5rem 2rem;
+            background: var(--navy);
+        }
+        .footer-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+        .footer-brand p {
+            font-size: 0.85rem;
+            color: var(--grey-text);
+            line-height: 1.7;
+            margin-top: 0.75rem;
+        }
+        .footer-brand .logo-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 1.05rem;
+            color: var(--off-white);
+        }
+        .footer-brand .logo-text span { color: var(--red); font-weight: 600; }
+        .footer-col h4 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--off-white);
+            margin-bottom: 1rem;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-col ul li::before {
+            content: none;
+        }
+        .footer-col ul li a {
+            font-size: 0.85rem;
+            color: var(--grey-text);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-col ul li a:hover { color: var(--off-white); }
+        .footer-legal {
+            max-width: 1100px;
+            margin: 3rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--grey-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-legal p {
+            font-size: 0.75rem;
+            color: var(--grey-text);
+            margin: 0;
+        }
+        .footer-legal-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .footer-legal-links a {
+            font-size: 0.75rem;
+            color: var(--grey-text);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-legal-links a:hover { color: var(--off-white); }
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+        .footer-social a {
+            color: var(--grey-text);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover { color: var(--off-white); }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 768px) {
+            .nav { padding: 1rem 1.25rem; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--navy);
+                border-bottom: 1px solid var(--grey-border);
+                padding: 1.5rem;
+                gap: 1rem;
+            }
+            .policy-hero { padding: 7rem 1.25rem 2.5rem; }
+            .policy-hero h1 { font-size: 2rem; }
+            .policy-content { padding: 0 1.25rem 4rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-legal { flex-direction: column; text-align: center; }
+            .footer-legal-links { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">Greyline <span>Investigations</span></a>
+        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="inquiry.html" class="nav-cta">Submit Inquiry</a></li>
+        </ul>
+    </nav>
+
+    <section class="policy-hero">
+        <div class="label">Greyline Investigations Limited</div>
+        <h1>Terms of <em>Use</em></h1>
+        <div class="red-line"></div>
+        <p class="intro">These Terms and Conditions govern your use of the Greyline Investigations website at greylineinvestigations.co.uk. By accessing or using the Website, you agree to be bound by these Terms. If you do not agree, please do not use the Website.</p>
+        <div class="policy-meta">
+            <strong>Company:</strong> <span>Greyline Investigations Limited</span><br>
+            <strong>Company Number:</strong> <span>17121990</span><br>
+            <strong>Contact:</strong> <span>cases@greylineinvestigations.co.uk</span><br>
+            <strong>Website:</strong> <span>greylineinvestigations.co.uk</span><br>
+            <strong>Last updated:</strong> <span>March 2026</span><br>
+        </div>
+    </section>
+    <section class="policy-content">
+        <div class="clause-label">Clause 1</div>
+        <h2 class="clause-title">About Us</h2>
+        <p>The Website is operated by Greyline Investigations Limited, a company incorporated in England and Wales (Company Number 17121990). Our registered email address is cases@greylineinvestigations.co.uk.</p>
+        <div class="clause-label">Clause 2</div>
+        <h2 class="clause-title">Use of the Website</h2>
+        <p><strong>2.1</strong> You may use the Website for lawful purposes only. You must not use the Website in any way that breaches applicable law, is fraudulent, harmful, or infringes the rights of any person.</p>
+        <p><strong>2.2</strong> You must not transmit unsolicited commercial communications, introduce malware or harmful code, or attempt to gain unauthorised access to any part of the Website or its infrastructure.</p>
+        <p><strong>2.3</strong> You must not attempt to scrape, reproduce, or systematically extract content from the Website without our prior written consent.</p>
+        <div class="clause-label">Clause 3</div>
+        <h2 class="clause-title">Intellectual Property</h2>
+        <p><strong>3.1</strong> All content on the Website — including text, graphics, logos, service descriptions, layouts, and methodology descriptions — is owned by or licensed to Greyline Investigations Limited and protected by UK copyright law.</p>
+        <p><strong>3.2</strong> You may view and print content from the Website for your personal, non-commercial use only. You must not reproduce, distribute, modify, or create derivative works without our express written permission.</p>
+        <p><strong>3.3</strong> The name "Greyline Investigations" and associated branding are proprietary to Greyline Investigations Limited. Nothing on this Website grants any licence to use our trade marks or brand identifiers.</p>
+        <div class="clause-label">Clause 4</div>
+        <h2 class="clause-title">Website Content and Accuracy</h2>
+        <p><strong>4.1</strong> We make reasonable efforts to ensure the Website content is accurate and up to date. However, we do not warrant that the Website will be error-free, uninterrupted, or free from technical faults.</p>
+        <p><strong>4.2</strong> Service descriptions, turnaround times, and pricing information on the Website are indicative only. Confirmed scope, timelines, and fees are set out in the Client Services Agreement and Case Reference issued for each individual engagement.</p>
+        <p><strong>4.3</strong> Nothing on the Website constitutes legal advice. We recommend you seek independent legal counsel before acting on any information presented.</p>
+        <div class="clause-label">Clause 5</div>
+        <h2 class="clause-title">Inquiry Submissions</h2>
+        <p><strong>5.1</strong> Submitting an inquiry via the Website does not create a contract or obligate Greyline to accept your case. An engagement begins only upon execution of a signed Client Services Agreement and NDA.</p>
+        <p><strong>5.2</strong> All information submitted via the inquiry form is handled in accordance with our <a href='privacy-policy.html' style='color: var(--red);'>Privacy Policy</a>.</p>
+        <p><strong>5.3</strong> By submitting an inquiry you confirm that the information provided is truthful and that you are submitting it for a lawful purpose.</p>
+        <div class="clause-label">Clause 6</div>
+        <h2 class="clause-title">Third-Party Links</h2>
+        <p>The Website may contain links to third-party websites. These links are provided for convenience only. We have no control over and accept no responsibility for the content, privacy practices, or terms of any third-party site. Visiting linked sites is entirely at your own risk.</p>
+        <div class="clause-label">Clause 7</div>
+        <h2 class="clause-title">Limitation of Liability</h2>
+        <p><strong>7.1</strong> To the fullest extent permitted by law, Greyline Investigations Limited excludes all liability for any loss or damage arising from your use of, or inability to use, the Website, including indirect or consequential loss, loss of data, or loss of business opportunity.</p>
+        <p><strong>7.2</strong> Nothing in these Terms limits our liability for: (a) death or personal injury caused by our negligence; (b) fraud or fraudulent misrepresentation; or (c) any other liability that cannot be excluded by law.</p>
+        <p><strong>7.3</strong> We do not exclude liability for direct loss arising from our own negligence where such exclusion would be unreasonable under the Unfair Contract Terms Act 1977 or the Consumer Rights Act 2015.</p>
+        <div class="clause-label">Clause 8</div>
+        <h2 class="clause-title">Availability and Maintenance</h2>
+        <p>We reserve the right to modify, suspend, or withdraw the Website or any part of it at any time without notice. We will not be liable if the Website is unavailable for any reason, including for maintenance or technical issues.</p>
+        <div class="clause-label">Clause 9</div>
+        <h2 class="clause-title">Privacy and Cookies</h2>
+        <p>Your use of the Website is also governed by our <a href='privacy-policy.html' style='color: var(--red);'>Privacy Policy</a> and <a href='cookie-policy.html' style='color: var(--red);'>Cookie Policy</a>, which are incorporated into these Terms by reference.</p>
+        <div class="clause-label">Clause 10</div>
+        <h2 class="clause-title">Governing Law</h2>
+        <p>These Terms are governed by and construed in accordance with the laws of England and Wales. Any dispute arising in connection with these Terms shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+        <div class="clause-label">Clause 11</div>
+        <h2 class="clause-title">Changes to These Terms</h2>
+        <p>We may update these Terms at any time. The current version will always be available on the Website. Your continued use of the Website following any update constitutes acceptance of the revised Terms.</p>
+        <div class="clause-label">Clause 12</div>
+        <h2 class="clause-title">Contact</h2>
+        <p>For any questions about these Terms, please contact us at cases@greylineinvestigations.co.uk.</p>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo-text">Greyline <span>Investigations</span></div>
+                <p>Cyber intelligence, risk, and investigation services. UK-registered. Confidential by design.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html#fraud">Fraud investigations</a></li>
+                    <li><a href="services.html#forensics">Digital forensics</a></li>
+                    <li><a href="services.html#cybersecurity">Cybersecurity</a></li>
+                    <li><a href="services.html#intelligence">Intelligence &amp; tracing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="inquiry.html">Confidential inquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-use.html">Terms of Use</a></li>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="aml-policy.html">AML Policy</a></li>
+                    <li><a href="payment-refund-policy.html">Payment &amp; Refund</a></li>
+                    <li><a href="data-protection.html">Data Protection</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <p>Greyline Investigations operates under strict confidentiality and data protection standards. All activities comply with UK GDPR, the Data Protection Act 2018, and applicable international data protection laws.</p>
+            <div class="footer-legal-links">
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="terms-of-use.html">Terms</a>
+                <a href="cookie-policy.html">Cookies</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-legal" style="border-top: none; margin-top: 1rem; padding-top: 0;">
+            <p>&copy; 2026 Greyline Investigations Limited. All Rights Reserved. Company No. 17121990.</p>
+            <div class="footer-social">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
