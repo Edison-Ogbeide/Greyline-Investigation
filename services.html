@@ -8,32 +8,33 @@
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 	<style>
-		.page-hero { padding:8rem 4rem 3.5rem; background:var(--navy); }
-		.page-hero .hero-eyebrow { font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); margin-bottom:1.25rem; font-weight:500; }
-		.page-hero h1 { color:var(--white); font-size:clamp(2.6rem,5vw,4.5rem); margin-bottom:1.25rem; }
-		.page-hero h1 em { font-style:italic; color:rgba(255,255,255,0.4); }
-		.page-hero p { color:rgba(255,255,255,0.45); max-width:620px; }
-		.addon-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:1.5px; background:var(--border-2); border:1.5px solid var(--border-2); margin-top:2rem; }
-		.addon-card { background:var(--white); padding:1.5rem; transition:background 0.2s; }
-		.addon-card:hover { background:var(--ice-2); }
-		.addon-label { font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-3); margin-bottom:0.5rem; font-weight:500; }
-		.addon-name { font-family:'Cormorant Garamond',Georgia,serif; font-size:1.05rem; color:var(--navy); margin-bottom:0.5rem; }
-		.addon-desc { font-size:0.92rem; color:var(--text-2); line-height:1.65; }
+		/* DELIVERABLES LIST */
+		.deliver-list { list-style:none; }
+		.deliver-list li { font-size:0.95rem; color:var(--text-2); padding:0.6rem 0; border-bottom:1px solid var(--border); display:flex; gap:0.75rem; line-height:1.5; }
+		.deliver-list li:last-child { border-bottom:none; }
+		.deliver-list li::before { content:'→'; color:var(--accent); flex-shrink:0; font-size:0.85rem; margin-top:0.12rem; }
+		.deliver-list.dark li { color:rgba(255,255,255,0.6); border-bottom-color:rgba(255,255,255,0.07); }
+		.deliver-list.dark li::before { color:var(--accent); }
 
-		/* FIX: Section header layout — sub-heading beneath header, not beside */
-		.section-header {
-			margin-bottom: 2.5rem;
-			max-width: 720px;
-		}
-		.section-header p {
-			font-size: 1rem;
-			line-height: 1.75;
-			margin-top: 1rem;
-		}
-		.section-header-light p { color: var(--text-2); }
-		.section-header-dark p { color: rgba(255,255,255,0.45); }
+		/* USE CASE TAGS */
+		.use-cases { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1rem; }
+		.use-tag { font-size:0.75rem; color:var(--text-3); background:var(--ice-2); border:1px solid var(--border); padding:0.35rem 0.85rem; font-weight:400; }
+		.use-tag.dark { color:rgba(255,255,255,0.4); background:var(--navy-3); border-color:rgba(255,255,255,0.08); }
 
-		@media(max-width:960px){ .page-hero{padding:6rem 1.5rem 2.5rem;} }
+		/* SERVICE SECTION LAYOUT */
+		.svc-section-grid { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start; }
+		.svc-section-grid .svc-left h3 { margin-bottom:0.5rem; }
+		.svc-section-grid .svc-left p { margin-bottom:1rem; }
+
+		/* INLINE CTA */
+		.inline-cta { margin-top:2rem; padding:2rem; border:1.5px solid var(--border-2); background:var(--ice-2); }
+		.inline-cta.dark { border-color:rgba(255,255,255,0.08); background:var(--navy-3); }
+		.inline-cta h4 { font-size:1rem; margin-bottom:0.5rem; }
+		.inline-cta.dark h4 { color:var(--white); }
+		.inline-cta p { font-size:0.88rem; margin-bottom:1.25rem; }
+		.inline-cta.dark p { color:rgba(255,255,255,0.4); }
+
+		@media(max-width:960px){ .svc-section-grid{grid-template-columns:1fr;} }
 	</style>
 </head>
 <body>
@@ -46,76 +47,97 @@
 		<li><a href="about.html">About</a></li>
 		<li><a href="contact.html">Contact</a></li>
 	</ul>
-	<a href="inquiry.html" class="nav-cta">Begin Inquiry</a>
+	<a href="inquiry.html" class="nav-cta hot">Submit Inquiry</a>
 </nav>
 
-<!-- PAGE HERO -->
 <div class="page-hero">
 	<div class="hero-eyebrow">Service Catalogue</div>
-	<h1>Full-spectrum intelligence<br><em>&amp; Security Services</em></h1>
-	<p>From personal investigations to enterprise cybersecurity — every service is intelligence-led, legally compliant, and delivered to the highest standard. Serving clients across the UK, Nigeria, USA, Canada, and worldwide.</p>
+	<h1>Full-spectrum intelligence<br><em>&amp; security services</em></h1>
+	<p>From private investigations to enterprise cybersecurity — every service follows the same structured, confidential engagement process. Sensitive information is only exchanged after formal agreements are in place.</p>
 </div>
 
 
 <!-- ============================================================ -->
-<!-- 1. RELATIONSHIP & INFIDELITY INTELLIGENCE -->
+<!-- 1. FRAUD & FINANCIAL INVESTIGATIONS -->
 <!-- ============================================================ -->
-<section id="infidelity" style="background:var(--ice-2);">
-	<div class="section-header section-header-light">
-		<div class="section-eyebrow">Relationship &amp; Infidelity Intelligence</div>
-		<h2>Relationship &amp;<br>Infidelity Intelligence</h2>
-		<div class="section-rule"></div>
-		<p>See the full picture. We trace your partner's digital footprint across social media, dating apps, and public records — legally, discreetly, and packaged as evidence you can act on.</p>
-	</div>
-	<div class="tier-grid">
-		<div class="tier">
-			<span class="tier-badge">Suitable for: Partners · Online daters · Parents</span>
-			<div class="tier-name">Digital Footprint Analysis</div>
-			<div class="tier-desc">A comprehensive sweep of someone's entire online footprint — social media, dating apps, posted images, and public mentions. See the full picture.</div>
-			<ul class="feat-list">
-				<li>Full social media profile audit across all major platforms</li>
-				<li>Username &amp; alias search across 300+ platforms</li>
-				<li>Dating app sweep — Tinder, Bumble, Hinge, Badoo, Plenty of Fish, Afroromance, Nairaland &amp; diaspora platforms</li>
-				<li>Reverse image search &amp; photo trace</li>
-				<li>Forum, directory &amp; public mention checks</li>
-				<li>Screenshots &amp; profile archive included</li>
-				<li>PDF summary report with all findings</li>
-			</ul>
+<section id="fraud">
+	<div class="svc-section-grid">
+		<div class="svc-left">
+			<div class="section-eyebrow">Fraud &amp; Financial Investigations</div>
+			<h2>Uncovering fraud,<br>financial deception &amp; hidden risk</h2>
+			<div class="section-rule"></div>
+			<p>We investigate financial fraud, romance scams, real estate deception, and corporate misconduct — delivering documented evidence for legal action, law enforcement referral, or private resolution.</p>
+			<p>Serving individuals, businesses, and legal teams across the UK, Nigeria, USA, Canada, and worldwide.</p>
+			<div class="use-cases">
+				<span class="use-tag">Suspected fraud</span>
+				<span class="use-tag">Romance scam</span>
+				<span class="use-tag">Property fraud</span>
+				<span class="use-tag">Embezzlement</span>
+				<span class="use-tag">Investment scam</span>
+				<span class="use-tag">Crypto fraud</span>
+			</div>
 		</div>
-		<div class="tier featured">
-			<span class="tier-badge">Suitable for: Partners · Online daters · Businesses</span>
-			<div class="tier-name"> Identity Verification &amp; Background Intelligence</div>
-			<div class="tier-desc">Goes deeper than an online search. Verify the information someone has given you — employment, marital status, identity, associates — with a court-ready evidence report.</div>
-			<ul class="feat-list">
-				<li>Everything in Online Presence Search</li>
-				<li>Identity cross-check across public records</li>
-				<li>Employment &amp; location verification</li>
-				<li>Marital status indicators</li>
-				<li>Link analysis — map associates &amp; contacts</li>
-				<li>Timeline reconstruction from public data</li>
-				<li>Annotated court-ready PDF evidence report</li>
-				<li>30-minute debrief call included</li>
+		<div>
+			<h4 style="font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;font-weight:500;font-family:'Inter',system-ui,sans-serif;">What we deliver</h4>
+			<ul class="deliver-list">
+				<li>Financial fraud investigation reports</li>
+				<li>Transaction trail analysis &amp; documentation</li>
+				<li>Romance scam verification &amp; evidence packaging</li>
+				<li>Real estate fraud checks (title, C-of-O, seller identity)</li>
+				<li>Crypto wallet tracing &amp; fraud evidence packs</li>
+				<li>Business due diligence &amp; background checks</li>
+				<li>Online reputation &amp; defamation evidence</li>
+				<li>Evidence reports for Action Fraud / EFCC / FTC referral</li>
 			</ul>
-		</div>
-		<div class="tier">
-			<span class="tier-badge">Suitable for: Couples · Partners · Parents</span>
-			<div class="tier-name">Continuous Monitoring  &amp; Intelligence Reporting</div>
-			<div class="tier-desc">Continuous digital monitoring for clients who need sustained intelligence over time. Monthly reports, cancel anytime.</div>
-			<ul class="feat-list">
-				<li>Weekly social media monitoring</li>
-				<li>New account &amp; alias detection alerts</li>
-				<li>Dating app activity change flags</li>
-				<li>Monthly intelligence briefing report</li>
-				<li>Priority WhatsApp investigator access</li>
-			</ul>
+			<div class="inline-cta">
+				<h4>Discuss your case</h4>
+				<p>Submit a high-level summary. A confidentiality agreement will be provided before detailed disclosure.</p>
+				<a href="inquiry.html" class="btn-primary" style="font-size:0.72rem;padding:0.7rem 1.6rem;">Submit confidential inquiry →</a>
+			</div>
 		</div>
 	</div>
+</section>
 
-	<div class="sub-label-light">Investigation Enhancements</div>
-	<div class="addon-grid">
-		<div class="addon-card"><div class="addon-label">Add-on</div><div class="addon-name">Footprint scorecard</div><div class="addon-desc">A clear breakdown of all gathered evidence, fully mapped and assessed, with red flags highlighted. Includes a visual scorecard and an overall risk assessment for fast, confident decision‑making.</div></div>
-		<div class="addon-card"><div class="addon-label">Add-on</div><div class="addon-name">Third-party deep check</div><div class="addon-desc">Full background check on an identified third party — who they are, where they work, their own relationship status.</div></div>
-		<div class="addon-card"><div class="addon-label">Add-on</div><div class="addon-name">Legal evidence pack</div><div class="addon-desc">Report formatted to court standards with chain of custody documentation. For divorce or formal legal proceedings.</div></div>
+<hr class="section-divider">
+
+
+<!-- ============================================================ -->
+<!-- 2. DIGITAL FORENSICS -->
+<!-- ============================================================ -->
+<section id="forensics" class="services-dark">
+	<div class="svc-section-grid">
+		<div class="svc-left">
+			<div class="section-eyebrow">Digital Forensics</div>
+			<h2 style="color:var(--white);">Device forensics, identity<br>&amp; digital evidence</h2>
+			<div class="section-rule"></div>
+			<p style="color:rgba(255,255,255,0.45);">Professional forensic examination of digital devices, identity theft investigation, social media intelligence, and personal safety documentation. All evidence is court-admissible with full chain of custody.</p>
+			<div class="use-cases">
+				<span class="use-tag dark">Device examination</span>
+				<span class="use-tag dark">Deleted data recovery</span>
+				<span class="use-tag dark">Identity theft</span>
+				<span class="use-tag dark">Online harassment</span>
+				<span class="use-tag dark">Email tracing</span>
+				<span class="use-tag dark">Social media intelligence</span>
+			</div>
+		</div>
+		<div>
+			<h4 style="font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;font-weight:500;font-family:'Inter',system-ui,sans-serif;">What we deliver</h4>
+			<ul class="deliver-list dark">
+				<li>Phone, tablet &amp; laptop forensic reports</li>
+				<li>Deleted file &amp; message recovery</li>
+				<li>App usage &amp; browsing history extraction</li>
+				<li>Email header analysis &amp; source tracing</li>
+				<li>SOCMINT (social media intelligence) reports</li>
+				<li>Identity theft investigation &amp; evidence packaging</li>
+				<li>Harasser source identification &amp; documentation</li>
+				<li>Court-admissible chain of custody throughout</li>
+			</ul>
+			<div class="inline-cta dark">
+				<h4>Discuss your case</h4>
+				<p>Submit a high-level summary. A confidentiality agreement will be provided before detailed disclosure.</p>
+				<a href="inquiry.html" class="btn-primary" style="font-size:0.72rem;padding:0.7rem 1.6rem;">Submit confidential inquiry →</a>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -123,21 +145,43 @@
 
 
 <!-- ============================================================ -->
-<!-- 2. ADVANCED CYBERSECURITY SERVICES -->
+<!-- 3. CYBERSECURITY ASSESSMENTS -->
 <!-- ============================================================ -->
-<section id="cybersecurity" class="services-dark">
-	<div class="section-header section-header-dark">
-		<div class="section-eyebrow">Advanced Cybersecurity</div>
-		<h2 style="color:var(--white);">Cybersecurity &amp;<br>Offensive Security Services</h2>
-		<div class="section-rule"></div>
-		<p>We think like attackers so you don't have to. Penetration testing, red teaming, and security reviews that show you exactly where you're exposed — before someone else finds out.</p>
-	</div>
-	<div class="card-grid">
-		<div class="svc-card"><div class="svc-cat">Suitable for: Businesses · Enterprises</div><div class="svc-name">Penetration Testing</div><div class="svc-desc">Simulated cyberattacks against your web applications, networks, and cloud infrastructure to identify exploitable vulnerabilities before real attackers do.</div><ul class="svc-includes"><li>Web application penetration testing</li><li>Network infrastructure testing</li><li>Cloud environment testing (AWS, Azure, GCP)</li><li>Detailed findings report with remediation steps</li></ul></div>
-		<div class="svc-card"><div class="svc-cat">Suitable for: Enterprises · High-security environments</div><div class="svc-name">Red Team Operations</div><div class="svc-desc">Full-scope, realistic attack simulations that test your people, processes, and technology together — not just individual systems.</div><ul class="svc-includes"><li>Simulated real-world attack scenarios</li><li>Social engineering &amp; phishing campaigns</li><li>Physical &amp; digital attack surface testing</li><li>Executive debrief with strategic recommendations</li></ul></div>
-		<div class="svc-card"><div class="svc-cat">Suitable for: Businesses · SMEs · Startups</div><div class="svc-name">Vulnerability Assessment &amp; Risk Analysis</div><div class="svc-desc">Systematic scanning and analysis of your systems to identify security weaknesses, misconfigurations, and outdated components — with prioritised remediation guidance.</div><ul class="svc-includes"><li>Automated &amp; manual vulnerability scanning</li><li>Risk-ranked findings with severity ratings</li><li>Remediation roadmap</li><li>Re-test validation included</li></ul></div>
-		<div class="svc-card"><div class="svc-cat">Suitable for: Enterprises · Regulated industries</div><div class="svc-name">Security Architecture &amp; Control Review</div><div class="svc-desc">Independent assessment of your security architecture, policies, and controls — identifying gaps and recommending improvements aligned to industry standards.</div><ul class="svc-includes"><li>Architecture design review</li><li>Policy &amp; control gap analysis</li><li>Compliance alignment (ISO 27001, Cyber Essentials)</li><li>Strategic improvement roadmap</li></ul></div>
-		<div class="svc-card"><div class="svc-cat">Suitable for: Businesses · Enterprises</div><div class="svc-name">Managed Detection &amp; Response</div><div class="svc-desc">Continuous monitoring, threat detection, and incident response delivered as a managed service — your security operations team, on demand.</div><ul class="svc-includes"><li>24/7 threat monitoring</li><li>Incident detection &amp; triage</li><li>Rapid response &amp; containment</li><li>Monthly security posture reports</li></ul></div>
+<section id="cybersecurity">
+	<div class="svc-section-grid">
+		<div class="svc-left">
+			<div class="section-eyebrow">Cybersecurity Assessments</div>
+			<h2>Penetration testing, red team<br>&amp; security operations</h2>
+			<div class="section-rule"></div>
+			<p>Enterprise-grade offensive and defensive security. We identify vulnerabilities before attackers do — across web applications, networks, cloud infrastructure, and people.</p>
+			<div class="use-cases">
+				<span class="use-tag">Cyber breach</span>
+				<span class="use-tag">Security audit</span>
+				<span class="use-tag">Compliance</span>
+				<span class="use-tag">Insider threat</span>
+				<span class="use-tag">Data leakage</span>
+				<span class="use-tag">Pre-acquisition</span>
+			</div>
+		</div>
+		<div>
+			<h4 style="font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;font-weight:500;font-family:'Inter',system-ui,sans-serif;">What we deliver</h4>
+			<ul class="deliver-list">
+				<li>Penetration testing (web, network, cloud)</li>
+				<li>Red team operations (simulated real-world attacks)</li>
+				<li>Vulnerability assessments &amp; remediation roadmaps</li>
+				<li>Security architecture review</li>
+				<li>Managed detection &amp; response (MDR)</li>
+				<li>Insider threat detection programs</li>
+				<li>Employee risk profiling &amp; workplace misconduct intelligence</li>
+				<li>TSCM / bug sweeping (offices, homes, vehicles)</li>
+				<li>Communication security assessments</li>
+			</ul>
+			<div class="inline-cta">
+				<h4>Request a security assessment</h4>
+				<p>Submit a high-level summary of your security needs. Scope and pricing provided after initial consultation.</p>
+				<a href="inquiry.html" class="btn-primary" style="font-size:0.72rem;padding:0.7rem 1.6rem;">Submit confidential inquiry →</a>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -145,19 +189,45 @@
 
 
 <!-- ============================================================ -->
-<!-- 3. THREAT INTELLIGENCE & OSINT -->
+<!-- 4. INTELLIGENCE & ASSET TRACING -->
 <!-- ============================================================ -->
-<section id="threat-intel">
-	<div class="section-header section-header-light">
-		<div class="section-eyebrow">Threat Intelligence &amp; OSINT</div>
-		<h2>Threat Intelligence<br>&amp; OSINT Operations</h2>
-		<div class="section-rule"></div>
-		<p>Know what's coming. We monitor, collect, and analyse open-source intelligence so you can act on threats before they reach your door — across the UK, Africa, and globally.</p>
-	</div>
-	<div class="card-grid light">
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Businesses · Executives · Investors</div><div class="svc-name dk">Threat Intelligence Reports</div><div class="svc-desc dk">Bespoke intelligence reports tailored to your industry, geography, or specific threat landscape — delivered on schedule or on demand.</div><ul class="svc-includes"><li class="dk">Industry-specific threat landscape analysis</li><li class="dk">Emerging risk identification</li><li class="dk">Actionable recommendations</li><li class="dk">Scheduled or on-demand delivery</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Individuals · Businesses</div><div class="svc-name dk">Dark Web Monitoring</div><div class="svc-desc dk">Continuous monitoring of dark web marketplaces, breach databases, and fraud channels for your data, credentials, and brand mentions.</div><ul class="svc-includes"><li class="dk">Real-time breach alerts</li><li class="dk">Credential &amp; data leak monitoring</li><li class="dk">Financial detail exposure checks</li><li class="dk">Monthly dark web summary report</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Executives · Public figures · Brands</div><div class="svc-name dk">Brand &amp; Executive Protection Intelligence</div><div class="svc-desc dk">Monitor for impersonation, defamation, leaked data, and physical threats targeting your executives or brand reputation across the open and dark web.</div><ul class="svc-includes"><li class="dk">Executive name &amp; image monitoring</li><li class="dk">Brand impersonation detection</li><li class="dk">Threat escalation alerts</li><li class="dk">Takedown support included</li></ul></div>
+<section id="intelligence" class="services-dark">
+	<div class="svc-section-grid">
+		<div class="svc-left">
+			<div class="section-eyebrow">Intelligence &amp; Asset Tracing</div>
+			<h2 style="color:var(--white);">Threat intelligence, due diligence<br>&amp; asset recovery</h2>
+			<div class="section-rule"></div>
+			<p style="color:rgba(255,255,255,0.45);">Proactive intelligence services that identify threats, verify counterparties, and trace hidden assets. From dark web monitoring to pre-investment due diligence to cross-border financial tracking.</p>
+			<div class="use-cases">
+				<span class="use-tag dark">Pre-investment</span>
+				<span class="use-tag dark">M&amp;A</span>
+				<span class="use-tag dark">Hidden assets</span>
+				<span class="use-tag dark">Crypto tracing</span>
+				<span class="use-tag dark">Vendor risk</span>
+				<span class="use-tag dark">Geopolitical risk</span>
+			</div>
+		</div>
+		<div>
+			<h4 style="font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;font-weight:500;font-family:'Inter',system-ui,sans-serif;">What we deliver</h4>
+			<ul class="deliver-list dark">
+				<li>Tailored threat intelligence reports</li>
+				<li>Dark web monitoring &amp; breach alerts</li>
+				<li>Brand &amp; executive threat monitoring</li>
+				<li>Geopolitical &amp; regional risk intelligence</li>
+				<li>Adversary profiling (fraud networks, syndicates)</li>
+				<li>Pre-investment due diligence &amp; beneficial ownership</li>
+				<li>Third-party &amp; vendor risk assessments</li>
+				<li>Enhanced background checks (executive-level)</li>
+				<li>Hidden asset identification (domestic &amp; international)</li>
+				<li>Cryptocurrency asset tracing</li>
+				<li>Cross-border financial tracking</li>
+			</ul>
+			<div class="inline-cta dark">
+				<h4>Discuss your intelligence needs</h4>
+				<p>Submit a high-level summary. A confidentiality agreement will be provided before detailed disclosure.</p>
+				<a href="inquiry.html" class="btn-primary" style="font-size:0.72rem;padding:0.7rem 1.6rem;">Submit confidential inquiry →</a>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -165,20 +235,42 @@
 
 
 <!-- ============================================================ -->
-<!-- 4. CORPORATE INTELLIGENCE, DUE DILIGENCE & INSIDER THREAT -->
+<!-- 5. RELATIONSHIP & PERSONAL INVESTIGATIONS -->
 <!-- ============================================================ -->
-<section id="corporate" class="services-dark">
-	<div class="section-header section-header-dark">
-		<div class="section-eyebrow">Insider Threat &amp; Workplace Intelligence</div>
-		<h2 style="color:var(--white);">Insider Threat<br>&amp; Workplace Risk Intelligence</h2>
-		<div class="section-rule"></div>
-		<p>When the risk is already inside the building. We investigate employee misconduct, data theft, and internal fraud — quietly, thoroughly, and with evidence that holds up.</p>
-	</div>
-
-	<div class="card-grid">
-		<div class="svc-card"><div class="svc-cat">Suitable for: Enterprises · HR · Security teams</div><div class="svc-name">Insider Threat Detection</div><div class="svc-desc">Identify, assess, and mitigate insider threats within your organisation — from data leakage to fraud to workplace sabotage.</div><ul class="svc-includes"><li>Insider threat program design</li><li>Behavioural indicator assessment</li><li>Data leakage investigation</li><li>Ongoing monitoring framework</li></ul></div>
-		<div class="svc-card"><div class="svc-cat">Suitable for: Enterprises · Legal teams</div><div class="svc-name">Employee Risk Profiling</div><div class="svc-desc">Legal and ethical assessment of employee risk indicators — supporting pre-employment screening, periodic review, and incident investigation.</div><ul class="svc-includes"><li>Pre-employment integrity screening</li><li>Periodic risk re-assessment</li><li>Incident-triggered deep checks</li><li>Legally compliant throughout</li></ul></div>
-		<div class="svc-card"><div class="svc-cat">Suitable for: HR · Legal · Compliance</div><div class="svc-name">Workplace Misconduct Intelligence</div><div class="svc-desc">Discreet investigation of workplace misconduct allegations — harassment, fraud, policy violations, and conflicts of interest.</div><ul class="svc-includes"><li>Digital evidence collection &amp; preservation</li><li>Witness statement analysis</li><li>Findings report for HR or legal action</li><li>Expert witness support available</li></ul></div>
+<section id="personal">
+	<div class="svc-section-grid">
+		<div class="svc-left">
+			<div class="section-eyebrow">Relationship &amp; Personal Investigations</div>
+			<h2>Infidelity intelligence,<br>identity verification &amp; monitoring</h2>
+			<div class="section-rule"></div>
+			<p>Our most requested category for private individuals. Online presence searches, partner identity verification, footprint scorecards, ongoing monitoring, blackmail support, and polygraph testing (Nigeria-based).</p>
+			<div class="use-cases">
+				<span class="use-tag">Suspected infidelity</span>
+				<span class="use-tag">Online dating</span>
+				<span class="use-tag">Parental concerns</span>
+				<span class="use-tag">Blackmail</span>
+				<span class="use-tag">Pre-marriage check</span>
+				<span class="use-tag">Visa sponsor</span>
+			</div>
+		</div>
+		<div>
+			<h4 style="font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;font-weight:500;font-family:'Inter',system-ui,sans-serif;">What we deliver</h4>
+			<ul class="deliver-list">
+				<li>Online presence search (social media, dating apps, images, mentions)</li>
+				<li>Identity &amp; background check (employment, marital status, associates)</li>
+				<li>Footprint scorecard (risk scoring &amp; analytical breakdown)</li>
+				<li>Ongoing watch (continuous monitoring, monthly reports)</li>
+				<li>Blackmail &amp; extortion support (source tracing, evidence, takedown)</li>
+				<li>Polygraph testing (Nigeria-based, certified examiner)</li>
+				<li>Pre-marriage &amp; pre-visa relationship verification</li>
+				<li>Court-ready evidence reports</li>
+			</ul>
+			<div class="inline-cta">
+				<h4>Discuss your case</h4>
+				<p>Submit a high-level summary. A confidentiality agreement will be provided before detailed disclosure.</p>
+				<a href="inquiry.html" class="btn-primary" style="font-size:0.72rem;padding:0.7rem 1.6rem;">Submit confidential inquiry →</a>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -186,186 +278,122 @@
 
 
 <!-- ============================================================ -->
-<!-- 5. DIGITAL FORENSICS, FRAUD, ASSET TRACING & RECOVERY -->
+<!-- 6. LITIGATION, TRAINING & ADVISORY -->
 <!-- ============================================================ -->
-<section id="digital">
-	<div class="section-header section-header-light">
-		<div class="section-eyebrow">Digital Forensics</div>
-		<h2>Digital Forensics<br>&amp; Technical Investigations</h2>
-		<div class="section-rule"></div>
-		<p>Device examination, data recovery, and technical evidence packaging for legal proceedings or law enforcement referral.</p>
-	</div>
-
-	<div class="card-grid light" style="margin-bottom:3.5rem;">
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Partners · Legal professionals · Businesses</div><div class="svc-name dk">Device Forensics</div><div class="svc-desc dk">Professional forensic examination of phones, tablets, laptops, and other digital devices. Deleted messages, app usage history, and location data extracted with full chain of custody.</div><ul class="svc-includes"><li class="dk">Phone, tablet &amp; laptop analysis</li><li class="dk">Deleted file &amp; message recovery</li><li class="dk">App usage &amp; browsing history extraction</li><li class="dk">Court-admissible chain of custody</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Individuals · Businesses</div><div class="svc-name dk">Email Header &amp; Source Tracing</div><div class="svc-desc dk">Trace the origin of suspicious emails — IP identification, geolocation, and spoofing detection.</div><ul class="svc-includes"><li class="dk">Full email header analysis</li><li class="dk">IP address &amp; geolocation tracing</li><li class="dk">Spoofing &amp; phishing detection</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Individuals · Businesses</div><div class="svc-name dk">Social Media Intelligence (SOCMINT) Analysis</div><div class="svc-desc dk">Open-source social media intelligence. Map a subject's public activity and contacts using only publicly available data.</div><ul class="svc-includes"><li class="dk">Multi-platform public profile analysis</li><li class="dk">Contact &amp; associate mapping</li><li class="dk">Activity timeline report</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Individuals · Businesses</div><div class="svc-name dk">Identity Theft Investigation</div><div class="svc-desc dk">Investigate misuse of your NI Number, BVN, NIN, SSN, or business identity across UK, Nigerian, and US identity systems.</div><ul class="svc-includes"><li class="dk">NI Number / NIN / BVN misuse investigation</li><li class="dk">Dark web exposure check included</li><li class="dk">Evidence report for Action Fraud / police / EFCC</li></ul></div>
-	</div>
-
-	<div class="section-header section-header-light">
-		<div class="section-eyebrow">Fraud Investigation</div>
-		<h2>Fraud Investigation<br>&amp; Financial Intelligence</h2>
-		<div class="section-rule"></div>
-		<p>Follow the money, find the truth. From romance scams to corporate embezzlement, we trace the deception, identify the people behind it, and build the evidence file.</p>
-	</div>
-
-	<div class="card-grid light" style="margin-bottom:3.5rem;">
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Individuals · Businesses</div><div class="svc-name dk">Financial Fraud Investigation</div><div class="svc-desc dk">Uncover Ponzi structures, fake investment platforms, embezzlement, and romance-linked financial fraud. Includes Action Fraud and EFCC referral pathways.</div><ul class="svc-includes"><li class="dk">Transaction trail analysis</li><li class="dk">Platform &amp; operator OSINT</li><li class="dk">Evidence report for Action Fraud / EFCC referral</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Investors · Diaspora clients</div><div class="svc-name dk">Real Estate Fraud Check</div><div class="svc-desc dk">Detect property scams, fake C-of-O documents, and double sales before you commit funds. Particularly valuable for UK-based clients investing in Nigerian property.</div><ul class="svc-includes"><li class="dk">Title deed &amp; C-of-O verification</li><li class="dk">Survey plan validation</li><li class="dk">Seller identity check</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Individuals · Public Figures · Businesses · Stalking Victims</div><div class="svc-name dk">Blackmail, Extortion &amp; Online Threats Investigation</div><div class="svc-desc dk">If you're being threatened, coerced, blackmailed, harassed, stalked, or defamed online — we investigate the source, gather evidence, and work with you to shut it down discreetly.</div><ul class="svc-includes"><li class="dk">Threat &amp; harasser source tracing &amp; identification</li><li class="dk">Evidence preservation &amp; archiving</li><li class="dk">Platform reporting &amp; takedown support</li><li class="dk">Legal referral support for defamation &amp; restraining orders</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Online daters · Individuals</div><div class="svc-name dk">Romance Scam Check</div><div class="svc-desc dk">Verify whether someone you've met online is real or a scammer — before you invest emotionally or financially.</div><ul class="svc-includes"><li class="dk">Reverse image search — detect stolen photos</li><li class="dk">Profile age &amp; activity analysis</li><li class="dk">Cross-reference against known scam databases</li><li class="dk">Clear verdict: real person or likely scammer</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Businesses · Finance · Boards</div><div class="svc-name dk">Fraud Risk Assessment</div><div class="svc-desc dk">Comprehensive assessment of your organisation's fraud risk exposure — identifying vulnerabilities in processes, systems, and controls before they're exploited.</div><ul class="svc-includes"><li class="dk">Fraud risk mapping</li><li class="dk">Control effectiveness evaluation</li><li class="dk">Vulnerability identification</li><li class="dk">Prioritised remediation plan</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Businesses · Compliance teams</div><div class="svc-name dk">Anti-Fraud Framework Design</div><div class="svc-desc dk">Design and implementation of internal controls and anti-fraud frameworks tailored to your organisation's risk profile and regulatory requirements.</div><ul class="svc-includes"><li class="dk">Internal control design</li><li class="dk">Anti-fraud policy development</li><li class="dk">Whistleblower framework setup</li><li class="dk">Compliance advisory (GDPR, AML)</li></ul></div>
-	</div>
-
-	<div class="section-header section-header-light">
-		<div class="section-eyebrow">Crypto Tracing</div>
-			<h2>Cryptocurrency Tracing<br>&amp; Blockchain Intelligence</h2>
-		<div class="section-rule"></div>
-		<p>Wallet identification, transaction tracing, and crypto fraud investigation across Bitcoin, Ethereum, and multi-chain environments.</p>
-	</div>
-
-	<div class="card-grid light" style="margin-bottom:3.5rem;">
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Individuals · Investors</div><div class="svc-name dk">Crypto Investment Platform Due Diligence</div><div class="svc-desc dk">Before you invest — verify whether a crypto platform or investment scheme is legitimate. Clear pass/fail verdict.</div><ul class="svc-includes"><li class="dk">Domain age &amp; registration analysis</li><li class="dk">Company registration verification</li><li class="dk">Scam database cross-reference</li><li class="dk">Red flag scoring &amp; clear verdict</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Scam victims · Legal teams</div><div class="svc-name dk">Cryptocurrency Wallet Trace Analysis</div><div class="svc-desc dk">Trace a suspicious crypto wallet — follow the money and identify where funds moved. Covers Bitcoin, Ethereum, USDT.</div><ul class="svc-includes"><li class="dk">Blockchain transaction trail analysis</li><li class="dk">Wallet clustering &amp; exchange identification</li><li class="dk">Flag if funds hit known scam addresses</li><li class="dk">PDF trace report with full movement chain</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Scam victims · Legal teams</div><div class="svc-name dk">Cryptocurrency Asset Tracing</div><div class="svc-desc dk">Advanced blockchain analysis to trace cryptocurrency assets across multiple chains — from basic wallet identification to complex multi-hop tracing.</div><ul class="svc-includes"><li class="dk">Multi-chain wallet analysis</li><li class="dk">Exchange identification &amp; reporting</li><li class="dk">Transaction flow documentation</li><li class="dk">Evidence for legal proceedings</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Scam victims · Businesses</div><div class="svc-name dk">Cryptocurrency Fraud Investigation</div><div class="svc-desc dk">Full investigation for victims of crypto investment scams — trace funds, identify operators, prepare evidence for legal action.</div><ul class="svc-includes"><li class="dk">Multi-hop wallet trace across chains</li><li class="dk">Scam platform OSINT</li><li class="dk">Operator identity investigation</li><li class="dk">Legal-grade evidence report</li></ul></div>
+<section id="advisory" class="services-dark">
+	<div class="svc-section-grid">
+		<div class="svc-left">
+			<div class="section-eyebrow">Litigation, Training &amp; Advisory</div>
+			<h2 style="color:var(--white);">Expert witness, fraud prevention<br>&amp; capacity building</h2>
+			<div class="section-rule"></div>
+			<p style="color:rgba(255,255,255,0.45);">Expert witness services, case file preparation, fraud risk consulting, anti-fraud frameworks, cybersecurity training, OSINT workshops, executive briefings, and AI-powered intelligence tools.</p>
+			<div class="use-cases">
+				<span class="use-tag dark">Expert witness</span>
+				<span class="use-tag dark">Litigation support</span>
+				<span class="use-tag dark">Fraud prevention</span>
+				<span class="use-tag dark">Staff training</span>
+				<span class="use-tag dark">OSINT training</span>
+				<span class="use-tag dark">AI detection</span>
+			</div>
+		</div>
+		<div>
+			<h4 style="font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;font-weight:500;font-family:'Inter',system-ui,sans-serif;">What we deliver</h4>
+			<ul class="deliver-list dark">
+				<li>Expert witness reports (digital forensics, fraud, OSINT)</li>
+				<li>Evidence handling &amp; chain-of-custody documentation</li>
+				<li>Case file preparation for solicitors</li>
+				<li>Fraud risk assessments &amp; anti-fraud framework design</li>
+				<li>Compliance advisory (GDPR, AML)</li>
+				<li>Cybersecurity awareness training</li>
+				<li>Fraud detection workshops</li>
+				<li>OSINT training for organisations</li>
+				<li>Executive security briefings</li>
+				<li>AI-assisted fraud detection &amp; behavioural anomaly detection</li>
+			</ul>
+			<div class="inline-cta dark">
+				<h4>Discuss your requirements</h4>
+				<p>Submit a high-level summary. Scope and pricing provided after initial consultation.</p>
+				<a href="inquiry.html" class="btn-primary" style="font-size:0.72rem;padding:0.7rem 1.6rem;">Submit confidential inquiry →</a>
+			</div>
+		</div>
 	</div>
 </section>
 
-<hr class="section-divider">
 
-
-<!-- ============================================================ -->
-<!-- 6. TRAINING & CAPACITY BUILDING + AI-POWERED INTELLIGENCE -->
-<!-- ============================================================ -->
-<section id="litigation" class="services-dark">
-	<div class="section-header section-header-dark">
-		<div class="section-eyebrow">Training &amp; Capability Development</div>
-		<h2 style="color:var(--white);">Training &amp; Capability Development</h2>
+<!-- HOW IT WORKS (REPEATED ON EVERY SERVICE PAGE) -->
+<section style="background:var(--navy);">
+	<div style="margin-bottom:2rem;">
+		<div class="section-eyebrow">Engagement Process</div>
+		<h2 style="color:var(--white);">How every engagement works</h2>
 		<div class="section-rule"></div>
-		<p>Equipping your teams with the skills to detect, prevent, and respond to threats — from cybersecurity awareness to advanced OSINT methodology.</p>
+		<p style="color:rgba(255,255,255,0.45);max-width:540px;">The same structured process applies to every service. Sensitive information is only exchanged after formal agreements are in place.</p>
 	</div>
-
-	<div class="card-grid" style="margin-bottom:3.5rem;">
-		<div class="svc-card"><div class="svc-cat">Suitable for: Organisations · Teams · Employees</div><div class="svc-name">Cybersecurity Awareness Training</div><div class="svc-desc">Engaging, practical cybersecurity training for your workforce — covering phishing, social engineering, password hygiene, and secure remote working.</div><ul class="svc-includes"><li>In-person or online delivery</li><li>Phishing simulation exercises</li><li>Role-specific training modules</li><li>Completion certificates</li></ul></div>
-		<div class="svc-card"><div class="svc-cat">Suitable for: Finance teams · Compliance · HR</div><div class="svc-name">Fraud Detection Workshops</div><div class="svc-desc">Practical workshops teaching your team how to identify, prevent, and respond to fraud — tailored to your industry and risk profile.</div><ul class="svc-includes"><li>Red flag recognition training</li><li>Case study walkthroughs</li><li>Reporting procedure setup</li><li>Subscription-based refresher modules</li></ul></div>
-		<div class="svc-card"><div class="svc-cat">Suitable for: Security teams · Analysts · Investigators</div><div class="svc-name">OSINT Training</div><div class="svc-desc">Professional OSINT methodology training for organisations — from basic open-source research to advanced digital investigation techniques.</div><ul class="svc-includes"><li>OSINT fundamentals</li><li>Advanced search &amp; analysis techniques</li><li>Tool selection &amp; workflow design</li><li>Hands-on practical exercises</li></ul></div>
-		<div class="svc-card"><div class="svc-cat">Suitable for: Executives · Boards · C-suite</div><div class="svc-name">Executive Security Briefings</div><div class="svc-desc">Tailored security briefings for senior leadership — covering cyber risk, threat landscape, personal security, and travel risk for your specific context.</div><ul class="svc-includes"><li>Personal cyber risk assessment</li><li>Threat landscape briefing</li><li>Travel security advisory</li><li>Quarterly or on-demand scheduling</li></ul></div>
-	</div>
-
-	<div class="section-header section-header-dark">
-		<div class="section-eyebrow">AI-Powered Intelligence</div>
-		<h2 style="color:var(--white);">AI-powered Intelligence <br>&amp; Automation </h2>
-		<div class="section-rule"></div>
-		<p>Machine learning and AI systems that detect fraud, aggregate intelligence, and identify anomalies at scale — faster and more consistently than manual analysis.</p>
-	</div>
-
-	<div class="card-grid">
-		<div class="svc-card"><div class="svc-cat">Suitable for: Businesses · Enterprises</div><div class="svc-name">AI-Assisted Fraud Detection</div><div class="svc-desc">Machine learning systems trained to detect fraudulent patterns, anomalous transactions, and suspicious behaviour across your data — reducing false positives and response time.</div><ul class="svc-includes"><li>Custom fraud detection model development</li><li>Transaction anomaly detection</li><li>Behavioural pattern analysis</li><li>Integration with existing systems</li></ul></div>
-		<div class="svc-card"><div class="svc-cat">Suitable for: Security teams · Analysts</div><div class="svc-name">Automated OSINT Aggregation</div><div class="svc-desc">AI-powered data collection and analysis tools that aggregate open-source intelligence at scale — faster, broader, and more consistent than manual investigation.</div><ul class="svc-includes"><li>Multi-source data aggregation</li><li>Automated entity extraction</li><li>Pattern &amp; link detection</li><li>Dashboard &amp; reporting interface</li></ul></div>
-		<div class="svc-card"><div class="svc-cat">Suitable for: Businesses · Individuals</div><div class="svc-name">Behavioural Anomaly Detection</div><div class="svc-desc">AI systems that detect unusual behavioural patterns — in employee activity, transaction flows, or digital communications — flagging potential insider threats or fraud.</div><ul class="svc-includes"><li>Baseline behaviour modelling</li><li>Real-time anomaly alerts</li><li>Risk scoring &amp; prioritisation</li><li>Investigation trigger reports</li></ul></div>
-	<div class="svc-card">
-	<div class="svc-cat">Suitable for: Businesses · Enterprises · AI Product Teams</div>
-	<div class="svc-name">AI Security Audits</div>
-	<div class="svc-desc">Comprehensive security assessments of AI systems — identifying prompt injection, data leakage, and unsafe model behaviour before they become incidents. We test your AI the way an attacker would, then show you exactly how to lock it down.</div>
-	<ul class="svc-includes">
-		<li>Prompt injection testing &amp; exploit simulation</li>
-		<li>Data leakage assessment &amp; exposure analysis</li>
-		<li>Model behaviour evaluation under adversarial inputs</li>
-		<li>API &amp; integration security review</li>
-		<li>Risk scoring, vulnerability reporting &amp; remediation guidance</li>
-	</ul>
-</div>
-	</div>
-</section>
-
-<hr class="section-divider">
-
-
-<!-- ============================================================ -->
-<!-- 7. POLYGRAPH TESTING -->
-<!-- ============================================================ -->
-<section id="polygraph">
-	<div class="section-header section-header-light">
-		<div class="section-eyebrow">In-Person Truth Verification ·</div>
-			<h2>Polygraph <br>&amp; Truth Verification Services</h2>
-		<div class="section-rule"></div>
-		<p>In-person polygraph examinations conducted by certified examiners — for personal truth verification, not court submission.</p>
-	</div>
-	<div class="card-grid light">
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Couples · Diaspora clients</div><div class="svc-name dk">Pre-Marriage Truth Verification</div><div class="svc-desc dk">Full OSINT background investigation combined with a professionally administered polygraph — the most comprehensive pre-marriage package for diaspora clients.</div><ul class="svc-includes"><li class="dk">Full identity, prior marriage &amp; criminal record check</li><li class="dk">Pre-test question design from investigation findings</li><li class="dk">Certified polygraph examination, Nigeria-based</li><li class="dk">Combined OSINT + polygraph evidence package</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Partners · Couples</div><div class="svc-name dk">Fidelity Verification Polygraph</div><div class="svc-desc dk">For specific suspicions of infidelity — a structured examination focused on agreed questions, administered by a certified examiner.</div><ul class="svc-includes"><li class="dk">Pre-test OSINT to inform question design</li><li class="dk">Question review &amp; approval by client</li><li class="dk">Professional polygraph examination</li><li class="dk">Written examiner report with findings</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Diaspora · Visa sponsors</div><div class="svc-name dk">Pre-Visa Relationship Integrity Check</div><div class="svc-desc dk">For UK-based clients sponsoring a Nigerian partner for a UK, US, or Canadian visa — verifying the authenticity of the relationship for the sponsor's personal assurance.</div><ul class="svc-includes"><li class="dk">Full OSINT relationship history investigation</li><li class="dk">Polygraph on relationship authenticity &amp; intent</li><li class="dk">Written report for sponsor's personal records</li><li class="dk">Not for submission to UKVI, USCIS, or IRCC</li></ul></div>
-		<div class="svc-card lc"><div class="svc-cat">Suitable for: Employers · Property owners</div><div class="svc-name dk">Staff &amp; Domestic Integrity Screening</div><div class="svc-desc dk">For UK-based property owners and employers with Nigerian operations — verify the integrity of domestic staff, property managers, or security personnel.</div><ul class="svc-includes"><li class="dk">Staff background check by Greyline</li><li class="dk">Polygraph on specific integrity concerns</li><li class="dk">Written examiner report &amp; risk assessment</li><li class="dk">Suitable for pre-employment &amp; periodic screening</li></ul></div>
+	<div class="process-steps">
+		<div class="process-step"><div class="step-num">01</div><div class="step-title">Initial inquiry</div><div class="step-body">Submit a high-level summary. No sensitive information at this stage.</div></div>
+		<div class="process-step"><div class="step-num">02</div><div class="step-title">Case assessment</div><div class="step-body">We review and determine suitability.</div></div>
+		<div class="process-step"><div class="step-num">03</div><div class="step-title">Confidentiality agreement</div><div class="step-body">Mutual NDA executed before detailed disclosure.</div></div>
+		<div class="process-step"><div class="step-num">04</div><div class="step-title">Engagement</div><div class="step-body">Scope defined, retainer paid, work begins.</div></div>
+		<div class="process-step"><div class="step-num">05</div><div class="step-title">Reporting</div><div class="step-body">Findings delivered securely upon completion.</div></div>
 	</div>
 </section>
 
 <!-- CTA -->
-<section style="background:var(--navy);padding:4rem;">
+<section style="background:var(--ice-2);padding:4rem;">
 	<div style="max-width:620px;margin:0 auto;text-align:center;">
 		<div class="section-eyebrow" style="text-align:center;">Ready to begin?</div>
-		<h2 style="color:var(--white);margin-bottom:1.25rem;">Start a confidential inquiry</h2>
-		<p style="color:rgba(255,255,255,0.45);margin-bottom:2rem;">All inquiries are strictly confidential. No obligation to proceed. NDA signed before any case discussion begins.</p>
-		<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-			<a href="inquiry.html" class="btn-primary">Begin confidential inquiry →</a>
-			<a href="contact.html" class="btn-outline-w">Contact us</a>
-		</div>
+		<h2 style="margin-bottom:1.25rem;">Submit a confidential inquiry</h2>
+		<p style="margin-bottom:2rem;">No sensitive information required at this stage. A confidentiality agreement will be provided before detailed discussion.</p>
+		<a href="inquiry.html" class="btn-primary">Submit Confidential Inquiry →</a>
 	</div>
 </section>
 
-<!-- UPDATED FOOTER -->
 <footer class="site-footer">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <div class="logo-text">Greyline <span>Investigations</span></div>
-                <p>Cyber intelligence, risk, and investigation services. UK-registered agency serving clients across the UK, Nigeria, USA, Canada, Australia, and beyond.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="services.html#corporate">Corporate Investigations</a></li>
-                    <li><a href="services.html#crypto">Crypto &amp; Asset Tracing</a></li>
-                    <li><a href="services.html#cybersecurity">Cybersecurity &amp; Red Teaming</a></li>
-                    <li><a href="services.html#digital">Digital Forensics</a></li>
-                    <li><a href="services.html#fraud">Fraud &amp; Financial Crime</a></li>
-                    <li><a href="services.html#infidelity">Infidelity Investigations</a></li>
-                    <li><a href="services.html#insider">Insider Threat &amp; Workplace Intelligence</a></li>
-                    <li><a href="services.html#threat-intel">Threat Intelligence &amp; OSINT</a></li>
-                    <li><a href="services.html#training">Training &amp; Advisory</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="inquiry.html">Begin inquiry</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="terms-of-use.html">Terms of Use</a></li>
-                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
-                    <li><a href="disclaimer.html">Disclaimer</a></li>
-                    <li><a href="aml-policy.html">AML Policy</a></li>
-                    <li><a href="payment-refund-policy.html">Payment &amp; Refund</a></li>
-                    <li><a href="data-protection.html">Data Protection</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-legal">
-            <p>&copy; 2026 Greyline Investigations Limited. All Rights Reserved. Company No. 17121990.</p>
-            <div class="footer-social">
-                <a href="#">Twitter</a>
-                <a href="#">LinkedIn</a>
-            </div>
-        </div>
-    </footer>
+	<div class="footer-grid">
+		<div class="footer-brand">
+			<div class="logo-text">Greyline <span>Investigations</span></div>
+			<p>Cyber intelligence, risk, and investigation services. UK-registered agency serving clients across the UK, Nigeria, USA, Canada, Australia, and beyond.</p>
+		</div>
+		<div class="footer-col">
+			<h4>Services</h4>
+			<ul>
+				<li><a href="services.html#personal">Infidelity &amp; Relationship Intelligence</a></li>
+				<li><a href="services.html#fraud">Fraud &amp; Financial Crime</a></li>
+				<li><a href="services.html#forensics">Digital Forensics</a></li>
+				<li><a href="services.html#cybersecurity">Cybersecurity &amp; Offensive Security</a></li>
+				<li><a href="services.html#intelligence">Threat Intelligence &amp; Asset Tracing</a></li>
+				<li><a href="services.html#advisory">Litigation, Training &amp; Advisory</a></li>
+			</ul>
+		</div>
+		<div class="footer-col">
+			<h4>Company</h4>
+			<ul>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="inquiry.html">Begin inquiry</a></li>
+			</ul>
+		</div>
+		<div class="footer-col">
+			<h4>Legal</h4>
+			<ul>
+				<li><a href="privacy-policy.html">Privacy Policy</a></li>
+				<li><a href="terms-of-use.html">Terms of Use</a></li>
+				<li><a href="cookie-policy.html">Cookie Policy</a></li>
+				<li><a href="disclaimer.html">Disclaimer</a></li>
+				<li><a href="aml-policy.html">AML Policy</a></li>
+				<li><a href="payment-refund-policy.html">Payment &amp; Refund</a></li>
+				<li><a href="data-protection.html">Data Protection</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer-legal">
+		<p>&copy; 2026 Greyline Investigations Limited. All Rights Reserved. Company No. 17121990.</p>
+		<div class="footer-social">
+			<a href="#">Twitter</a>
+			<a href="#">LinkedIn</a>
+		</div>
+	</div>
+</footer>
 
 </body>
 </html>
