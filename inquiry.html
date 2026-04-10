@@ -236,7 +236,9 @@
 		<strong>Important:</strong> Please do not include sensitive, personal, or evidential information at this stage. A confidentiality agreement will be provided before detailed disclosure. Provide only a high-level summary of your situation.
 	</div>
 
-	<form id="inquiryForm">
+	<form id="inquiryForm" name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+		<!-- Honeypot field — hidden from real users, catches bots -->
+		<p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
 
 		<!-- YOUR DETAILS -->
 		<div class="form-group-label">Your details</div>
@@ -353,7 +355,7 @@
 	<div class="success-message" id="successMessage">
 		<h3>Your inquiry has been received.</h3>
 		<p>We will review your case and provide a confidentiality agreement if appropriate. You will receive a response within 2 hours.</p>
-		<p style="margin-top:1rem;">If you need to reach us urgently, email <strong>cases@greylineinvestigations.co.uk</strong></p>
+		<p style="margin-top:1rem;">If you need to reach us urgently, email <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="86e5e7f5e3f5c6e1f4e3ffeaefe8e3efe8f0e3f5f2efe1e7f2efe9e8f5a8e5e9a8f3ed">[email&#160;protected]</a></strong></p>
 	</div>
 </div>
 
@@ -390,9 +392,31 @@
 <script>
 document.getElementById('inquiryForm').addEventListener('submit', function(e) {
 	e.preventDefault();
-	document.getElementById('inquiryForm').style.display = 'none';
-	document.getElementById('successMessage').style.display = 'block';
-	window.scrollTo({ top: document.getElementById('successMessage').offsetTop - 120, behavior: 'smooth' });
+	var form = e.target;
+	var btn = form.querySelector('button[type="submit"]');
+	btn.disabled = true;
+	btn.textContent = 'Submitting...';
+
+	fetch('/', {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+		body: new URLSearchParams(new FormData(form)).toString()
+	})
+	.then(function(res) {
+		if (res.ok) {
+			form.style.display = 'none';
+			document.querySelector('.form-notice').style.display = 'none';
+			document.getElementById('successMessage').style.display = 'block';
+			window.scrollTo({ top: document.getElementById('successMessage').offsetTop - 120, behavior: 'smooth' });
+		} else {
+			throw new Error('Submission failed');
+		}
+	})
+	.catch(function(err) {
+		btn.disabled = false;
+		btn.textContent = 'Submit Confidential Inquiry';
+		alert('Something went wrong. Please try again or email us directly at cases@greylineinvestigations.co.uk');
+	});
 });
 </script>
 
