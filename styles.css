@@ -781,3 +781,251 @@ footer, .site-footer { background:var(--navy-2); border-top:1px solid rgba(255,2
 	.capability-list span:not(:last-child)::after { right: -0.9rem; }
 	.route-switch-inner { flex-direction: column; align-items: flex-start; }
 }
+
+
+/* ================================================================ */
+/* GREYLINE — FOOTER UPDATE FOR EXPANDED SERVICES                    */
+/*                                                                    */
+/* The audience-page footer now has 5 columns (brand, audiences,     */
+/* featured services, core services, legal) instead of 4.            */
+/*                                                                    */
+/* If your existing styles.css (or styles-additions.css) has a       */
+/* .footer-grid rule with grid-template-columns: 2fr 1fr 1fr 1fr,    */
+/* replace that rule with the version below.                         */
+/* ================================================================ */
+
+.footer-grid {
+	display: grid;
+	grid-template-columns: 1.5fr 0.8fr 1.2fr 1.2fr 1fr;
+	gap: 2rem;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 4rem 4rem 2rem;
+}
+
+@media (max-width: 1024px) {
+	.footer-grid {
+		grid-template-columns: 1fr 1fr;
+		gap: 2.5rem;
+	}
+}
+
+@media (max-width: 720px) {
+	.footer-grid {
+		grid-template-columns: 1fr;
+		padding: 3rem 1.5rem 2rem;
+	}
+}
+
+
+
+/* ================================================================ */
+/* GREYLINE — SPECIALIST SECTION STYLES                              */
+/* These styles add the new "Specialist Programmes" / "Specialist    */
+/* Reports" section used on the rebuilt audience pages.              */
+/* Append these to your existing styles.css file.                    */
+/* ================================================================ */
+
+
+/* ----------------------------------------------------------------- */
+/* SPECIALIST SECTION                                                */
+/* A visually distinct band that sits below the core services on     */
+/* each audience page, holding the new flagship/premium products.    */
+/* Uses a subtle navy gradient to elevate the new offerings.         */
+/* ----------------------------------------------------------------- */
+.specialist-section {
+	padding: 5rem 4rem;
+	background: linear-gradient(180deg, var(--white) 0%, var(--ice-2) 100%);
+	border-top: 1px solid var(--border);
+	position: relative;
+}
+.specialist-section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 2px;
+	background: var(--accent);
+}
+
+.specialist-header {
+	max-width: 1300px;
+	margin: 0 auto 3rem;
+	text-align: left;
+}
+.specialist-header h2 {
+	color: var(--navy);
+}
+.specialist-header h2 em {
+	font-style: italic;
+	color: var(--slate);
+	font-weight: 400;
+}
+.specialist-lead {
+	max-width: 720px;
+	font-size: 1rem;
+	color: var(--text-2);
+	margin-top: 1.5rem;
+	line-height: 1.75;
+}
+
+
+/* ----------------------------------------------------------------- */
+/* SPECIALIST GRID                                                   */
+/* Default = 2 columns (used on Individuals + Businesses pages).     */
+/* Modifier `.specialist-grid-three` = 3 columns (Solicitors page).  */
+/* ----------------------------------------------------------------- */
+.specialist-grid {
+	max-width: 1300px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+}
+.specialist-grid-three {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* ----------------------------------------------------------------- */
+/* AUDIENCE CARD — odd-count layout fix                              */
+/* When a 2-column audience grid contains 7 cards, the 7th sits      */
+/* alone at the bottom. This rule makes that 7th card span both      */
+/* columns, presenting it as a deliberately elevated final card      */
+/* rather than an awkward orphan.                                    */
+/* ----------------------------------------------------------------- */
+.audience-card-grid > .audience-card:nth-child(7):last-child {
+	grid-column: 1 / -1;
+}
+.audience-card-grid > .audience-card:nth-child(7):last-child h3 {
+	font-size: 1.85rem;
+}
+.audience-card-grid > .audience-card:nth-child(7):last-child .card-bullets {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 2rem;
+}
+@media (max-width: 1024px) {
+	.audience-card-grid > .audience-card:nth-child(7):last-child .card-bullets {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+/* ----------------------------------------------------------------- */
+/* SPECIALIST CARD                                                   */
+/* Premium variant of the standard audience card — with a darker     */
+/* top edge and accent tag to signal these are the flagship/new      */
+/* offerings on each page.                                           */
+/* ----------------------------------------------------------------- */
+.specialist-card {
+	background: var(--white);
+	padding: 2.5rem 2rem;
+	border: 1px solid var(--border);
+	border-top: 3px solid var(--accent);
+	transition: border-color 0.2s ease, box-shadow 0.25s ease, transform 0.25s ease;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.specialist-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 18px 40px -22px rgba(13, 27, 42, 0.25);
+	border-color: var(--border-2);
+	border-top-color: var(--accent);
+}
+
+.specialist-tag {
+	display: inline-block;
+	font-size: 0.65rem;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--accent);
+	background: rgba(200, 57, 43, 0.08);
+	padding: 0.35rem 0.8rem;
+	border-radius: 2px;
+	margin-bottom: 1rem;
+	align-self: flex-start;
+}
+
+.specialist-card .card-tag {
+	font-size: 0.7rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--text-3);
+	margin-bottom: 0.85rem;
+	font-weight: 500;
+}
+
+.specialist-card h3 {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	color: var(--navy);
+	line-height: 1.2;
+}
+
+.specialist-card p {
+	font-size: 0.9rem;
+	line-height: 1.7;
+	margin-bottom: 1.25rem;
+	color: var(--text-2);
+}
+
+.specialist-card .card-bullets {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1.5rem;
+	border-top: 1px solid var(--border);
+	padding-top: 1rem;
+	flex-grow: 1;
+}
+.specialist-card .card-bullets li {
+	font-size: 0.85rem;
+	color: var(--text-2);
+	padding: 0.4rem 0 0.4rem 1.2rem;
+	position: relative;
+}
+.specialist-card .card-bullets li::before {
+	content: "—";
+	position: absolute;
+	left: 0;
+	color: var(--accent);
+}
+
+.specialist-card .card-link {
+	font-size: 0.78rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--accent);
+	font-weight: 500;
+	text-decoration: none;
+	display: inline-block;
+	border-bottom: 1px solid transparent;
+	padding-bottom: 0.2rem;
+	transition: border-color 0.2s;
+	margin-top: auto;
+}
+.specialist-card .card-link:hover {
+	border-color: var(--accent);
+}
+
+
+/* ----------------------------------------------------------------- */
+/* RESPONSIVE                                                        */
+/* ----------------------------------------------------------------- */
+@media (max-width: 1024px) {
+	.specialist-grid,
+	.specialist-grid-three {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+}
+@media (max-width: 720px) {
+	.specialist-section {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
