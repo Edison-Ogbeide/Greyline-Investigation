@@ -175,3 +175,609 @@ footer, .site-footer { background:var(--navy-2); border-top:1px solid rgba(255,2
 	.footer-inner,.footer-grid{grid-template-columns:1fr 1fr;} .form-row{grid-template-columns:1fr;}
 }
 @media(max-width:540px){ .footer-inner,.footer-grid{grid-template-columns:1fr;} .assurance-bar{grid-template-columns:1fr;} .nav-cta{display:none;} .nav-links{gap:1.5rem;} }
+
+
+/* ================================================================ */
+/* GREYLINE — NEW STYLES FOR BUYER-SEGMENTED PAGES                   */
+/* These styles are designed to be appended to your existing         */
+/* styles.css. They reuse all existing CSS variables (var(--navy),   */
+/* var(--accent), etc.) and add only what's new for the              */
+/* restructured homepage and three audience landing pages.           */
+/* ================================================================ */
+
+
+/* ----------------------------------------------------------------- */
+/* HOMEPAGE HERO                                                     */
+/* ----------------------------------------------------------------- */
+.home-hero {
+	min-height: 92vh;
+	background: var(--navy);
+	color: var(--white);
+	display: flex;
+	align-items: center;
+	padding: 8rem 4rem 5rem;
+	position: relative;
+	overflow: hidden;
+}
+.home-hero::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(circle at 20% 30%, rgba(200, 57, 43, 0.08), transparent 50%),
+		radial-gradient(circle at 80% 70%, rgba(176, 196, 222, 0.06), transparent 50%);
+	pointer-events: none;
+}
+.hero-bg-grid {
+	position: absolute;
+	inset: 0;
+	background-image:
+		linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+	background-size: 60px 60px;
+	pointer-events: none;
+	mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+.home-hero-inner {
+	max-width: 980px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+.home-hero .hero-eyebrow {
+	font-size: 0.74rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 1.75rem;
+	font-weight: 500;
+}
+.home-hero h1 {
+	color: var(--white);
+	margin-bottom: 2rem;
+}
+.home-hero h1 em {
+	font-style: italic;
+	color: var(--mist);
+	font-weight: 400;
+}
+.hero-lead {
+	color: rgba(255, 255, 255, 0.78);
+	font-size: 1.15rem;
+	line-height: 1.75;
+	max-width: 720px;
+	margin-bottom: 2.5rem;
+}
+.hero-rule {
+	width: 60px;
+	height: 1px;
+	background: var(--accent);
+	margin: 2.5rem 0 1.5rem;
+}
+.hero-prompt {
+	color: rgba(255, 255, 255, 0.55);
+	font-style: italic;
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 1.2rem;
+}
+
+
+/* ----------------------------------------------------------------- */
+/* THREE-ROUTE BUYER GRID                                            */
+/* ----------------------------------------------------------------- */
+.route-section {
+	background: var(--ice-2);
+	padding: 5rem 4rem;
+}
+.route-grid {
+	max-width: 1400px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+}
+.route-card {
+	background: var(--white);
+	padding: 2.5rem 2rem 2rem;
+	border: 1px solid var(--border);
+	text-decoration: none;
+	color: var(--text);
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+	position: relative;
+	overflow: hidden;
+}
+.route-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background: var(--accent);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.35s ease;
+}
+.route-card:hover {
+	transform: translateY(-4px);
+	border-color: var(--border-2);
+	box-shadow: 0 18px 40px -22px rgba(13, 27, 42, 0.25);
+}
+.route-card:hover::before {
+	transform: scaleX(1);
+}
+.route-eyebrow {
+	font-size: 0.68rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--text-3);
+	margin-bottom: 1.25rem;
+	font-weight: 500;
+}
+.route-title {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: clamp(1.9rem, 2.4vw, 2.4rem);
+	font-weight: 500;
+	color: var(--navy);
+	line-height: 1.05;
+	margin-bottom: 1.25rem;
+}
+.route-title em {
+	font-style: italic;
+	color: var(--slate);
+	font-weight: 400;
+}
+.route-rule {
+	width: 32px;
+	height: 2px;
+	background: var(--accent);
+	margin-bottom: 1.5rem;
+}
+.route-desc {
+	color: var(--text-2);
+	font-size: 0.95rem;
+	line-height: 1.7;
+	margin-bottom: 1.5rem;
+}
+.route-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 2rem;
+	flex-grow: 1;
+}
+.route-list li {
+	font-size: 0.88rem;
+	color: var(--text-2);
+	padding: 0.5rem 0 0.5rem 1rem;
+	border-bottom: 1px solid var(--border);
+	position: relative;
+}
+.route-list li::before {
+	content: "·";
+	position: absolute;
+	left: 0;
+	color: var(--accent);
+	font-weight: 700;
+}
+.route-list li:last-child {
+	border-bottom: none;
+}
+.route-cta {
+	font-size: 0.78rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--accent);
+	font-weight: 500;
+	padding-top: 1rem;
+	border-top: 1px solid var(--border);
+}
+
+
+/* ----------------------------------------------------------------- */
+/* CAPABILITY STRIP                                                  */
+/* ----------------------------------------------------------------- */
+.capability-strip {
+	background: var(--white);
+	padding: 4rem 4rem 4.5rem;
+	text-align: center;
+	border-top: 1px solid var(--border);
+	border-bottom: 1px solid var(--border);
+}
+.capability-eyebrow {
+	font-size: 0.7rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 2rem;
+	font-weight: 500;
+}
+.capability-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.25rem 2.5rem;
+	max-width: 1200px;
+	margin: 0 auto 2rem;
+}
+.capability-list span {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-style: italic;
+	font-size: 1.1rem;
+	color: var(--text-2);
+	position: relative;
+}
+.capability-list span:not(:last-child)::after {
+	content: "·";
+	position: absolute;
+	right: -1.4rem;
+	color: var(--accent);
+}
+.capability-link {
+	display: inline-block;
+	font-size: 0.78rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--navy);
+	font-weight: 500;
+	text-decoration: none;
+	border-bottom: 1px solid var(--accent);
+	padding-bottom: 0.3rem;
+	margin-top: 1rem;
+}
+.capability-link:hover { color: var(--accent); }
+
+
+/* ----------------------------------------------------------------- */
+/* TRUST SECTION                                                     */
+/* ----------------------------------------------------------------- */
+.trust-section { padding: 5rem 4rem; background: var(--white); }
+.trust-grid {
+	max-width: 1300px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1.2fr 1fr;
+	gap: 5rem;
+	align-items: center;
+}
+.trust-stats {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5rem;
+}
+.trust-stat {
+	background: var(--ice-2);
+	padding: 2rem 1.5rem;
+	border-left: 2px solid var(--accent);
+}
+.stat-figure {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 2.6rem;
+	font-weight: 500;
+	color: var(--navy);
+	line-height: 1;
+	margin-bottom: 0.5rem;
+}
+.stat-label {
+	font-size: 0.78rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--text-3);
+	font-weight: 500;
+}
+
+
+/* ----------------------------------------------------------------- */
+/* HOW WE WORK                                                       */
+/* ----------------------------------------------------------------- */
+.how-section { padding: 5rem 4rem; background: var(--ice-2); }
+.how-eyebrow {
+	font-size: 0.7rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 1rem;
+	font-weight: 500;
+}
+.how-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+	margin-top: 3rem;
+}
+.how-step {
+	background: var(--white);
+	padding: 2rem 1.75rem;
+	border-top: 2px solid var(--accent);
+}
+.how-num {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 1.8rem;
+	font-style: italic;
+	color: var(--accent);
+	margin-bottom: 0.75rem;
+}
+.how-step h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+.how-step p { font-size: 0.9rem; line-height: 1.7; }
+
+
+/* ----------------------------------------------------------------- */
+/* PAGE-LEVEL HERO LEAD (used on audience pages)                     */
+/* ----------------------------------------------------------------- */
+.page-hero h1 {
+	color: var(--white);
+	margin-bottom: 1.5rem;
+}
+.page-hero h1 em {
+	font-style: italic;
+	color: var(--mist);
+	font-weight: 400;
+}
+.page-hero-lead {
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 1.1rem;
+	line-height: 1.75;
+	max-width: 740px;
+	margin-top: 1.5rem;
+}
+
+
+/* ----------------------------------------------------------------- */
+/* PROSE INTRO SECTIONS                                              */
+/* ----------------------------------------------------------------- */
+.prose-section { padding: 5rem 4rem; background: var(--white); }
+.prose-grid {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1.4fr;
+	gap: 4rem;
+	align-items: start;
+}
+.prose-body p {
+	font-size: 1.05rem;
+	line-height: 1.85;
+	margin-bottom: 1.4rem;
+	color: var(--text-2);
+}
+.prose-body p:last-child { margin-bottom: 0; }
+
+
+/* ----------------------------------------------------------------- */
+/* AUDIENCE SERVICES (the six-card grid on each landing page)        */
+/* ----------------------------------------------------------------- */
+.audience-services { padding: 5rem 4rem; background: var(--ice-2); }
+.audience-services-header {
+	max-width: 1300px;
+	margin: 0 auto 3rem;
+}
+.audience-card-grid {
+	max-width: 1300px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+}
+.audience-card {
+	background: var(--white);
+	padding: 2.5rem 2rem;
+	border: 1px solid var(--border);
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+	position: relative;
+}
+.audience-card:hover {
+	border-color: var(--accent);
+	box-shadow: 0 14px 32px -22px rgba(13, 27, 42, 0.2);
+}
+.card-num {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-style: italic;
+	font-size: 2rem;
+	color: var(--accent);
+	line-height: 1;
+	margin-bottom: 1rem;
+}
+.card-tag {
+	font-size: 0.7rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--text-3);
+	margin-bottom: 0.85rem;
+	font-weight: 500;
+}
+.audience-card h3 {
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+	color: var(--navy);
+}
+.audience-card p {
+	font-size: 0.92rem;
+	line-height: 1.7;
+	margin-bottom: 1.25rem;
+}
+.card-bullets {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1.5rem;
+	border-top: 1px solid var(--border);
+	padding-top: 1rem;
+}
+.card-bullets li {
+	font-size: 0.85rem;
+	color: var(--text-2);
+	padding: 0.4rem 0 0.4rem 1.2rem;
+	position: relative;
+}
+.card-bullets li::before {
+	content: "—";
+	position: absolute;
+	left: 0;
+	color: var(--accent);
+}
+.card-link {
+	font-size: 0.78rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--accent);
+	font-weight: 500;
+	text-decoration: none;
+	display: inline-block;
+	border-bottom: 1px solid transparent;
+	padding-bottom: 0.2rem;
+	transition: border-color 0.2s;
+}
+.card-link:hover { border-color: var(--accent); }
+
+
+/* ----------------------------------------------------------------- */
+/* DISCRETION SECTION (Individuals page only)                        */
+/* ----------------------------------------------------------------- */
+.discretion-section { padding: 5rem 4rem; background: var(--navy); color: var(--white); }
+.discretion-grid {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1.4fr;
+	gap: 4rem;
+	align-items: start;
+}
+.discretion-section h2 { color: var(--white); }
+.discretion-section h2 em { color: var(--mist); font-style: italic; }
+.discretion-section .section-eyebrow { color: var(--accent); }
+.discretion-body p {
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 1rem;
+	line-height: 1.85;
+	margin-bottom: 1.25rem;
+}
+.discretion-body a {
+	color: var(--mist);
+	text-decoration: underline;
+	text-decoration-color: rgba(176, 196, 222, 0.4);
+}
+.discretion-body a:hover { color: var(--white); }
+
+
+/* ----------------------------------------------------------------- */
+/* ENGAGEMENT SECTION (Business + Solicitor pages)                   */
+/* ----------------------------------------------------------------- */
+.engagement-section { padding: 5rem 4rem; background: var(--white); }
+.engagement-grid {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1.6fr;
+	gap: 4rem;
+	align-items: start;
+}
+.engagement-block { margin-bottom: 2rem; }
+.engagement-block:last-child { margin-bottom: 0; }
+.engagement-block h3 {
+	font-size: 1.4rem;
+	color: var(--navy);
+	margin-bottom: 0.75rem;
+	padding-left: 1rem;
+	border-left: 2px solid var(--accent);
+}
+.engagement-block p {
+	font-size: 0.95rem;
+	line-height: 1.75;
+	padding-left: 1rem;
+	color: var(--text-2);
+}
+
+
+/* ----------------------------------------------------------------- */
+/* ROUTE-SWITCH STRIP                                                */
+/* ----------------------------------------------------------------- */
+.route-switch {
+	background: var(--ice-2);
+	padding: 2.5rem 4rem;
+	border-top: 1px solid var(--border);
+}
+.route-switch-inner {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+.route-switch-inner > p {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-style: italic;
+	font-size: 1.15rem;
+	color: var(--text-2);
+}
+.route-switch-links {
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+.route-switch-links a {
+	font-size: 0.82rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--navy);
+	text-decoration: none;
+	font-weight: 500;
+	border-bottom: 1px solid var(--accent);
+	padding-bottom: 0.25rem;
+}
+.route-switch-links a:hover { color: var(--accent); }
+
+
+/* ----------------------------------------------------------------- */
+/* FINAL CTA (used across all pages)                                 */
+/* ----------------------------------------------------------------- */
+.final-cta {
+	background: var(--navy);
+	padding: 5rem 4rem;
+	color: var(--white);
+}
+.final-cta-inner { max-width: 1100px; margin: 0 auto; }
+.final-cta h2 { color: var(--white); margin-bottom: 1rem; }
+.final-cta h2 em { font-style: italic; color: var(--mist); }
+
+
+/* ----------------------------------------------------------------- */
+/* RESPONSIVE BREAKPOINTS                                            */
+/* ----------------------------------------------------------------- */
+@media (max-width: 1024px) {
+	.route-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+	.audience-card-grid { grid-template-columns: 1fr; }
+	.how-grid { grid-template-columns: repeat(2, 1fr); }
+	.trust-grid,
+	.prose-grid,
+	.discretion-grid,
+	.engagement-grid {
+		grid-template-columns: 1fr;
+		gap: 2.5rem;
+	}
+}
+@media (max-width: 720px) {
+	#nav { padding: 1rem 1.5rem; }
+	.nav-links { display: none; }
+	.home-hero,
+	.page-hero,
+	.route-section,
+	.prose-section,
+	.audience-services,
+	.discretion-section,
+	.engagement-section,
+	.trust-section,
+	.how-section,
+	.capability-strip,
+	.final-cta,
+	.route-switch {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+	.how-grid { grid-template-columns: 1fr; }
+	.trust-stats { grid-template-columns: 1fr 1fr; }
+	.capability-list { gap: 0.6rem 1.6rem; }
+	.capability-list span:not(:last-child)::after { right: -0.9rem; }
+	.route-switch-inner { flex-direction: column; align-items: flex-start; }
+}
