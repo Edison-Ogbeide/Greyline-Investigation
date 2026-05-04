@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Studies | Greyline Investigations</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Page-specific styles — assumes shared styles.css provides base palette + nav/footer.
+     If any variables aren't defined globally, they're declared here as a fallback. */
+  :root {
+    --navy: #0b1d3a;
+    --navy-deep: #061227;
+    --ice: #eef3f8;
+    --ice-soft: #f7fafd;
+    --red: #b81d2c;
+    --red-deep: #8a1320;
+    --ink: #1a2238;
+    --muted: #5a6478;
+    --rule: #d8e1ec;
+    --paper: #ffffff;
+  }
+
+  .cs-hero {
+    background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%);
+    color: var(--ice);
+    padding: 7rem 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .cs-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse at 20% 30%, rgba(184, 29, 44, 0.08) 0%, transparent 45%),
+      radial-gradient(ellipse at 80% 70%, rgba(238, 243, 248, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .cs-hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .cs-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .cs-eyebrow::before {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: var(--red);
+  }
+  .cs-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.5rem;
+    max-width: 18ch;
+  }
+  .cs-hero h1 em {
+    font-style: italic;
+    color: #c8d4e3;
+  }
+  .cs-hero-lede {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: #b8c4d6;
+    max-width: 60ch;
+    font-weight: 300;
+  }
+
+  .cs-disclaimer-bar {
+    background: var(--ice);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 1.25rem 2rem;
+  }
+  .cs-disclaimer-bar-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  .cs-disclaimer-bar-inner strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+  .cs-disclaimer-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    color: var(--red);
+  }
+
+  .cs-cases {
+    background: var(--paper);
+    padding: 5rem 2rem 6rem;
+  }
+  .cs-cases-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .cs-case {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .cs-case:first-child { padding-top: 1rem; }
+  .cs-case:last-child { border-bottom: none; padding-bottom: 1rem; }
+
+  .cs-case-aside {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+  }
+  .cs-case-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+  }
+  .cs-case-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    padding: 0.4rem 0.7rem;
+    background: var(--ice);
+    border: 1px solid var(--rule);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+  .cs-case h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    line-height: 1.15;
+    color: var(--navy);
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.005em;
+  }
+  .cs-case-meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8125rem;
+    line-height: 1.8;
+    color: var(--muted);
+    border-top: 1px solid var(--rule);
+    padding-top: 1.25rem;
+  }
+  .cs-case-meta dt {
+    font-weight: 600;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.6875rem;
+    margin-top: 0.75rem;
+  }
+  .cs-case-meta dt:first-child { margin-top: 0; }
+  .cs-case-meta dd {
+    margin: 0.15rem 0 0;
+  }
+
+  .cs-case-body h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin: 2rem 0 0.75rem;
+  }
+  .cs-case-body h3:first-child { margin-top: 0; }
+  .cs-case-body p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1875rem;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 0 0 1rem;
+    font-weight: 400;
+  }
+  .cs-case-body p.cs-narrative-lead::first-letter {
+    font-size: 3.5rem;
+    float: left;
+    line-height: 0.85;
+    margin: 0.35rem 0.5rem 0 0;
+    color: var(--red);
+    font-weight: 500;
+  }
+
+  .cs-scorecard {
+    background: var(--ice-soft);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--red);
+    padding: 1.5rem 1.75rem;
+    margin: 1.75rem 0;
+  }
+  .cs-scorecard-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+  }
+  .cs-scorecard-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    color: var(--ink);
+    padding: 0.4rem 0;
+  }
+  .cs-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.04);
+  }
+  .cs-dot.red { background: #c0392b; }
+  .cs-dot.amber { background: #d99e2b; }
+  .cs-dot.green { background: #1f8a4c; }
+  .cs-scorecard-row strong {
+    font-weight: 600;
+    min-width: 90px;
+  }
+
+  .cs-outcome-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem 0 0.5rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .cs-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 2.25rem;
+    color: var(--navy);
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  .cs-stat-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.4rem;
+    line-height: 1.4;
+  }
+
+  .cs-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--navy);
+    border-left: 2px solid var(--red);
+    padding: 0.25rem 0 0.25rem 1.5rem;
+    margin: 1.75rem 0;
+  }
+  .cs-quote-attr {
+    display: block;
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.75rem;
+    font-weight: 500;
+  }
+
+  .cs-cta {
+    background: var(--navy);
+    color: var(--ice);
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cs-cta::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(184, 29, 44, 0.12) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .cs-cta-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .cs-cta h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .cs-cta h2 em { font-style: italic; color: #c8d4e3; }
+  .cs-cta p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #b8c4d6;
+    margin: 0 0 2rem;
+    line-height: 1.6;
+  }
+  .cs-cta-btn {
+    display: inline-block;
+    background: var(--red);
+    color: var(--ice);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 1rem 2.25rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    border: 1px solid var(--red);
+  }
+  .cs-cta-btn:hover { background: var(--red-deep); border-color: var(--red-deep); }
+
+  @media (max-width: 820px) {
+    .cs-hero { padding: 5rem 1.5rem 3.5rem; }
+    .cs-cases { padding: 3rem 1.5rem 4rem; }
+    .cs-case {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 3rem 0;
+    }
+    .cs-case-aside { position: static; }
+    .cs-outcome-stats { grid-template-columns: 1fr; gap: 1rem; }
+    .cs-cta { padding: 3.5rem 1.5rem; }
+    .cs-disclaimer-bar { padding: 1rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NOTE: replace this nav placeholder with your shared site nav include -->
+<!-- <nav>...</nav> -->
+
+<header class="cs-hero">
+  <div class="cs-hero-inner">
+    <div class="cs-eyebrow">Selected Engagements</div>
+    <h1>The work, <em>without the names.</em></h1>
+    <p class="cs-lede cs-hero-lede">
+      Discretion is the foundation of everything we do. The case studies below illustrate how Greyline approaches three of our most-requested engagement types — drawn from real patterns of work, presented in a form that protects every client and subject involved.
+    </p>
+  </div>
+</header>
+
+<div class="cs-disclaimer-bar">
+  <div class="cs-disclaimer-bar-inner">
+    <svg class="cs-disclaimer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="12" y1="8" x2="12" y2="12"></line>
+      <line x1="12" y1="16" x2="12.01" y2="16"></line>
+    </svg>
+    <div>
+      <strong>Composite case studies based on representative engagements.</strong>
+      Names, locations, sectors, monetary figures and identifying details have been altered or merged across multiple instructions to protect client confidentiality. The investigative methodology, scorecard outputs and outcomes reflect the standard of work Greyline delivers.
+    </div>
+  </div>
+</div>
+
+<main class="cs-cases">
+  <div class="cs-cases-inner">
+
+    <!-- CASE 01 -->
+    <article class="cs-case">
+      <aside class="cs-case-aside">
+        <div class="cs-case-number">Case Study 01</div>
+        <span class="cs-case-tag">Relationship Intelligence</span>
+        <h2>The Partner Who Wasn't Where He Said He Was</h2>
+        <dl class="cs-case-meta">
+          <dt>Service Line</dt>
+          <dd>Relationship &amp; Infidelity Intelligence</dd>
+          <dt>Subject Profile</dt>
+          <dd>Long-term partner, mid-thirties, professional services</dd>
+          <dt>Engagement Length</dt>
+          <dd>21 days</dd>
+          <dt>Jurisdiction</dt>
+          <dd>England &amp; Wales</dd>
+        </dl>
+      </aside>
+
+      <div class="cs-case-body">
+        <h3>The Brief</h3>
+        <p class="cs-narrative-lead">A client in her early thirties approached Greyline after a year of small inconsistencies — late returns from work trips, a second phone she had glimpsed once, a sudden interest in privacy on shared devices. She did not want a confrontation. She wanted to know, calmly and on her own terms, whether the relationship she was about to commit to long-term was what it appeared to be.</p>
+
+        <h3>Our Approach</h3>
+        <p>We opened with a Digital Footprint Scorecard on the subject — a non-intrusive review of public-facing online presence, professional registries, and metadata patterns from communications already lawfully held by the client. Where the scorecard surfaced amber and red signals, we deployed lawful physical observation across three pre-identified high-probability windows, coordinated with a female lead investigator for two of them. No covert recording, no device interference, no pretexting of third parties.</p>
+
+        <div class="cs-scorecard">
+          <div class="cs-scorecard-label">Digital Footprint Scorecard — Initial Assessment</div>
+          <div class="cs-scorecard-row"><span class="cs-dot amber"></span><strong>Identity</strong>Two active professional profiles, one under a partial alias</div>
+          <div class="cs-scorecard-row"><span class="cs-dot red"></span><strong>Location</strong>Geotag inconsistencies on three of seven referenced trips</div>
+          <div class="cs-scorecard-row"><span class="cs-dot red"></span><strong>Networks</strong>Concealed mutual contact with a recurring third party</div>
+          <div class="cs-scorecard-row"><span class="cs-dot green"></span><strong>Financial</strong>No anomalies in lawfully shared accounts</div>
+        </div>
+
+        <h3>What We Found</h3>
+        <p>Two of the three "work trips" referenced in the brief had not occurred at the stated locations. A pattern of meetings at a single residential address — not the subject's home or workplace — was documented across the engagement window. The third party was identified through open-source means only; no covert intrusion was required.</p>
+
+        <h3>Outcome</h3>
+        <p>The client received a written report, a chronological observation log, and corroborating photography taken in public spaces only. She used the report privately, with a solicitor of her own choosing. Greyline made no recommendation as to her decision. She was not pressured, not lectured, and not contacted after the engagement closed beyond a single confirmation that the file had been securely retained for the agreed retention window.</p>
+
+        <div class="cs-outcome-stats">
+          <div>
+            <div class="cs-stat-num">21</div>
+            <div class="cs-stat-label">days from intake to final report</div>
+          </div>
+          <div>
+            <div class="cs-stat-num">3</div>
+            <div class="cs-stat-label">independently corroborated observations</div>
+          </div>
+          <div>
+            <div class="cs-stat-num">0</div>
+            <div class="cs-stat-label">lawful or ethical breaches in evidence chain</div>
+          </div>
+        </div>
+
+        <p class="cs-quote">
+          I did not want someone to tell me what to do. I wanted someone to tell me what was true. They did exactly that and then they stepped back.
+          <span class="cs-quote-attr">— Client, anonymised</span>
+        </p>
+      </div>
+    </article>
+
+    <!-- CASE 02 -->
+    <article class="cs-case">
+      <aside class="cs-case-aside">
+        <div class="cs-case-number">Case Study 02</div>
+        <span class="cs-case-tag">Fraud Investigation</span>
+        <h2>The Invoice That Travelled Further Than Expected</h2>
+        <dl class="cs-case-meta">
+          <dt>Service Line</dt>
+          <dd>Fraud Investigation &amp; Cryptocurrency Tracing</dd>
+          <dt>Client Profile</dt>
+          <dd>Mid-market law firm acting for a corporate claimant</dd>
+          <dt>Engagement Length</dt>
+          <dd>9 weeks</dd>
+          <dt>Loss Quantum (indicative)</dt>
+          <dd>Mid six figures, GBP equivalent</dd>
+        </dl>
+      </aside>
+
+      <div class="cs-case-body">
+        <h3>The Brief</h3>
+        <p class="cs-narrative-lead">A claimant company had paid a substantial invoice to what it believed was a long-standing supplier. The bank details had been changed by email three days before payment. Within forty-eight hours of the funds clearing, they had been moved through two intermediary accounts and partially converted to cryptocurrency. The instructing solicitors needed evidentially robust tracing material to support a freezing application and a Bankers Trust order.</p>
+
+        <h3>Our Approach</h3>
+        <p>Our digital forensics team triaged the email environment first, identifying the point of compromise — a forwarding rule silently installed on a finance mailbox six weeks earlier. In parallel, our cryptocurrency tracing analysts followed the on-chain trail through a peel chain into a clustered wallet group attributable, with high confidence, to a specific exchange. OSINT enrichment tied two of the intermediary fiat accounts to documented mule patterns we had previously catalogued.</p>
+
+        <div class="cs-scorecard">
+          <div class="cs-scorecard-label">Tracing Confidence Scorecard</div>
+          <div class="cs-scorecard-row"><span class="cs-dot green"></span><strong>Email vector</strong>Conclusively identified — forensic artefacts preserved</div>
+          <div class="cs-scorecard-row"><span class="cs-dot green"></span><strong>Fiat trail</strong>Two-hop chain documented to named institution</div>
+          <div class="cs-scorecard-row"><span class="cs-dot amber"></span><strong>Crypto trail</strong>Clustered to identifiable VASP — KYC subject to disclosure</div>
+          <div class="cs-scorecard-row"><span class="cs-dot green"></span><strong>Evidential chain</strong>Hashed, logged, ready for civil disclosure</div>
+        </div>
+
+        <h3>What We Delivered</h3>
+        <p>A tracing report admissible as expert evidence; a chain-of-custody log for every artefact handled; a wallet attribution memorandum with on-chain visualisations; and a witness statement prepared in the form expected by the court. The instructing solicitors used the package to support a successful without-notice application.</p>
+
+        <h3>Outcome</h3>
+        <p>A meaningful proportion of the misappropriated funds was preserved at the regulated exchange identified in our work and ultimately recovered through proceedings. The compromise vector was closed. The client's finance team received a tailored briefing on the indicators they had narrowly missed, so the same pattern could not run twice.</p>
+
+        <div class="cs-outcome-stats">
+          <div>
+            <div class="cs-stat-num">9 wks</div>
+            <div class="cs-stat-label">from instruction to court-ready evidence</div>
+          </div>
+          <div>
+            <div class="cs-stat-num">100%</div>
+            <div class="cs-stat-label">of artefacts admitted without challenge</div>
+          </div>
+          <div>
+            <div class="cs-stat-num">~70%</div>
+            <div class="cs-stat-label">of traced funds preserved at intervention point</div>
+          </div>
+        </div>
+
+        <p class="cs-quote">
+          The evidential discipline was the difference. We had something a judge could rely on, not a narrative we had to defend.
+          <span class="cs-quote-attr">— Instructing partner, anonymised</span>
+        </p>
+      </div>
+    </article>
+
+    <!-- CASE 03 -->
+    <article class="cs-case">
+      <aside class="cs-case-aside">
+        <div class="cs-case-number">Case Study 03</div>
+        <span class="cs-case-tag">Insider Threat &amp; Cybersecurity</span>
+        <h2>The Departure That Took More Than It Should Have</h2>
+        <dl class="cs-case-meta">
+          <dt>Service Line</dt>
+          <dd>Insider Threat, Digital Forensics &amp; Offensive Security</dd>
+          <dt>Client Profile</dt>
+          <dd>UK SME, regulated technology sector</dd>
+          <dt>Engagement Length</dt>
+          <dd>14 days, plus 30-day hardening phase</dd>
+          <dt>Reporting Stakeholder</dt>
+          <dd>Board-level, with HR and external counsel</dd>
+        </dl>
+      </aside>
+
+      <div class="cs-case-body">
+        <h3>The Brief</h3>
+        <p class="cs-narrative-lead">A senior employee had resigned and joined a direct competitor. Within a fortnight, the client noticed that two prospective tenders they had been quietly preparing were being competed for — accurately, and aggressively — by the new employer. The board needed to know whether confidential material had left the building, and if so, what, when, and by what route.</p>
+
+        <h3>Our Approach</h3>
+        <p>We executed a forensically sound acquisition of the departing employee's issued devices and a targeted review of cloud activity logs across the final 90 days of access. In parallel, our offensive security team conducted a controlled assessment of the data exfiltration paths the employee had access to — not to attribute, but to map what was technically possible. The two streams were then reconciled.</p>
+
+        <div class="cs-scorecard">
+          <div class="cs-scorecard-label">Insider Threat Scorecard</div>
+          <div class="cs-scorecard-row"><span class="cs-dot red"></span><strong>Volume</strong>Anomalous download burst within final 14 days of access</div>
+          <div class="cs-scorecard-row"><span class="cs-dot red"></span><strong>Channel</strong>Personal cloud sync intermittently active on issued laptop</div>
+          <div class="cs-scorecard-row"><span class="cs-dot amber"></span><strong>Intent</strong>Pattern consistent with curation, not routine use</div>
+          <div class="cs-scorecard-row"><span class="cs-dot red"></span><strong>Control gap</strong>DLP rule scope did not cover the channel observed</div>
+        </div>
+
+        <h3>What We Found</h3>
+        <p>Two specific document sets — one of them the tender material — had been synchronised to a personal cloud account in the final week of employment. The forensic record was unambiguous: filenames, timestamps, hashes and the offline-online sync events were all preserved. The control gap that allowed it was mapped and documented.</p>
+
+        <h3>Outcome</h3>
+        <p>The client's solicitors used the report to send a precisely scoped letter before action. The competitor returned and certified destruction of the relevant material under independent supervision, and the prospective tender process was re-set. In the hardening phase that followed, we closed the DLP gap, tightened off-boarding, and ran a tabletop exercise with the leadership team so the same pattern would be visible far earlier next time.</p>
+
+        <div class="cs-outcome-stats">
+          <div>
+            <div class="cs-stat-num">14 days</div>
+            <div class="cs-stat-label">from board instruction to evidential report</div>
+          </div>
+          <div>
+            <div class="cs-stat-num">2</div>
+            <div class="cs-stat-label">document sets recovered and certified destroyed</div>
+          </div>
+          <div>
+            <div class="cs-stat-num">1</div>
+            <div class="cs-stat-label">control gap closed before next departure cycle</div>
+          </div>
+        </div>
+
+        <p class="cs-quote">
+          We expected a forensic report. We received a forensic report, a legal lever, and a quieter Monday morning. That is the order it should arrive in.
+          <span class="cs-quote-attr">— Board chair, anonymised</span>
+        </p>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<section class="cs-cta">
+  <div class="cs-cta-inner">
+    <h2>Your matter will not appear here. <em>That is the point.</em></h2>
+    <p>Every Greyline engagement is conducted under strict confidentiality. We communicate by email and Google Meet, we work to defined scopes, and the only people who will ever know the work happened are the people you choose to tell.</p>
+    <a href="contact.html" class="cs-cta-btn">The truth satisfies — get answers today</a>
+  </div>
+</section>
+
+<!-- NOTE: replace this footer placeholder with your shared site footer include -->
+<!-- <footer>...</footer> -->
+
+</body>
+</html>
