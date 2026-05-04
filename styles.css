@@ -1029,3 +1029,37 @@ footer, .site-footer { background:var(--navy-2); border-top:1px solid rgba(255,2
 		padding-right: 1.5rem;
 	}
 }
+
+/* ============================================
+   APPEND THIS TO THE BOTTOM OF styles.css
+   Fixes social icons not rendering in footer
+   ============================================ */
+
+.social-links {
+	display: inline-flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.social-links a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	color: var(--text-2, #b8c4d6);
+	transition: color 0.2s ease, transform 0.2s ease;
+	text-decoration: none;
+}
+
+.social-links a:hover {
+	color: var(--accent, #b81d2c);
+	transform: translateY(-2px);
+}
+
+.social-links svg {
+	width: 18px;
+	height: 18px;
+	fill: currentColor;
+	display: block;
+}
