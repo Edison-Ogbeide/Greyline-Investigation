@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Intake Received — Greyline Investigations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0a1f3d;
+  --navy-deep: #061427;
+  --ice: #f4f7fa;
+  --ice-warm: #e8eef4;
+  --red: #b8202e;
+  --grey-text: #4a5568;
+  --grey-line: #d6dde5;
+  --serif: 'Cormorant Garamond', 'Times New Roman', serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--ice);
+  color: var(--navy);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.intake-header {
+  background: var(--navy);
+  padding: 28px 0;
+  border-bottom: 3px solid var(--red);
+}
+
+.header-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wordmark {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ice);
+  text-decoration: none;
+}
+
+.wordmark .accent {
+  color: var(--ice);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.confidential-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ice-warm);
+  opacity: 0.85;
+}
+
+.confidential-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--red);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+main {
+  flex: 1;
+  padding: 64px 32px 80px;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.intro-block {
+  margin-bottom: 48px;
+  border-left: 2px solid var(--red);
+  padding-left: 28px;
+}
+
+.intake-eyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 14px;
+}
+
+.intake-title {
+  font-family: var(--serif);
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--navy);
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.intake-subtitle {
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--grey-text);
+  line-height: 1.7;
+  max-width: 580px;
+}
+
+.intake-subtitle strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.status-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  margin-bottom: 56px;
+  background: white;
+  border: 1px solid var(--grey-line);
+  border-radius: 2px;
+}
+
+.status-item {
+  padding: 20px 24px;
+  border-right: 1px solid var(--grey-line);
+}
+
+.status-item:last-child { border-right: none; }
+
+.status-label {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--grey-text);
+  margin-bottom: 6px;
+}
+
+.status-value {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.status-value.confirmed {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-value.confirmed::before {
+  content: '✓';
+  color: var(--red);
+  font-weight: 600;
+}
+
+.content-section {
+  background: white;
+  border: 1px solid var(--grey-line);
+  border-radius: 2px;
+  padding: 36px 40px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.content-section::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 40px;
+  height: 1px;
+  background: var(--red);
+}
+
+.content-section::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 1px;
+  height: 40px;
+  background: var(--red);
+}
+
+.section-eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+}
+
+.content-section p {
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--grey-text);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.content-section p:last-child { margin-bottom: 0; }
+
+.content-section p strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.content-section a {
+  color: var(--red);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.content-section a:hover { border-bottom-color: var(--red); }
+
+.tagline-divider {
+  text-align: center;
+  margin: 56px 0 32px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+  position: relative;
+}
+
+.tagline-divider::before,
+.tagline-divider::after {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: var(--red);
+  vertical-align: middle;
+  margin: 0 18px;
+}
+
+.return-link-wrap {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.return-link {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--navy);
+  text-decoration: none;
+  padding: 14px 28px;
+  border: 1px solid var(--navy);
+  transition: all 0.25s ease;
+}
+
+.return-link:hover {
+  background: var(--navy);
+  color: var(--ice);
+}
+
+.intake-footer {
+  background: var(--navy-deep);
+  color: var(--ice-warm);
+  padding: 32px 32px;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.footer-tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ice);
+  margin-bottom: 16px;
+  letter-spacing: 0.01em;
+}
+
+.footer-policies {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--ice-warm);
+  opacity: 0.7;
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+}
+
+.footer-policies a {
+  color: var(--ice-warm);
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-policies a:hover { color: var(--red); }
+
+.footer-meta {
+  font-family: var(--sans);
+  font-size: 10px;
+  color: var(--ice-warm);
+  opacity: 0.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .intake-title { font-size: 32px; }
+  .intro-block { padding-left: 20px; }
+  .status-strip { grid-template-columns: 1fr; }
+  .status-item {
+    border-right: none;
+    border-bottom: 1px solid var(--grey-line);
+  }
+  .status-item:last-child { border-bottom: none; }
+  .content-section { padding: 28px 24px; }
+  .section-title { font-size: 22px; }
+  main { padding: 40px 20px 60px; }
+  .header-inner { padding: 0 20px; }
+  .confidential-badge { display: none; }
+  .tagline-divider { font-size: 18px; }
+  .tagline-divider::before,
+  .tagline-divider::after {
+    width: 20px;
+    margin: 0 12px;
+  }
+}
+
+.intro-block, .status-strip, .content-section, .tagline-divider, .return-link-wrap {
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.intro-block { animation-delay: 0.05s; }
+.status-strip { animation-delay: 0.15s; }
+.content-section:nth-of-type(1) { animation-delay: 0.25s; }
+.content-section:nth-of-type(2) { animation-delay: 0.32s; }
+.content-section:nth-of-type(3) { animation-delay: 0.39s; }
+.content-section:nth-of-type(4) { animation-delay: 0.46s; }
+.tagline-divider { animation-delay: 0.55s; }
+.return-link-wrap { animation-delay: 0.62s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<header class="intake-header">
+  <div class="header-inner">
+    <a href="/" class="wordmark">Greyline <span class="accent">Investigations</span></a>
+    <span class="confidential-badge">Confidential Channel</span>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="intro-block">
+      <div class="intake-eyebrow">Confirmed</div>
+      <h1 class="intake-title">Intake received. Your case is now active.</h1>
+      <p class="intake-subtitle">
+        Thank you. Your payment is confirmed and your intake has been logged. A senior analyst will be in touch by email with your <strong>case reference</strong>, the timeline for your engagement, and any case-specific instructions. Please check your inbox now.
+      </p>
+    </div>
+
+    <div class="status-strip">
+      <div class="status-item">
+        <div class="status-label">Payment</div>
+        <div class="status-value confirmed">Confirmed</div>
+      </div>
+      <div class="status-item">
+        <div class="status-label">Intake</div>
+        <div class="status-value confirmed">Logged</div>
+      </div>
+      <div class="status-item">
+        <div class="status-label">Status</div>
+        <div class="status-value">Case Active</div>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <div class="section-eyebrow">What happens next</div>
+      <h2 class="section-title">Your confirmation email contains everything.</h2>
+      <p>
+        A confirmation email has been issued to the address you nominated. It contains your <strong>case reference</strong>, the expected delivery timeline for your engagement, and any case-specific guidance that applies to your service.
+      </p>
+      <p>
+        You do not need to take any further action at this stage. If we require clarification on any element of your intake, the request will come from a Greyline analyst by email — referencing your case number — and only from an address ending in @greylineinvestigations.co.uk.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <div class="section-eyebrow">How to recognise us</div>
+      <h2 class="section-title">All correspondence comes from one place.</h2>
+      <p>
+        All Greyline communication relating to your case will come from an address ending in <strong>@greylineinvestigations.co.uk</strong>. We will never contact you by WhatsApp, SMS, social media DM, or phone call. We will never ask you for your password, payment details, or any further fee beyond what you have already paid.
+      </p>
+      <p>
+        If you receive a message claiming to be from Greyline through any other channel, it is not us. Forward it to <a href="mailto:security@greylineinvestigations.co.uk">security@greylineinvestigations.co.uk</a> and we will investigate.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <div class="section-eyebrow">A note on discretion</div>
+      <h2 class="section-title">Read your delivery on a private device.</h2>
+      <p>
+        Your intake, your findings, and the fact of your engagement with Greyline are held in strict confidence. Our <a href="/data-protection">Data Protection &amp; Confidentiality Policy</a> sets out exactly how your information is stored, who can access it, and when it is destroyed. Findings are delivered once, to the email address you nominated, and are not retained on our systems beyond the period required by law.
+      </p>
+      <p>
+        If you share a device, mailbox, or cloud account with anyone connected to this matter, we recommend reading your delivery on a device only you can access.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <div class="section-eyebrow">If you need to reach us</div>
+      <h2 class="section-title">Reply to your confirmation email.</h2>
+      <p>
+        For any matter relating to your case, reply directly to the confirmation email — quoting your case reference will help us route it quickly. For all other enquiries, contact <a href="mailto:cases@greylineinvestigations.co.uk">cases@greylineinvestigations.co.uk</a>.
+      </p>
+      <p>
+        We do not operate a telephone helpline. Where a call is necessary at any stage of your engagement, it will be conducted by Google Meet at a scheduled time, on a link issued from a Greyline address.
+      </p>
+    </section>
+
+    <div class="tagline-divider">The truth satisfies.</div>
+
+    <div class="return-link-wrap">
+      <a href="https://greylineinvestigations.co.uk" class="return-link">Return to Greyline</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="intake-footer">
+  <div class="footer-inner">
+    <div class="footer-tagline">Your case is being prepared.</div>
+    <div class="footer-policies">
+      <a href="/privacy">Privacy</a>·
+      <a href="/data-protection">Data Protection &amp; Confidentiality</a>·
+      <a href="/terms">Terms</a>·
+      <a href="/cookies">Cookies</a>·
+      <a href="/disclaimer">Disclaimer</a>
+    </div>
+    <div class="footer-meta">
+      Greyline Investigations Limited&nbsp;&nbsp;·&nbsp;&nbsp;Company No. 17121990&nbsp;&nbsp;·&nbsp;&nbsp;United Kingdom
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
