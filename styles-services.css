@@ -1,0 +1,812 @@
+/* =========================================================
+   GREYLINE — SERVICES INFRASTRUCTURE STYLES
+   Append this to your existing styles.css OR keep as a
+   separate stylesheet linked AFTER styles.css on every
+   service page. Uses your existing CSS variables:
+   --navy, --navy-2, --navy-3, --ice, --ice-2, --accent,
+   --text-1, --text-2, --text-3, --border, --border-2, --white
+   ========================================================= */
+
+
+/* =========================================================
+   NAV DROPDOWN — Services hover menu
+   ========================================================= */
+
+.nav-links li.has-dropdown {
+	position: relative;
+}
+
+.nav-links li.has-dropdown > a::after {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 0.4rem;
+	vertical-align: middle;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid currentColor;
+	opacity: 0.55;
+	transition: transform 200ms ease;
+}
+
+.nav-links li.has-dropdown:hover > a::after {
+	transform: rotate(180deg);
+}
+
+.nav-dropdown {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%) translateY(8px);
+	min-width: 720px;
+	background: var(--white);
+	border: 1px solid var(--border);
+	border-top: 3px solid var(--accent);
+	box-shadow: 0 18px 40px rgba(11, 30, 63, 0.10);
+	padding: 1.75rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.4rem 1.75rem;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 180ms ease, visibility 180ms ease, transform 180ms ease;
+	z-index: 100;
+}
+
+.nav-links li.has-dropdown:hover .nav-dropdown,
+.nav-links li.has-dropdown:focus-within .nav-dropdown {
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-item {
+	display: block;
+	padding: 0.85rem 1rem;
+	text-decoration: none;
+	border: 1px solid transparent;
+	transition: background 160ms ease, border-color 160ms ease;
+}
+
+.nav-dropdown-item:hover {
+	background: var(--ice-2);
+	border-color: var(--border);
+}
+
+.nav-dropdown-item .dd-num {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 0.78rem;
+	font-style: italic;
+	color: var(--accent);
+	letter-spacing: 0.06em;
+	display: block;
+	margin-bottom: 0.2rem;
+}
+
+.nav-dropdown-item .dd-title {
+	font-size: 0.92rem;
+	font-weight: 500;
+	color: var(--text-1);
+	display: block;
+	margin-bottom: 0.25rem;
+	line-height: 1.3;
+}
+
+.nav-dropdown-item .dd-desc {
+	font-size: 0.78rem;
+	color: var(--text-3);
+	line-height: 1.45;
+	display: block;
+}
+
+@media (max-width: 960px) {
+	.nav-dropdown {
+		display: none;
+	}
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.breadcrumb {
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 1.5rem 2rem 0 2rem;
+	font-size: 0.78rem;
+	letter-spacing: 0.04em;
+	color: var(--text-3);
+}
+
+.breadcrumb a {
+	color: var(--text-3);
+	text-decoration: none;
+	transition: color 160ms ease;
+}
+
+.breadcrumb a:hover {
+	color: var(--accent);
+}
+
+.breadcrumb .sep {
+	margin: 0 0.55rem;
+	color: var(--border-2);
+}
+
+.breadcrumb .current {
+	color: var(--text-1);
+}
+
+
+/* =========================================================
+   SERVICE LINE PAGES — header/hero pattern
+   ========================================================= */
+
+.line-hero {
+	max-width: 1180px;
+	margin: 2rem auto 0 auto;
+	padding: 4rem 2rem 5rem 2rem;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 4rem;
+	align-items: end;
+	border-bottom: 1.5px solid var(--border);
+}
+
+.line-hero .hero-num {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 9rem;
+	font-weight: 300;
+	font-style: italic;
+	line-height: 0.85;
+	color: var(--accent);
+}
+
+.line-hero .hero-eyebrow {
+	font-size: 0.72rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--text-3);
+	margin-bottom: 0.9rem;
+	font-weight: 500;
+}
+
+.line-hero h1 {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 3.4rem;
+	font-weight: 400;
+	line-height: 1.05;
+	color: var(--text-1);
+	margin-bottom: 1.4rem;
+}
+
+.line-hero h1 em {
+	font-style: italic;
+	color: var(--accent);
+}
+
+.line-hero .hero-intro {
+	font-size: 1.05rem;
+	line-height: 1.7;
+	color: var(--text-2);
+	max-width: 620px;
+}
+
+@media (max-width: 960px) {
+	.line-hero {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+		padding: 3rem 1.5rem 4rem 1.5rem;
+	}
+	.line-hero .hero-num {
+		font-size: 5rem;
+	}
+	.line-hero h1 {
+		font-size: 2.4rem;
+	}
+}
+
+
+/* =========================================================
+   SERVICE LINE — content sections
+   ========================================================= */
+
+.svc-section {
+	padding: 5rem 0;
+	border-bottom: 1px solid var(--border);
+}
+
+.svc-section.alt {
+	background: var(--ice-2);
+}
+
+.svc-section .container {
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.svc-section-header {
+	max-width: 720px;
+	margin-bottom: 3rem;
+}
+
+.svc-section-header .eyebrow {
+	font-size: 0.7rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin-bottom: 1rem;
+	font-weight: 500;
+}
+
+.svc-section-header h2 {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 2.2rem;
+	font-weight: 400;
+	line-height: 1.15;
+	color: var(--text-1);
+	margin-bottom: 1.1rem;
+}
+
+.svc-section-header h2 em {
+	font-style: italic;
+	color: var(--accent);
+}
+
+.svc-section-header p {
+	font-size: 1rem;
+	line-height: 1.7;
+	color: var(--text-2);
+}
+
+
+/* =========================================================
+   PRODUCT CARDS — productised (with prices)
+   ========================================================= */
+
+.product-card-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.75rem;
+}
+
+.product-card-grid.cols-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.product-card-grid.single {
+	grid-template-columns: 1fr;
+	max-width: 760px;
+}
+
+.product-card {
+	background: var(--white);
+	border: 1px solid var(--border);
+	padding: 2.4rem 2.2rem;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	transition: border-color 200ms ease, box-shadow 220ms ease;
+}
+
+.product-card:hover {
+	border-color: var(--accent);
+	box-shadow: 0 12px 32px rgba(11, 30, 63, 0.08);
+}
+
+.product-card .pc-flag {
+	font-size: 0.66rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--accent);
+	font-weight: 500;
+	margin-bottom: 1rem;
+	display: inline-block;
+}
+
+.product-card .pc-flag.bespoke {
+	color: var(--text-3);
+}
+
+.product-card h3 {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 1.85rem;
+	font-weight: 500;
+	line-height: 1.15;
+	color: var(--text-1);
+	margin-bottom: 1rem;
+}
+
+.product-card .pc-q {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 1.05rem;
+	font-style: italic;
+	color: var(--text-2);
+	margin-bottom: 1.1rem;
+	line-height: 1.5;
+	padding-left: 1rem;
+	border-left: 2px solid var(--accent);
+}
+
+.product-card .pc-desc {
+	font-size: 0.95rem;
+	line-height: 1.7;
+	color: var(--text-2);
+	margin-bottom: 1.4rem;
+	flex-grow: 1;
+}
+
+
+/* TIER LIST INSIDE PRODUCT CARD */
+.pc-tiers {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1.5rem 0;
+	border-top: 1px solid var(--border);
+}
+
+.pc-tiers li {
+	padding: 0.95rem 0;
+	border-bottom: 1px solid var(--border);
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	gap: 1rem;
+	align-items: baseline;
+}
+
+.pc-tiers .t-label {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-style: italic;
+	color: var(--accent);
+	font-weight: 500;
+	font-size: 0.95rem;
+	min-width: 5rem;
+}
+
+.pc-tiers .t-name {
+	font-size: 0.88rem;
+	color: var(--text-2);
+	line-height: 1.4;
+}
+
+.pc-tiers .t-price {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 1.1rem;
+	font-weight: 500;
+	color: var(--text-1);
+	white-space: nowrap;
+}
+
+
+/* SUITED-FOR LINE */
+.pc-suited {
+	font-size: 0.83rem;
+	color: var(--text-2);
+	font-style: italic;
+	line-height: 1.55;
+	margin-bottom: 1.4rem;
+	padding: 0.85rem 1rem;
+	background: var(--ice-2);
+	border-left: 2px solid var(--accent);
+}
+
+.svc-section.alt .pc-suited {
+	background: var(--ice);
+}
+
+
+/* PRODUCT CARD FOOTER */
+.pc-foot {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 1.3rem;
+	border-top: 1px solid var(--border);
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.pc-price {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 1.7rem;
+	font-weight: 500;
+	color: var(--text-1);
+	line-height: 1;
+}
+
+.pc-price .from-tag {
+	font-size: 0.68rem;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	color: var(--text-3);
+	font-family: 'Inter', system-ui, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	display: block;
+	margin-bottom: 0.25rem;
+}
+
+.pc-price.tiered-label {
+	font-size: 0.92rem;
+	font-style: italic;
+	color: var(--text-3);
+	font-weight: 400;
+}
+
+.pc-cta-row {
+	display: flex;
+	gap: 0.6rem;
+	flex-wrap: wrap;
+}
+
+.pc-cta {
+	font-family: 'Inter', system-ui, sans-serif;
+	font-size: 0.76rem;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0.8rem 1.2rem;
+	border: 1px solid var(--text-1);
+	color: var(--text-1);
+	background: transparent;
+	transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.pc-cta:hover {
+	background: var(--text-1);
+	color: var(--white);
+}
+
+.pc-cta.primary {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: var(--white);
+}
+
+.pc-cta.primary:hover {
+	background: var(--text-1);
+	border-color: var(--text-1);
+}
+
+
+/* =========================================================
+   ENGAGEMENT NOTE / CALLOUT BLOCK
+   ========================================================= */
+
+.engagement-note {
+	background: var(--navy);
+	color: rgba(255, 255, 255, 0.78);
+	padding: 2.75rem 2.4rem;
+	margin-top: 3rem;
+	border-left: 3px solid var(--accent);
+}
+
+.engagement-note h4 {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 1.5rem;
+	color: var(--white);
+	font-weight: 500;
+	margin-bottom: 0.85rem;
+	line-height: 1.2;
+}
+
+.engagement-note p {
+	font-size: 0.95rem;
+	line-height: 1.7;
+	margin-bottom: 0;
+}
+
+
+/* =========================================================
+   PROCESS STEPS — used on service-line pages
+   ========================================================= */
+
+.process-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1.5rem;
+	margin-top: 2rem;
+}
+
+.process-step {
+	padding: 1.75rem 0 0 0;
+	border-top: 2px solid var(--accent);
+}
+
+.process-step .step-num {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 0.85rem;
+	font-style: italic;
+	letter-spacing: 0.08em;
+	color: var(--accent);
+	margin-bottom: 0.6rem;
+	display: block;
+}
+
+.process-step h4 {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 1.3rem;
+	font-weight: 500;
+	color: var(--text-1);
+	margin-bottom: 0.7rem;
+	line-height: 1.25;
+}
+
+.process-step p {
+	font-size: 0.88rem;
+	line-height: 1.6;
+	color: var(--text-2);
+}
+
+@media (max-width: 960px) {
+	.process-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.process-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+/* =========================================================
+   CLOSING CTA SECTION — reused across all service pages
+   ========================================================= */
+
+.closing-cta {
+	background: var(--navy);
+	color: var(--white);
+	padding: 6rem 2rem;
+	text-align: center;
+}
+
+.closing-cta .container {
+	max-width: 720px;
+	margin: 0 auto;
+}
+
+.closing-cta .eyebrow {
+	font-size: 0.72rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.5);
+	margin-bottom: 1.5rem;
+}
+
+.closing-cta h2 {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 2.8rem;
+	line-height: 1.15;
+	font-weight: 400;
+	color: var(--white);
+	margin-bottom: 1.5rem;
+}
+
+.closing-cta h2 em {
+	font-style: italic;
+	color: var(--accent);
+}
+
+.closing-cta p {
+	font-size: 1rem;
+	line-height: 1.7;
+	color: rgba(255, 255, 255, 0.65);
+	max-width: 560px;
+	margin: 0 auto 2.5rem auto;
+}
+
+.closing-cta .cta-row {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.cta-btn {
+	font-family: 'Inter', system-ui, sans-serif;
+	font-size: 0.82rem;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 1rem 1.8rem;
+	transition: all 180ms ease;
+	display: inline-block;
+}
+
+.cta-btn.primary {
+	background: var(--accent);
+	color: var(--white);
+	border: 1px solid var(--accent);
+}
+
+.cta-btn.primary:hover {
+	background: var(--white);
+	color: var(--text-1);
+	border-color: var(--white);
+}
+
+.cta-btn.ghost {
+	background: transparent;
+	color: var(--white);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta-btn.ghost:hover {
+	background: var(--white);
+	color: var(--text-1);
+	border-color: var(--white);
+}
+
+
+/* =========================================================
+   SERVICES OVERVIEW PAGE — directory grid
+   ========================================================= */
+
+.lines-grid {
+	max-width: 1180px;
+	margin: 4rem auto 0 auto;
+	padding: 0 2rem 6rem 2rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.75rem;
+}
+
+.line-card {
+	background: var(--white);
+	border: 1px solid var(--border);
+	padding: 2.5rem 2.25rem;
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	color: inherit;
+	transition: border-color 200ms ease, transform 200ms ease, box-shadow 220ms ease;
+}
+
+.line-card:hover {
+	border-color: var(--accent);
+	transform: translateY(-3px);
+	box-shadow: 0 14px 36px rgba(11, 30, 63, 0.08);
+}
+
+.line-card .lc-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 1.4rem;
+	padding-bottom: 1.2rem;
+	border-bottom: 1px solid var(--border);
+}
+
+.line-card .lc-num {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 2.6rem;
+	font-style: italic;
+	font-weight: 300;
+	line-height: 1;
+	color: var(--accent);
+}
+
+.line-card .lc-eyebrow {
+	font-size: 0.65rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--text-3);
+	font-weight: 500;
+	text-align: right;
+}
+
+.line-card h3 {
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 1.65rem;
+	font-weight: 500;
+	line-height: 1.2;
+	color: var(--text-1);
+	margin-bottom: 0.9rem;
+}
+
+.line-card h3 em {
+	font-style: italic;
+	color: var(--accent);
+}
+
+.line-card .lc-desc {
+	font-size: 0.92rem;
+	line-height: 1.6;
+	color: var(--text-2);
+	margin-bottom: 1.4rem;
+	flex-grow: 1;
+}
+
+.line-card .lc-includes {
+	font-size: 0.78rem;
+	color: var(--text-3);
+	line-height: 1.6;
+	margin-bottom: 1.5rem;
+}
+
+.line-card .lc-includes strong {
+	color: var(--text-2);
+	font-weight: 500;
+}
+
+.line-card .lc-foot {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 1.2rem;
+	border-top: 1px solid var(--border);
+}
+
+.line-card .lc-pricepill {
+	font-size: 0.74rem;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+	color: var(--accent);
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-style: italic;
+}
+
+.line-card .lc-arrow {
+	font-size: 0.76rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: var(--text-1);
+}
+
+.line-card:hover .lc-arrow {
+	color: var(--accent);
+}
+
+@media (max-width: 800px) {
+	.lines-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+/* =========================================================
+   RESPONSIVE — global service page tweaks
+   ========================================================= */
+
+@media (max-width: 960px) {
+	.product-card-grid,
+	.product-card-grid.cols-3 {
+		grid-template-columns: 1fr;
+	}
+	.svc-section-header h2 {
+		font-size: 1.7rem;
+	}
+	.closing-cta h2 {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.svc-section {
+		padding: 3.5rem 0;
+	}
+	.product-card {
+		padding: 1.8rem 1.5rem;
+	}
+	.pc-foot {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.pc-cta-row {
+		justify-content: stretch;
+	}
+	.pc-cta {
+		flex: 1;
+		text-align: center;
+	}
+}

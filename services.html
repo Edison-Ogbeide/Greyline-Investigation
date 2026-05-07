@@ -4,401 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services — Greyline Investigations</title>
-<meta name="description" content="Greyline Investigations' full service catalogue: relationship intelligence, corporate vetting, fraud and financial investigations, OSINT, cybersecurity, and litigation support.">
+<meta name="description" content="Greyline Investigations operates across six service lines: relationship intelligence, corporate vetting, fraud and financial investigations, OSINT and digital intelligence, cybersecurity, and litigation support.">
 <link rel="stylesheet" href="styles.css">
-<style>
-	/* =========================================================
-	   SERVICES PAGE — page-specific styles
-	   Layered on top of styles.css. Uses the existing palette
-	   variables: --navy, --navy-2, --navy-3, --ice, --ice-2,
-	   --accent (red), --text-1/2/3, --border, --white.
-	   ========================================================= */
-
-	/* SERVICE-LINE BANDS */
-	.service-line {
-		padding: 6rem 0;
-		border-bottom: 1px solid var(--border);
-	}
-	.service-line:nth-child(even) {
-		background: var(--ice-2);
-	}
-	.service-line:last-of-type {
-		border-bottom: none;
-	}
-
-	.service-line .container {
-		max-width: 1180px;
-		margin: 0 auto;
-		padding: 0 2rem;
-	}
-
-	/* SECTION HEADER */
-	.line-header {
-		display: grid;
-		grid-template-columns: auto 1fr;
-		gap: 3rem;
-		align-items: end;
-		margin-bottom: 4rem;
-		padding-bottom: 2rem;
-		border-bottom: 1.5px solid var(--border-2);
-	}
-	.line-number {
-		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-size: 5.5rem;
-		font-weight: 300;
-		line-height: 0.9;
-		color: var(--accent);
-		font-style: italic;
-	}
-	.line-title-block .eyebrow {
-		font-size: 0.72rem;
-		font-weight: 500;
-		letter-spacing: 0.18em;
-		text-transform: uppercase;
-		color: var(--text-3);
-		margin-bottom: 0.6rem;
-	}
-	.line-title-block h2 {
-		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-size: 2.6rem;
-		font-weight: 400;
-		line-height: 1.1;
-		color: var(--text-1);
-		margin-bottom: 0.9rem;
-	}
-	.line-title-block h2 em {
-		font-style: italic;
-		color: var(--accent);
-	}
-	.line-title-block .line-intro {
-		font-size: 1rem;
-		line-height: 1.65;
-		color: var(--text-2);
-		max-width: 640px;
-	}
-
-	/* SERVICE GRID */
-	.service-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1.5rem;
-	}
-	.service-grid.cols-3 {
-		grid-template-columns: repeat(3, 1fr);
-	}
-
-	/* SERVICE CARD */
-	.svc-card {
-		background: var(--white);
-		border: 1px solid var(--border);
-		padding: 2rem 1.85rem;
-		display: flex;
-		flex-direction: column;
-		position: relative;
-		transition: border-color 200ms ease, transform 200ms ease;
-	}
-	.svc-card:hover {
-		border-color: var(--accent);
-		transform: translateY(-2px);
-	}
-	.service-line:nth-child(even) .svc-card {
-		background: var(--white);
-	}
-
-	.svc-card .svc-tag {
-		font-size: 0.68rem;
-		font-weight: 500;
-		letter-spacing: 0.16em;
-		text-transform: uppercase;
-		color: var(--accent);
-		margin-bottom: 1.1rem;
-		display: inline-block;
-	}
-	.svc-card .svc-tag.enquiry {
-		color: var(--text-3);
-	}
-	.svc-card h3 {
-		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-size: 1.55rem;
-		font-weight: 500;
-		line-height: 1.2;
-		color: var(--text-1);
-		margin-bottom: 0.85rem;
-	}
-	.svc-card .svc-desc {
-		font-size: 0.92rem;
-		line-height: 1.6;
-		color: var(--text-2);
-		margin-bottom: 1.25rem;
-		flex-grow: 1;
-	}
-
-	/* TIER LIST INSIDE CARD */
-	.tier-list {
-		list-style: none;
-		padding: 0;
-		margin: 0 0 1.25rem 0;
-		border-top: 1px solid var(--border);
-	}
-	.tier-list li {
-		padding: 0.85rem 0;
-		border-bottom: 1px solid var(--border);
-		display: grid;
-		grid-template-columns: auto 1fr auto;
-		gap: 0.9rem;
-		align-items: baseline;
-	}
-	.tier-list .t-label {
-		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-size: 0.92rem;
-		font-style: italic;
-		color: var(--accent);
-		font-weight: 500;
-		min-width: 4.5rem;
-	}
-	.tier-list .t-name {
-		font-size: 0.88rem;
-		color: var(--text-2);
-		line-height: 1.45;
-	}
-	.tier-list .t-price {
-		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-size: 1.05rem;
-		font-weight: 500;
-		color: var(--text-1);
-		white-space: nowrap;
-	}
-
-	/* PRICE + CTA FOOTER */
-	.svc-foot {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding-top: 1.1rem;
-		border-top: 1px solid var(--border);
-		gap: 1rem;
-	}
-	.svc-price {
-		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-size: 1.5rem;
-		font-weight: 500;
-		color: var(--text-1);
-		line-height: 1;
-	}
-	.svc-price .from {
-		font-size: 0.7rem;
-		text-transform: uppercase;
-		letter-spacing: 0.14em;
-		color: var(--text-3);
-		font-family: 'Inter', system-ui, sans-serif;
-		font-style: normal;
-		font-weight: 500;
-		display: block;
-		margin-bottom: 0.2rem;
-	}
-	.svc-price.enquiry-only {
-		font-size: 0.92rem;
-		font-style: italic;
-		color: var(--text-3);
-		font-weight: 400;
-	}
-	.svc-cta {
-		font-family: 'Inter', system-ui, sans-serif;
-		font-size: 0.78rem;
-		font-weight: 500;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
-		color: var(--text-1);
-		text-decoration: none;
-		padding: 0.7rem 1.1rem;
-		border: 1px solid var(--text-1);
-		transition: background 180ms ease, color 180ms ease;
-		white-space: nowrap;
-	}
-	.svc-cta:hover {
-		background: var(--text-1);
-		color: var(--white);
-	}
-	.svc-cta.primary {
-		background: var(--accent);
-		border-color: var(--accent);
-		color: var(--white);
-	}
-	.svc-cta.primary:hover {
-		background: var(--text-1);
-		border-color: var(--text-1);
-	}
-
-	/* SUITED-FOR LINE */
-	.suited-for {
-		font-size: 0.78rem;
-		color: var(--text-3);
-		font-style: italic;
-		line-height: 1.5;
-		margin-bottom: 1.1rem;
-		padding: 0.7rem 0.9rem;
-		background: var(--ice-2);
-		border-left: 2px solid var(--accent);
-	}
-	.service-line:nth-child(even) .suited-for {
-		background: var(--ice);
-	}
-
-	/* SECTION DIVIDER FOR SUB-CATEGORIES */
-	.sub-cat {
-		font-size: 0.72rem;
-		font-weight: 500;
-		letter-spacing: 0.16em;
-		text-transform: uppercase;
-		color: var(--text-3);
-		margin: 3rem 0 1.5rem 0;
-		padding-bottom: 0.6rem;
-		border-bottom: 1px solid var(--border);
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-	}
-	.sub-cat::after {
-		content: '';
-		flex: 1;
-		height: 1px;
-		background: var(--border);
-	}
-	.sub-cat:first-of-type {
-		margin-top: 0;
-	}
-
-	/* ENGAGEMENT MODEL CALLOUT */
-	.engagement-note {
-		background: var(--navy);
-		color: rgba(255,255,255,0.75);
-		padding: 2.5rem 2.25rem;
-		margin-top: 3rem;
-		border-left: 3px solid var(--accent);
-	}
-	.engagement-note h4 {
-		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-size: 1.4rem;
-		color: var(--white);
-		font-weight: 500;
-		margin-bottom: 0.7rem;
-	}
-	.engagement-note p {
-		font-size: 0.92rem;
-		line-height: 1.65;
-		margin-bottom: 0;
-	}
-
-	/* CLOSING CTA SECTION */
-	.closing-cta {
-		background: var(--navy);
-		color: var(--white);
-		padding: 6rem 2rem;
-		text-align: center;
-	}
-	.closing-cta .container {
-		max-width: 720px;
-		margin: 0 auto;
-	}
-	.closing-cta .eyebrow {
-		font-size: 0.72rem;
-		letter-spacing: 0.18em;
-		text-transform: uppercase;
-		color: rgba(255,255,255,0.5);
-		margin-bottom: 1.5rem;
-	}
-	.closing-cta h2 {
-		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-size: 2.8rem;
-		line-height: 1.15;
-		font-weight: 400;
-		color: var(--white);
-		margin-bottom: 1.5rem;
-	}
-	.closing-cta h2 em {
-		font-style: italic;
-		color: var(--accent);
-	}
-	.closing-cta p {
-		font-size: 1rem;
-		line-height: 1.7;
-		color: rgba(255,255,255,0.65);
-		max-width: 560px;
-		margin: 0 auto 2.5rem auto;
-	}
-	.closing-cta .cta-row {
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-	.cta-btn {
-		font-family: 'Inter', system-ui, sans-serif;
-		font-size: 0.82rem;
-		font-weight: 500;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		text-decoration: none;
-		padding: 1rem 1.8rem;
-		transition: all 180ms ease;
-	}
-	.cta-btn.primary {
-		background: var(--accent);
-		color: var(--white);
-		border: 1px solid var(--accent);
-	}
-	.cta-btn.primary:hover {
-		background: var(--white);
-		color: var(--text-1);
-		border-color: var(--white);
-	}
-	.cta-btn.ghost {
-		background: transparent;
-		color: var(--white);
-		border: 1px solid rgba(255,255,255,0.3);
-	}
-	.cta-btn.ghost:hover {
-		background: var(--white);
-		color: var(--text-1);
-		border-color: var(--white);
-	}
-
-	/* RESPONSIVE */
-	@media (max-width: 960px) {
-		.service-grid,
-		.service-grid.cols-3 {
-			grid-template-columns: 1fr;
-		}
-		.line-header {
-			grid-template-columns: 1fr;
-			gap: 1rem;
-			align-items: start;
-		}
-		.line-number {
-			font-size: 4rem;
-		}
-		.line-title-block h2 {
-			font-size: 2rem;
-		}
-		.closing-cta h2 {
-			font-size: 2rem;
-		}
-	}
-
-	@media (max-width: 600px) {
-		.service-line {
-			padding: 4rem 0;
-		}
-		.svc-foot {
-			flex-direction: column;
-			align-items: stretch;
-			gap: 1rem;
-		}
-		.svc-cta {
-			text-align: center;
-		}
-	}
-</style>
+<link rel="stylesheet" href="styles-services.css">
 </head>
 <body>
 
@@ -407,7 +15,41 @@
 	<a href="index.html" class="nav-logo">Greyline <span>Investigations</span></a>
 	<ul class="nav-links">
 		<li><a href="index.html">Home</a></li>
-		<li><a href="services.html" class="active">Services</a></li>
+		<li class="has-dropdown">
+			<a href="services.html" class="active">Services</a>
+			<div class="nav-dropdown">
+				<a href="relationship-intelligence.html" class="nav-dropdown-item">
+					<span class="dd-num">01</span>
+					<span class="dd-title">Relationship &amp; Personal Intelligence</span>
+					<span class="dd-desc">Verdicts, footprint analysis, pre-commitment vetting, continuous monitoring</span>
+				</a>
+				<a href="corporate-intelligence.html" class="nav-dropdown-item">
+					<span class="dd-num">02</span>
+					<span class="dd-title">Corporate &amp; Commercial Intelligence</span>
+					<span class="dd-desc">Pre-hire vetting, vendor due diligence, insider threat investigations</span>
+				</a>
+				<a href="fraud-financial-investigations.html" class="nav-dropdown-item">
+					<span class="dd-num">03</span>
+					<span class="dd-title">Fraud &amp; Financial Investigations</span>
+					<span class="dd-desc">Fraud, asset tracing, crypto tracing, real estate fraud, defamation</span>
+				</a>
+				<a href="osint-digital-intelligence.html" class="nav-dropdown-item">
+					<span class="dd-num">04</span>
+					<span class="dd-title">OSINT &amp; Digital Intelligence</span>
+					<span class="dd-desc">Dark web sweeps, monitoring, OSINT investigations, locate persons</span>
+				</a>
+				<a href="cybersecurity.html" class="nav-dropdown-item">
+					<span class="dd-num">05</span>
+					<span class="dd-title">Cybersecurity &amp; Offensive Security</span>
+					<span class="dd-desc">Pen testing, vulnerability assessment, social engineering, phishing</span>
+				</a>
+				<a href="litigation-legal-support.html" class="nav-dropdown-item">
+					<span class="dd-num">06</span>
+					<span class="dd-title">Litigation &amp; Legal Support</span>
+					<span class="dd-desc">Evidence gathering, witness location, ongoing matter support</span>
+				</a>
+			</div>
+		</li>
 		<li><a href="about.html">About</a></li>
 		<li><a href="contact.html">Contact</a></li>
 	</ul>
@@ -418,467 +60,134 @@
 <div class="page-hero">
 	<div class="hero-eyebrow">Service Catalogue</div>
 	<h1>Intelligence-led services<br><em>for decisions that matter</em></h1>
-	<p>Greyline operates across six service lines — from relationship intelligence to corporate vetting, fraud investigations, OSINT, cybersecurity, and litigation support. Some engagements are productised and available for immediate online instruction. Others are bespoke, scoped through a confidential discovery call. Every engagement is conducted under strict confidentiality and formal terms.</p>
+	<p>Greyline operates across six service lines. Some engagements are productised — fixed scope, fixed price, available for immediate online instruction. Others are bespoke and begin with a confidential discovery call. Every engagement is conducted under formal terms, lawful basis, and strict confidentiality.</p>
 </div>
 
-<!-- ===================== 1. RELATIONSHIP & PERSONAL INTELLIGENCE ===================== -->
-<section class="service-line" id="relationship">
+<!-- ===================== LINES GRID ===================== -->
+<div class="lines-grid">
+
+	<a href="relationship-intelligence.html" class="line-card">
+		<div class="lc-head">
+			<div class="lc-num">01</div>
+			<div class="lc-eyebrow">Service Line One</div>
+		</div>
+		<h3>Relationship &amp; <em>Personal Intelligence</em></h3>
+		<p class="lc-desc">Intelligence work for the most consequential decisions in private life — entering a relationship, committing to one, protecting the household, or finally answering the questions that have been left unanswered.</p>
+		<p class="lc-includes"><strong>Includes:</strong> Greyline Verdict, Footprint Analysis (Relationship), Pre-Commitment Vetting Report, Greyline Continuous Intelligence, Field Relationship Investigation, Stalking &amp; Harassment Support, Matrimonial &amp; Divorce Support.</p>
+		<div class="lc-foot">
+			<span class="lc-pricepill">From £299 — productised</span>
+			<span class="lc-arrow">View Service Line →</span>
+		</div>
+	</a>
+
+	<a href="corporate-intelligence.html" class="line-card">
+		<div class="lc-head">
+			<div class="lc-num">02</div>
+			<div class="lc-eyebrow">Service Line Two</div>
+		</div>
+		<h3>Corporate &amp; <em>Commercial Intelligence</em></h3>
+		<p class="lc-desc">Intelligence-led vetting and due diligence for the people you employ, the entities you do business with, and the threats already inside the organisation.</p>
+		<p class="lc-includes"><strong>Includes:</strong> Pre-Hire Intelligence Report, Vendor &amp; Supply Chain Risk Report, Corporate Due Diligence, Insider Threat Investigations.</p>
+		<div class="lc-foot">
+			<span class="lc-pricepill">From £499 — productised</span>
+			<span class="lc-arrow">View Service Line →</span>
+		</div>
+	</a>
+
+	<a href="fraud-financial-investigations.html" class="line-card">
+		<div class="lc-head">
+			<div class="lc-num">03</div>
+			<div class="lc-eyebrow">Service Line Three</div>
+		</div>
+		<h3>Fraud &amp; <em>Financial Investigations</em></h3>
+		<p class="lc-desc">Investigations into fraud, hidden assets, and financial deception — for individuals targeted by scams, businesses defending against loss, and litigation contexts where the truth sits behind the numbers.</p>
+		<p class="lc-includes"><strong>Includes:</strong> Fraud Investigation, Cryptocurrency Tracing, Asset Tracing &amp; Recovery Intelligence, Real Estate Fraud Check (Nigeria), Defamation Investigation.</p>
+		<div class="lc-foot">
+			<span class="lc-pricepill">Bespoke — discovery call</span>
+			<span class="lc-arrow">View Service Line →</span>
+		</div>
+	</a>
+
+	<a href="osint-digital-intelligence.html" class="line-card">
+		<div class="lc-head">
+			<div class="lc-num">04</div>
+			<div class="lc-eyebrow">Service Line Four</div>
+		</div>
+		<h3>OSINT &amp; <em>Digital Intelligence</em></h3>
+		<p class="lc-desc">Open-source intelligence, dark web visibility, and digital exposure mapping — for individuals, businesses, and any client whose risk lives online.</p>
+		<p class="lc-includes"><strong>Includes:</strong> Dark Web Sweep, Dark Web Monitoring (B2B), OSINT Investigations, Adverse Media &amp; Background Checks, Locate Persons.</p>
+		<div class="lc-foot">
+			<span class="lc-pricepill">From £199 — productised</span>
+			<span class="lc-arrow">View Service Line →</span>
+		</div>
+	</a>
+
+	<a href="cybersecurity.html" class="line-card">
+		<div class="lc-head">
+			<div class="lc-num">05</div>
+			<div class="lc-eyebrow">Service Line Five</div>
+		</div>
+		<h3>Cybersecurity &amp; <em>Offensive Security</em></h3>
+		<p class="lc-desc">Offensive security and adversarial testing — delivered through accredited cybersecurity partners under Greyline project management and intelligence-led scoping. One point of accountability; specialist execution.</p>
+		<p class="lc-includes"><strong>Includes:</strong> Penetration Testing, Vulnerability Assessment, Social Engineering Assessment, Phishing Simulation.</p>
+		<div class="lc-foot">
+			<span class="lc-pricepill">Partner-delivered — discovery call</span>
+			<span class="lc-arrow">View Service Line →</span>
+		</div>
+	</a>
+
+	<a href="litigation-legal-support.html" class="line-card">
+		<div class="lc-head">
+			<div class="lc-num">06</div>
+			<div class="lc-eyebrow">Service Line Six</div>
+		</div>
+		<h3>Litigation &amp; <em>Legal Support</em></h3>
+		<p class="lc-desc">Intelligence and evidence support for solicitors, barristers, and litigants — work structured to be deployable in proceedings, not just informative on a desk.</p>
+		<p class="lc-includes"><strong>Includes:</strong> Evidence Gathering &amp; Witness Location, Litigation Support across the matter lifecycle.</p>
+		<div class="lc-foot">
+			<span class="lc-pricepill">Bespoke — discovery call</span>
+			<span class="lc-arrow">View Service Line →</span>
+		</div>
+	</a>
+
+</div>
+
+<!-- ===================== ENGAGEMENT MODELS BAND ===================== -->
+<section class="svc-section alt">
 	<div class="container">
+		<div class="svc-section-header">
+			<div class="eyebrow">How Engagement Works</div>
+			<h2>Two paths to <em>begin</em>.</h2>
+			<p>Greyline operates two engagement models. Productised services are available for immediate instruction online — fixed scope, fixed price, defined turnaround. Bespoke engagements begin with a confidential discovery call to scope the work properly before any quote or commitment.</p>
+		</div>
 
-		<header class="line-header">
-			<div class="line-number">01</div>
-			<div class="line-title-block">
-				<div class="eyebrow">Service Line One</div>
-				<h2>Relationship &amp; <em>Personal Intelligence</em></h2>
-				<p class="line-intro">Intelligence work for the most consequential decisions in private life — entering a relationship, committing to one, protecting the household, or finally answering questions that have been left unanswered.</p>
+		<div class="process-grid">
+
+			<div class="process-step">
+				<span class="step-num">Path A — Productised</span>
+				<h4>Choose your service</h4>
+				<p>Select the productised service that matches your need — Greyline Verdict, Footprint Analysis, Pre-Commitment Vetting, Pre-Hire Intelligence Report, Continuous Intelligence, or Dark Web Sweep.</p>
 			</div>
-		</header>
 
-		<!-- PRODUCTISED -->
-		<div class="sub-cat">Productised — Available Online</div>
-
-		<div class="service-grid">
-
-			<!-- Greyline Verdict -->
-			<article class="svc-card">
-				<span class="svc-tag">Productised</span>
-				<h3>Greyline Verdict</h3>
-				<p class="svc-desc">A single, decisive verification of whether a person you've met online or recently is genuine, safe, and who they claim to be — before you commit emotionally, financially, or by travelling to meet them. Delivered as a clear Green / Amber / Red verdict with the underlying intelligence that supports it.</p>
-				<div class="suited-for"><strong>Suited for:</strong> early-stage online connections, long-distance partners, anyone being asked for money, gifts, or travel before having met in person.</div>
-				<div class="svc-foot">
-					<div class="svc-price">£299</div>
-					<a href="checkout.html?product=verdict" class="svc-cta primary">Buy Now</a>
-				</div>
-			</article>
-
-			<!-- Footprint Analysis -->
-			<article class="svc-card">
-				<span class="svc-tag">Productised — 3 Tiers</span>
-				<h3>Footprint Analysis (Relationship)</h3>
-				<p class="svc-desc">A tiered investigation into a partner's digital life. Tier 1 maps presence; Tier 2 surfaces dating apps, hidden accounts, and adult-platform activity; Tier 3 delivers a full behavioural profile with analyst-led interpretation.</p>
-				<ul class="tier-list">
-					<li><span class="t-label">Tier 1</span><span class="t-name">Identity &amp; Presence</span><span class="t-price">£399</span></li>
-					<li><span class="t-label">Tier 2</span><span class="t-name">Intimate Platform Exposure</span><span class="t-price">£749</span></li>
-					<li><span class="t-label">Tier 3</span><span class="t-name">Full Intelligence Profile</span><span class="t-price">£1,699</span></li>
-				</ul>
-				<div class="suited-for"><strong>Suited for:</strong> partners with concerns about hidden accounts, secret dating-app activity, or unexplained behavioural patterns in an existing relationship.</div>
-				<div class="svc-foot">
-					<div class="svc-price enquiry-only">Choose your tier</div>
-					<a href="checkout.html?product=footprint" class="svc-cta primary">Buy Now</a>
-				</div>
-			</article>
-
-			<!-- Pre-Commitment Vetting -->
-			<article class="svc-card">
-				<span class="svc-tag">Productised</span>
-				<h3>Pre-Commitment Vetting Report</h3>
-				<p class="svc-desc">Premium vetting before marriage, sponsorship, or relocation. Combines our Tier 3 Digital Behaviour Intelligence Report with comprehensive criminal and background checks across the UK and country of origin, plus full identity verification. Built for decisions that cannot be undone.</p>
-				<div class="suited-for"><strong>Suited for:</strong> spouse or fiancé(e) visa sponsors, anyone preparing for marriage, second marriages, cross-border relationships.</div>
-				<div class="svc-foot">
-					<div class="svc-price">£2,499</div>
-					<a href="checkout.html?product=pre-commitment" class="svc-cta primary">Buy Now</a>
-				</div>
-			</article>
-
-			<!-- Continuous Intelligence -->
-			<article class="svc-card">
-				<span class="svc-tag">Subscription — 3 Tiers</span>
-				<h3>Greyline Continuous Intelligence</h3>
-				<p class="svc-desc">Ongoing monitoring of a specified subject's digital footprint, structured around the client's specific concern — infidelity, adult content, gambling, hidden accounts, predator contact, scam targeting, or behavioural drift. The fear is the product; we watch for it.</p>
-				<ul class="tier-list">
-					<li><span class="t-label">Essential</span><span class="t-name">1 subject, 1 concern</span><span class="t-price">£299/mo</span></li>
-					<li><span class="t-label">Enhanced</span><span class="t-name">2 subjects, 3 concerns</span><span class="t-price">£599/mo</span></li>
-					<li><span class="t-label">Comprehensive</span><span class="t-name">4 subjects, 5 concerns</span><span class="t-price">£1,199/mo</span></li>
-				</ul>
-				<div class="suited-for"><strong>Suited for:</strong> partners watching for hidden behaviour, parents protecting children online, adult children safeguarding ageing parents from scam contact, anyone wanting peace of mind that doesn't expire.</div>
-				<div class="svc-foot">
-					<div class="svc-price enquiry-only">Annual prepay 10% off</div>
-					<a href="checkout.html?product=continuous" class="svc-cta primary">Subscribe</a>
-				</div>
-			</article>
-
-		</div>
-
-		<!-- ENQUIRY-LED -->
-		<div class="sub-cat">Bespoke — Discovery Call Required</div>
-
-		<div class="service-grid cols-3">
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke</span>
-				<h3>Field Relationship Investigation</h3>
-				<p class="svc-desc">Custom relationship investigations requiring physical confirmation, on-ground enquiry, or operational adaptation to the specific case. Scoped after a confidential discovery call.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£2,500</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke</span>
-				<h3>Stalking &amp; Harassment Support</h3>
-				<p class="svc-desc">Identifying anonymous stalkers and harassers, evidence-gathering for restraining orders or police complaints, and digital protection for clients under sustained targeting.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£1,500</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke</span>
-				<h3>Matrimonial &amp; Divorce Support</h3>
-				<p class="svc-desc">Intelligence support for divorce proceedings — hidden assets, undisclosed income, behavioural evidence, and digital records — built to brief solicitors and stand up to scrutiny.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£2,500</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-		</div>
-
-	</div>
-</section>
-
-<!-- ===================== 2. CORPORATE & COMMERCIAL INTELLIGENCE ===================== -->
-<section class="service-line" id="corporate">
-	<div class="container">
-
-		<header class="line-header">
-			<div class="line-number">02</div>
-			<div class="line-title-block">
-				<div class="eyebrow">Service Line Two</div>
-				<h2>Corporate &amp; <em>Commercial Intelligence</em></h2>
-				<p class="line-intro">Intelligence-led vetting and due diligence for the people you employ, the entities you do business with, and the threats already inside the organisation.</p>
+			<div class="process-step">
+				<span class="step-num">Path A — Productised</span>
+				<h4>Instruct online</h4>
+				<p>Complete payment securely. We confirm receipt, request the relevant case information through an encrypted intake form, and begin work immediately.</p>
 			</div>
-		</header>
 
-		<!-- PRODUCTISED -->
-		<div class="sub-cat">Productised — Available Online</div>
-
-		<div class="service-grid">
-
-			<article class="svc-card">
-				<span class="svc-tag">Productised — 2 Tiers</span>
-				<h3>Pre-Hire Intelligence Report</h3>
-				<p class="svc-desc">Pre-employment vetting that goes meaningfully beyond standard background screening. Standard covers identity, right-to-work, criminal record, employment and education verification, reference authentication, and a Tier 2 footprint review. Executive adds extended criminal checks, directorships, civil litigation and bankruptcy, a Tier 3 digital behaviour profile, PEP and sanctions screening, and source-country verification for foreign hires.</p>
-				<ul class="tier-list">
-					<li><span class="t-label">Standard</span><span class="t-name">Trust-critical hires</span><span class="t-price">£499</span></li>
-					<li><span class="t-label">Executive</span><span class="t-name">Senior, regulated, household staff</span><span class="t-price">£1,749</span></li>
-				</ul>
-				<div class="suited-for"><strong>Suited for:</strong> SMEs hiring senior or trust-critical roles, family offices vetting household staff, law firms and financial services hiring associates, schools and care providers hiring staff with access to vulnerable people.</div>
-				<div class="svc-foot">
-					<div class="svc-price enquiry-only">Volume pricing available</div>
-					<a href="checkout.html?product=prehire" class="svc-cta primary">Buy Now</a>
-				</div>
-			</article>
-
-		</div>
-
-		<!-- ENQUIRY-LED -->
-		<div class="sub-cat">Enquiry-Led — Discovery Call Required</div>
-
-		<div class="service-grid cols-3">
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Enquiry-Led — 2 Tiers</span>
-				<h3>Vendor &amp; Supply Chain Risk Report</h3>
-				<p class="svc-desc">Due diligence on vendors, suppliers, and partners — Standard covers corporate verification, beneficial ownership, financial health, sanctions and adverse media. Executive adds deep ownership tracing, source-country field verification, modern slavery and ESG audit, and analyst-led risk rating.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£1,500</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke</span>
-				<h3>Corporate Due Diligence</h3>
-				<p class="svc-desc">Pre-acquisition, pre-partnership, and pre-investment intelligence on companies, principals, and controlling interests. Scoped to the deal and the jurisdictions involved.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£3,500</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke</span>
-				<h3>Insider Threat Investigations</h3>
-				<p class="svc-desc">When the threat is already inside — suspected data theft, kickback arrangements, undisclosed conflicts, IP exfiltration, or coordinated leaks. Discreet investigation, evidence-grade documentation, and a defensible audit trail.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£5,000</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-		</div>
-
-	</div>
-</section>
-
-<!-- ===================== 3. FRAUD & FINANCIAL INVESTIGATIONS ===================== -->
-<section class="service-line" id="fraud">
-	<div class="container">
-
-		<header class="line-header">
-			<div class="line-number">03</div>
-			<div class="line-title-block">
-				<div class="eyebrow">Service Line Three</div>
-				<h2>Fraud &amp; <em>Financial Investigations</em></h2>
-				<p class="line-intro">Investigations into fraud, hidden assets, and financial deception — for individuals who've been targeted, businesses defending against loss, and litigation contexts where the truth sits behind the numbers.</p>
+			<div class="process-step">
+				<span class="step-num">Path B — Bespoke</span>
+				<h4>Submit an inquiry</h4>
+				<p>Submit a confidential inquiry through the website. An analyst — not a salesperson — reviews your submission and books a 30-minute discovery call to scope the engagement.</p>
 			</div>
-		</header>
 
-		<div class="sub-cat">Enquiry-Led — Discovery Call Required</div>
-
-		<div class="service-grid cols-3">
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke</span>
-				<h3>Fraud Investigation</h3>
-				<p class="svc-desc">Investigation into suspected or confirmed fraud — romance scams, investment fraud, identity fraud, business email compromise, and complex multi-party deceptions. Evidence-led, discreet, and structured for both civil action and criminal referral.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£2,500</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke</span>
-				<h3>Cryptocurrency Tracing</h3>
-				<p class="svc-desc">On-chain tracing of stolen funds, scam-tied wallets, and illicit flows. Findings prepared for law enforcement, exchanges, and civil recovery proceedings — with the chain-of-custody work that admissible evidence requires.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£3,500</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke</span>
-				<h3>Asset Tracing &amp; Recovery Intelligence</h3>
-				<p class="svc-desc">Locating hidden, undisclosed, or dissipated assets — for divorce proceedings, judgment enforcement, fraud recovery, and partnership disputes. Real assets, real ownership, real locations, in formats that solicitors and courts can use.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£2,500</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke — Nigeria</span>
-				<h3>Real Estate Fraud Check (Nigeria)</h3>
-				<p class="svc-desc">Pre-purchase verification on Nigerian property — title authentication, seller and family-claim verification, government acquisition status, on-ground physical confirmation, and full risk-rated reporting. Built around the actual fraud patterns of the Nigerian market.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£1,500</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke</span>
-				<h3>Defamation Investigation</h3>
-				<p class="svc-desc">Identifying anonymous online attackers, building evidence packs against coordinated smear campaigns, and supporting legal action against defamatory content. Where reputation is under attack, we surface who, why, and how.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£2,500</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-		</div>
-
-	</div>
-</section>
-
-<!-- ===================== 4. OSINT & DIGITAL INTELLIGENCE ===================== -->
-<section class="service-line" id="osint">
-	<div class="container">
-
-		<header class="line-header">
-			<div class="line-number">04</div>
-			<div class="line-title-block">
-				<div class="eyebrow">Service Line Four</div>
-				<h2>OSINT &amp; <em>Digital Intelligence</em></h2>
-				<p class="line-intro">Open-source intelligence, dark web visibility, and digital exposure mapping — for individuals, businesses, and any client whose risk lives online.</p>
+			<div class="process-step">
+				<span class="step-num">Path B — Bespoke</span>
+				<h4>Quoted and engaged</h4>
+				<p>Following discovery, we issue a written scope and quotation. On agreement, terms are signed, the engagement begins, and a single analyst remains your point of contact throughout.</p>
 			</div>
-		</header>
-
-		<!-- PRODUCTISED -->
-		<div class="sub-cat">Productised — Available Online</div>
-
-		<div class="service-grid">
-
-			<article class="svc-card">
-				<span class="svc-tag">Productised — 2 Variants</span>
-				<h3>Dark Web Sweep</h3>
-				<p class="svc-desc">A one-time scan of dark web markets, breach databases, paste sites, and underground forums for exposure tied to a specified email, phone number, name, domain, or organisation. Delivered as a findings report with severity ratings and remediation guidance.</p>
-				<ul class="tier-list">
-					<li><span class="t-label">Personal</span><span class="t-name">Individual exposure scan</span><span class="t-price">£199</span></li>
-					<li><span class="t-label">Business</span><span class="t-name">Domain, organisation, top 5 execs</span><span class="t-price">£599</span></li>
-				</ul>
-				<div class="suited-for"><strong>Suited for:</strong> individuals worried their data has been leaked, businesses auditing their exposure before deciding on continuous monitoring, anyone responding to a suspected breach.</div>
-				<div class="svc-foot">
-					<div class="svc-price enquiry-only">Choose Personal or Business</div>
-					<a href="checkout.html?product=darkweb-sweep" class="svc-cta primary">Buy Now</a>
-				</div>
-			</article>
 
 		</div>
-
-		<!-- ENQUIRY-LED -->
-		<div class="sub-cat">Enquiry-Led — Discovery Call Required</div>
-
-		<div class="service-grid cols-3">
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Subscription — 2 Tiers</span>
-				<h3>Dark Web Monitoring (B2B)</h3>
-				<p class="svc-desc">Continuous monitoring of dark web sources for organisational exposure — credentials, brand mentions, executive accounts, IP, and threat-actor chatter. Ongoing intelligence digest, real-time alerts, and analyst-led contextualisation.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£499/mo</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke</span>
-				<h3>OSINT Investigations</h3>
-				<p class="svc-desc">Bespoke open-source investigations across people, organisations, jurisdictions, and digital networks. Scoped to the question — answered with the discipline and documentation standards intelligence work requires.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£1,500</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke</span>
-				<h3>Adverse Media &amp; Background Checks</h3>
-				<p class="svc-desc">Targeted background checks and adverse media screening on named individuals or entities — for employment, regulatory, partnership, or pre-engagement contexts.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£350</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke</span>
-				<h3>Locate Persons</h3>
-				<p class="svc-desc">Locating individuals for legitimate purposes — debt recovery, witness location, lost family, beneficiary tracing. Lawful basis confirmed before engagement and documented throughout.</p>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£750</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-		</div>
-
-	</div>
-</section>
-
-<!-- ===================== 5. CYBERSECURITY & OFFENSIVE SECURITY ===================== -->
-<section class="service-line" id="cyber">
-	<div class="container">
-
-		<header class="line-header">
-			<div class="line-number">05</div>
-			<div class="line-title-block">
-				<div class="eyebrow">Service Line Five</div>
-				<h2>Cybersecurity &amp; <em>Offensive Security</em></h2>
-				<p class="line-intro">Offensive security and adversarial testing, delivered through accredited cybersecurity partners under Greyline project management and intelligence-led scoping. One point of accountability; specialist execution.</p>
-			</div>
-		</header>
-
-		<div class="sub-cat">Partner-Delivered — Discovery Call Required</div>
-
-		<div class="service-grid cols-3">
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Partner-Delivered</span>
-				<h3>Penetration Testing</h3>
-				<p class="svc-desc">External, internal, web application, and infrastructure penetration testing scoped to the client's environment. Delivered by accredited testers under Greyline's intelligence-led scoping and project management.</p>
-				<div class="svc-foot">
-					<div class="svc-price enquiry-only">Quoted post-discovery</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Partner-Delivered</span>
-				<h3>Vulnerability Assessment</h3>
-				<p class="svc-desc">Authenticated and unauthenticated vulnerability assessment of internal systems, external-facing assets, and cloud configurations. Findings interpreted, prioritised, and tracked to remediation.</p>
-				<div class="svc-foot">
-					<div class="svc-price enquiry-only">Quoted post-discovery</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Partner-Delivered</span>
-				<h3>Social Engineering Assessment</h3>
-				<p class="svc-desc">Authorised social engineering assessments testing the human layer of organisational security. Conducted under written rules of engagement with full ethical and legal safeguards.</p>
-				<div class="svc-foot">
-					<div class="svc-price enquiry-only">Quoted post-discovery</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Partner-Delivered</span>
-				<h3>Phishing Simulation</h3>
-				<p class="svc-desc">Realistic, tailored phishing campaigns to test workforce resilience — with reporting, training integration, and longitudinal tracking against baseline.</p>
-				<div class="svc-foot">
-					<div class="svc-price enquiry-only">Quoted post-discovery</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-		</div>
-
-		<div class="engagement-note">
-			<h4>How partner delivery works</h4>
-			<p>Greyline scopes the engagement, selects the appropriate accredited delivery partner, manages the project end-to-end, and is the client's single point of accountability. The technical work is performed by tested specialist firms; the intelligence-led scoping, reporting standard, and client relationship sit with us. This protects clients from the cost and risk of unaccredited vendors, while ensuring that cybersecurity findings are integrated with the broader intelligence picture Greyline maintains.</p>
-		</div>
-
-	</div>
-</section>
-
-<!-- ===================== 6. LITIGATION & LEGAL SUPPORT ===================== -->
-<section class="service-line" id="legal">
-	<div class="container">
-
-		<header class="line-header">
-			<div class="line-number">06</div>
-			<div class="line-title-block">
-				<div class="eyebrow">Service Line Six</div>
-				<h2>Litigation &amp; <em>Legal Support</em></h2>
-				<p class="line-intro">Intelligence and evidence support for solicitors, barristers, and litigants — work that is structured to be deployable in proceedings, not just informative on a desk.</p>
-			</div>
-		</header>
-
-		<div class="sub-cat">Enquiry-Led — Discovery Call Required</div>
-
-		<div class="service-grid">
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke</span>
-				<h3>Evidence Gathering &amp; Witness Location</h3>
-				<p class="svc-desc">Locating witnesses, gathering corroborating evidence, and producing intelligence packs that meet the standards of civil and family proceedings. Documentation, chain-of-custody, and statements prepared with litigation in mind from the outset.</p>
-				<div class="suited-for"><strong>Suited for:</strong> solicitors and barristers preparing for civil litigation, family proceedings, fraud claims, defamation actions, or freezing-order applications.</div>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£1,500</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-			<article class="svc-card">
-				<span class="svc-tag enquiry">Bespoke</span>
-				<h3>Litigation Support</h3>
-				<p class="svc-desc">Ongoing intelligence support throughout the lifecycle of a matter — from pre-action investigation, through disclosure-stage analysis, to trial preparation. Available on hourly rates or as a fixed-scope engagement; retainer arrangements for ongoing law firm relationships.</p>
-				<div class="suited-for"><strong>Suited for:</strong> law firms requiring an embedded intelligence capability across multiple matters, or specialist support on a single complex case.</div>
-				<div class="svc-foot">
-					<div class="svc-price"><span class="from">From</span>£150/hr</div>
-					<a href="inquiry.html" class="svc-cta">Enquire</a>
-				</div>
-			</article>
-
-		</div>
-
 	</div>
 </section>
 
@@ -887,7 +196,7 @@
 	<div class="container">
 		<div class="eyebrow">Begin a Confidential Engagement</div>
 		<h2>Some questions <em>need answers</em>.<br>We provide them.</h2>
-		<p>Productised services can be instructed immediately through online checkout. Bespoke engagements begin with a complimentary 30-minute discovery call — confidential, without obligation, and conducted by an analyst, not a salesperson.</p>
+		<p>Productised services can be instructed immediately. Bespoke engagements begin with a complimentary 30-minute discovery call — confidential, without obligation, and conducted by an analyst.</p>
 		<div class="cta-row">
 			<a href="inquiry.html" class="cta-btn primary">Submit a Confidential Inquiry</a>
 			<a href="contact.html" class="cta-btn ghost">Book a Discovery Call</a>
