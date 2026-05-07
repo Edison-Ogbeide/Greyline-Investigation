@@ -739,24 +739,186 @@ footer,
 	list-style: none;
 }
 .what-included li {
-	padding: 1rem 0;
+	padding: 1.1rem 0 1.1rem 1.5rem;
 	border-bottom: 1px solid var(--rule);
 	font-size: 0.95rem;
 	color: var(--text-2);
-	display: flex;
-	gap: 0.75rem;
-	line-height: 1.6;
+	line-height: 1.65;
 	list-style: none;
+	position: relative;
 }
 .what-included li::before {
 	content: '·';
 	color: var(--accent);
 	font-weight: 700;
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 	line-height: 1;
-	flex-shrink: 0;
+	position: absolute;
+	left: 0;
+	top: 1rem;
 }
-.what-included li strong { color: var(--ink); font-weight: 500; }
+.what-included li strong {
+	color: var(--ink);
+	font-weight: 500;
+	display: inline;
+	margin-right: 0.35em;
+}
+
+/* ============================================================
+   SAMPLE REPORT VIEWER
+   Inline embedded PDF preview so prospects can see what
+   they are actually buying.
+   ============================================================ */
+
+.sample-report {
+	background: var(--navy);
+	color: var(--white);
+	padding: 5rem 2rem;
+	position: relative;
+}
+.sample-report::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-image:
+		linear-gradient(rgba(255,255,255,0.012) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255,255,255,0.012) 1px, transparent 1px);
+	background-size: 40px 40px;
+	pointer-events: none;
+}
+.sample-report-inner {
+	max-width: 1100px;
+	margin: 0 auto;
+	position: relative;
+}
+.sample-report .section-eyebrow {
+	color: var(--accent);
+}
+.sample-report h2 {
+	color: var(--white);
+	margin-bottom: 1rem;
+}
+.sample-report h2 em {
+	color: var(--accent);
+	font-style: italic;
+}
+.sample-report .gold-rule {
+	background: var(--accent);
+}
+.sample-report .lead {
+	color: rgba(255,255,255,0.78);
+	font-size: 1.02rem;
+	max-width: 760px;
+	line-height: 1.65;
+	margin-bottom: 2.25rem;
+}
+.sample-report .lead strong {
+	color: var(--white);
+	font-weight: 500;
+}
+
+.sample-report-frame {
+	background: var(--white);
+	border-top: 3px solid var(--accent);
+	box-shadow: 0 1px 0 rgba(0,0,0,0.4), 0 24px 60px rgba(0,0,0,0.45);
+	padding: 0;
+	margin-top: 1rem;
+	position: relative;
+	overflow: hidden;
+}
+.sample-report-frame iframe {
+	width: 100%;
+	height: 720px;
+	border: none;
+	display: block;
+	background: var(--ice);
+}
+.sample-report-frame-bar {
+	background: var(--ice);
+	border-bottom: 1px solid var(--rule);
+	padding: 0.85rem 1.25rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: var(--sans);
+	font-size: 0.78rem;
+}
+.sample-report-frame-bar .filename {
+	color: var(--ink);
+	font-weight: 500;
+	letter-spacing: 0.02em;
+}
+.sample-report-frame-bar .filename .ref {
+	color: var(--ink-muted);
+	margin-left: 0.6rem;
+	font-weight: 400;
+}
+.sample-report-frame-bar .frame-actions {
+	display: flex;
+	gap: 1.5rem;
+}
+.sample-report-frame-bar .frame-actions a {
+	color: var(--accent);
+	font-size: 0.72rem;
+	letter-spacing: 0.13em;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.sample-report-frame-bar .frame-actions a:hover { color: var(--ink); }
+
+.sample-report-meta {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1.5rem;
+	margin: 2.5rem 0 0.5rem;
+	padding: 1.5rem 0 0;
+	border-top: 1px solid rgba(255,255,255,0.08);
+}
+.sample-report-meta-item {
+	font-family: var(--sans);
+}
+.sample-report-meta-item .label {
+	font-size: 0.68rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--accent);
+	font-weight: 500;
+	margin-bottom: 0.45rem;
+}
+.sample-report-meta-item .value {
+	font-family: var(--serif);
+	font-size: 1.15rem;
+	color: var(--white);
+	line-height: 1.3;
+}
+.sample-report-meta-item .value em { color: var(--accent); font-style: italic; }
+.sample-report-meta-item .note {
+	font-size: 0.78rem;
+	color: rgba(255,255,255,0.55);
+	margin-top: 0.35rem;
+	line-height: 1.5;
+}
+
+.sample-report-redaction-note {
+	font-family: var(--sans);
+	font-size: 0.82rem;
+	color: rgba(255,255,255,0.6);
+	font-style: italic;
+	margin-top: 1.5rem;
+	line-height: 1.6;
+	padding-left: 1rem;
+	border-left: 2px solid var(--accent);
+}
+
+@media (max-width: 820px) {
+	.sample-report-frame iframe { height: 520px; }
+	.sample-report-frame-bar { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+	.sample-report-meta { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 540px) {
+	.sample-report-meta { grid-template-columns: 1fr; }
+	.sample-report-frame iframe { height: 420px; }
+}
 
 .tier-table {
 	width: 100%;
