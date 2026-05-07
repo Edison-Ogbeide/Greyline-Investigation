@@ -137,7 +137,7 @@ main {
   font-weight: 600;
 }
 
-.status-strip {
+.flow-strip {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0;
@@ -147,39 +147,78 @@ main {
   border-radius: 2px;
 }
 
-.status-item {
-  padding: 20px 24px;
+.flow-item {
+  padding: 18px 22px;
   border-right: 1px solid var(--grey-line);
+  position: relative;
 }
 
-.status-item:last-child { border-right: none; }
+.flow-item:last-child { border-right: none; }
 
-.status-label {
+.flow-item.current {
+  background: var(--ice-warm);
+}
+
+.flow-item.current::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--red);
+}
+
+.flow-num {
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--red);
+  margin-bottom: 4px;
+}
+
+.flow-label {
   font-family: var(--sans);
   font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--grey-text);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
-.status-value {
-  font-family: var(--serif);
-  font-size: 17px;
-  font-weight: 500;
+.flow-item.current .flow-label {
   color: var(--navy);
 }
 
-.status-value.confirmed {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.flow-value {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.25;
 }
 
-.status-value.confirmed::before {
-  content: '✓';
-  color: var(--red);
+.flow-item.pending .flow-value {
+  color: var(--grey-text);
+  font-style: italic;
+}
+
+.notice-strip {
+  background: white;
+  border: 1px solid var(--grey-line);
+  border-left: 3px solid var(--red);
+  padding: 18px 24px;
+  margin-bottom: 32px;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--grey-text);
+  line-height: 1.65;
+}
+
+.notice-strip strong {
+  color: var(--navy);
   font-weight: 600;
 }
 
@@ -385,27 +424,28 @@ main {
 @media (max-width: 720px) {
   .intake-title { font-size: 32px; }
   .intro-block { padding-left: 20px; }
-  .status-strip { grid-template-columns: 1fr; }
-  .status-item {
+  .flow-strip { grid-template-columns: 1fr; }
+  .flow-item {
     border-right: none;
     border-bottom: 1px solid var(--grey-line);
   }
-  .status-item:last-child { border-bottom: none; }
+  .flow-item:last-child { border-bottom: none; }
   .trust-list { grid-template-columns: 1fr; }
   main { padding: 40px 20px 60px; }
   .header-inner { padding: 0 20px; }
   .confidential-badge { display: none; }
 }
 
-.intro-block, .status-strip, .form-embed-wrapper, .trust-notes {
+.intro-block, .flow-strip, .notice-strip, .form-embed-wrapper, .trust-notes {
   opacity: 0;
   animation: fadeUp 0.6s ease forwards;
 }
 
 .intro-block { animation-delay: 0.05s; }
-.status-strip { animation-delay: 0.15s; }
-.form-embed-wrapper { animation-delay: 0.25s; }
-.trust-notes { animation-delay: 0.35s; }
+.flow-strip { animation-delay: 0.12s; }
+.notice-strip { animation-delay: 0.20s; }
+.form-embed-wrapper { animation-delay: 0.28s; }
+.trust-notes { animation-delay: 0.36s; }
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(8px); }
@@ -427,25 +467,32 @@ main {
 
     <div class="intro-block">
       <div class="intake-eyebrow">Confidential Intake</div>
-      <h1 class="intake-title">Your case is almost active.</h1>
+      <h1 class="intake-title">Tell us about the matter.</h1>
       <p class="intake-subtitle">
-        Payment is confirmed. Please complete the confidential intake below. Your case will be opened on submission, and a senior analyst will be in touch by email with your case reference and timeline.
+        Complete the confidential intake below. Your submission is reviewed by an analyst, not a salesperson. <strong>After you submit, you will be taken to a secure payment page to begin the investigation.</strong> Your case enters the queue the moment payment is confirmed, and findings are delivered within 72 hours.
       </p>
     </div>
 
-    <div class="status-strip">
-      <div class="status-item">
-        <div class="status-label">Payment</div>
-        <div class="status-value confirmed">Confirmed</div>
+    <div class="flow-strip">
+      <div class="flow-item current">
+        <div class="flow-num">01</div>
+        <div class="flow-label">You are here</div>
+        <div class="flow-value">Submit Intake</div>
       </div>
-      <div class="status-item">
-        <div class="status-label">Channel</div>
-        <div class="status-value">Encrypted (TLS)</div>
+      <div class="flow-item pending">
+        <div class="flow-num">02</div>
+        <div class="flow-label">Next step</div>
+        <div class="flow-value">Secure Payment</div>
       </div>
-      <div class="status-item">
-        <div class="status-label">Data Residency</div>
-        <div class="status-value">European Union</div>
+      <div class="flow-item pending">
+        <div class="flow-num">03</div>
+        <div class="flow-label">Within 72 hours</div>
+        <div class="flow-value">Findings Delivered</div>
       </div>
+    </div>
+
+    <div class="notice-strip">
+      <strong>Encrypted channel.</strong> Your submission is transmitted over TLS and stored on EU-based infrastructure. Photographs, screenshots, and supporting documents may be uploaded directly within the form. After you submit, you will be redirected to our secure payment partner to complete the engagement.
     </div>
 
     <div class="form-embed-wrapper" id="form-wrapper">
@@ -459,19 +506,19 @@ main {
       <ul class="trust-list">
         <li class="trust-item">
           <strong>Use a private inbox</strong>
-          The delivery email you provide should be one only you can access. If you share a device or cloud account with anyone connected to this matter, use a freshly created address.
+          The contact email you provide should be one only you can access. If you share a device or cloud account with anyone connected to this matter, use a freshly created address.
         </li>
         <li class="trust-item">
-          <strong>One submission per case</strong>
-          Each payment generates one intake. Do not refresh or resubmit. If you encounter an error, contact us before retrying.
+          <strong>One submission per matter</strong>
+          One intake per case. Do not refresh or resubmit. If you encounter an error before reaching the payment page, email us before retrying.
         </li>
         <li class="trust-item">
           <strong>What we will not do</strong>
-          We will never call, text, or message you on social media. All correspondence comes from @greylineinvestigations.co.uk only.
+          We will never call, text, or message you on social media. All correspondence comes from <strong style="display: inline; font-size: inherit; letter-spacing: 0; text-transform: none;">@greylineinvestigations.co.uk</strong> only.
         </li>
         <li class="trust-item">
           <strong>Sending evidence</strong>
-          Photos, screenshots, and supporting documents may be uploaded directly within the form, or emailed to cases@greylineinvestigations.co.uk after submission, quoting your case reference.
+          Photos, screenshots, and supporting documents may be uploaded directly within the form, or emailed to <strong style="display: inline; font-size: inherit; letter-spacing: 0; text-transform: none;">cases@greylineinvestigations.co.uk</strong> after payment, quoting your reference.
         </li>
       </ul>
     </div>
@@ -483,11 +530,11 @@ main {
   <div class="footer-inner">
     <div class="footer-tagline">The truth satisfies.</div>
     <div class="footer-policies">
-      <a href="/privacy">Privacy</a>·
-      <a href="/data-protection">Data Protection &amp; Confidentiality</a>·
-      <a href="/terms">Terms</a>·
-      <a href="/cookies">Cookies</a>·
-      <a href="/disclaimer">Disclaimer</a>
+      <a href="/privacy-policy.html">Privacy</a>·
+      <a href="/data-protection.html">Data Protection &amp; Confidentiality</a>·
+      <a href="/terms-of-use.html">Terms</a>·
+      <a href="/cookie-policy.html">Cookies</a>·
+      <a href="/disclaimer.html">Disclaimer</a>
     </div>
     <div class="footer-meta">
       Greyline Investigations Limited&nbsp;&nbsp;·&nbsp;&nbsp;Company No. 17121990&nbsp;&nbsp;·&nbsp;&nbsp;United Kingdom
@@ -500,46 +547,37 @@ main {
   ============================================================================
   SERVICE → TALLY FORM MAPPING
   ----------------------------------------------------------------------------
-  This is the only part of this page that ever needs to change.
-
-  For each service line, you need ONE value: the Tally form ID.
+  Each service slug below maps to a Tally form ID. The slug is what the
+  product page passes via ?service=... in the URL.
 
   How to find a Tally form ID:
     1. Open the form in Tally.
     2. Click "Share" at the top right.
-    3. Look at the form's public URL: https://tally.so/r/XXXXXXX
-    4. The XXXXXXX (typically 7 characters) is the form ID.
+    3. Look at the form's public URL: https://tally.so/r/XXXXXX
+    4. The XXXXXX (typically 6-7 characters) is the form ID.
 
-  Each form must have a hidden field named exactly "session_id" — Tally
-  captures URL parameters automatically into hidden fields, so the session
-  ID from Stripe will populate without any further configuration.
+  Each Tally form should:
+    - Have a hidden field named exactly "service" (auto-populated by URL)
+    - Set its after-submit redirect to the matching Stripe Payment Link
+    - Stripe Payment Link's success URL should redirect to /received.html
 
-  Example after a service is configured:
-
-    'romance-verdict': 'mO5lZb',
-
-  Until a form ID is set, the page will show a graceful fallback message
-  asking the client to email cases@greylineinvestigations.co.uk for manual
-  intake.
+  Slugs match the website's product page naming:
+    romance-fraud, digital-footprint-analysis, pre-commitment-vetting,
+    continuous-intelligence, pre-hire-intelligence, dark-web-sweep
   ============================================================================
 */
 const SERVICE_FORMS = {
-  'romance-verdict':         'REPLACE_WITH_FORM_ID',
-  'digital-forensics':       'REPLACE_WITH_FORM_ID',
-  'cryptocurrency-tracing':  'REPLACE_WITH_FORM_ID',
-  'fraud-investigation':     'REPLACE_WITH_FORM_ID',
-  'threat-intelligence':     'REPLACE_WITH_FORM_ID',
-  'insider-threat':          'REPLACE_WITH_FORM_ID',
-  'cybersecurity':           'REPLACE_WITH_FORM_ID',
-  'ai-intelligence':         'REPLACE_WITH_FORM_ID',
-  'training':                'REPLACE_WITH_FORM_ID',
-  'polygraph':               'REPLACE_WITH_FORM_ID'
+  'romance-fraud':              'Pd8r9e',
+  'digital-footprint-analysis': 'REPLACE_WITH_FORM_ID',
+  'pre-commitment-vetting':     'REPLACE_WITH_FORM_ID',
+  'continuous-intelligence':    'REPLACE_WITH_FORM_ID',
+  'pre-hire-intelligence':      'REPLACE_WITH_FORM_ID',
+  'dark-web-sweep':             'REPLACE_WITH_FORM_ID'
 };
 
 (function() {
   const params = new URLSearchParams(window.location.search);
   const service = (params.get('service') || '').toLowerCase().trim();
-  const sessionId = params.get('session_id') || '';
   const wrapper = document.getElementById('form-wrapper');
   const loading = document.getElementById('embed-loading');
 
@@ -547,32 +585,28 @@ const SERVICE_FORMS = {
     wrapper.innerHTML =
       '<div class="embed-error">' +
         '<div class="error-eyebrow">Intake Unavailable</div>' +
-        '<h3>We could not load your intake form.</h3>' +
+        '<h3>We could not load the intake form.</h3>' +
         '<p>' + messageHtml + '</p>' +
-        '<p>If you have just paid and reached this page, your payment is safe. ' +
-        'Email <a href="mailto:cases@greylineinvestigations.co.uk">cases@greylineinvestigations.co.uk</a> ' +
-        'with your Stripe receipt and we will issue your intake by encrypted email.</p>' +
+        '<p>Please email <a href="mailto:cases@greylineinvestigations.co.uk">cases@greylineinvestigations.co.uk</a> ' +
+        'with a brief description of the matter and we will reply with a confidential intake link by encrypted email.</p>' +
       '</div>';
   }
 
   if (!service) {
     showError('No service was specified in the link you arrived from. ' +
-              'This usually means the payment link is misconfigured.');
+              'Please return to the service page and click the intake button again.');
     return;
   }
 
   const formId = SERVICE_FORMS[service];
   if (!formId || formId === 'REPLACE_WITH_FORM_ID') {
-    showError('The intake form for this service is not yet available.');
+    showError('The intake form for this service is not yet available online. ' +
+              'In the meantime, our team will issue a confidential intake link by email.');
     return;
   }
 
   let src = 'https://tally.so/embed/' + encodeURIComponent(formId) +
             '?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1';
-
-  if (sessionId) {
-    src += '&session_id=' + encodeURIComponent(sessionId);
-  }
   src += '&service=' + encodeURIComponent(service);
 
   const iframe = document.createElement('iframe');

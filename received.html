@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Intake Received — Greyline Investigations</title>
+<title>Engagement Confirmed — Greyline Investigations</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -137,7 +137,7 @@ main {
   font-weight: 600;
 }
 
-.status-strip {
+.flow-strip {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0;
@@ -147,40 +147,67 @@ main {
   border-radius: 2px;
 }
 
-.status-item {
-  padding: 20px 24px;
+.flow-item {
+  padding: 18px 22px;
   border-right: 1px solid var(--grey-line);
+  position: relative;
 }
 
-.status-item:last-child { border-right: none; }
+.flow-item:last-child { border-right: none; }
 
-.status-label {
+.flow-item.complete .flow-num::after {
+  content: '  ✓';
+  color: var(--red);
+}
+
+.flow-item.current {
+  background: var(--ice-warm);
+}
+
+.flow-item.current::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--red);
+}
+
+.flow-num {
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--red);
+  margin-bottom: 4px;
+}
+
+.flow-label {
   font-family: var(--sans);
   font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--grey-text);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
-.status-value {
-  font-family: var(--serif);
-  font-size: 17px;
-  font-weight: 500;
+.flow-item.current .flow-label {
   color: var(--navy);
 }
 
-.status-value.confirmed {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.flow-value {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.25;
 }
 
-.status-value.confirmed::before {
-  content: '✓';
-  color: var(--red);
-  font-weight: 600;
+.flow-item.pending .flow-value {
+  color: var(--grey-text);
+  font-style: italic;
 }
 
 .content-section {
@@ -352,12 +379,12 @@ main {
 @media (max-width: 720px) {
   .intake-title { font-size: 32px; }
   .intro-block { padding-left: 20px; }
-  .status-strip { grid-template-columns: 1fr; }
-  .status-item {
+  .flow-strip { grid-template-columns: 1fr; }
+  .flow-item {
     border-right: none;
     border-bottom: 1px solid var(--grey-line);
   }
-  .status-item:last-child { border-bottom: none; }
+  .flow-item:last-child { border-bottom: none; }
   .content-section { padding: 28px 24px; }
   .section-title { font-size: 22px; }
   main { padding: 40px 20px 60px; }
@@ -371,13 +398,13 @@ main {
   }
 }
 
-.intro-block, .status-strip, .content-section, .tagline-divider, .return-link-wrap {
+.intro-block, .flow-strip, .content-section, .tagline-divider, .return-link-wrap {
   opacity: 0;
   animation: fadeUp 0.6s ease forwards;
 }
 
 .intro-block { animation-delay: 0.05s; }
-.status-strip { animation-delay: 0.15s; }
+.flow-strip { animation-delay: 0.15s; }
 .content-section:nth-of-type(1) { animation-delay: 0.25s; }
 .content-section:nth-of-type(2) { animation-delay: 0.32s; }
 .content-section:nth-of-type(3) { animation-delay: 0.39s; }
@@ -404,36 +431,39 @@ main {
   <div class="container">
 
     <div class="intro-block">
-      <div class="intake-eyebrow">Confirmed</div>
-      <h1 class="intake-title">Intake received. Your case is now active.</h1>
+      <div class="intake-eyebrow">Engagement Confirmed</div>
+      <h1 class="intake-title">Thank you for trusting us with this investigation.</h1>
       <p class="intake-subtitle">
-        Thank you. Your payment is confirmed and your intake has been logged. A senior analyst will be in touch by email with your <strong>case reference</strong>, the timeline for your engagement, and any case-specific instructions. Please check your inbox now.
+        Your intake is logged and your payment is confirmed. <strong>Your case is now in the queue, and findings will be delivered within 72 hours.</strong> A confirmation email is on its way to you with your case reference and what to expect next.
       </p>
     </div>
 
-    <div class="status-strip">
-      <div class="status-item">
-        <div class="status-label">Payment</div>
-        <div class="status-value confirmed">Confirmed</div>
+    <div class="flow-strip">
+      <div class="flow-item complete">
+        <div class="flow-num">01</div>
+        <div class="flow-label">Completed</div>
+        <div class="flow-value">Intake Submitted</div>
       </div>
-      <div class="status-item">
-        <div class="status-label">Intake</div>
-        <div class="status-value confirmed">Logged</div>
+      <div class="flow-item complete">
+        <div class="flow-num">02</div>
+        <div class="flow-label">Completed</div>
+        <div class="flow-value">Payment Confirmed</div>
       </div>
-      <div class="status-item">
-        <div class="status-label">Status</div>
-        <div class="status-value">Case Active</div>
+      <div class="flow-item current">
+        <div class="flow-num">03</div>
+        <div class="flow-label">In progress · within 72 hours</div>
+        <div class="flow-value">Findings Delivered</div>
       </div>
     </div>
 
     <section class="content-section">
       <div class="section-eyebrow">What happens next</div>
-      <h2 class="section-title">Your confirmation email contains everything.</h2>
+      <h2 class="section-title">Findings within 72 hours.</h2>
       <p>
-        A confirmation email has been issued to the address you nominated. It contains your <strong>case reference</strong>, the expected delivery timeline for your engagement, and any case-specific guidance that applies to your service.
+        A confirmation email is on its way to you now, containing your <strong>case reference</strong>, the precise delivery deadline for your engagement, and any case-specific guidance. Findings will be delivered to that same email address — once, encrypted, within 72 hours.
       </p>
       <p>
-        You do not need to take any further action at this stage. If we require clarification on any element of your intake, the request will come from a Greyline analyst by email — referencing your case number — and only from an address ending in @greylineinvestigations.co.uk.
+        You do not need to take any further action at this stage. If we require clarification on any element of your intake, the request will come from a Greyline analyst by email — referencing your case number — and only from an address ending in <strong>@greylineinvestigations.co.uk</strong>.
       </p>
     </section>
 
@@ -441,7 +471,7 @@ main {
       <div class="section-eyebrow">How to recognise us</div>
       <h2 class="section-title">All correspondence comes from one place.</h2>
       <p>
-        All Greyline communication relating to your case will come from an address ending in <strong>@greylineinvestigations.co.uk</strong>. We will never contact you by WhatsApp, SMS, social media DM, or phone call. We will never ask you for your password, payment details, or any further fee beyond what you have already paid.
+        All Greyline communication relating to your case will come from an address ending in <strong>@greylineinvestigations.co.uk</strong>. We will never contact you by WhatsApp, SMS, social media DM, or phone call. We will never ask you for your password, banking details, or any further fee beyond what you have already paid.
       </p>
       <p>
         If you receive a message claiming to be from Greyline through any other channel, it is not us. Forward it to <a href="mailto:security@greylineinvestigations.co.uk">security@greylineinvestigations.co.uk</a> and we will investigate.
@@ -452,7 +482,7 @@ main {
       <div class="section-eyebrow">A note on discretion</div>
       <h2 class="section-title">Read your delivery on a private device.</h2>
       <p>
-        Your intake, your findings, and the fact of your engagement with Greyline are held in strict confidence. Our <a href="/data-protection">Data Protection &amp; Confidentiality Policy</a> sets out exactly how your information is stored, who can access it, and when it is destroyed. Findings are delivered once, to the email address you nominated, and are not retained on our systems beyond the period required by law.
+        Your intake, your findings, and the fact of your engagement with Greyline are held in strict confidence. Our <a href="/data-protection.html">Data Protection &amp; Confidentiality Policy</a> sets out exactly how your information is stored, who can access it, and when it is destroyed. Findings are delivered once, to the email address you nominated, and are not retained on our systems beyond the period required by law.
       </p>
       <p>
         If you share a device, mailbox, or cloud account with anyone connected to this matter, we recommend reading your delivery on a device only you can access.
@@ -463,7 +493,7 @@ main {
       <div class="section-eyebrow">If you need to reach us</div>
       <h2 class="section-title">Reply to your confirmation email.</h2>
       <p>
-        For any matter relating to your case, reply directly to the confirmation email — quoting your case reference will help us route it quickly. For all other enquiries, contact <a href="mailto:cases@greylineinvestigations.co.uk">cases@greylineinvestigations.co.uk</a>.
+        For any matter relating to your case, reply directly to your confirmation email — quoting your case reference will help us route it quickly. For all other enquiries, contact <a href="mailto:cases@greylineinvestigations.co.uk">cases@greylineinvestigations.co.uk</a>.
       </p>
       <p>
         We do not operate a telephone helpline. Where a call is necessary at any stage of your engagement, it will be conducted by Google Meet at a scheduled time, on a link issued from a Greyline address.
@@ -483,11 +513,11 @@ main {
   <div class="footer-inner">
     <div class="footer-tagline">Your case is being prepared.</div>
     <div class="footer-policies">
-      <a href="/privacy">Privacy</a>·
-      <a href="/data-protection">Data Protection &amp; Confidentiality</a>·
-      <a href="/terms">Terms</a>·
-      <a href="/cookies">Cookies</a>·
-      <a href="/disclaimer">Disclaimer</a>
+      <a href="/privacy-policy.html">Privacy</a>·
+      <a href="/data-protection.html">Data Protection &amp; Confidentiality</a>·
+      <a href="/terms-of-use.html">Terms</a>·
+      <a href="/cookie-policy.html">Cookies</a>·
+      <a href="/disclaimer.html">Disclaimer</a>
     </div>
     <div class="footer-meta">
       Greyline Investigations Limited&nbsp;&nbsp;·&nbsp;&nbsp;Company No. 17121990&nbsp;&nbsp;·&nbsp;&nbsp;United Kingdom
