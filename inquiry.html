@@ -1,382 +1,255 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<title>Confidential Inquiry | Greyline Investigations</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="styles-services.css">
-	<style>
-		/* Page hero — matches services/about page pattern */
-		.page-hero {
-			padding: 8rem 4rem 3.5rem;
-			background: var(--navy);
-		}
-		.page-hero .hero-eyebrow {
-			font-size: 0.72rem;
-			letter-spacing: 0.22em;
-			text-transform: uppercase;
-			color: var(--accent);
-			margin-bottom: 1.25rem;
-			font-weight: 500;
-		}
-		.page-hero h1 {
-			color: var(--white);
-			font-size: clamp(2.6rem, 5vw, 4.5rem);
-			margin-bottom: 1.25rem;
-		}
-		.page-hero h1 em {
-			font-style: italic;
-			color: rgba(255,255,255,0.4);
-		}
-		.page-hero p {
-			color: rgba(255,255,255,0.45);
-			max-width: 620px;
-		}
-
-		/* Form section */
-		.inquiry-section {
-			padding: 4rem;
-			max-width: 780px;
-			margin: 0 auto;
-		}
-		.form-notice {
-			background: var(--ice-2, #f8f7f5);
-			border-left: 3px solid var(--accent, #c0392b);
-			padding: 1.25rem 1.5rem;
-			margin-bottom: 3rem;
-			font-size: 0.92rem;
-			color: var(--text-2, #555);
-			line-height: 1.7;
-		}
-		.form-notice strong {
-			color: var(--navy, #0a0f1a);
-		}
-		.form-group-label {
-			font-size: 0.72rem;
-			letter-spacing: 0.18em;
-			text-transform: uppercase;
-			color: var(--accent, #c0392b);
-			font-weight: 500;
-			margin-bottom: 1.5rem;
-			margin-top: 2.5rem;
-			padding-bottom: 0.5rem;
-			border-bottom: 1px solid var(--border-2, #e5e5e5);
-		}
-		.form-group-label:first-of-type {
-			margin-top: 0;
-		}
-		.form-field {
-			margin-bottom: 1.5rem;
-		}
-		.form-field label {
-			display: block;
-			font-size: 0.88rem;
-			font-weight: 500;
-			color: var(--navy, #0a0f1a);
-			margin-bottom: 0.5rem;
-		}
-		.form-field input,
-		.form-field select,
-		.form-field textarea {
-			width: 100%;
-			padding: 0.75rem 1rem;
-			font-family: 'Inter', sans-serif;
-			font-size: 0.92rem;
-			color: var(--navy, #0a0f1a);
-			background: var(--white, #fff);
-			border: 1.5px solid var(--border-2, #e0ddd8);
-			border-radius: 4px;
-			transition: border-color 0.2s;
-			outline: none;
-		}
-		.form-field input:focus,
-		.form-field select:focus,
-		.form-field textarea:focus {
-			border-color: var(--accent, #c0392b);
-		}
-		.form-field textarea {
-			min-height: 140px;
-			resize: vertical;
-		}
-		.form-field .field-hint {
-			font-size: 0.8rem;
-			color: var(--text-3, #999);
-			margin-top: 0.35rem;
-		}
-
-		/* Radio group */
-		.radio-group {
-			display: flex;
-			gap: 1.5rem;
-			flex-wrap: wrap;
-			margin-top: 0.25rem;
-		}
-		.radio-group label {
-			display: flex;
-			align-items: center;
-			gap: 0.4rem;
-			font-size: 0.88rem;
-			font-weight: 400;
-			color: var(--text-2, #555);
-			cursor: pointer;
-		}
-		.radio-group input[type="radio"] {
-			width: auto;
-			accent-color: var(--accent, #c0392b);
-		}
-
-		/* Consent checkboxes */
-		.consent-group {
-			margin-top: 2.5rem;
-			padding-top: 1.5rem;
-			border-top: 1px solid var(--border-2, #e5e5e5);
-		}
-		.consent-item {
-			display: flex;
-			align-items: flex-start;
-			gap: 0.75rem;
-			margin-bottom: 1rem;
-		}
-		.consent-item input[type="checkbox"] {
-			margin-top: 0.25rem;
-			width: auto;
-			accent-color: var(--accent, #c0392b);
-			flex-shrink: 0;
-		}
-		.consent-item label {
-			font-size: 0.85rem;
-			color: var(--text-2, #555);
-			line-height: 1.6;
-			font-weight: 400;
-		}
-
-		/* Submit button */
-		.form-submit {
-			margin-top: 2rem;
-		}
-		.form-submit button {
-			display: inline-block;
-			padding: 0.85rem 2.5rem;
-			background: var(--accent, #c0392b);
-			color: var(--white, #fff);
-			font-family: 'Inter', sans-serif;
-			font-size: 0.88rem;
-			font-weight: 600;
-			letter-spacing: 0.04em;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
-			transition: background 0.2s;
-		}
-		.form-submit button:hover {
-			background: #a5311f;
-		}
-		.form-submit .submit-note {
-			font-size: 0.8rem;
-			color: var(--text-3, #999);
-			margin-top: 0.75rem;
-		}
-
-		/* Success message */
-		.success-message {
-			display: none;
-			padding: 2.5rem;
-			background: var(--ice-2, #f8f7f5);
-			border: 1px solid var(--border-2, #e5e5e5);
-			border-radius: 6px;
-			text-align: center;
-		}
-		.success-message h3 {
-			font-family: 'Cormorant Garamond', Georgia, serif;
-			font-size: 1.6rem;
-			color: var(--navy, #0a0f1a);
-			margin-bottom: 1rem;
-		}
-		.success-message p {
-			font-size: 0.92rem;
-			color: var(--text-2, #555);
-			line-height: 1.7;
-		}
-
-		@media(max-width:960px) {
-			.page-hero { padding: 6rem 1.5rem 2.5rem; }
-			.inquiry-section { padding: 2.5rem 1.5rem; }
-		}
-		@media(max-width:480px) {
-			.radio-group { flex-direction: column; gap: 0.75rem; }
-		}
-	</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit a Confidential Inquiry — Greyline Investigations</title>
+<meta name="description" content="Submit a confidential inquiry to Greyline Investigations. Encrypted intake. Reviewed by an analyst, not a salesperson. Confidentiality agreement provided before detailed disclosure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav id="nav">
-	<a href="index.html" class="nav-logo">Greyline <span>Investigations</span></a>
+	<a href="index.html" class="logo">Greyline <span>Investigations</span></a>
 	<ul class="nav-links">
 		<li><a href="index.html">Home</a></li>
-		<li class="has-dropdown">
-			<a href="services.html">Services</a>
-			<div class="nav-dropdown">
-				<a href="relationship-intelligence.html" class="nav-dropdown-item"><span class="dd-num">01</span><span class="dd-title">Relationship &amp; Personal Intelligence</span><span class="dd-desc">Verdicts, footprint analysis, pre-commitment vetting, continuous monitoring</span></a>
-				<a href="corporate-intelligence.html" class="nav-dropdown-item"><span class="dd-num">02</span><span class="dd-title">Corporate &amp; Commercial Intelligence</span><span class="dd-desc">Pre-hire vetting, vendor due diligence, insider threat investigations</span></a>
-				<a href="fraud-financial-investigations.html" class="nav-dropdown-item"><span class="dd-num">03</span><span class="dd-title">Fraud &amp; Financial Investigations</span><span class="dd-desc">Fraud, asset tracing, crypto tracing, real estate fraud, defamation</span></a>
-				<a href="osint-digital-intelligence.html" class="nav-dropdown-item"><span class="dd-num">04</span><span class="dd-title">OSINT &amp; Digital Intelligence</span><span class="dd-desc">Dark web sweeps, monitoring, OSINT investigations, locate persons</span></a>
-				<a href="cybersecurity.html" class="nav-dropdown-item"><span class="dd-num">05</span><span class="dd-title">Cybersecurity &amp; Offensive Security</span><span class="dd-desc">Pen testing, vulnerability assessment, social engineering, phishing</span></a>
-				<a href="litigation-legal-support.html" class="nav-dropdown-item"><span class="dd-num">06</span><span class="dd-title">Litigation &amp; Legal Support</span><span class="dd-desc">Evidence gathering, witness location, ongoing matter support</span></a>
-			</div>
-		</li>
+		<li><a href="services.html">Services</a></li>
 		<li><a href="about.html">About</a></li>
-		<li><a href="case-studies.html">Case Studies</a></li>
+		<li><a href="case-studies.html">Case studies</a></li>
 		<li><a href="contact.html">Contact</a></li>
 	</ul>
-	<a href="inquiry.html" class="nav-cta hot">Submit Inquiry</a>
+	<a href="inquiry.html" class="nav-cta active">Submit Inquiry</a>
 </nav>
 
-<!-- PAGE HERO — same layout as services & about pages -->
-<div class="page-hero">
-	<div class="hero-eyebrow">Confidential Case Inquiry</div>
-	<h1>Submit your <em>inquiry</em></h1>
-	<p>Complete the form below. All information is handled under strict confidentiality protocols. A confidentiality agreement will be provided before detailed disclosure.</p>
-</div>
-
-
-<!-- FORM SECTION -->
-<div class="inquiry-section">
-	<div class="form-notice">
-		<strong>Important:</strong> Please do not include sensitive, personal, or evidential information at this stage. A confidentiality agreement will be provided before detailed disclosure. Provide only a high-level summary of your situation.
+<section class="page-hero">
+	<div class="container">
+		<div class="hero-eyebrow">Confidential Case Inquiry</div>
+		<h1>Submit your <em>inquiry</em>.</h1>
+		<p>All inquiries are handled under strict confidentiality protocols. A confidentiality agreement is provided before any detailed disclosure. Reviewed by an analyst, not a salesperson.</p>
 	</div>
+</section>
 
-	<form id="inquiryForm" name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-		<!-- Honeypot field — hidden from real users, catches bots -->
-		<p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
-		<input type="hidden" name="form-name" value="inquiry">
-
-		<!-- YOUR DETAILS -->
-		<div class="form-group-label">Your details</div>
-
-		<div class="form-field">
-			<label for="fullName">Full name</label>
-			<input type="text" id="fullName" name="fullName" required>
-		</div>
-
-		<div class="form-field">
-			<label for="email">Contact email</label>
-			<input type="email" id="email" name="email" required>
-		</div>
-
-		<div class="form-field">
-			<label for="phone">Phone / WhatsApp (optional)</label>
-			<input type="tel" id="phone" name="phone">
-		</div>
-
-		<div class="form-field">
-			<label for="country">Your location</label>
-			<select id="country" name="country" required>
-				<option value="" disabled selected>Select your country</option>
-				<option value="UK">United Kingdom</option>
-				<option value="NG">Nigeria</option>
-				<option value="US">United States</option>
-				<option value="CA">Canada</option>
-				<option value="AU">Australia</option>
-				<option value="Other">Other</option>
-			</select>
-		</div>
-
-		<!-- TYPE OF ISSUE -->
-		<div class="form-group-label">Type of issue</div>
-
-		<div class="form-field">
-	<label for="issueType">What best describes your issue?</label>
-	<select id="issueType" name="issueType" required>
-		<option value="" disabled selected>Select the area that best describes your situation</option>
-		<option value="relationship">Relationship or infidelity concern</option>
-		<option value="cybersecurity">Cybersecurity or penetration testing</option>
-		<option value="threat-intel">Threat intelligence or OSINT</option>
-		<option value="insider-threat">Insider threat or workplace misconduct</option>
-		<option value="forensics">Digital forensics (device, email, data recovery)</option>
-		<option value="fraud">Fraud investigation or financial deception</option>
-		<option value="crypto">Cryptocurrency tracing or crypto fraud</option>
-		<option value="training">Training or capability development</option>
-		<option value="ai-intelligence">AI-powered intelligence or automation</option>
-		<option value="polygraph">Polygraph or truth verification</option>
-		<option value="other">Other / not sure — I need guidance</option>
-	</select>
-</div>
-
-		<div class="form-field">
-			<label>Is this related to an individual or organisation?</label>
-			<div class="radio-group">
-				<label><input type="radio" name="subjectType" value="individual"> Individual</label>
-				<label><input type="radio" name="subjectType" value="organisation"> Organisation</label>
-				<label><input type="radio" name="subjectType" value="both"> Both</label>
-				<label><input type="radio" name="subjectType" value="notsure"> Not sure</label>
-			</div>
-		</div>
-
-		<!-- JURISDICTION -->
-		<div class="form-group-label">Jurisdiction</div>
-
-		<div class="form-field">
-			<label for="jurisdiction">Where is the issue located?</label>
-			<select id="jurisdiction" name="jurisdiction">
-				<option value="" disabled selected>Select jurisdiction</option>
-				<option value="UK">United Kingdom</option>
-				<option value="NG">Nigeria</option>
-				<option value="US">United States</option>
-				<option value="CA">Canada</option>
-				<option value="international">International / multiple</option>
-				<option value="notsure">Not sure</option>
-			</select>
-		</div>
-
-		<!-- BRIEF DESCRIPTION -->
-		<div class="form-group-label">Brief description</div>
-
-		<div class="form-field">
-			<label for="description">Describe your situation (high-level only)</label>
-			<textarea id="description" name="description" required></textarea>
-			<div class="field-hint">Keep this high-level. A confidentiality agreement will be provided before we ask for detailed information.</div>
-		</div>
-
-		<div class="form-field">
-			<label for="timeline">When did this issue begin? (approximate)</label>
-			<input type="text" id="timeline" name="timeline">
-		</div>
-
-		<!-- CONSENT -->
-		<div class="consent-group">
-			<div class="consent-item">
-				<input type="checkbox" id="consent1" name="consent1" required>
-				<label for="consent1">I understand that a confidentiality agreement will be provided before any detailed case discussion, and that my information will be handled in accordance with UK GDPR and the Data Protection Act 2018.</label>
-			</div>
-			<div class="consent-item">
-				<input type="checkbox" id="consent2" name="consent2" required>
-				<label for="consent2">I confirm that I have not included sensitive or evidential information in this form, and I consent to being contacted by Greyline Investigations regarding this inquiry.</label>
-			</div>
-		</div>
-
-		<!-- SUBMIT -->
-		<div class="form-submit">
-			<button type="submit">Submit Confidential Inquiry</button>
-			<div class="submit-note">Your inquiry is handled under strict confidentiality. Response within 24 hours.</div>
-		</div>
-	</form>
-
-	<!-- SUCCESS MESSAGE -->
-	<div class="success-message" id="successMessage">
-		<h3>Your inquiry has been received.</h3>
-		<p>We will review your case and provide a confidentiality agreement if appropriate. You will receive a response within 24 hours.</p>
-		<p style="margin-top:1rem;">If you need to reach us urgently, email <strong>cases@greylineinvestigations.co.uk</strong></p>
+<div class="breadcrumb">
+	<div class="container">
+		<a href="index.html">Home</a><span class="sep">›</span>
+		<span class="current">Submit Inquiry</span>
 	</div>
 </div>
 
+<section class="form-section">
+	<div class="form-card">
+		<h2>Confidential <em>case inquiry</em>.</h2>
+		<p class="form-lead">Complete the form below. All information is encrypted in transit and at rest. The form is reviewed by a Greyline analyst within two business days, and a confidential discovery call is then arranged.</p>
 
-<!-- UPDATED FOOTER -->
-<footer>
-	<div class="footer-inner" style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:2.5rem;">
-		<div class="footer-brand"><div class="footer-brand-name">Greyline Investigations</div><p>Cyber intelligence, risk, and investigation services. UK-registered agency serving clients across the UK, Nigeria, USA, Canada, Australia, and beyond.</p></div>
+		<div class="form-notice">
+			<strong>Important:</strong> Please do not include sensitive, personal, or evidential information at this stage. A confidentiality agreement will be provided before detailed disclosure. Provide only a high-level summary of your situation. If you are in immediate danger, contact emergency services first.
+		</div>
+
+		<form id="inquiry-form" method="POST" action="https://formspree.io/f/yourFormID" novalidate>
+
+			<!-- ============================ YOUR DETAILS ============================ -->
+			<fieldset class="form-fieldset">
+				<legend>Your Details</legend>
+
+				<div class="form-row">
+					<div class="form-field">
+						<label for="full-name">Full name</label>
+						<input type="text" id="full-name" name="full-name" required>
+					</div>
+					<div class="form-field">
+						<label for="contact-email">Contact email</label>
+						<input type="email" id="contact-email" name="contact-email" required>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-field">
+						<label for="phone">Phone (optional)</label>
+						<input type="tel" id="phone" name="phone">
+						<div class="helper">We communicate by email and Google Meet. Phone is requested only for verification purposes.</div>
+					</div>
+					<div class="form-field">
+						<label for="country">Your country</label>
+						<select id="country" name="country" required>
+							<option value="">Select your country</option>
+							<option value="UK">United Kingdom</option>
+							<option value="NG">Nigeria</option>
+							<option value="US">United States</option>
+							<option value="CA">Canada</option>
+							<option value="AU">Australia</option>
+							<option value="IE">Ireland</option>
+							<option value="ZA">South Africa</option>
+							<option value="GH">Ghana</option>
+							<option value="KE">Kenya</option>
+							<option value="OTHER">Other</option>
+						</select>
+					</div>
+				</div>
+			</fieldset>
+
+			<!-- ============================ NATURE OF MATTER ============================ -->
+			<fieldset class="form-fieldset">
+				<legend>Nature of Matter</legend>
+
+				<div class="form-row single">
+					<div class="form-field">
+						<label for="service-line">Which best describes your matter?</label>
+						<select id="service-line" name="service-line" required>
+							<option value="">Select the area that best describes your situation</option>
+							<optgroup label="Relationship &amp; Personal Intelligence">
+								<option value="romance-fraud">Greyline Romance Fraud Investigation — £299</option>
+								<option value="footprint-analysis">Greyline Digital Footprint Analysis — from £399</option>
+								<option value="pre-commitment-vetting">Greyline Pre-Commitment Vetting — £2,499</option>
+								<option value="continuous-intelligence">Greyline Continuous Intelligence — from £299/mo</option>
+								<option value="field-investigations">Greyline Field Investigations</option>
+								<option value="stalking-harassment">Stalking &amp; Harassment Investigations</option>
+							</optgroup>
+							<optgroup label="Corporate &amp; Commercial Intelligence">
+								<option value="pre-hire">Greyline Pre-Hire Intelligence — from £499</option>
+								<option value="vendor-risk">Vendor &amp; Supply Chain Risk Assessment</option>
+								<option value="insider-threat">Insider Threat Investigations</option>
+								<option value="boardroom-osint">Boardroom OSINT Briefing</option>
+							</optgroup>
+							<optgroup label="Fraud &amp; Financial Investigations">
+								<option value="fraud-investigations">Fraud Investigations</option>
+								<option value="crypto-tracing">Cryptocurrency Tracing</option>
+								<option value="asset-tracing">Asset Tracing &amp; Recovery Intelligence</option>
+								<option value="real-estate-fraud">Real Estate Fraud Investigations</option>
+								<option value="defamation">Defamation &amp; Reputation Evidence</option>
+							</optgroup>
+							<optgroup label="OSINT &amp; Digital Intelligence">
+								<option value="dark-web-sweep">Dark Web Sweep — from £199</option>
+								<option value="dark-web-monitoring">Dark Web Monitoring (B2B)</option>
+								<option value="adverse-media">Adverse Media &amp; Background Checks</option>
+							</optgroup>
+							<optgroup label="Cybersecurity &amp; Offensive Security">
+								<option value="pen-testing">Penetration Testing</option>
+								<option value="vulnerability">Vulnerability Assessment</option>
+								<option value="social-engineering">Social Engineering Assessment</option>
+							</optgroup>
+							<optgroup label="Litigation &amp; Legal Support">
+								<option value="civil-litigation">Investigative Support for Civil Litigation</option>
+								<option value="expert-witness">Expert Witness &amp; Court Reporting</option>
+								<option value="witness-location">Witness Location &amp; Verification</option>
+								<option value="pre-investment-dd">Pre-Investment Due Diligence</option>
+							</optgroup>
+							<option value="other">Other / not sure — please describe below</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-row single">
+					<div class="form-field">
+						<label>Is this matter relating to:</label>
+						<div class="radio-row">
+							<label><input type="radio" name="subject-type" value="individual"> An individual</label>
+							<label><input type="radio" name="subject-type" value="organisation"> An organisation</label>
+							<label><input type="radio" name="subject-type" value="both"> Both</label>
+							<label><input type="radio" name="subject-type" value="not-sure"> Not sure</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-field">
+						<label for="urgency">Urgency</label>
+						<select id="urgency" name="urgency">
+							<option value="standard">Standard — within agreed engagement timeline</option>
+							<option value="prompt">Prompt — would like to begin within one week</option>
+							<option value="urgent">Urgent — material decision pending in the next 7–14 days</option>
+							<option value="critical">Critical — safety, legal deadline, or active fraud in progress</option>
+						</select>
+					</div>
+					<div class="form-field">
+						<label for="capacity">Engaging in what capacity?</label>
+						<select id="capacity" name="capacity">
+							<option value="individual">As an individual</option>
+							<option value="family-member">On behalf of a family member</option>
+							<option value="business-owner">On behalf of my business</option>
+							<option value="counsel">As legal counsel</option>
+							<option value="family-office">From a family office</option>
+							<option value="other">Other</option>
+						</select>
+					</div>
+				</div>
+			</fieldset>
+
+			<!-- ============================ HIGH-LEVEL SUMMARY ============================ -->
+			<fieldset class="form-fieldset">
+				<legend>High-Level Summary</legend>
+
+				<div class="form-row single">
+					<div class="form-field">
+						<label for="summary">Briefly describe the situation</label>
+						<textarea id="summary" name="summary" rows="6" required placeholder="Please provide a high-level summary only. Do not include names of subjects, financial details, identifying documents, or evidential material at this stage. A confidentiality agreement will be provided before any of that is required."></textarea>
+						<div class="helper">High-level only. We do not need names, financial details, or evidential material at this stage. A confidentiality agreement will be provided before any sensitive disclosure.</div>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-field">
+						<label for="jurisdiction">Where is the subject or activity located?</label>
+						<select id="jurisdiction" name="jurisdiction">
+							<option value="uk">United Kingdom</option>
+							<option value="ng">Nigeria</option>
+							<option value="us">United States / Canada</option>
+							<option value="europe">Europe (other)</option>
+							<option value="africa">Africa (other)</option>
+							<option value="asia">Asia</option>
+							<option value="multi">Multiple jurisdictions</option>
+							<option value="unknown">Unknown</option>
+						</select>
+					</div>
+					<div class="form-field">
+						<label for="referral">How did you hear about Greyline?</label>
+						<select id="referral" name="referral">
+							<option value="search">Search engine</option>
+							<option value="social">Social media (LinkedIn, Instagram, X)</option>
+							<option value="referral">Referral from a contact</option>
+							<option value="solicitor">Referral from a solicitor</option>
+							<option value="other">Other</option>
+						</select>
+					</div>
+				</div>
+			</fieldset>
+
+			<!-- ============================ CONFIRMATIONS ============================ -->
+			<fieldset class="form-fieldset">
+				<legend>Confirmations</legend>
+
+				<div class="form-row single">
+					<div class="form-field">
+						<div class="checkbox-row">
+							<label><input type="checkbox" name="confirm-summary" required> I confirm I have provided only a high-level summary and have not included sensitive evidential material at this stage.</label>
+						</div>
+						<div class="checkbox-row" style="margin-top:0.75rem;">
+							<label><input type="checkbox" name="confirm-privacy" required> I confirm I have read and accepted the <a href="privacy-policy.html" style="color:var(--accent);">Privacy Policy</a> and understand how Greyline processes personal data.</label>
+						</div>
+						<div class="checkbox-row" style="margin-top:0.75rem;">
+							<label><input type="checkbox" name="confirm-discovery"> I understand that any engagement is preceded by a confidential discovery call on Google Meet and a written engagement letter, and that no work is committed until the engagement letter is signed.</label>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<div class="form-submit-row">
+				<button type="submit" class="btn-primary">Submit Inquiry</button>
+				<p>You will receive a confirmation email within 5 minutes. A Greyline analyst will review your inquiry and respond within two business days. If your matter is critical, please indicate so above and we will prioritise the response.</p>
+			</div>
+
+		</form>
+	</div>
+</section>
+
+<footer class="site-footer">
+	<div class="footer-inner">
+		<div class="footer-brand">
+			<div class="logo">Greyline <span>Investigations</span></div>
+			<p>Cyber intelligence, risk, and investigation services. UK-registered agency serving clients across the UK, Nigeria, USA, Canada, Australia, and beyond.</p>
+		</div>
 		<div class="footer-col">
 			<h4>Service Lines</h4>
 			<ul>
@@ -389,86 +262,44 @@
 			</ul>
 		</div>
 		<div class="footer-col">
-			<h4>Productised Services</h4>
+			<h4>Featured Services</h4>
 			<ul>
-				<li><a href="greyline-verdict.html">Greyline Verdict — &pound;299</a></li>
-				<li><a href="footprint-analysis.html">Footprint Analysis — from &pound;399</a></li>
-				<li><a href="pre-commitment-vetting.html">Pre-Commitment Vetting — &pound;2,499</a></li>
-				<li><a href="greyline-continuous-intelligence.html">Continuous Intelligence — from &pound;299/mo</a></li>
-				<li><a href="pre-hire-intelligence-report.html">Pre-Hire Intelligence — from &pound;499</a></li>
-				<li><a href="dark-web-sweep.html">Dark Web Sweep — from &pound;199</a></li>
+				<li><a href="greyline-romance-fraud-investigation.html">Greyline Romance Fraud Investigation</a></li>
+				<li><a href="greyline-digital-footprint-analysis.html">Greyline Digital Footprint Analysis</a></li>
+				<li><a href="greyline-pre-commitment-vetting.html">Greyline Pre-Commitment Vetting</a></li>
+				<li><a href="greyline-continuous-intelligence.html">Greyline Continuous Intelligence</a></li>
+				<li><a href="greyline-pre-hire-intelligence.html">Greyline Pre-Hire Intelligence</a></li>
+				<li><a href="dark-web-sweep.html">Dark Web Sweep</a></li>
 			</ul>
 		</div>
 		<div class="footer-col">
 			<h4>Company</h4>
 			<ul>
-				<li><a href="about.html">About us</a></li>
+				<li><a href="about.html">About</a></li>
 				<li><a href="services.html">All services</a></li>
-				<li><a href="case-studies.html">Case Studies</a></li>
+				<li><a href="case-studies.html">Case studies</a></li>
 				<li><a href="contact.html">Contact</a></li>
-				<li><a href="inquiry.html">Begin inquiry</a></li>
+				<li><a href="inquiry.html">Submit inquiry</a></li>
 			</ul>
-			<h4 style="margin-top:1.5rem;">Legal</h4>
+		</div>
+		<div class="footer-col">
+			<h4>Legal</h4>
 			<ul>
 				<li><a href="privacy-policy.html">Privacy Policy</a></li>
 				<li><a href="terms-of-use.html">Terms of Use</a></li>
 				<li><a href="cookie-policy.html">Cookie Policy</a></li>
 				<li><a href="disclaimer.html">Disclaimer</a></li>
 				<li><a href="aml-policy.html">AML Policy</a></li>
-				<li><a href="payment-refund-policy.html">Payment &amp; Refund</a></li>
+				<li><a href="payment-refund.html">Payment &amp; Refund</a></li>
 				<li><a href="data-protection.html">Data Protection</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="footer-bottom">
-		<p>&copy; 2026 Greyline Investigations Limited. All Rights Reserved. Company No. 17121990.</p>
-		<div class="social-links">
-			<a href="https://x.com/GreyLineINVGT" target="_blank" rel="noopener noreferrer" aria-label="Greyline Investigations on X" title="X">
-				<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-			</a>
-			<a href="https://www.linkedin.com/company/112581265/" target="_blank" rel="noopener noreferrer" aria-label="Greyline Investigations on LinkedIn" title="LinkedIn">
-				<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-			</a>
-			<a href="https://www.instagram.com/greyline_investigations/" target="_blank" rel="noopener noreferrer" aria-label="Greyline Investigations on Instagram" title="Instagram">
-				<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-			</a>
-			<a href="https://www.facebook.com/profile.php?id=61575888642173" target="_blank" rel="noopener noreferrer" aria-label="Greyline Investigations on Facebook" title="Facebook">
-				<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-			</a>
-		</div>
+		<p>© 2026 Greyline Investigations Limited. Company No. 17121990. Registered in England &amp; Wales.</p>
+		<p>cases@greylineinvestigations.co.uk</p>
 	</div>
 </footer>
-
-<script>
-document.getElementById('inquiryForm').addEventListener('submit', function(e) {
-	e.preventDefault();
-	var form = e.target;
-	var btn = form.querySelector('button[type="submit"]');
-	btn.disabled = true;
-	btn.textContent = 'Submitting...';
-
-	fetch('/', {
-		method: 'POST',
-		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-		body: new URLSearchParams(new FormData(form)).toString()
-	})
-	.then(function(res) {
-		if (res.ok) {
-			form.style.display = 'none';
-			document.querySelector('.form-notice').style.display = 'none';
-			document.getElementById('successMessage').style.display = 'block';
-			window.scrollTo({ top: document.getElementById('successMessage').offsetTop - 120, behavior: 'smooth' });
-		} else {
-			throw new Error('Submission failed');
-		}
-	})
-	.catch(function(err) {
-		btn.disabled = false;
-		btn.textContent = 'Submit Confidential Inquiry';
-		alert('Something went wrong. Please try again or email us directly at cases@greylineinvestigations.co.uk');
-	});
-});
-</script>
 
 </body>
 </html>
