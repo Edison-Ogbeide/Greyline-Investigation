@@ -38,7 +38,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
     line-height: 1.75;
-    color: var(--text-secondary, #888);
+    color: #444;
     margin-bottom: 2.5rem;
   }
   .trust-steps {
@@ -66,7 +66,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--text-primary, #f0ece4);
+    color: #1a1a1a;
     margin-bottom: 0.2rem;
     letter-spacing: 0.02em;
   }
@@ -74,19 +74,19 @@
     font-family: 'Inter', sans-serif;
     font-size: 0.82rem;
     line-height: 1.6;
-    color: var(--text-secondary, #888);
+    color: #555;
     margin: 0;
   }
   .trust-notice {
     border-left: 2px solid var(--accent, #b8922a);
     padding: 0.85rem 1rem;
-    background: rgba(184,146,42,0.05);
+    background: rgba(184,146,42,0.06);
   }
   .trust-notice p {
     font-family: 'Inter', sans-serif;
     font-size: 0.8rem;
     line-height: 1.65;
-    color: var(--text-secondary, #888);
+    color: #555;
     margin: 0;
   }
   .trust-notice p + p {
@@ -95,8 +95,8 @@
 
   /* Right form panel */
   .inquiry-form-panel {
-    background: var(--card-bg, rgba(255,255,255,0.03));
-    border: 1px solid var(--border, rgba(255,255,255,0.08));
+    background: #fff;
+    border: 1px solid #e0dbd0;
     padding: 2.75rem;
   }
   .inquiry-form-panel .form-group {
@@ -109,16 +109,16 @@
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--text-secondary, #888);
+    color: #444;
     margin-bottom: 0.5rem;
   }
   .inquiry-form-panel input,
   .inquiry-form-panel select,
   .inquiry-form-panel textarea {
     width: 100%;
-    background: transparent;
-    border: 1px solid var(--border, rgba(255,255,255,0.12));
-    color: var(--text-primary, #f0ece4);
+    background: #fafaf8;
+    border: 1px solid #d8d2c6;
+    color: #1a1a1a;
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     padding: 0.75rem 1rem;
@@ -132,17 +132,20 @@
   .inquiry-form-panel select:focus,
   .inquiry-form-panel textarea:focus {
     border-color: var(--accent, #b8922a);
+    background: #fff;
   }
   .inquiry-form-panel select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 1rem center;
+    background-color: #fafaf8;
     padding-right: 2.5rem;
     cursor: pointer;
   }
-  .inquiry-form-panel select option {
-    background: #1a1a1a;
-    color: #f0ece4;
+  .inquiry-form-panel select option,
+  .inquiry-form-panel select optgroup {
+    background: #fff;
+    color: #1a1a1a;
   }
   .inquiry-form-panel textarea {
     resize: vertical;
@@ -156,7 +159,7 @@
   }
   .form-divider {
     border: none;
-    border-top: 1px solid var(--border, rgba(255,255,255,0.08));
+    border-top: 1px solid #e0dbd0;
     margin: 2rem 0;
   }
   .form-confirm {
@@ -177,7 +180,7 @@
     letter-spacing: 0;
     font-size: 0.82rem;
     line-height: 1.6;
-    color: var(--text-secondary, #888);
+    color: #555;
     font-weight: 400;
     margin-bottom: 0;
   }
@@ -197,17 +200,16 @@
     font-family: 'Inter', sans-serif;
     font-size: 0.78rem;
     line-height: 1.65;
-    color: var(--text-secondary, #888);
+    color: #777;
     margin-top: 1rem;
     text-align: center;
   }
   .textarea-helper {
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
-    color: var(--text-secondary, #888);
+    color: #777;
     margin-top: 0.4rem;
     line-height: 1.5;
-    opacity: 0.7;
   }
 
   @media (max-width: 860px) {
