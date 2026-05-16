@@ -121,7 +121,9 @@
     color: #444;
     margin-bottom: 0.5rem;
   }
-  .inquiry-form-panel input,
+
+  /* FIX: exclude checkboxes/radios from the appearance reset */
+  .inquiry-form-panel input:not([type="checkbox"]):not([type="radio"]),
   .inquiry-form-panel select,
   .inquiry-form-panel textarea {
     width: 100%;
@@ -137,7 +139,7 @@
     appearance: none;
     -webkit-appearance: none;
   }
-  .inquiry-form-panel input:focus,
+  .inquiry-form-panel input:not([type="checkbox"]):not([type="radio"]):focus,
   .inquiry-form-panel select:focus,
   .inquiry-form-panel textarea:focus {
     border-color: var(--accent, #b8922a);
@@ -177,9 +179,13 @@
     gap: 0.75rem;
     margin-bottom: 1.25rem;
   }
+  /* FIX: explicitly restore native checkbox rendering + size it properly */
   .form-confirm input[type="checkbox"] {
-    width: auto;
-    margin-top: 0.15rem;
+    appearance: auto;
+    -webkit-appearance: auto;
+    width: 16px;
+    height: 16px;
+    margin-top: 0.2rem;
     flex-shrink: 0;
     accent-color: var(--accent, #b8922a);
     cursor: pointer;
@@ -192,6 +198,7 @@
     color: #555;
     font-weight: 400;
     margin-bottom: 0;
+    cursor: pointer;
   }
   .form-confirm label a {
     color: var(--accent, #b8922a);
@@ -204,6 +211,10 @@
     width: 100%;
     justify-content: center;
     text-align: center;
+  }
+  .form-submit-area .btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
   .form-after-submit {
     font-family: 'Inter', sans-serif;
@@ -219,6 +230,77 @@
     color: #777;
     margin-top: 0.4rem;
     line-height: 1.5;
+  }
+
+  /* ── In-page confirmation state ── */
+  .inquiry-success {
+    display: none;
+    text-align: left;
+    padding: 1rem 0;
+  }
+  .inquiry-success.visible {
+    display: block;
+  }
+  .inquiry-success .success-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--accent, #b8922a);
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+  }
+  .inquiry-success .success-mark svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--accent, #b8922a);
+  }
+  .inquiry-success h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.25;
+  }
+  .inquiry-success .success-ref {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 1.75rem;
+  }
+  .inquiry-success p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: #444;
+    margin: 0 0 1rem 0;
+  }
+  .inquiry-success .success-meta {
+    border-top: 1px solid #e0dbd0;
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    font-size: 0.78rem;
+    color: #777;
+    line-height: 1.65;
+  }
+
+  .form-error {
+    display: none;
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background: rgba(139, 0, 0, 0.06);
+    border-left: 2px solid #8B0000;
+    color: #8B0000;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.55;
+  }
+  .form-error.visible {
+    display: block;
   }
 
   @media (max-width: 860px) {
@@ -308,7 +390,8 @@
 	<!-- ── RIGHT: Form Panel ── -->
 	<div class="inquiry-form-panel">
 
-		<form id="inquiry-form" name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+		<!-- The form. action="/thank-you.html" is a fallback if JS is disabled. -->
+		<form id="inquiry-form" name="inquiry" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" novalidate>
 
 			<p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
 			<input type="hidden" name="form-name" value="inquiry">
@@ -405,14 +488,95 @@
 			</div>
 
 			<div class="form-submit-area">
-				<button type="submit" class="btn-primary">Submit</button>
-				
+				<button type="submit" class="btn-primary" id="inquiry-submit-btn">Submit</button>
+				<div class="form-error" id="form-error">Something went wrong. Please try again, or email <a href="mailto:inquiries@greylineinvestigations.co.uk" style="color:#8B0000;">inquiries@greylineinvestigations.co.uk</a> directly.</div>
 			</div>
 
 		</form>
+
+		<!-- In-page confirmation, shown after successful submit -->
+		<div class="inquiry-success" id="inquiry-success" role="status" aria-live="polite">
+			<div class="success-mark" aria-hidden="true">
+				<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<polyline points="5 12 10 17 19 8"></polyline>
+				</svg>
+			</div>
+			<h3>Your inquiry has been received.</h3>
+			<div class="success-ref" id="success-ref">Reference: —</div>
+			<p>A Greyline analyst will review your submission personally and respond from <strong>inquiries@greylineinvestigations.co.uk</strong> within two business days.</p>
+			<p>Please add that address to your trusted contacts so the response is not filtered. If your matter is time-sensitive, you may also reply to the confirmation email once it arrives.</p>
+			<div class="success-meta">
+				All submissions are encrypted in transit and at rest. Your information is seen only by the analyst assigned to your matter. No further action is required from you at this stage.
+			</div>
+		</div>
+
 	</div>
 
 </div>
+
+<script>
+	(function () {
+		var form = document.getElementById('inquiry-form');
+		var successPanel = document.getElementById('inquiry-success');
+		var successRef = document.getElementById('success-ref');
+		var errorBox = document.getElementById('form-error');
+		var submitBtn = document.getElementById('inquiry-submit-btn');
+
+		function buildReference() {
+			// Short, human-presentable reference like GL-26A-7Q2K
+			var now = new Date();
+			var yr = String(now.getFullYear()).slice(-2);
+			var month = String.fromCharCode(64 + (now.getMonth() + 1)); // A..L
+			var rand = Math.random().toString(36).toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 4);
+			return 'GL-' + yr + month + '-' + rand;
+		}
+
+		function encode(data) {
+			return Object.keys(data)
+				.map(function (k) { return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]); })
+				.join('&');
+		}
+
+		form.addEventListener('submit', function (e) {
+			e.preventDefault();
+			errorBox.classList.remove('visible');
+
+			if (!form.checkValidity()) {
+				form.reportValidity();
+				return;
+			}
+
+			submitBtn.disabled = true;
+			submitBtn.textContent = 'Submitting…';
+
+			var formData = new FormData(form);
+			var payload = {};
+			formData.forEach(function (value, key) { payload[key] = value; });
+
+			fetch('/', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				body: encode(payload)
+			})
+			.then(function (response) {
+				if (!response.ok) throw new Error('Network error');
+				var ref = buildReference();
+				successRef.textContent = 'Reference: ' + ref;
+				form.style.display = 'none';
+				successPanel.classList.add('visible');
+				successPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				if (typeof gtag === 'function') {
+					gtag('event', 'inquiry_submitted', { event_category: 'engagement' });
+				}
+			})
+			.catch(function () {
+				submitBtn.disabled = false;
+				submitBtn.textContent = 'Submit';
+				errorBox.classList.add('visible');
+			});
+		});
+	})();
+</script>
 
 <footer>
 	<div class="footer-inner">
