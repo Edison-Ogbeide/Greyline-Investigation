@@ -17,15 +17,6 @@ no_brand_suffix: true
 </section>
 
 
-
-<div class="cap-stack">
-	<div class="cap-stack-label">Full Capability Stack</div>
-	<div class="cap-stack-list">
-		{% assign caps = site.data.capabilities | sort: "order" %}
-		{% for cap in caps %}<span>{{ cap.short_name }}</span>{% unless forloop.last %}<span>&middot;</span>{% endunless %}{% endfor %}
-	</div>
-</div>
-
 <section class="svc-overview">
 	<div class="container">
 		<div class="section-head">
