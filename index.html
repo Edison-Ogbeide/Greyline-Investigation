@@ -17,29 +17,6 @@ no_brand_suffix: true
 </section>
 
 
-<section class="svc-overview">
-	<div class="container">
-		<div class="section-head">
-			<div class="section-eyebrow">Capability Lines</div>
-			<h2>Six disciplines, <em>one chain of accountability</em>.</h2>
-			<hr class="gold-rule">
-			<p>Every Greyline engagement is led by an analyst, scoped against your specific facts, and reported to evidential standard.</p>
-		</div>
-
-		<div class="svc-grid">
-			{% for cap in caps %}
-			<a href="{{ '/capabilities/' | append: cap.slug | append: '/' | relative_url }}" class="svc-card">
-				<div class="svc-num">{{ forloop.index | prepend: '00' | slice: -2, 2 }}</div>
-				<h3>{{ cap.name }}</h3>
-				<p>{{ cap.overview }}</p>
-				<span class="svc-link">Explore &rarr;</span>
-			</a>
-			{% endfor %}
-		</div>
-	</div>
-</section>
-
-
 
 <section class="engagement">
 	<div class="container">
