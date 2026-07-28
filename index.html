@@ -16,14 +16,7 @@ no_brand_suffix: true
 	</div>
 </section>
 
-<section class="svc-overview" style="padding-top:3rem;padding-bottom:3rem;">
-	<div class="container-narrow" style="text-align:center;">
-		<div class="section-eyebrow" style="justify-content:center;display:inline-flex;">Our Method</div>
-		<h2 style="margin:0.75rem 0;">Every finding held to <em>the Greyline Verification Standard</em>.</h2>
-		<p style="max-width:60ch;margin:0 auto 1.25rem;">Direction, collection, verification, corroboration, analysis, assessment, analyst sign-off, monitoring. Published, not assumed.</p>
-		<a href="{{ '/method/' | relative_url }}" class="text-link">See how the standard works &rarr;</a>
-	</div>
-</section>
+
 
 <div class="cap-stack">
 	<div class="cap-stack-label">Full Capability Stack</div>
@@ -94,23 +87,7 @@ no_brand_suffix: true
 	</div>
 </section>
 
-<section class="svc-overview" style="padding-top:3rem;padding-bottom:3rem;">
-	<div class="container-narrow" style="text-align:center;">
-		<div class="section-eyebrow" style="justify-content:center;display:inline-flex;">Training</div>
-		<h2 style="margin:0.75rem 0;">Intelligence-led training, <em>not compliance theatre</em>.</h2>
-		<p style="max-width:60ch;margin:0 auto 1.25rem;">Programmes and briefings delivered by a named analyst, scoped to your organisation.</p>
-		<a href="{{ '/training/' | relative_url }}" class="text-link">Explore training programmes &rarr;</a>
-	</div>
-</section>
 
-<section class="svc-overview">
-	<div class="container-narrow" style="text-align:center;">
-		<div class="section-eyebrow" style="justify-content:center;display:inline-flex;">Trust &amp; Standards</div>
-		<p style="max-width:70ch;margin:0.75rem auto 0;font-size:0.9rem;color:var(--text-2);">
-			{{ site.company.legal_name }} &middot; Company No. {{ site.company.company_number }} &middot; Registered with the ICO &middot; Held to UK GDPR and the Data Protection Act 2018 &middot; Digital forensic work conducted to ACPO Principles for Digital Evidence &middot; Every report signed by a named, accountable analyst — see <a href="{{ '/about/' | relative_url }}">/about</a>.
-		</p>
-	</div>
-</section>
 
 {% assign latest_research = site.research | sort: "date" | reverse | slice: 0, 2 %}
 {% if latest_research.size > 0 %}
