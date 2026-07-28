@@ -16,27 +16,64 @@ no_brand_suffix: true
 	</div>
 </section>
 
+<section class="engagement">
+	<div class="container">
+		<div class="engagement-head">
+			<div class="section-eyebrow">How Engagement Works</div>
+			<h2>A clear path <em>to begin</em>.</h2>
+			<hr class="gold-rule">
+			<p>Every engagement begins with a confidential inquiry, submitted through our encrypted form, and proceeds to a written scope before any work is committed.</p>
+		</div>
+
+		<div class="engagement-grid">
+			<div class="engagement-card">
+				<span class="step-no">Step 01</span>
+				<h3>Confidential <em>inquiry</em></h3>
+				<p>Use the encrypted intake form. Provide a high-level summary, no sensitive evidence required at this stage. An analyst, not a salesperson, reviews every submission.</p>
+			</div>
+			<div class="engagement-card">
+				<span class="step-no">Step 02</span>
+				<h3>Confidential <em>scoping call</em></h3>
+				<p>Within two business days, we arrange a call to understand the matter, identify what is and isn't in scope, and explain our approach.</p>
+			</div>
+			<div class="engagement-card">
+				<span class="step-no">Step 03</span>
+				<h3>Written <em>scope &amp; fixed fee</em></h3>
+				<p>You receive a written engagement letter setting out the work, the deliverable, the timeline, and the fee. Nothing is committed until you sign.</p>
+			</div>
+			<div class="engagement-card">
+				<span class="step-no">Step 04</span>
+				<h3>Engagement <em>begins</em></h3>
+				<p>Once the engagement letter is signed, work begins.</p>
+			</div>
+		</div>
+		<div style="text-align:center;margin-top:2rem;">
+			<a href="{{ '/engagement/' | relative_url }}" class="text-link">Read the full engagement process &rarr;</a>
+		</div>
+	</div>
+</section>
+
+{% assign latest_research = site.research | sort: "date" | reverse | slice: 0, 2 %}
+{% if latest_research.size > 0 %}
 <section class="svc-overview">
 	<div class="container">
 		<div class="section-head">
-			<div class="section-eyebrow">Capabilities</div>
-			<h2>Six disciplines, <em>one chain of accountability</em>.</h2>
+			<div class="section-eyebrow">Latest Research</div>
+			<h2>Recent <em>published analysis</em>.</h2>
 			<hr class="gold-rule">
-			<p>Every engagement is led by an analyst, scoped against your facts, and reported to evidential standard.</p>
 		</div>
-
 		<div class="svc-grid">
-			{% assign caps = site.data.capabilities | sort: "order" %}
-			{% for cap in caps %}
-			<a href="{{ '/capabilities/' | append: cap.slug | append: '/' | relative_url }}" class="svc-card">
-				<h3>{{ cap.name }}</h3>
-				<p>{{ cap.overview }}</p>
-				<span class="svc-link">Explore &rarr;</span>
+			{% for article in latest_research %}
+			<a href="{{ article.url | relative_url }}" class="svc-card">
+				<h3>{{ article.title }}</h3>
+				<p>{{ article.abstract }}</p>
+				<span class="svc-link">Read &rarr;</span>
 			</a>
 			{% endfor %}
 		</div>
 	</div>
 </section>
+{% endif %}
 
 <section class="cta-panel">
 	<div class="container-narrow">
