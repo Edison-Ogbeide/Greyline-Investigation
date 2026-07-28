@@ -1,7 +1,7 @@
 ---
 title: "Family Financial Disclosure Verification"
 slug: family-financial-disclosure-verification
-description: "Family Financial Disclosure Verification — part of Greyline's Litigation Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "Family Financial Disclosure Verification, part of Greyline's Litigation Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

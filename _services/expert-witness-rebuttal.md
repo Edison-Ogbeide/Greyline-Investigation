@@ -1,7 +1,7 @@
 ---
 title: "Expert Witness Rebuttal"
 slug: expert-witness-rebuttal
-description: "Expert Witness Rebuttal — part of Greyline's Litigation Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "Expert Witness Rebuttal, part of Greyline's Litigation Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

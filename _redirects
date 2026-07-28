@@ -1,0 +1,81 @@
+# Greyline Investigations — legacy URL redirects (spec section 15)
+# Netlify native redirects, evaluated before static file resolution.
+# All 301, single hop.
+
+# Legacy productized service pages -> their specific new service page
+/greyline-pre-hire-intelligence.html        /services/candidate-risk-intelligence/            301
+/greyline-pre-hire-intelligence             /services/candidate-risk-intelligence/            301
+/greyline-digital-footprint-analysis.html   /services/digital-exposure-intelligence/          301
+/greyline-digital-footprint-analysis        /services/digital-exposure-intelligence/          301
+/dark-web-sweep.html                        /services/dark-web-exposure-report/               301
+/dark-web-sweep                             /services/dark-web-exposure-report/               301
+/greyline-continuous-intelligence.html      /services/continuous-subject-monitoring/          301
+/greyline-continuous-intelligence           /services/continuous-subject-monitoring/          301
+/greyline-romance-fraud-investigation.html  /services/ai-romance-fraud-verification/          301
+/greyline-romance-fraud-investigation       /services/ai-romance-fraud-verification/          301
+/greyline-pre-commitment-vetting.html       /services/pre-commitment-intelligence-assessment/ 301
+/greyline-pre-commitment-vetting            /services/pre-commitment-intelligence-assessment/ 301
+
+# Old capability / service-line pages -> new capability pages
+/corporate-intelligence.html                /capabilities/corporate-intelligence/  301
+/corporate-intelligence                     /capabilities/corporate-intelligence/  301
+/services/corporate-intelligence            /capabilities/corporate-intelligence/  301
+/services/corporate-intelligence.html       /capabilities/corporate-intelligence/  301
+/osint-digital-intelligence.html            /capabilities/cyber-intelligence/      301
+/osint-digital-intelligence                 /capabilities/cyber-intelligence/      301
+/cybersecurity.html                         /capabilities/cyber-intelligence/      301
+/cybersecurity                              /capabilities/cyber-intelligence/      301
+/services/osint-digital-intelligence        /capabilities/cyber-intelligence/      301
+/services/osint-digital-intelligence.html   /capabilities/cyber-intelligence/      301
+/services/cybersecurity-offensive-security       /capabilities/cyber-intelligence/ 301
+/services/cybersecurity-offensive-security.html  /capabilities/cyber-intelligence/ 301
+/fraud-financial-investigations.html        /capabilities/fraud-intelligence/      301
+/fraud-financial-investigations             /capabilities/fraud-intelligence/      301
+/services/fraud-investigations              /capabilities/fraud-intelligence/      301
+/services/fraud-investigations.html         /capabilities/fraud-intelligence/      301
+/litigation-legal-support.html              /capabilities/litigation-intelligence/ 301
+/litigation-legal-support                   /capabilities/litigation-intelligence/ 301
+/services/litigation-legal-support          /capabilities/litigation-intelligence/ 301
+/services/litigation-legal-support.html     /capabilities/litigation-intelligence/ 301
+/relationship-intelligence.html             /capabilities/personal-intelligence/   301
+/relationship-intelligence                  /capabilities/personal-intelligence/   301
+/services/relationship-intelligence         /capabilities/personal-intelligence/   301
+/services/relationship-intelligence.html    /capabilities/personal-intelligence/   301
+
+# Root pages
+/about.html          /about/          301
+/about-us            /about/          301
+/about-us.html       /about/          301
+/contact.html         /contact/       301
+/case-studies.html    /case-studies/  301
+/services.html        /capabilities/  301
+/services              /capabilities/ 301
+/pricing               /engagement/   301
+/pricing.html          /engagement/   301
+/insights               /research/    301
+/insights.html           /research/   301
+/insights/*                /research/ 301
+
+# Legal pages
+/disclaimer.html      /disclaimer/     301
+/terms-of-use.html    /terms-of-use/   301
+/privacy-policy.html  /privacy-policy/ 301
+/cookie-policy.html   /cookie-policy/  301
+
+# Enquiry / retired checkout flow
+/inquiry.html          /submit-inquiry/ 301
+/inquiry                /submit-inquiry/ 301
+/start                   /submit-inquiry/ 301
+/start.html               /submit-inquiry/ 301
+/checkout                  /submit-inquiry/ 301
+/checkout.html               /submit-inquiry/ 301
+/cart                          /submit-inquiry/ 301
+/cart.html                       /submit-inquiry/ 301
+/order                             /submit-inquiry/ 301
+/order.html                          /submit-inquiry/ 301
+/order/*                               /submit-inquiry/ 301
+/intake.html                             /submit-inquiry/ 301
+/intake/intake.html                        /submit-inquiry/ 301
+/intake/received.html                        /submit-inquiry/ 301
+/received.html                                 /submit-inquiry/ 301
+/thank-you.html                                  /submit-inquiry/ 301

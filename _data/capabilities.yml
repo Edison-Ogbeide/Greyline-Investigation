@@ -1,5 +1,5 @@
-# Six capability lines — spec section 5.
-# order matches spec section 5.1–5.6 / homepage capability stack order.
+# Six capability lines, spec section 5.
+# order matches spec section 5.1 to 5.6 / homepage capability stack order.
 
 - slug: corporate-intelligence
   name: "Corporate Intelligence"
@@ -16,7 +16,7 @@
   name: "Fraud & Asset Intelligence"
   short_name: "Fraud & Asset"
   overview: >-
-    Investigation into fraud, hidden assets and financial deception — for
+    Investigation into fraud, hidden assets and financial deception, for
     individuals targeted by scams, businesses defending against loss, and litigation.
   buyers: "Insurers, law firms, high-net-worth individuals, family solicitors, commercial litigators."
   method_link: /method/evidential/
@@ -38,14 +38,14 @@
   name: "AI & Synthetic Intelligence"
   short_name: "AI & Synthetic"
   overview: >-
-    Detection, analysis and defence against AI-generated threats — from
+    Detection, analysis and defence against AI-generated threats, from
     deepfakes to synthetic narratives to AI-enhanced fraud.
   buyers: "CISO, general counsel, insurers, solicitors, barristers, individuals, family offices."
   method_link: /method/analysis/
   training_slug: ai-threat-awareness
   copy_constraint: >-
     Findings are worded as "consistent with synthetic generation" rather than
-    "is a deepfake" — detection tooling is probabilistic, and the stronger
+    "is a deepfake", detection tooling is probabilistic, and the stronger
     phrasing will not survive cross-examination. Applies in headings, body copy
     and meta descriptions on every page in this capability.
   order: 4
@@ -54,7 +54,7 @@
   name: "Litigation Intelligence"
   short_name: "Litigation"
   overview: >-
-    Investigative support for solicitors and family offices — asset tracing,
+    Investigative support for solicitors and family offices, asset tracing,
     expert witness work, witness location and pre-investment due diligence.
   buyers: "Solicitors, barristers, general counsel, commercial litigators, family law practitioners."
   method_link: /method/reporting/
@@ -65,7 +65,7 @@
   name: "Personal Intelligence"
   short_name: "Personal"
   overview: >-
-    Quiet, documented inquiry into the people who matter most — partners,
+    Quiet, documented inquiry into the people who matter most, partners,
     prospective spouses, those targeting you online, and those threatening
     your safety.
   buyers: "Individuals, family offices, executives, diaspora community."

@@ -1,7 +1,7 @@
 ---
 title: "Incident Response Intelligence"
 slug: incident-response-intelligence
-description: "Incident Response Intelligence — part of Greyline's Cyber & Digital Risk Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "Incident Response Intelligence, part of Greyline's Cyber & Digital Risk Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

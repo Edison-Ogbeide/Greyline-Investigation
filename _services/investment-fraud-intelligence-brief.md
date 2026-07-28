@@ -1,7 +1,7 @@
 ---
 title: "Investment Fraud Intelligence Brief"
 slug: investment-fraud-intelligence-brief
-description: "Investment Fraud Intelligence Brief — part of Greyline's Fraud & Asset Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "Investment Fraud Intelligence Brief, part of Greyline's Fraud & Asset Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

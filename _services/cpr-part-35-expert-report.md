@@ -1,7 +1,7 @@
 ---
 title: "CPR Part 35 Expert Report"
 slug: cpr-part-35-expert-report
-description: "CPR Part 35 Expert Report — part of Greyline's Litigation Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "CPR Part 35 Expert Report, part of Greyline's Litigation Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

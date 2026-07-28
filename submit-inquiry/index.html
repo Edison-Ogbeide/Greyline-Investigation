@@ -5,22 +5,6 @@ description: "Submit a confidential inquiry to Greyline Investigations. Encrypte
 crumbs:
   - title: "Submit Inquiry"
     url: /submit-inquiry/
-redirect_from:
-  - /inquiry.html
-  - /inquiry
-  - /start
-  - /start.html
-  - /checkout
-  - /checkout.html
-  - /cart
-  - /cart.html
-  - /order
-  - /order.html
-  - /intake.html
-  - /intake/intake.html
-  - /thank-you.html
-  - /intake/received.html
-  - /received.html
 ---
 <style>
   .inquiry-wrap { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem 6rem; display: grid; grid-template-columns: 1fr 1.35fr; gap: 5rem; align-items: start; }
@@ -73,16 +57,16 @@ redirect_from:
 		<div class="section-eyebrow">Confidential Intake</div>
 		<h2>Begin in <em>confidence</em>.</h2>
 		<hr class="gold-rule">
-		<p class="trust-lead">This form is the first step, not a commitment. Provide a high-level summary only — a Greyline analyst reviews every submission personally. No sensitive detail is required until a confidentiality agreement is in place.</p>
+		<p class="trust-lead">This form is the first step, not a commitment. Provide a high-level summary only, a Greyline analyst reviews every submission personally. No sensitive detail is required until a confidentiality agreement is in place.</p>
 
 		<div class="trust-steps">
 			<div class="trust-step">
 				<div class="trust-step-no">01.</div>
-				<div class="trust-step-body"><strong>Submit this form</strong><p>High-level overview only — no names, evidence, or financial detail at this stage.</p></div>
+				<div class="trust-step-body"><strong>Submit this form</strong><p>High-level overview only, no names, evidence, or financial detail at this stage.</p></div>
 			</div>
 			<div class="trust-step">
 				<div class="trust-step-no">02.</div>
-				<div class="trust-step-body"><strong>Analyst review</strong><p>A Greyline analyst — not a salesperson — reviews your submission within two business days.</p></div>
+				<div class="trust-step-body"><strong>Analyst review</strong><p>A Greyline analyst, not a salesperson, reviews your submission within two business days.</p></div>
 			</div>
 			<div class="trust-step">
 				<div class="trust-step-no">03.</div>
@@ -101,7 +85,7 @@ redirect_from:
 	</div>
 
 	<div class="inquiry-form-panel">
-		<!-- FORM BACKEND: Netlify Forms (native — no third-party account needed). -->
+		<!-- FORM BACKEND: Netlify Forms (native, no third-party account needed). -->
 		<form id="inquiry-form" name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
 			<input type="hidden" name="form-name" value="inquiry">
 			<p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>

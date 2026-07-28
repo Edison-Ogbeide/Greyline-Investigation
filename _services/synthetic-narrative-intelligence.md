@@ -1,7 +1,7 @@
 ---
 title: "Synthetic Narrative Intelligence"
 slug: synthetic-narrative-intelligence
-description: "Synthetic Narrative Intelligence — part of Greyline's AI & Synthetic Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "Synthetic Narrative Intelligence, part of Greyline's AI & Synthetic Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

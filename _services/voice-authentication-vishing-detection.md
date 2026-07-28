@@ -1,7 +1,7 @@
 ---
 title: "Voice Authentication & Vishing Detection"
 slug: voice-authentication-vishing-detection
-description: "Voice Authentication & Vishing Detection — part of Greyline's AI & Synthetic Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "Voice Authentication & Vishing Detection, part of Greyline's AI & Synthetic Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

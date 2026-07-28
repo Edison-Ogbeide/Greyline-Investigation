@@ -1,7 +1,7 @@
 ---
 title: "Attack Surface Validation"
 slug: attack-surface-validation
-description: "Attack Surface Validation — part of Greyline's Cyber & Digital Risk Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "Attack Surface Validation, part of Greyline's Cyber & Digital Risk Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

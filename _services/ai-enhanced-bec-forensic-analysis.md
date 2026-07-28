@@ -1,7 +1,7 @@
 ---
 title: "AI-Enhanced BEC Forensic Analysis"
 slug: ai-enhanced-bec-forensic-analysis
-description: "AI-Enhanced BEC Forensic Analysis — part of Greyline's AI & Synthetic Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "AI-Enhanced BEC Forensic Analysis, part of Greyline's AI & Synthetic Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

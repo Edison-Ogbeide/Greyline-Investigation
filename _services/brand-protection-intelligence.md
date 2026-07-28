@@ -1,7 +1,7 @@
 ---
 title: "Brand Protection Intelligence"
 slug: brand-protection-intelligence
-description: "Brand Protection Intelligence — part of Greyline's Cyber & Digital Risk Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "Brand Protection Intelligence, part of Greyline's Cyber & Digital Risk Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

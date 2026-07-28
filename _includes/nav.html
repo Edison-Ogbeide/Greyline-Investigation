@@ -1,6 +1,7 @@
 <nav id="nav">
 	<a href="{{ '/' | relative_url }}" class="nav-logo">Greyline <span>Investigations</span></a>
 	<ul class="nav-links">
+		<li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a></li>
 		<li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about/' %} class="active"{% endif %}>About</a></li>
 		<li><a href="{{ '/capabilities/' | relative_url }}"{% if page.url contains '/capabilities/' or page.url contains '/services/' %} class="active"{% endif %}>Capabilities</a></li>
 		<li><a href="{{ '/training/' | relative_url }}"{% if page.url contains '/training/' %} class="active"{% endif %}>Training</a></li>

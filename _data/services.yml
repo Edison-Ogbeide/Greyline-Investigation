@@ -1,4 +1,4 @@
-# Full service catalogue — spec section 5.1–5.6.
+# Full service catalogue, spec section 5.1 to 5.6.
 # has_copy: true => real migrated content lives in _services/<slug>.md body.
 # has_copy: false => structural placeholder only (copy pending from the firm).
 # featured_as / featured_points_at: spec section 5.7 homepage labels (not separate URLs).

@@ -1,7 +1,7 @@
 ---
 title: "Executive Exposure Profile"
 slug: executive-exposure-profile
-description: "Executive Exposure Profile — part of Greyline's Cyber & Digital Risk Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "Executive Exposure Profile, part of Greyline's Cyber & Digital Risk Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

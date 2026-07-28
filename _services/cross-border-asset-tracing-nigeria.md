@@ -1,7 +1,7 @@
 ---
 title: "Cross-Border Asset Tracing (Nigeria / West Africa)"
 slug: cross-border-asset-tracing-nigeria
-description: "Cross-Border Asset Tracing (Nigeria / West Africa) — part of Greyline's Fraud & Asset Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "Cross-Border Asset Tracing (Nigeria / West Africa), part of Greyline's Fraud & Asset Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

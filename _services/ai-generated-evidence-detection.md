@@ -1,7 +1,7 @@
 ---
 title: "AI-Generated Evidence Detection & Rebuttal"
 slug: ai-generated-evidence-detection
-description: "AI-Generated Evidence Detection & Rebuttal — part of Greyline's AI & Synthetic Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "AI-Generated Evidence Detection & Rebuttal, part of Greyline's AI & Synthetic Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

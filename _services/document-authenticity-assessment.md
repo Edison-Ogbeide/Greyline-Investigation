@@ -1,7 +1,7 @@
 ---
 title: "Document Authenticity Assessment"
 slug: document-authenticity-assessment
-description: "Document Authenticity Assessment — part of Greyline's AI & Synthetic Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "Document Authenticity Assessment, part of Greyline's AI & Synthetic Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

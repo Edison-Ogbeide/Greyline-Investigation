@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Greyline Investigations — Private Intelligence & Cybersecurity"
+title: "Greyline Investigations | Private Intelligence & Cybersecurity"
 description: "UK-registered private intelligence and cybersecurity firm. Discreet, evidence-led investigations for individuals, businesses, and legal teams. Confidential intake."
 no_brand_suffix: true
 ---
@@ -8,7 +8,7 @@ no_brand_suffix: true
 	<div class="hero-inner">
 		<div class="hero-eyebrow">Private Intelligence &middot; Cybersecurity &middot; Investigations</div>
 		<h1>Evidence that holds. <em>Intelligence that acts.</em></h1>
-		<p class="hero-sub">Greyline is a UK-registered private intelligence firm. We investigate quietly, document properly, and deliver findings that clients, courts, and counter-parties can rely on.</p>
+		<p class="hero-sub">Greyline is a UK registered private intelligence firm. We investigate quietly, document properly, and deliver findings that clients, courts, and counterparties can rely on.</p>
 		<div class="hero-actions">
 			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
 			<a href="{{ '/capabilities/' | relative_url }}" class="btn-outline-w">View Capabilities</a>
@@ -16,36 +16,19 @@ no_brand_suffix: true
 	</div>
 </section>
 
-<section class="svc-overview" style="padding-top:3rem;padding-bottom:3rem;">
-	<div class="container-narrow" style="text-align:center;">
-		<div class="section-eyebrow" style="justify-content:center;display:inline-flex;">Our Method</div>
-		<h2 style="margin:0.75rem 0;">Every finding held to <em>the Greyline Verification Standard</em>.</h2>
-		<p style="max-width:60ch;margin:0 auto 1.25rem;">Direction, collection, verification, corroboration, analysis, assessment, analyst sign-off, monitoring. Published, not assumed.</p>
-		<a href="{{ '/method/' | relative_url }}" class="text-link">See how the standard works &rarr;</a>
-	</div>
-</section>
-
-<div class="cap-stack">
-	<div class="cap-stack-label">Full Capability Stack</div>
-	<div class="cap-stack-list">
-		{% assign caps = site.data.capabilities | sort: "order" %}
-		{% for cap in caps %}<span>{{ cap.short_name }}</span>{% unless forloop.last %}<span>&middot;</span>{% endunless %}{% endfor %}
-	</div>
-</div>
-
 <section class="svc-overview">
 	<div class="container">
 		<div class="section-head">
-			<div class="section-eyebrow">Capability Lines</div>
+			<div class="section-eyebrow">Capabilities</div>
 			<h2>Six disciplines, <em>one chain of accountability</em>.</h2>
 			<hr class="gold-rule">
-			<p>Every Greyline engagement is led by an analyst, scoped against your specific facts, and reported to evidential standard.</p>
+			<p>Every engagement is led by an analyst, scoped against your facts, and reported to evidential standard.</p>
 		</div>
 
 		<div class="svc-grid">
+			{% assign caps = site.data.capabilities | sort: "order" %}
 			{% for cap in caps %}
 			<a href="{{ '/capabilities/' | append: cap.slug | append: '/' | relative_url }}" class="svc-card">
-				<div class="svc-num">{{ forloop.index | prepend: '00' | slice: -2, 2 }}</div>
 				<h3>{{ cap.name }}</h3>
 				<p>{{ cap.overview }}</p>
 				<span class="svc-link">Explore &rarr;</span>
@@ -55,111 +38,14 @@ no_brand_suffix: true
 	</div>
 </section>
 
-<section class="engagement">
-	<div class="container">
-		<div class="engagement-head">
-			<div class="section-eyebrow">Featured Services</div>
-			<h2>Six services, <em>defined scope and turnaround</em>.</h2>
-			<hr class="gold-rule">
-			<p>Every enquiry — featured or not — is scoped on a confidential call and confirmed with a fixed fee in writing before any work begins.</p>
-		</div>
-		<div class="svc-grid">
-			{% assign featured = site.data.services | where_exp: "s", "s.featured_as" %}
-			{% for svc in featured %}
-			<a href="{{ '/services/' | append: svc.slug | append: '/' | relative_url }}" class="svc-card">
-				<h3>{{ svc.featured_as }}</h3>
-				<span class="svc-link">Learn more &rarr;</span>
-			</a>
-			{% endfor %}
-		</div>
-	</div>
-</section>
-
-<section class="engagement">
-	<div class="container">
-		<div class="engagement-head">
-			<div class="section-eyebrow">How Engagement Works</div>
-			<h2>A clear path <em>to begin</em>.</h2>
-			<hr class="gold-rule">
-			<p>Every engagement begins with a confidential inquiry, submitted through our encrypted form, and proceeds to a written scope before any work is committed.</p>
-		</div>
-
-		<div class="engagement-grid">
-			<div class="engagement-card">
-				<span class="step-no">Step 01</span>
-				<h3>Confidential <em>inquiry</em></h3>
-				<p>Use the encrypted intake form. Provide a high-level summary — no sensitive evidence required at this stage. An analyst, not a salesperson, reviews every submission.</p>
-			</div>
-			<div class="engagement-card">
-				<span class="step-no">Step 02</span>
-				<h3>Confidential <em>scoping call</em></h3>
-				<p>Within two business days, we arrange a call to understand the matter, identify what is and isn't in scope, and explain our approach.</p>
-			</div>
-			<div class="engagement-card">
-				<span class="step-no">Step 03</span>
-				<h3>Written <em>scope &amp; fixed fee</em></h3>
-				<p>You receive a written engagement letter setting out the work, the deliverable, the timeline, and the fee. Nothing is committed until you sign.</p>
-			</div>
-			<div class="engagement-card">
-				<span class="step-no">Step 04</span>
-				<h3>Engagement <em>begins</em></h3>
-				<p>Once the engagement letter is signed, work begins.</p>
-			</div>
-		</div>
-		<div style="text-align:center;margin-top:2rem;">
-			<a href="{{ '/engagement/' | relative_url }}" class="text-link">Read the full engagement process &rarr;</a>
-		</div>
-	</div>
-</section>
-
-<section class="svc-overview" style="padding-top:3rem;padding-bottom:3rem;">
-	<div class="container-narrow" style="text-align:center;">
-		<div class="section-eyebrow" style="justify-content:center;display:inline-flex;">Training</div>
-		<h2 style="margin:0.75rem 0;">Intelligence-led training, <em>not compliance theatre</em>.</h2>
-		<p style="max-width:60ch;margin:0 auto 1.25rem;">Programmes and briefings delivered by a named analyst, scoped to your organisation.</p>
-		<a href="{{ '/training/' | relative_url }}" class="text-link">Explore training programmes &rarr;</a>
-	</div>
-</section>
-
-<section class="svc-overview">
-	<div class="container-narrow" style="text-align:center;">
-		<div class="section-eyebrow" style="justify-content:center;display:inline-flex;">Trust &amp; Standards</div>
-		<p style="max-width:70ch;margin:0.75rem auto 0;font-size:0.9rem;color:var(--text-2);">
-			{{ site.company.legal_name }} &middot; Company No. {{ site.company.company_number }} &middot; Registered with the ICO &middot; Held to UK GDPR and the Data Protection Act 2018 &middot; Digital forensic work conducted to ACPO Principles for Digital Evidence &middot; Every report signed by a named, accountable analyst — see <a href="{{ '/about/' | relative_url }}">/about</a>.
-		</p>
-	</div>
-</section>
-
-{% assign latest_research = site.research | sort: "date" | reverse | slice: 0, 2 %}
-{% if latest_research.size > 0 %}
-<section class="svc-overview">
-	<div class="container">
-		<div class="section-head">
-			<div class="section-eyebrow">Latest Research</div>
-			<h2>Recent <em>published analysis</em>.</h2>
-			<hr class="gold-rule">
-		</div>
-		<div class="svc-grid">
-			{% for article in latest_research %}
-			<a href="{{ article.url | relative_url }}" class="svc-card">
-				<h3>{{ article.title }}</h3>
-				<p>{{ article.abstract }}</p>
-				<span class="svc-link">Read &rarr;</span>
-			</a>
-			{% endfor %}
-		</div>
-	</div>
-</section>
-{% endif %}
-
 <section class="cta-panel">
 	<div class="container-narrow">
 		<div class="hero-eyebrow">Ready to begin</div>
 		<h2>Submit a <em>confidential inquiry</em>.</h2>
-		<p>All inquiries are handled under strict confidentiality protocols. Submit a high-level summary — no sensitive material at this stage. A confidentiality agreement is provided before any detailed disclosure.</p>
+		<p>Every enquiry is reviewed by an analyst and scoped on a confidential call before any work begins. No sensitive material is required at this stage.</p>
 		<div class="cta-panel-actions">
 			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
-			<a href="{{ '/capabilities/' | relative_url }}" class="btn-outline-w">Browse Capabilities</a>
+			<a href="{{ '/engagement/' | relative_url }}" class="btn-outline-w">How Engagement Works</a>
 		</div>
 	</div>
 </section>

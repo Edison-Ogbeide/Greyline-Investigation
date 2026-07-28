@@ -1,4 +1,4 @@
-# Training programmes — spec section 9. published: false holds schools page
+# Training programmes, spec section 9. published: false holds schools page
 # back per spec section 9 hold-back requirement (DBS/safeguarding docs pending).
 
 - slug: employee-cyber-awareness
@@ -11,7 +11,7 @@
 - slug: executive-board-briefing
   name: "Executive & Board Briefing"
   audience: "C-suite, trustees, partners"
-  format: "60–90 minutes"
+  format: "60 to 90 minutes"
   capability: null
   published: true
 
@@ -25,7 +25,7 @@
 - slug: phishing-social-engineering-simulation
   name: "Phishing & Social Engineering Simulation"
   audience: "Whole organisation"
-  format: "Programme over 4–12 weeks"
+  format: "Programme over 4 to 12 weeks"
   capability: cyber-intelligence
   published: true
 
@@ -39,7 +39,7 @@
 - slug: legal-sector-cpd
   name: "Legal Sector CPD"
   audience: "Solicitors, paralegals, clerks"
-  format: "60–90 minutes, accredited"
+  format: "60 to 90 minutes, accredited"
   capability: litigation-intelligence
   published: true
 

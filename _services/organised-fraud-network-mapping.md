@@ -1,7 +1,7 @@
 ---
 title: "Organised Fraud Network Mapping"
 slug: organised-fraud-network-mapping
-description: "Organised Fraud Network Mapping — part of Greyline's Fraud & Asset Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "Organised Fraud Network Mapping, part of Greyline's Fraud & Asset Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

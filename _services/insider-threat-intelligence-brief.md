@@ -1,7 +1,7 @@
 ---
 title: "Insider Threat Intelligence Brief"
 slug: insider-threat-intelligence-brief
-description: "Insider Threat Intelligence Brief — part of Greyline's Corporate Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "Insider Threat Intelligence Brief, part of Greyline's Corporate Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

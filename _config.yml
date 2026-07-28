@@ -16,10 +16,12 @@ company:
 
 permalink: /:path/
 
-# Jekyll excludes dotfiles by default — .well-known/security.txt needs an
-# explicit include or it silently never reaches _site.
+# Jekyll excludes dotfiles and underscore-prefixed files by default.
+# .well-known/security.txt and _redirects need an explicit include or
+# they never reach _site.
 include:
   - .well-known
+  - _redirects
 
 collections:
   capabilities:
@@ -78,7 +80,6 @@ defaults:
       layout: default
 
 plugins:
-  - jekyll-redirect-from
   - jekyll-sitemap
 
 sass:
@@ -92,11 +93,11 @@ exclude:
   - node_modules
   - vendor
   # Leftover HTML5-UP "Helios" template assets (jQuery, Font Awesome, demo
-  # images) — verified unreferenced by any page (see repo history). Kept in
+  # images), verified unreferenced by any page (see repo history). Kept in
   # the working tree but excluded from the build rather than deleted.
   - assets
   - images
-  # Orphaned stylesheets from an earlier iteration — verified unreferenced
+  # Orphaned stylesheets from an earlier iteration, verified unreferenced
   # by any current page. styles.css (the site's actual stylesheet) now
   # includes everything the new templates need.
   - styles-services.css

@@ -1,7 +1,7 @@
 ---
 title: "Vendor Intelligence Report"
 slug: vendor-intelligence-report
-description: "Vendor Intelligence Report — part of Greyline's Corporate Intelligence capability. Scope, methodology and turnaround confirmed on a confidential scoping call."
+description: "Vendor Intelligence Report, part of Greyline's Corporate Intelligence capability. Scope, methodology and turnaround are confirmed on a confidential scoping call."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

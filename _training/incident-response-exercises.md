@@ -8,4 +8,4 @@ crumbs:
   - title: "Incident Response Exercises"
     url: /training/incident-response-exercises/
 ---
-An incident response plan that has never been rehearsed is a document, not a capability. This tabletop exercise walks leadership and IT through a realistic incident scenario in real time — who decides what, who is contacted when, what gets said externally and when — surfacing the gaps in your actual plan before a real incident does.
+An incident response plan that has never been rehearsed is a document, not a capability. This tabletop exercise walks leadership and IT through a realistic incident scenario in real time, who decides what, who is contacted when, what gets said externally and when, surfacing the gaps in your actual plan before a real incident does.
