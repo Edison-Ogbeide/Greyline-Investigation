@@ -1,0 +1,56 @@
+# Training programmes — spec section 9. published: false holds schools page
+# back per spec section 9 hold-back requirement (DBS/safeguarding docs pending).
+
+- slug: employee-cyber-awareness
+  name: "Employee Cyber Awareness"
+  audience: "All staff, SME to mid-market"
+  format: "Half day onsite or remote, or short modules"
+  capability: null
+  published: true
+
+- slug: executive-board-briefing
+  name: "Executive & Board Briefing"
+  audience: "C-suite, trustees, partners"
+  format: "60–90 minutes"
+  capability: null
+  published: true
+
+- slug: ai-threat-awareness
+  name: "AI Threat Awareness"
+  audience: "Finance, HR, executive assistants"
+  format: "Half day"
+  capability: ai-synthetic-intelligence
+  published: true
+
+- slug: phishing-social-engineering-simulation
+  name: "Phishing & Social Engineering Simulation"
+  audience: "Whole organisation"
+  format: "Programme over 4–12 weeks"
+  capability: cyber-intelligence
+  published: true
+
+- slug: incident-response-exercises
+  name: "Incident Response Exercises"
+  audience: "Leadership and IT"
+  format: "Half-day tabletop"
+  capability: null
+  published: true
+
+- slug: legal-sector-cpd
+  name: "Legal Sector CPD"
+  audience: "Solicitors, paralegals, clerks"
+  format: "60–90 minutes, accredited"
+  capability: litigation-intelligence
+  published: true
+
+- slug: schools-young-people
+  name: "Schools & Young People"
+  audience: "Students, staff, parents"
+  format: "Assembly or workshop"
+  capability: null
+  published: false
+  hold_back_reason: >-
+    Requires enhanced DBS for anyone delivering, a written safeguarding
+    policy, KCSIE awareness and a stated position on disclosures made during
+    a session. Held unpublished until those documents exist and can be
+    linked from it.

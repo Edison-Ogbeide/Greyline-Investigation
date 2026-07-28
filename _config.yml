@@ -1,0 +1,105 @@
+title: Greyline Investigations
+tagline: "Evidence that holds. Intelligence that acts."
+description: >-
+  UK-registered private intelligence and cybersecurity firm. Discreet,
+  evidence-led investigations for individuals, businesses, and legal teams.
+url: "https://greylineinvestigations.co.uk"
+baseurl: ""
+
+company:
+  legal_name: "Greyline Investigations Limited"
+  company_number: "17121990"
+  registered_office: "Swan Building, 20 Swan Street, Manchester"
+  email: "cases@greylineinvestigations.co.uk"
+  phone: "+44 7427 134 282"
+  ga_id: "G-DJ4GE5YL09"
+
+permalink: /:path/
+
+# Jekyll excludes dotfiles by default — .well-known/security.txt needs an
+# explicit include or it silently never reaches _site.
+include:
+  - .well-known
+
+collections:
+  capabilities:
+    output: true
+    permalink: /capabilities/:path/
+  services:
+    output: true
+    permalink: /services/:path/
+  training:
+    output: true
+    permalink: /training/:path/
+  method:
+    output: true
+    permalink: /method/:path/
+  research:
+    output: true
+    permalink: /research/:path/
+  case_studies:
+    output: true
+    permalink: /case-studies/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: capabilities
+    values:
+      layout: capability
+  - scope:
+      path: ""
+      type: services
+    values:
+      layout: service
+  - scope:
+      path: ""
+      type: training
+    values:
+      layout: training-programme
+  - scope:
+      path: ""
+      type: method
+    values:
+      layout: method-subpage
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: research-article
+  - scope:
+      path: ""
+      type: case_studies
+    values:
+      layout: case-study
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.txt
+  - LICENSE.txt
+  - node_modules
+  - vendor
+  # Leftover HTML5-UP "Helios" template assets (jQuery, Font Awesome, demo
+  # images) — verified unreferenced by any page (see repo history). Kept in
+  # the working tree but excluded from the build rather than deleted.
+  - assets
+  - images
+  # Orphaned stylesheets from an earlier iteration — verified unreferenced
+  # by any current page. styles.css (the site's actual stylesheet) now
+  # includes everything the new templates need.
+  - styles-services.css
+  - styles-products.css
+  - styles-specialist.css
+

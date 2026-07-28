@@ -1,0 +1,65 @@
+---
+layout: default
+title: "Sitemap"
+description: "A full, human-readable map of every page on the Greyline Investigations website."
+crumbs:
+  - title: "Sitemap"
+    url: /sitemap/
+---
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">Sitemap</div>
+		<h1>Every page, <em>in one place</em>.</h1>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+<section class="service-intro">
+	<div class="container-narrow">
+		<h2>Company</h2>
+		<ul>
+			<li><a href="{{ '/' | relative_url }}">Home</a></li>
+			<li><a href="{{ '/about/' | relative_url }}">About</a></li>
+			<li><a href="{{ '/method/' | relative_url }}">Method</a></li>
+			<li><a href="{{ '/engagement/' | relative_url }}">How Engagement Works</a></li>
+			<li><a href="{{ '/case-studies/' | relative_url }}">Case Studies</a></li>
+			<li><a href="{{ '/research/' | relative_url }}">Research</a></li>
+			<li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+			<li><a href="{{ '/submit-inquiry/' | relative_url }}">Submit Inquiry</a></li>
+		</ul>
+
+		<h2>Method</h2>
+		<ul>
+			{% for m in site.method %}<li><a href="{{ m.url | relative_url }}">{{ m.title }}</a></li>{% endfor %}
+		</ul>
+
+		<h2>Capabilities</h2>
+		{% assign caps = site.data.capabilities | sort: "order" %}
+		{% for cap in caps %}
+		<h3>{{ cap.name }}</h3>
+		<ul>
+			<li><a href="{{ '/capabilities/' | append: cap.slug | append: '/' | relative_url }}">{{ cap.name }} (capability overview)</a></li>
+			{% assign cap_services = site.data.services | where: "capability", cap.slug %}
+			{% for svc in cap_services %}
+			<li><a href="{{ '/services/' | append: svc.slug | append: '/' | relative_url }}">{{ svc.name }}{% if svc.name_suffix %} {{ svc.name_suffix }}{% endif %}</a></li>
+			{% endfor %}
+		</ul>
+		{% endfor %}
+
+		<h2>Training</h2>
+		<ul>
+			<li><a href="{{ '/training/' | relative_url }}">Training (hub)</a></li>
+			{% assign programmes = site.training | where: "published", true %}
+			{% for prog in programmes %}<li><a href="{{ prog.url | relative_url }}">{{ prog.title }}</a></li>{% endfor %}
+		</ul>
+
+		<h2>Legal</h2>
+		<ul>
+			<li><a href="{{ '/disclaimer/' | relative_url }}">Website Disclaimer</a></li>
+			<li><a href="{{ '/terms-of-use/' | relative_url }}">Terms of Use</a></li>
+			<li><a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a></li>
+			<li><a href="{{ '/cookie-policy/' | relative_url }}">Cookie Policy</a></li>
+		</ul>
+	</div>
+</section>

@@ -1,0 +1,39 @@
+<!-- Called as: include breadcrumb.html, passing crumbs=page.crumbs.
+     page.crumbs: array of {title, url}. Last entry renders as the current, unlinked page. -->
+{% if include.crumbs %}
+<div class="breadcrumb">
+	<div class="container">
+		<a href="{{ '/' | relative_url }}">Home</a><span class="sep">&rsaquo;</span>
+		{% for crumb in include.crumbs %}
+			{% unless forloop.last %}
+			<a href="{{ crumb.url | relative_url }}">{{ crumb.title }}</a><span class="sep">&rsaquo;</span>
+			{% else %}
+			<span class="current">{{ crumb.title }}</span>
+			{% endunless %}
+		{% endfor %}
+	</div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}{{ '/' | relative_url }}"
+    }
+    {% for crumb in include.crumbs %}
+    ,{
+      "@type": "ListItem",
+      "position": {{ forloop.index | plus: 1 }},
+      "name": {{ crumb.title | jsonify }},
+      "item": "{{ site.url }}{{ crumb.url | relative_url }}"
+    }
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

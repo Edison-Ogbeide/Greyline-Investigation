@@ -1,0 +1,14 @@
+Contact: mailto:cases@greylineinvestigations.co.uk
+Expires: 2027-07-28T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://greylineinvestigations.co.uk/.well-known/security.txt
+Policy: https://greylineinvestigations.co.uk/disclaimer/
+
+# Greyline Investigations Limited — vulnerability disclosure
+# If you believe you have found a security vulnerability on this site,
+# please report it to the contact address above. Provide enough detail to
+# reproduce the issue. We will acknowledge reports and aim to respond
+# within two business days. Please act in good faith: do not access,
+# modify, or exfiltrate data beyond what is necessary to demonstrate the
+# issue, and do not disclose publicly until we have had a reasonable
+# opportunity to address it.

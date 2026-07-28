@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "{{ site.company.legal_name }}",
+  "url": "{{ site.url }}{{ page.url | relative_url }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.company.registered_office }}",
+    "addressCountry": "GB"
+  },
+  "email": "{{ site.company.email }}",
+  "telephone": "{{ site.company.phone }}",
+  "areaServed": "GB"
+}
+</script>

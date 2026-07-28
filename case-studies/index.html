@@ -1,0 +1,49 @@
+---
+layout: default
+title: "Case Studies"
+description: "Composite engagement studies drawn from representative Greyline casework — names, locations and identifying details altered or merged to protect confidentiality."
+crumbs:
+  - title: "Case Studies"
+    url: /case-studies/
+redirect_from:
+  - /case-studies.html
+---
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">Selected Engagements</div>
+		<h1>The work, <em>without the names</em>.</h1>
+		<p>Discretion is the foundation of everything we do. The case studies below illustrate how Greyline approaches representative engagement types — drawn from real patterns of work, presented in a form that protects every client and subject involved.</p>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+<div class="cs-disclaimer-bar">
+	<div class="cs-disclaimer-inner">
+		<strong>Composite case studies based on representative engagements.</strong>
+		Names, locations, sectors, monetary figures and identifying details have been altered or merged across multiple instructions to protect client confidentiality. The investigative methodology, scorecard outputs and outcomes reflect the standard of work Greyline delivers.
+	</div>
+</div>
+
+<section class="svc-overview">
+	<div class="container">
+		<div class="svc-grid">
+			{% for cs in site.case_studies %}
+			<a href="{{ cs.url | relative_url }}" class="svc-card">
+				<div class="svc-num">{{ cs.service_line }}</div>
+				<h3>{{ cs.title }}</h3>
+				<span class="svc-link">Read &rarr;</span>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section style="padding-bottom:6rem;">
+	<div style="max-width:900px;margin:0 auto;padding:0 2rem;text-align:center;">
+		<div class="section-eyebrow" style="justify-content:center;display:inline-flex;">Begin Your Engagement</div>
+		<h2 style="margin-top:1rem;">Your matter will not appear here. That is the point.</h2>
+		<div class="gold-rule" style="margin:1.5rem auto;"></div>
+		<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Begin Confidential Inquiry &rarr;</a>
+	</div>
+</section>

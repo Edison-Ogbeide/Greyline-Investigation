@@ -1,0 +1,96 @@
+---
+layout: default
+---
+{% assign cap = site.data.capabilities | where: "slug", page.slug | first %}
+{% assign cap_services = site.data.services | where: "capability", page.slug %}
+
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">Capability · {{ cap.short_name }}</div>
+		<h1>{{ page.title }}</h1>
+		<p>{{ cap.overview }}</p>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">{{ cap.name }}</div>
+		<h2>{{ page.subhead | default: "Overview" }}</h2>
+		<hr class="gold-rule">
+		{{ content }}
+		{% if cap.copy_constraint %}
+		<p class="copy-constraint-note"><strong>A note on findings:</strong> {{ cap.copy_constraint }}</p>
+		{% endif %}
+	</div>
+</section>
+
+<section class="svc-overview">
+	<div class="container">
+		<div class="section-head">
+			<div class="section-eyebrow">Services</div>
+			<h2>{{ cap_services.size }} service{% if cap_services.size != 1 %}s{% endif %} under {{ cap.short_name }}</h2>
+			<hr class="gold-rule">
+		</div>
+		<div class="svc-grid">
+			{% for svc in cap_services %}
+			<a href="{{ '/services/' | append: svc.slug | append: '/' | relative_url }}" class="svc-card">
+				<div class="svc-num">{{ forloop.index | prepend: '00' | slice: -2, 2 }}</div>
+				<h3>{{ svc.name }}{% if svc.name_suffix %} <span class="svc-suffix">{{ svc.name_suffix }}</span>{% endif %}</h3>
+				<span class="svc-link">Explore &rarr;</span>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section class="engagement">
+	<div class="container">
+		<div class="engagement-head">
+			<div class="section-eyebrow">Who Instructs Us</div>
+			<h2>Typical <em>instructing parties</em></h2>
+			<hr class="gold-rule">
+			<p>{{ cap.buyers }}</p>
+		</div>
+	</div>
+</section>
+
+<section class="svc-overview">
+	<div class="container-narrow">
+		<div class="section-head">
+			<div class="section-eyebrow">How This Work Is Produced</div>
+			<h2>Held to <em>the Greyline Verification Standard</em></h2>
+			<hr class="gold-rule">
+			<p>Every engagement in this capability follows the same evidential discipline described in full at <a href="{{ cap.method_link | relative_url }}">our method</a>{% if cap.method_link != '/method/' %} — in particular {{ cap.method_link }}{% endif %}.</p>
+		</div>
+	</div>
+</section>
+
+{% if cap.training_slug %}
+{% assign related_training = site.data.training | where: "slug", cap.training_slug | first %}
+<section class="engagement">
+	<div class="container">
+		<div class="engagement-head">
+			<div class="section-eyebrow">Related Training</div>
+			<h2>{{ related_training.name }}</h2>
+			<hr class="gold-rule">
+			<p>Related organisational training programme for {{ cap.short_name | downcase }} risk: <a href="{{ '/training/' | append: related_training.slug | append: '/' | relative_url }}">{{ related_training.name }} &rarr;</a></p>
+		</div>
+	</div>
+</section>
+{% endif %}
+
+<section class="cta-panel">
+	<div class="container-narrow">
+		<div class="hero-eyebrow">Begin an Engagement</div>
+		<h2>Discuss a <em>{{ cap.short_name | downcase }} matter</em>.</h2>
+		<p>Every engagement begins with a confidential inquiry and proceeds to a written scope before any work is committed.</p>
+		<div class="cta-panel-actions">
+			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
+			<a href="{{ '/engagement/' | relative_url }}" class="btn-outline-w">How Engagement Works</a>
+		</div>
+	</div>
+</section>
+
+{% include schema-professional-service.html %}

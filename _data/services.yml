@@ -1,0 +1,288 @@
+# Full service catalogue — spec section 5.1–5.6.
+# has_copy: true => real migrated content lives in _services/<slug>.md body.
+# has_copy: false => structural placeholder only (copy pending from the firm).
+# featured_as / featured_points_at: spec section 5.7 homepage labels (not separate URLs).
+
+- slug: counterparty-intelligence-report
+  name: "Counterparty Intelligence Report"
+  capability: corporate-intelligence
+  has_copy: false
+
+- slug: vendor-intelligence-report
+  name: "Vendor Intelligence Report"
+  capability: corporate-intelligence
+  has_copy: false
+
+- slug: candidate-risk-intelligence
+  name: "Candidate Risk Intelligence"
+  capability: corporate-intelligence
+  has_copy: true
+  featured_as: "Pre-Hire Intelligence"
+
+- slug: insider-threat-intelligence-brief
+  name: "Insider Threat Intelligence Brief"
+  capability: corporate-intelligence
+  has_copy: false
+
+- slug: ma-integrity-intelligence
+  name: "M&A Integrity Intelligence"
+  capability: corporate-intelligence
+  has_copy: false
+
+- slug: executive-intelligence-brief
+  name: "Executive Intelligence Brief"
+  capability: corporate-intelligence
+  has_copy: false
+
+- slug: tprm-as-a-service
+  name: "Third-Party Risk Management as a Service"
+  capability: corporate-intelligence
+  has_copy: false
+
+- slug: workplace-investigation
+  name: "Workplace Investigation"
+  capability: corporate-intelligence
+  has_copy: false
+
+- slug: pre-litigation-viability-assessment
+  name: "Pre-Litigation Viability Assessment"
+  capability: corporate-intelligence
+  has_copy: false
+
+- slug: asset-visibility-report
+  name: "Asset Visibility Report"
+  name_suffix: "(pre-litigation)"
+  capability: fraud-intelligence
+  has_copy: false
+
+- slug: asset-recovery-intelligence
+  name: "Asset Recovery Intelligence"
+  name_suffix: "(post-judgment)"
+  capability: fraud-intelligence
+  has_copy: false
+
+- slug: source-of-wealth-report
+  name: "Source of Wealth Report"
+  capability: fraud-intelligence
+  has_copy: false
+
+- slug: investment-fraud-intelligence-brief
+  name: "Investment Fraud Intelligence Brief"
+  capability: fraud-intelligence
+  has_copy: false
+
+- slug: cryptocurrency-tracing-recovery
+  name: "Cryptocurrency Tracing & Recovery Intelligence"
+  capability: fraud-intelligence
+  has_copy: false
+
+- slug: subrogation-investigation
+  name: "Subrogation Investigation"
+  capability: fraud-intelligence
+  has_copy: false
+
+- slug: lifestyle-evidence-report
+  name: "Lifestyle Evidence Report"
+  capability: fraud-intelligence
+  has_copy: false
+
+- slug: cross-border-asset-tracing-nigeria
+  name: "Cross-Border Asset Tracing"
+  name_suffix: "(Nigeria / West Africa)"
+  capability: fraud-intelligence
+  has_copy: false
+
+- slug: organised-fraud-network-mapping
+  name: "Organised Fraud Network Mapping"
+  capability: fraud-intelligence
+  has_copy: false
+
+- slug: digital-exposure-intelligence
+  name: "Digital Exposure Intelligence"
+  capability: cyber-intelligence
+  has_copy: true
+  featured_as: "Digital Footprint Analysis"
+
+- slug: attack-surface-validation
+  name: "Attack Surface Validation"
+  capability: cyber-intelligence
+  has_copy: false
+
+- slug: dark-web-exposure-report
+  name: "Dark Web Exposure Report"
+  capability: cyber-intelligence
+  has_copy: true
+  featured_as: "Dark Web Sweep"
+
+- slug: continuous-intelligence-subscription
+  name: "Continuous Intelligence Subscription"
+  capability: cyber-intelligence
+  has_copy: false
+
+- slug: executive-exposure-profile
+  name: "Executive Exposure Profile"
+  capability: cyber-intelligence
+  has_copy: false
+
+- slug: social-engineering-simulation
+  name: "Social Engineering Simulation"
+  capability: cyber-intelligence
+  has_copy: false
+
+- slug: brand-protection-intelligence
+  name: "Brand Protection Intelligence"
+  capability: cyber-intelligence
+  has_copy: false
+
+- slug: supply-chain-cyber-intelligence
+  name: "Supply Chain Cyber Intelligence"
+  capability: cyber-intelligence
+  has_copy: false
+
+- slug: incident-response-intelligence
+  name: "Incident Response Intelligence"
+  capability: cyber-intelligence
+  has_copy: false
+
+- slug: synthetic-media-authenticity-report
+  name: "Synthetic Media Authenticity Report"
+  capability: ai-synthetic-intelligence
+  has_copy: false
+
+- slug: ai-enhanced-bec-forensic-analysis
+  name: "AI-Enhanced BEC Forensic Analysis"
+  capability: ai-synthetic-intelligence
+  has_copy: false
+
+- slug: document-authenticity-assessment
+  name: "Document Authenticity Assessment"
+  capability: ai-synthetic-intelligence
+  has_copy: false
+
+- slug: ai-romance-fraud-verification
+  name: "AI Romance Fraud Verification"
+  capability: ai-synthetic-intelligence
+  has_copy: true
+  featured_as: "Romance Fraud Investigation"
+
+- slug: ai-generated-evidence-detection
+  name: "AI-Generated Evidence Detection & Rebuttal"
+  capability: ai-synthetic-intelligence
+  has_copy: false
+
+- slug: synthetic-narrative-intelligence
+  name: "Synthetic Narrative Intelligence"
+  capability: ai-synthetic-intelligence
+  has_copy: false
+
+- slug: voice-authentication-vishing-detection
+  name: "Voice Authentication & Vishing Detection"
+  capability: ai-synthetic-intelligence
+  has_copy: false
+
+- slug: non-human-identity-ai-agent-risk
+  name: "Non-Human Identity & AI Agent Risk Assessment"
+  capability: ai-synthetic-intelligence
+  has_copy: false
+
+- slug: cpr-part-35-expert-report
+  name: "CPR Part 35 Expert Report"
+  capability: litigation-intelligence
+  has_copy: false
+
+- slug: digital-evidence-preservation
+  name: "Digital Evidence Preservation"
+  capability: litigation-intelligence
+  has_copy: false
+
+- slug: witness-location-credibility-verification
+  name: "Witness Location & Credibility Verification"
+  capability: litigation-intelligence
+  has_copy: false
+
+- slug: defamation-pre-action-evidence-pack
+  name: "Defamation Pre-Action Evidence Pack"
+  capability: litigation-intelligence
+  has_copy: false
+
+- slug: family-financial-disclosure-verification
+  name: "Family Financial Disclosure Verification"
+  capability: litigation-intelligence
+  has_copy: false
+
+- slug: pre-litigation-investigation-pack
+  name: "Pre-Litigation Investigation Pack"
+  capability: litigation-intelligence
+  has_copy: false
+
+- slug: expert-witness-rebuttal
+  name: "Expert Witness Rebuttal"
+  capability: litigation-intelligence
+  has_copy: false
+
+- slug: process-serving
+  name: "Process Serving"
+  name_suffix: "(Merseyside, Lancashire, Greater Manchester)"
+  capability: litigation-intelligence
+  has_copy: false
+
+- slug: international-service-of-process
+  name: "International Service of Process"
+  name_suffix: "(Nigeria / West Africa)"
+  capability: litigation-intelligence
+  has_copy: false
+
+- slug: settlement-intelligence
+  name: "Settlement Intelligence"
+  capability: litigation-intelligence
+  has_copy: false
+
+- slug: relationship-authenticity-verification
+  name: "Relationship Authenticity Verification"
+  capability: personal-intelligence
+  has_copy: false
+
+- slug: identity-consistency-verification
+  name: "Identity Consistency Verification"
+  capability: personal-intelligence
+  has_copy: false
+
+- slug: pre-commitment-intelligence-assessment
+  name: "Pre-Commitment Intelligence Assessment"
+  capability: personal-intelligence
+  has_copy: true
+  featured_as: "Pre-Commitment Vetting"
+
+- slug: continuous-subject-monitoring
+  name: "Continuous Subject Monitoring"
+  capability: personal-intelligence
+  has_copy: true
+  featured_as: "Continuous Intelligence"
+
+- slug: digital-exposure-profile-personal
+  name: "Digital Exposure Profile"
+  name_suffix: "(personal)"
+  capability: personal-intelligence
+  has_copy: false
+
+- slug: personal-threat-intelligence
+  name: "Personal Threat Intelligence"
+  capability: personal-intelligence
+  has_copy: false
+
+- slug: executive-exposure-intelligence
+  name: "Executive Exposure Intelligence"
+  capability: personal-intelligence
+  has_copy: false
+
+- slug: background-verification-diaspora
+  name: "Background Verification"
+  name_suffix: "(Diaspora)"
+  capability: personal-intelligence
+  has_copy: false
+
+- slug: polygraph-examination-nigeria
+  name: "Polygraph Examination"
+  name_suffix: "(Nigeria-based)"
+  capability: personal-intelligence
+  has_copy: false

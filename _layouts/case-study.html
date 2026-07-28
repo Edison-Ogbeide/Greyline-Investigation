@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">Case Study &middot; {{ page.service_line }}</div>
+		<h1>{{ page.title }}</h1>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+<div class="cs-disclaimer-bar">
+	<div class="cs-disclaimer-inner">
+		<strong>Composite case study based on representative engagements.</strong>
+		Names, locations, sectors, monetary figures and identifying details have been altered or merged across multiple instructions to protect client confidentiality.
+	</div>
+</div>
+
+<section class="cs-cases">
+	<div class="cs-cases-inner">
+		<article class="cs-case">
+			<aside class="cs-case-aside">
+				<span class="cs-case-tag">{{ page.service_line }}</span>
+				<dl class="cs-meta">
+					{% for meta in page.meta %}
+					<dt>{{ meta.label }}</dt>
+					<dd>{{ meta.value }}</dd>
+					{% endfor %}
+				</dl>
+			</aside>
+			<div class="cs-body">
+				{{ content }}
+			</div>
+		</article>
+	</div>
+</section>
+
+<section style="padding-bottom:6rem;">
+	<div style="max-width:900px;margin:0 auto;padding:0 2rem;text-align:center;">
+		<div class="section-eyebrow" style="justify-content:center;display:inline-flex;">Begin Your Engagement</div>
+		<h2 style="margin-top:1rem;">Your matter will not appear here. That is the point.</h2>
+		<div class="gold-rule" style="margin:1.5rem auto;"></div>
+		<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Begin Confidential Inquiry &rarr;</a>
+	</div>
+</section>

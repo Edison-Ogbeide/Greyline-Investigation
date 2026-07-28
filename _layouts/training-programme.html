@@ -1,0 +1,63 @@
+---
+layout: default
+---
+{% assign prog = site.data.training | where: "slug", page.slug | first %}
+{% assign cap = site.data.capabilities | where: "slug", prog.capability | first %}
+
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">Training Programme</div>
+		<h1>{{ prog.name }}</h1>
+		<p>{{ page.description }}</p>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">{{ prog.name }}</div>
+		<h2>{{ page.subhead | default: "Delivered by a named analyst, scoped to the organisation." }}</h2>
+		<hr class="gold-rule">
+		{{ content }}
+	</div>
+</section>
+
+<section class="engagement">
+	<div class="container">
+		<div class="engagement-head">
+			<div class="section-eyebrow">Programme Details</div>
+			<hr class="gold-rule">
+		</div>
+		<div class="engagement-grid">
+			<div class="engagement-card">
+				<span class="step-no">Audience</span>
+				<h3>{{ prog.audience }}</h3>
+			</div>
+			<div class="engagement-card">
+				<span class="step-no">Format</span>
+				<h3>{{ prog.format }}</h3>
+			</div>
+			{% if cap %}
+			<div class="engagement-card">
+				<span class="step-no">Maps To</span>
+				<h3><a href="{{ '/capabilities/' | append: cap.slug | append: '/' | relative_url }}">{{ cap.name }}</a></h3>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+</section>
+
+<section class="cta-panel">
+	<div class="container-narrow">
+		<div class="hero-eyebrow">Bring This to Your Organisation</div>
+		<h2>Enquire and <em>scope this programme</em>.</h2>
+		<p>Every programme is scoped to the organisation — its sector, incident history and regulatory drivers — before delivery. Submit an inquiry and we'll arrange a scoping call.</p>
+		<div class="cta-panel-actions">
+			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
+			<a href="{{ '/training/' | relative_url }}" class="btn-outline-w">All Programmes</a>
+		</div>
+	</div>
+</section>
+
+{% include schema-course.html %}

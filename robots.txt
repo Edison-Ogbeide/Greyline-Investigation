@@ -1,9 +1,9 @@
 # Greyline Investigations — robots.txt
-# Allows all search engines to index the site.
-# Points to the sitemap for efficient crawling.
+# Allows crawling of all published content.
 
 User-agent: *
 Allow: /
+Disallow: /training/schools-young-people/
 
 # Sitemap location
 Sitemap: https://greylineinvestigations.co.uk/sitemap.xml

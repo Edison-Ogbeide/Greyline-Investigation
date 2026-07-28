@@ -1,0 +1,49 @@
+---
+layout: default
+title: "Capabilities"
+description: "Greyline's six capability lines: corporate, fraud & asset, cyber & digital risk, AI & synthetic, litigation, and personal intelligence."
+crumbs:
+  - title: "Capabilities"
+    url: /capabilities/
+redirect_from:
+  - /services.html
+  - /services
+---
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">Capabilities</div>
+		<h1>Six capability lines. <em>One chain of accountability.</em></h1>
+		<p>Greyline's complete capability stack, from personal intelligence to corporate insider-threat investigations and litigation support. Every engagement is led by a named analyst, scoped against your specific facts, and reported to evidential standard.</p>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+<section class="svc-overview">
+	<div class="container">
+		<div class="svc-grid">
+			{% assign caps = site.data.capabilities | sort: "order" %}
+			{% for cap in caps %}
+			{% assign n = site.data.services | where: "capability", cap.slug | size %}
+			<a href="{{ '/capabilities/' | append: cap.slug | append: '/' | relative_url }}" class="svc-card">
+				<div class="svc-num">{{ forloop.index | prepend: '00' | slice: -2, 2 }}</div>
+				<h3>{{ cap.name }}</h3>
+				<p>{{ cap.overview }}</p>
+				<span class="svc-link">{{ n }} services &middot; Explore &rarr;</span>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section class="cta-panel">
+	<div class="container-narrow">
+		<div class="hero-eyebrow">Ready to begin</div>
+		<h2>Submit a <em>confidential inquiry</em>.</h2>
+		<p>All inquiries are reviewed by an analyst, not a salesperson. Submit a high-level summary — no sensitive material at this stage.</p>
+		<div class="cta-panel-actions">
+			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
+			<a href="{{ '/contact/' | relative_url }}" class="btn-outline-w">Contact Us</a>
+		</div>
+	</div>
+</section>

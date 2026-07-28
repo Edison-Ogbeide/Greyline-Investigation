@@ -1,0 +1,130 @@
+---
+layout: default
+---
+{% assign svc = site.data.services | where: "slug", page.slug | first %}
+{% assign cap = site.data.capabilities | where: "slug", svc.capability | first %}
+{% assign siblings = site.data.services | where: "capability", svc.capability | where_exp: "s", "s.slug != page.slug" %}
+{% assign related = siblings | first %}
+
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">{{ cap.name }} &middot; Service</div>
+		<h1>{{ svc.name }}{% if svc.name_suffix %} <em>{{ svc.name_suffix }}</em>{% endif %}</h1>
+		<p>{{ page.description }}</p>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+{% if page.problem_statement %}
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">The Problem</div>
+		<h2>{{ page.problem_headline | default: "Before you commit, be sure." }}</h2>
+		<hr class="gold-rule">
+		<p>{{ page.problem_statement }}</p>
+	</div>
+</section>
+
+<div class="offering-grid two-up">
+	<div class="offering">
+		<h3>What You Receive</h3>
+		<p class="lead">{{ page.deliverable }}</p>
+		{% if page.features %}
+		<ul class="features">
+			{% for f in page.features %}<li>{{ f }}</li>{% endfor %}
+		</ul>
+		{% endif %}
+	</div>
+	<div class="offering">
+		<h3>Methodology</h3>
+		<p class="lead">{{ page.methodology }}</p>
+		<div class="suited"><strong>Typical turnaround:</strong> {{ page.turnaround }}</div>
+	</div>
+</div>
+
+{% if page.sample_output %}
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Sample Output</div>
+		<h2>What a Greyline report <em>looks like</em></h2>
+		<hr class="gold-rule">
+		<p>{{ page.sample_output }}</p>
+		{% if page.sample_report_url %}<a href="{{ page.sample_report_url }}" class="text-link">View anonymised sample report &rarr;</a>{% endif %}
+	</div>
+</section>
+{% endif %}
+
+{% if page.faq %}
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Frequently Asked</div>
+		<h2>Questions we're <em>asked most</em></h2>
+		<hr class="gold-rule">
+		<div class="faq-list">
+			{% for item in page.faq %}
+			<div class="faq-item">
+				<h3>{{ item.q }}</h3>
+				<p>{{ item.a }}</p>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+{% endif %}
+
+{% else %}
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">{{ cap.name }}</div>
+		<h2>Full copy for this page is <em>in progress</em>.</h2>
+		<hr class="gold-rule">
+		<p>{{ page.description }}</p>
+		<p>This service is part of our {{ cap.name }} capability. Detailed scope, methodology and turnaround for this specific deliverable are being finalised — in the meantime, tell us about your matter and an analyst will confirm exactly how this applies to your situation on a confidential scoping call.</p>
+		<p><strong>Typically instructed by:</strong> {{ cap.buyers }}</p>
+	</div>
+</section>
+{% endif %}
+
+<section class="engagement">
+	<div class="container">
+		<div class="engagement-head">
+			<div class="section-eyebrow">Part Of</div>
+			<h2><a href="{{ '/capabilities/' | append: cap.slug | append: '/' | relative_url }}">{{ cap.name }} &rarr;</a></h2>
+			<hr class="gold-rule">
+			{% if related %}
+			<p>Related service: <a href="{{ '/services/' | append: related.slug | append: '/' | relative_url }}">{{ related.name }} &rarr;</a></p>
+			{% endif %}
+		</div>
+	</div>
+</section>
+
+<section class="cta-panel">
+	<div class="container-narrow">
+		<div class="hero-eyebrow">Ready to Begin</div>
+		<h2>Submit a <em>confidential inquiry</em>.</h2>
+		<p>Every enquiry is reviewed by an analyst and routed to a scoping call — a fixed fee is confirmed in writing before any work begins.</p>
+		<div class="cta-panel-actions">
+			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
+			<a href="{{ '/engagement/' | relative_url }}" class="btn-outline-w">How Engagement Works</a>
+		</div>
+	</div>
+</section>
+
+{% if page.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in page.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | jsonify }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | jsonify }} }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

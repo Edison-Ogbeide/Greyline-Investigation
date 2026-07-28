@@ -1,0 +1,21 @@
+# Method sub-pages — spec section 6.2
+
+- slug: evidential
+  name: "Evidential"
+  summary: "Chain of custody, capture tooling, admissibility, how evidence is preserved and handed over."
+
+- slug: analysis
+  name: "Analysis"
+  summary: "Analytical tradecraft, source reliability grading, and an account of AI-assisted collection with mandatory analyst verification."
+
+- slug: reporting
+  name: "Reporting"
+  summary: "Report formats, sample redacted extracts, expert-evidence structure. Hosts the downloadable sample report."
+
+- slug: disciplines
+  name: "Disciplines"
+  summary: "OSINT, SOCMINT, cyber threat intelligence, entity resolution, identity intelligence, behavioural analysis, network and link analysis, digital forensics, dark web intelligence."
+
+- slug: technology
+  name: "Technology"
+  summary: "Named tool stack, and the platform layer: Greyline Sentinel and the Greyline Intelligence Cloud."

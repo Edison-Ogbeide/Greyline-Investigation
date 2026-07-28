@@ -1,0 +1,58 @@
+---
+layout: default
+title: "Research"
+description: "Published analysis on active threat patterns, corridor-specific fraud typologies, and the methodology behind our own tradecraft."
+crumbs:
+  - title: "Research"
+    url: /research/
+redirect_from:
+  - /insights
+  - /insights.html
+  - /insights/
+---
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">Research</div>
+		<h1>Published analysis, <em>under a named author</em>.</h1>
+		<p>A single index with filters, not a directory tree — one piece can carry two topics, and nothing sits in a near-empty category page.</p>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+{% if site.research.size > 0 %}
+<section class="svc-overview">
+	<div class="container">
+		<div class="svc-grid">
+			{% assign articles = site.research | sort: "date" | reverse %}
+			{% for article in articles %}
+			<a href="{{ article.url | relative_url }}" class="svc-card">
+				<div class="svc-num">{{ article.article_type }}</div>
+				<h3>{{ article.title }}</h3>
+				<p>{{ article.abstract }}</p>
+				<span class="svc-link">Read &rarr;</span>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+{% else %}
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Filters</div>
+		<h2>Intelligence brief &middot; Threat report &middot; <em>Methodology note &middot; White paper</em></h2>
+		<hr class="gold-rule">
+		<p>The first pieces of published analysis are in preparation. Every article, once published, will carry a named author linked to <a href="{{ '/about/' | relative_url }}">/about</a>, a publication date, and type/topic tags driving the filters above. Engagement summaries live separately at <a href="{{ '/case-studies/' | relative_url }}">/case-studies</a> — different job, different reader.</p>
+	</div>
+</section>
+{% endif %}
+
+<section class="cta-panel">
+	<div class="container-narrow">
+		<div class="hero-eyebrow">Discuss a Matter</div>
+		<h2>Submit a <em>confidential inquiry</em>.</h2>
+		<div class="cta-panel-actions">
+			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
+		</div>
+	</div>
+</section>

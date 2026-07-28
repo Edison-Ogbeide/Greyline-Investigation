@@ -1,0 +1,19 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.data.principal.name }}",
+  "additionalName": "{{ site.data.principal.also_known_as }}",
+  "jobTitle": "{{ site.data.principal.title }}",
+  "url": "{{ site.url }}{{ site.data.principal.url | relative_url }}",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "{{ site.company.legal_name }}"
+  },
+  "hasCredential": [
+    {% for c in site.data.principal.credentials %}
+    { "@type": "EducationalOccupationalCredential", "name": {{ c | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>

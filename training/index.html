@@ -1,0 +1,75 @@
+---
+layout: default
+title: "Training — Intelligence & Resilience Training"
+description: "Structured training programmes that turn intelligence insight into organisational resilience. Scheduled, not instructed — delivered by a named analyst."
+crumbs:
+  - title: "Training"
+    url: /training/
+---
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">Intelligence &amp; Resilience Training</div>
+		<h1>Training that comes from <em>real casework</em>, not a slide template.</h1>
+		<p>The only line on this site that is scheduled and recurring rather than instructed. Programmes and briefings, delivered by a named analyst, scoped to your organisation.</p>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Why Intelligence-Led Training</div>
+		<h2>Not <em>compliance theatre</em>.</h2>
+		<hr class="gold-rule">
+		<p>Most awareness training is generic content licensed at scale and delivered by whoever is available. Ours is built and delivered by the analysts who run Greyline's live investigative casework — the phishing patterns, AI-enhanced fraud attempts, and social engineering techniques we teach are the ones we see and counter directly, anonymised and adapted for training use.</p>
+	</div>
+</section>
+
+<section class="svc-overview">
+	<div class="container">
+		<div class="section-head">
+			<div class="section-eyebrow">Programmes</div>
+			<h2>Seven programmes, <em>one delivery standard</em>.</h2>
+			<hr class="gold-rule">
+		</div>
+		<div class="svc-grid">
+			{% assign programmes = site.training | where: "published", true %}
+			{% for prog in programmes %}
+			<a href="{{ prog.url | relative_url }}" class="svc-card">
+				<h3>{{ prog.title }}</h3>
+				<p>{{ prog.description }}</p>
+				<span class="svc-link">Learn more &rarr;</span>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Bespoke Training</div>
+		<h2>Tailored to <em>sector, incident type, or regulatory driver</em>.</h2>
+		<hr class="gold-rule">
+		<p>Every programme above is a starting point, not a fixed package. We regularly tailor content to a specific sector, a recent incident the organisation is responding to, or a regulatory driver — insurer requirements, SRA expectations, or board-level governance concerns. Tell us the driver on your scoping call and the programme is built around it.</p>
+	</div>
+</section>
+
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Accreditation &amp; Delivery</div>
+		<h2>CPD-recognised, <em>delivered how you need it</em>.</h2>
+		<hr class="gold-rule">
+		<p>Legal Sector CPD is delivered as an accredited session recognised for continuing professional development. All programmes are available onsite, remote, or in modular/blended format, and delivery is scoped — never instantly booked — so the content matches your organisation's actual risk profile.</p>
+	</div>
+</section>
+
+<section class="cta-panel">
+	<div class="container-narrow">
+		<div class="hero-eyebrow">Bring Training to Your Organisation</div>
+		<h2>Enquire and <em>scope a programme</em>.</h2>
+		<p>Every programme is scoped to the organisation before delivery — never an instant booking. Submit an inquiry and we'll arrange a scoping call.</p>
+		<div class="cta-panel-actions">
+			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
+		</div>
+	</div>
+</section>

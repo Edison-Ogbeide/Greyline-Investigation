@@ -1,0 +1,45 @@
+---
+title: "The Departure That Took More Than It Should Have"
+slug: departure-that-took-more
+description: "A composite case study: a Corporate Intelligence insider-threat investigation combining digital forensics and offensive security to map an exfiltration route before it reached a competitor."
+service_line: "Corporate Intelligence"
+meta:
+  - label: "Client Profile"
+    value: "UK SME, regulated technology sector"
+  - label: "Engagement Length"
+    value: "14 days, plus 30-day hardening phase"
+  - label: "Reporting Stakeholder"
+    value: "Board-level, with HR and external counsel"
+crumbs:
+  - title: "Case Studies"
+    url: /case-studies/
+  - title: "The Departure That Took More Than It Should Have"
+    url: /case-studies/departure-that-took-more/
+---
+<h3>The Brief</h3>
+<p>A senior employee had resigned and joined a direct competitor. Within a fortnight, the client noticed that two prospective tenders they had been quietly preparing were being competed for — accurately, and aggressively — by the new employer. The board needed to know whether confidential material had left the building, and if so, what, when, and by what route.</p>
+
+<h3>Our Approach</h3>
+<p>We executed a forensically sound acquisition of the departing employee's issued devices and a targeted review of cloud activity logs across the final 90 days of access. In parallel, our offensive security team conducted a controlled assessment of the data exfiltration paths the employee had access to — not to attribute, but to map what was technically possible. The two streams were then reconciled.</p>
+
+<div class="cs-scorecard">
+	<div class="cs-scorecard-label">Insider Threat Scorecard</div>
+	<div class="cs-scorecard-row"><span class="cs-dot red"></span><strong>Volume</strong>Anomalous download burst within final 14 days of access</div>
+	<div class="cs-scorecard-row"><span class="cs-dot red"></span><strong>Channel</strong>Personal cloud sync intermittently active on issued laptop</div>
+	<div class="cs-scorecard-row"><span class="cs-dot amber"></span><strong>Intent</strong>Pattern consistent with curation, not routine use</div>
+	<div class="cs-scorecard-row"><span class="cs-dot red"></span><strong>Control gap</strong>DLP rule scope did not cover the channel observed</div>
+</div>
+
+<h3>What We Found</h3>
+<p>Two specific document sets — one of them the tender material — had been synchronised to a personal cloud account in the final week of employment. The forensic record was unambiguous: filenames, timestamps, hashes and the offline-online sync events were all preserved. The control gap that allowed it was mapped and documented.</p>
+
+<h3>Outcome</h3>
+<p>The client's solicitors used the report to send a precisely scoped letter before action. The competitor returned and certified destruction of the relevant material under independent supervision, and the prospective tender process was re-set. In the hardening phase that followed, we closed the DLP gap, tightened off-boarding, and ran a tabletop exercise with the leadership team so the same pattern would be visible far earlier next time.</p>
+
+<div class="cs-stats">
+	<div><div class="cs-stat-num">14 days</div><div class="cs-stat-label">from board instruction to evidential report</div></div>
+	<div><div class="cs-stat-num">2</div><div class="cs-stat-label">document sets recovered and certified destroyed</div></div>
+	<div><div class="cs-stat-num">1</div><div class="cs-stat-label">control gap closed before next departure cycle</div></div>
+</div>
+
+<p class="cs-quote">We expected a forensic report. We received a forensic report, a legal lever, and a quieter Monday morning. That is the order it should arrive in.<span class="cs-quote-attr">— Board chair, anonymised</span></p>

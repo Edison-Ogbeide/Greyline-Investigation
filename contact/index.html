@@ -1,0 +1,124 @@
+---
+layout: default
+title: "Contact"
+description: "Direct contact details for Greyline Investigations, and what to expect when you get in touch. Case-related matters go through Submit Inquiry."
+crumbs:
+  - title: "Contact"
+    url: /contact/
+redirect_from:
+  - /contact.html
+---
+<style>
+	.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
+	.redirect-box { border:1.5px solid var(--border-2); padding:2.5rem; background:var(--ice-2); margin-bottom:3rem; }
+	.redirect-box h3 { margin-bottom:0.75rem; }
+	.redirect-box p { font-size:0.92rem; margin-bottom:1.5rem; }
+	@media(max-width:960px){ .contact-grid{grid-template-columns:1fr;gap:2.5rem;} }
+</style>
+
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">Contact</div>
+		<h1>Get in touch</h1>
+		<p>For general questions, partnership inquiries, or media requests. All communications are handled confidentially.</p>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+<section>
+	<div class="redirect-box">
+		<h3>Have a case to discuss?</h3>
+		<p>For all case-related inquiries, please use our Confidential Inquiry process. This ensures your information is handled securely and that a confidentiality agreement is in place before any detailed discussion.</p>
+		<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary" style="font-size:0.72rem;padding:0.7rem 1.6rem;">Go to Confidential Inquiry &rarr;</a>
+	</div>
+
+	<div class="contact-grid">
+		<div>
+			<div class="section-eyebrow">General Contact</div>
+			<h2>Reach us directly</h2>
+			<div class="gold-rule"></div>
+			<p>For non-case-related questions — partnerships, media inquiries, collaboration, or general information about our services.</p>
+
+			<div style="margin-top:2rem;">
+				<div class="cd-row" style="border-bottom:1px solid var(--border);padding-bottom:1rem;">
+					<span class="cd-label" style="color:var(--accent);">Email</span>
+					<span class="cd-val" style="color:var(--text-2);">{{ site.company.email }}</span>
+				</div>
+				<div class="cd-row" style="border-bottom:1px solid var(--border);padding-bottom:1rem;">
+					<span class="cd-label" style="color:var(--accent);">Phone</span>
+					<span class="cd-val" style="color:var(--text-2);">{{ site.company.phone }}</span>
+				</div>
+				<div class="cd-row" style="border-bottom:1px solid var(--border);padding-bottom:1rem;">
+					<span class="cd-label" style="color:var(--accent);">Registered Office</span>
+					<span class="cd-val" style="color:var(--text-2);">{{ site.company.registered_office }}</span>
+				</div>
+				<div class="cd-row" style="border-bottom:1px solid var(--border);padding-bottom:1rem;">
+					<span class="cd-label" style="color:var(--accent);">Response Time</span>
+					<span class="cd-val" style="color:var(--text-2);">Within two business days</span>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<div style="border:1.5px solid var(--border-2);padding:2.5rem;">
+				<h3 style="margin-bottom:0.75rem;">Send a general message</h3>
+				<p style="font-size:0.92rem;margin-bottom:2rem;">For non-case inquiries only. Do not include sensitive or case-related information in this form.</p>
+				<!-- Form backend: Formspree. Replace YOUR_FORM_ID with your Formspree form ID. -->
+				<form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+					<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+					<div class="form-row" style="margin-bottom:1.5rem;">
+						<div class="form-group"><label class="form-label">Full name</label><input type="text" name="fullName" class="form-input" placeholder="Your full name" required></div>
+						<div class="form-group"><label class="form-label">Email address</label><input type="email" name="email" class="form-input" placeholder="your@email.com" required></div>
+					</div>
+					<div class="form-group">
+						<label class="form-label">Subject</label>
+						<select name="subject" class="form-select" required>
+							<option value="">Select a topic</option>
+							<option value="General inquiry">General inquiry</option>
+							<option value="Partnership / collaboration">Partnership / collaboration</option>
+							<option value="Media / press inquiry">Media / press inquiry</option>
+							<option value="Training inquiry">Training inquiry</option>
+							<option value="Other">Other</option>
+						</select>
+					</div>
+					<div class="form-group"><label class="form-label">Message</label><textarea name="message" class="form-textarea" placeholder="How can we help?" required></textarea></div>
+					<button type="submit" class="btn-primary" style="width:100%;text-align:center;border:none;cursor:pointer;">Send message</button>
+				</form>
+				<div id="contactSuccess" style="display:none;padding:2rem 0;text-align:center;">
+					<h3 style="margin-bottom:0.75rem;">Message sent.</h3>
+					<p style="font-size:0.92rem;color:var(--text-2);">Thank you for reaching out. We'll respond within two business days.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+	e.preventDefault();
+	var form = e.target;
+	var btn = form.querySelector('button[type="submit"]');
+	btn.disabled = true;
+	btn.textContent = 'Sending...';
+
+	fetch(form.action, {
+		method: 'POST',
+		body: new FormData(form),
+		headers: { 'Accept': 'application/json' }
+	})
+	.then(function (res) {
+		if (res.ok) {
+			form.style.display = 'none';
+			document.getElementById('contactSuccess').style.display = 'block';
+		} else {
+			throw new Error('Submission failed');
+		}
+	})
+	.catch(function () {
+		btn.disabled = false;
+		btn.textContent = 'Send message';
+		alert('Something went wrong. Please try again or email us directly at {{ site.company.email }}');
+	});
+});
+</script>

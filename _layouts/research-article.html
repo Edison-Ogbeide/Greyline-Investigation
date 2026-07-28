@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">Research &middot; {{ page.article_type }}</div>
+		<h1>{{ page.title }}</h1>
+		<p>{{ page.abstract }}</p>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">
+			By {{ page.author | default: site.data.principal.name }} &middot;
+			{{ page.date | date: "%-d %B %Y" }}
+			{% if page.date_modified %}&middot; updated {{ page.date_modified | date: "%-d %B %Y" }}{% endif %}
+		</div>
+		{% if page.topics %}
+		<p class="research-topics">{% for t in page.topics %}<span class="tag">{{ t }}</span>{% endfor %}</p>
+		{% endif %}
+		<hr class="gold-rule">
+		{{ content }}
+		{% if page.pdf_url %}<p><a href="{{ page.pdf_url }}" class="text-link">Download as PDF &rarr;</a></p>{% endif %}
+	</div>
+</section>
+
+<section class="cta-panel">
+	<div class="container-narrow">
+		<div class="hero-eyebrow">Discuss This Analysis</div>
+		<h2>Submit a <em>confidential inquiry</em>.</h2>
+		<div class="cta-panel-actions">
+			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
+			<a href="{{ '/research/' | relative_url }}" class="btn-outline-w">All Research</a>
+		</div>
+	</div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.abstract | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date_modified | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.author | default: site.data.principal.name }}",
+    "url": "{{ site.url }}{{ site.data.principal.url | relative_url }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.company.legal_name }}"
+  }
+}
+</script>

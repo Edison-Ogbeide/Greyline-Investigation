@@ -1,0 +1,28 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.company.legal_name }}",
+  "legalName": "{{ site.company.legal_name }}",
+  "url": "{{ site.url }}/",
+  "identifier": "{{ site.company.company_number }}",
+  "logo": "{{ site.url }}/favicon.svg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.company.registered_office }}",
+    "addressCountry": "GB"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "{{ site.company.email }}",
+    "telephone": "{{ site.company.phone }}",
+    "contactType": "customer service"
+  },
+  "sameAs": [
+    "https://x.com/GreyLineINVGT",
+    "https://www.linkedin.com/company/112581265/",
+    "https://www.instagram.com/greyline_investigations/",
+    "https://www.facebook.com/profile.php?id=61575888642173"
+  ]
+}
+</script>

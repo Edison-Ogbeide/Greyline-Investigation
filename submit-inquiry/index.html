@@ -1,0 +1,229 @@
+---
+layout: default
+title: "Submit a Confidential Inquiry"
+description: "Submit a confidential inquiry to Greyline Investigations. Encrypted intake, reviewed by an analyst. A confidentiality agreement is provided before detailed disclosure."
+crumbs:
+  - title: "Submit Inquiry"
+    url: /submit-inquiry/
+redirect_from:
+  - /inquiry.html
+  - /inquiry
+  - /start
+  - /start.html
+  - /checkout
+  - /checkout.html
+  - /cart
+  - /cart.html
+  - /order
+  - /order.html
+  - /intake.html
+  - /intake/intake.html
+  - /thank-you.html
+  - /intake/received.html
+  - /received.html
+---
+<style>
+  .inquiry-wrap { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem 6rem; display: grid; grid-template-columns: 1fr 1.35fr; gap: 5rem; align-items: start; }
+  .inquiry-trust { position: sticky; top: 6rem; }
+  .inquiry-trust .section-eyebrow { margin-bottom: 1rem; }
+  .inquiry-trust h2 { font-size: clamp(1.75rem, 3vw, 2.4rem); line-height: 1.2; margin-bottom: 1.25rem; }
+  .inquiry-trust .trust-lead { font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.75; color: #444; margin-bottom: 2.5rem; }
+  .trust-steps { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2.5rem; }
+  .trust-step { display: flex; gap: 1rem; align-items: flex-start; }
+  .trust-step-no { font-family: 'Cormorant Garamond', serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; color: var(--accent, #b8922a); padding-top: 0.15rem; white-space: nowrap; }
+  .trust-step-body strong { display: block; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.2rem; letter-spacing: 0.02em; }
+  .trust-step-body p { font-family: 'Inter', sans-serif; font-size: 0.82rem; line-height: 1.6; color: #555; margin: 0; }
+  .trust-notice { border-left: 2px solid var(--accent, #b8922a); padding: 0.85rem 1rem; background: rgba(184,146,42,0.06); }
+  .trust-notice p { font-family: 'Inter', sans-serif; font-size: 0.8rem; line-height: 1.65; color: #555; margin: 0; }
+  .trust-notice p + p { margin-top: 0.5rem; }
+  .inquiry-form-panel { background: #fff; border: 1px solid #e0dbd0; padding: 2.75rem; }
+  .inquiry-form-panel .form-group { margin-bottom: 1.75rem; }
+  .inquiry-form-panel label { display: block; font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #444; margin-bottom: 0.5rem; }
+  .inquiry-form-panel input:not([type="checkbox"]):not([type="radio"]), .inquiry-form-panel select, .inquiry-form-panel textarea { width: 100%; background: #fafaf8; border: 1px solid #d8d2c6; color: #1a1a1a; font-family: 'Inter', sans-serif; font-size: 0.9rem; padding: 0.75rem 1rem; outline: none; transition: border-color 0.2s; box-sizing: border-box; appearance: none; -webkit-appearance: none; }
+  .inquiry-form-panel input:not([type="checkbox"]):not([type="radio"]):focus, .inquiry-form-panel select:focus, .inquiry-form-panel textarea:focus { border-color: var(--accent, #b8922a); background: #fff; }
+  .inquiry-form-panel select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-color: #fafaf8; padding-right: 2.5rem; cursor: pointer; }
+  .inquiry-form-panel textarea { resize: vertical; min-height: 110px; line-height: 1.65; }
+  .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .form-divider { border: none; border-top: 1px solid #e0dbd0; margin: 2rem 0; }
+  .form-confirm { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 1.25rem; }
+  .form-confirm input[type="checkbox"] { appearance: auto; -webkit-appearance: auto; width: 16px; height: 16px; margin-top: 0.2rem; flex-shrink: 0; accent-color: var(--accent, #b8922a); cursor: pointer; }
+  .form-confirm label { text-transform: none; letter-spacing: 0; font-size: 0.82rem; line-height: 1.6; color: #555; font-weight: 400; margin-bottom: 0; cursor: pointer; }
+  .form-confirm label a { color: var(--accent, #b8922a); text-decoration: none; }
+  .form-submit-area { margin-top: 2rem; }
+  .form-submit-area .btn-primary { width: 100%; justify-content: center; text-align: center; border: none; cursor: pointer; }
+  .form-submit-area .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+  .inquiry-success { display: none; text-align: left; padding: 1rem 0; }
+  .inquiry-success.visible { display: block; }
+  .inquiry-success h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 500; color: #1a1a1a; margin: 0 0 0.5rem 0; line-height: 1.25; }
+  .inquiry-success p { font-family: 'Inter', sans-serif; font-size: 0.92rem; line-height: 1.75; color: #444; margin: 0 0 1rem 0; }
+  .form-error { display: none; margin-top: 1rem; padding: 0.75rem 1rem; background: rgba(139, 0, 0, 0.06); border-left: 2px solid #8B0000; color: #8B0000; font-family: 'Inter', sans-serif; font-size: 0.82rem; line-height: 1.55; }
+  .form-error.visible { display: block; }
+  @media (max-width: 860px) {
+    .inquiry-wrap { grid-template-columns: 1fr; gap: 3rem; padding: 2.5rem 1.25rem 4rem; }
+    .inquiry-trust { position: static; }
+    .inquiry-form-panel { padding: 1.75rem 1.25rem; }
+    .form-row-2 { grid-template-columns: 1fr; }
+  }
+</style>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+<div class="inquiry-wrap">
+	<div class="inquiry-trust">
+		<div class="section-eyebrow">Confidential Intake</div>
+		<h2>Begin in <em>confidence</em>.</h2>
+		<hr class="gold-rule">
+		<p class="trust-lead">This form is the first step, not a commitment. Provide a high-level summary only — a Greyline analyst reviews every submission personally. No sensitive detail is required until a confidentiality agreement is in place.</p>
+
+		<div class="trust-steps">
+			<div class="trust-step">
+				<div class="trust-step-no">01.</div>
+				<div class="trust-step-body"><strong>Submit this form</strong><p>High-level overview only — no names, evidence, or financial detail at this stage.</p></div>
+			</div>
+			<div class="trust-step">
+				<div class="trust-step-no">02.</div>
+				<div class="trust-step-body"><strong>Analyst review</strong><p>A Greyline analyst — not a salesperson — reviews your submission within two business days.</p></div>
+			</div>
+			<div class="trust-step">
+				<div class="trust-step-no">03.</div>
+				<div class="trust-step-body"><strong>Confidential scoping call</strong><p>A short call to understand the matter and confirm scope. A confidentiality agreement is provided before detailed disclosure.</p></div>
+			</div>
+			<div class="trust-step">
+				<div class="trust-step-no">04.</div>
+				<div class="trust-step-body"><strong>Written engagement letter</strong><p>Scope, deliverables, timeline, and fee, in writing. Nothing is committed until you sign.</p></div>
+			</div>
+		</div>
+
+		<div class="trust-notice">
+			<p>All submissions are encrypted in transit and at rest. Your information is seen only by the analyst assigned to your matter.</p>
+			<p>If your matter involves immediate personal safety, contact emergency services first.</p>
+		</div>
+	</div>
+
+	<div class="inquiry-form-panel">
+		<!--
+			FORM BACKEND: Formspree.
+			Replace YOUR_FORM_ID below with the ID from your Formspree form
+			(https://formspree.io — free tier). No other code changes needed.
+		-->
+		<form id="inquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+			<input type="hidden" name="_subject" value="New Greyline inquiry">
+			<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+			<div class="form-row-2">
+				<div class="form-group">
+					<label for="full-name">Full name</label>
+					<input type="text" id="full-name" name="full-name" autocomplete="name" required>
+				</div>
+				<div class="form-group">
+					<label for="contact-email">Email address</label>
+					<input type="email" id="contact-email" name="email" autocomplete="email" required>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="organisation">Organisation <span style="text-transform:none;font-weight:400;">(optional)</span></label>
+				<input type="text" id="organisation" name="organisation" autocomplete="organization">
+			</div>
+
+			<hr class="form-divider">
+
+			<div class="form-group">
+				<label for="inquiry-type">Inquiry type</label>
+				<select id="inquiry-type" name="inquiry-type" required>
+					<option value="">Select the closest match</option>
+					<option value="Corporate">Corporate</option>
+					<option value="Legal / litigation">Legal / litigation</option>
+					<option value="Personal">Personal</option>
+					<option value="Training">Training</option>
+					<option value="Media">Media</option>
+					<option value="Partnerships">Partnerships</option>
+				</select>
+			</div>
+
+			<div class="form-row-2">
+				<div class="form-group">
+					<label for="jurisdiction">Jurisdiction</label>
+					<input type="text" id="jurisdiction" name="jurisdiction" placeholder="e.g. England &amp; Wales" required>
+				</div>
+				<div class="form-group">
+					<label for="urgency">Urgency</label>
+					<select id="urgency" name="urgency" required>
+						<option value="">Select</option>
+						<option value="Standard">Standard</option>
+						<option value="Time-sensitive">Time-sensitive</option>
+						<option value="Urgent">Urgent</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="contact-method">Preferred contact method</label>
+				<select id="contact-method" name="preferred-contact-method" required>
+					<option value="">Select</option>
+					<option value="Email">Email</option>
+					<option value="Video call">Video call</option>
+				</select>
+			</div>
+
+			<hr class="form-divider">
+
+			<div class="form-group">
+				<label for="summary">Nature of the matter</label>
+				<textarea id="summary" name="nature-of-matter" rows="5" required placeholder="Describe the situation in broad terms. No names, financial details, or evidential material at this stage."></textarea>
+			</div>
+
+			<hr class="form-divider">
+
+			<div class="form-confirm">
+				<input type="checkbox" id="confirm-privacy" name="confirm-privacy" required>
+				<label for="confirm-privacy">I have read and accept the <a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a> and understand that a confidentiality agreement will be provided before any detailed disclosure. No work is committed until a written engagement letter is signed.</label>
+			</div>
+
+			<div class="form-submit-area">
+				<button type="submit" class="btn-primary" id="inquiry-submit-btn">Submit</button>
+				<div class="form-error" id="form-error">Something went wrong. Please try again, or email <a href="mailto:{{ site.company.email }}" style="color:#8B0000;">{{ site.company.email }}</a> directly.</div>
+			</div>
+		</form>
+
+		<div class="inquiry-success" id="inquiry-success" role="status" aria-live="polite">
+			<h3>Your inquiry has been received.</h3>
+			<p>A Greyline analyst will review your submission personally and respond within two business days.</p>
+			<p>All submissions are encrypted in transit and at rest. Your information is seen only by the analyst assigned to your matter.</p>
+		</div>
+	</div>
+</div>
+
+<script>
+(function () {
+	var form = document.getElementById('inquiry-form');
+	var successPanel = document.getElementById('inquiry-success');
+	var errorBox = document.getElementById('form-error');
+	var submitBtn = document.getElementById('inquiry-submit-btn');
+
+	form.addEventListener('submit', function (e) {
+		e.preventDefault();
+		errorBox.classList.remove('visible');
+		if (!form.checkValidity()) { form.reportValidity(); return; }
+
+		submitBtn.disabled = true;
+		submitBtn.textContent = 'Submitting…';
+
+		fetch(form.action, {
+			method: 'POST',
+			body: new FormData(form),
+			headers: { 'Accept': 'application/json' }
+		}).then(function (response) {
+			if (!response.ok) throw new Error('Network error');
+			form.style.display = 'none';
+			successPanel.classList.add('visible');
+			successPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			if (typeof gtag === 'function') { gtag('event', 'inquiry_submitted', { event_category: 'engagement' }); }
+		}).catch(function () {
+			submitBtn.disabled = false;
+			submitBtn.textContent = 'Submit';
+			errorBox.classList.add('visible');
+		});
+	});
+})();
+</script>

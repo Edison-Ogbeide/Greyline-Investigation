@@ -1,0 +1,13 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "{{ page.title }}",
+  "description": {{ page.description | jsonify }},
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ site.company.legal_name }}",
+    "sameAs": "{{ site.url }}/"
+  }
+}
+</script>

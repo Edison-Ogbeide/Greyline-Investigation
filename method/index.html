@@ -1,0 +1,116 @@
+---
+layout: default
+title: "Method — The Greyline Verification Standard"
+description: "The Greyline Intelligence Cycle, our four-phase engagement model, evidence standards, quality assurance, and the limitations we publish rather than hide."
+crumbs:
+  - title: "Method"
+    url: /method/
+---
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">The Greyline Verification Standard</div>
+		<h1>The reason a buyer <em>believes the output</em>.</h1>
+		<p>With no pricing on this site, this page and the named principal carry most of the persuasive load. Every engagement, whatever the capability, is held to the standard described here.</p>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">The Greyline Intelligence Cycle</div>
+		<h2>Direction, collection, verification, <em>corroboration, analysis, assessment</em>.</h2>
+		<hr class="gold-rule">
+		<p>Eight stages, every engagement: <strong>Direction</strong> — the question is defined before collection starts. <strong>Collection</strong> — sourced, dated material gathered against that question. <strong>Verification</strong> — each item checked against known reliability standards. <strong>Corroboration</strong> — findings cross-referenced against at least one independent source wherever the material allows. <strong>Analysis</strong> — verified findings assembled into a coherent picture. <strong>Assessment</strong> — the analyst's judgement on what the picture means. <strong>Analyst sign-off</strong> — a named individual takes personal accountability for the report. <strong>Monitoring</strong> — where the engagement is ongoing, the cycle repeats against the same standard.</p>
+		<p>An <strong>unverified finding</strong> reads as a lead in an analyst's working notes — flagged, dated, not yet corroborated. A <strong>corroborated finding</strong> reads as a sourced, dated statement in the delivered report, cross-referenced wherever the underlying material allows it. We do not present the two the same way.</p>
+	</div>
+</section>
+
+<section class="engagement">
+	<div class="container">
+		<div class="engagement-head">
+			<div class="section-eyebrow">The Four-Phase Engagement Model</div>
+			<h2>How the work is <em>actually conducted</em>.</h2>
+			<hr class="gold-rule">
+		</div>
+		<div class="engagement-grid">
+			<div class="engagement-card">
+				<span class="step-no">Phase 01</span>
+				<h3>Intake &amp; <em>Confidentiality</em></h3>
+				<p>All inquiries are received under strict internal confidentiality protocols. A confidentiality agreement is provided before any detailed case discussion. We collect only the information necessary to assess fit, held on UK-jurisdiction infrastructure, encrypted in transit and at rest.</p>
+			</div>
+			<div class="engagement-card">
+				<span class="step-no">Phase 02</span>
+				<h3>Scoping &amp; <em>Fixed-Fee Quote</em></h3>
+				<p>We issue a written scoping note covering the question to be answered, the methodology to be applied, the deliverable, the standard it will be produced to, and the fixed fee. We do not work on open-ended hourly retainers.</p>
+			</div>
+			<div class="engagement-card">
+				<span class="step-no">Phase 03</span>
+				<h3>Investigation &amp; <em>Evidence Handling</em></h3>
+				<p>Conducted to ACPO Principles for Digital Evidence: original data is not altered, contemporaneous records are kept, and the audit trail is reproducible by an independent third party. Updates are provided at agreed intervals.</p>
+			</div>
+			<div class="engagement-card">
+				<span class="step-no">Phase 04</span>
+				<h3>Final Report &amp; <em>Onward Action</em></h3>
+				<p>A written report covering scope, methodology, findings, supporting evidence, and a non-technical summary. Litigation-aligned engagements include chain-of-custody documentation and expert-evidence formatting where required.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="svc-overview">
+	<div class="container">
+		<div class="section-head">
+			<div class="section-eyebrow">Method In Detail</div>
+			<h2>The five <em>sub-pages</em>.</h2>
+			<hr class="gold-rule">
+		</div>
+		<div class="svc-grid">
+			{% for m in site.method %}
+			<a href="{{ m.url | relative_url }}" class="svc-card">
+				<h3>{{ m.title }}</h3>
+				<p>{{ m.description }}</p>
+				<span class="svc-link">Read &rarr;</span>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Evidence Standards</div>
+		<h2>ACPO Principles, UK GDPR, <em>CPR Part 35</em>.</h2>
+		<hr class="gold-rule">
+		<p>Digital evidence work is conducted to the ACPO Principles for Digital Evidence. All personal data handling is governed by UK GDPR and the Data Protection Act 2018. Chain-of-custody documentation is maintained as standard, and reports destined for litigation are formatted to CPR Part 35 requirements where the instruction calls for it.</p>
+	</div>
+</section>
+
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Quality Assurance</div>
+		<h2>Named accountability, <em>peer review, reproducibility</em>.</h2>
+		<hr class="gold-rule">
+		<p>Every report identifies the analyst personally accountable for it. Litigation-aligned work receives peer review before delivery. The reproducibility standard means an independent third party could follow our documented process and arrive at the same audit trail — that is the bar we hold ourselves to, not just an internal sign-off.</p>
+	</div>
+</section>
+
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Limitations &amp; Boundaries</div>
+		<h2>What we will not do, <em>and where jurisdiction ends</em>.</h2>
+		<hr class="gold-rule">
+		<p>We do not hack accounts, intercept private communications, impersonate individuals to extract information, or pay for unlawfully obtained data — see the full published list of exclusions on <a href="{{ '/about/' | relative_url }}">/about</a>. Outside the UK, our reach is via named, vetted in-country partners under written confidentiality agreements; we do not use anonymous subcontractors, and jurisdictional limitations are disclosed in every affected report rather than left implicit.</p>
+	</div>
+</section>
+
+<section class="cta-panel">
+	<div class="container-narrow">
+		<div class="hero-eyebrow">See It Applied</div>
+		<h2>Read the <em>capability pages</em>.</h2>
+		<div class="cta-panel-actions">
+			<a href="{{ '/capabilities/' | relative_url }}" class="btn-primary">Browse Capabilities</a>
+			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-outline-w">Submit Inquiry</a>
+		</div>
+	</div>
+</section>
