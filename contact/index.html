@@ -64,9 +64,10 @@ redirect_from:
 			<div style="border:1.5px solid var(--border-2);padding:2.5rem;">
 				<h3 style="margin-bottom:0.75rem;">Send a general message</h3>
 				<p style="font-size:0.92rem;margin-bottom:2rem;">For non-case inquiries only. Do not include sensitive or case-related information in this form.</p>
-				<!-- Form backend: Formspree. Replace YOUR_FORM_ID with your Formspree form ID. -->
-				<form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-					<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+				<!-- Form backend: Netlify Forms (native — no third-party account needed). -->
+				<form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+					<input type="hidden" name="form-name" value="contact">
+					<p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
 					<div class="form-row" style="margin-bottom:1.5rem;">
 						<div class="form-group"><label class="form-label">Full name</label><input type="text" name="fullName" class="form-input" placeholder="Your full name" required></div>
 						<div class="form-group"><label class="form-label">Email address</label><input type="email" name="email" class="form-input" placeholder="your@email.com" required></div>
@@ -102,10 +103,10 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 	btn.disabled = true;
 	btn.textContent = 'Sending...';
 
-	fetch(form.action, {
+	fetch('/', {
 		method: 'POST',
-		body: new FormData(form),
-		headers: { 'Accept': 'application/json' }
+		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+		body: new URLSearchParams(new FormData(form)).toString()
 	})
 	.then(function (res) {
 		if (res.ok) {

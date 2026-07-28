@@ -101,14 +101,10 @@ redirect_from:
 	</div>
 
 	<div class="inquiry-form-panel">
-		<!--
-			FORM BACKEND: Formspree.
-			Replace YOUR_FORM_ID below with the ID from your Formspree form
-			(https://formspree.io — free tier). No other code changes needed.
-		-->
-		<form id="inquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-			<input type="hidden" name="_subject" value="New Greyline inquiry">
-			<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+		<!-- FORM BACKEND: Netlify Forms (native — no third-party account needed). -->
+		<form id="inquiry-form" name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+			<input type="hidden" name="form-name" value="inquiry">
+			<p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
 
 			<div class="form-row-2">
 				<div class="form-group">
@@ -209,10 +205,12 @@ redirect_from:
 		submitBtn.disabled = true;
 		submitBtn.textContent = 'Submitting…';
 
-		fetch(form.action, {
+		var params = new URLSearchParams(new FormData(form)).toString();
+
+		fetch('/', {
 			method: 'POST',
-			body: new FormData(form),
-			headers: { 'Accept': 'application/json' }
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: params
 		}).then(function (response) {
 			if (!response.ok) throw new Error('Network error');
 			form.style.display = 'none';
