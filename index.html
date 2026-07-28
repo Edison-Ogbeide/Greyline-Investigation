@@ -55,25 +55,7 @@ no_brand_suffix: true
 	</div>
 </section>
 
-<section class="engagement">
-	<div class="container">
-		<div class="engagement-head">
-			<div class="section-eyebrow">Featured Services</div>
-			<h2>Six services, <em>defined scope and turnaround</em>.</h2>
-			<hr class="gold-rule">
-			<p>Every enquiry — featured or not — is scoped on a confidential call and confirmed with a fixed fee in writing before any work begins.</p>
-		</div>
-		<div class="svc-grid">
-			{% assign featured = site.data.services | where_exp: "s", "s.featured_as" %}
-			{% for svc in featured %}
-			<a href="{{ '/services/' | append: svc.slug | append: '/' | relative_url }}" class="svc-card">
-				<h3>{{ svc.featured_as }}</h3>
-				<span class="svc-link">Learn more &rarr;</span>
-			</a>
-			{% endfor %}
-		</div>
-	</div>
-</section>
+
 
 <section class="engagement">
 	<div class="container">
