@@ -10,8 +10,8 @@ crumbs:
     url: /capabilities/corporate-intelligence/
 tiers:
   - name: "Investigate"
-    subtitle: "(one-off)"
-    style: list
+    style: cards
+    description: "Focused, one-off investigations into a specific counterparty, candidate, vendor or matter, delivering a defensible finding before a decision is made."
     items:
       - name: "Counterparty Intelligence Report"
         slug: counterparty-intelligence-report
@@ -28,8 +28,9 @@ tiers:
       - name: "M&A Integrity Intelligence"
         slug: ma-integrity-intelligence
   - name: "Monitor"
-    subtitle: "(subscription)"
-    style: list
+    subtitle: "(Managed Intelligence Services)"
+    style: detail
+    description: "Unlike one-off investigations, these subscription intelligence services provide continuous monitoring of vendors, candidates, workplaces and litigation risk as they develop."
     items:
       - name: "Executive Exposure Profile"
         slug: executive-exposure-profile
@@ -42,8 +43,9 @@ tiers:
       - name: "Third-Party Risk Management as a Service"
         slug: tprm-as-a-service
   - name: "Advise"
-    subtitle: "(strategic)"
-    style: list
+    subtitle: "(Strategic Intelligence)"
+    style: detail
+    description: "Strategic intelligence support at board level, informing decisions that go beyond a single instructed report."
     items:
       - name: "Intelligence briefings"
       - name: "Board reporting"
