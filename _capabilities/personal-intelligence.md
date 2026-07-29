@@ -37,6 +37,7 @@ tiers:
     description: "Unlike one-off investigations, these subscription intelligence services provide continuous monitoring of personal, digital and reputational risks, alerting clients to significant changes as they occur."
     items:
       - name: "Relationship Monitoring"
+        slug: relationship-monitoring
         monitoring:
           - "Public records"
           - "Social media activity"
@@ -45,6 +46,7 @@ tiers:
           - "Adverse media"
           - "Significant digital developments"
       - name: "Identity Monitoring"
+        slug: identity-monitoring
         monitoring:
           - "Identity misuse"
           - "Personal data exposure"
@@ -53,6 +55,7 @@ tiers:
           - "New public records"
           - "Identity-related risks"
       - name: "Digital Exposure Monitoring"
+        slug: personal-digital-exposure-monitoring
         monitoring:
           - "Email addresses"
           - "Phone numbers"
@@ -61,6 +64,7 @@ tiers:
           - "Dark web exposure"
           - "Personal information leaks"
       - name: "Executive Protection Monitoring"
+        slug: executive-protection-monitoring
         monitoring:
           - "Executive exposure"
           - "Impersonation attempts"
@@ -69,6 +73,7 @@ tiers:
           - "Public mentions"
           - "Reputation risks"
       - name: "Personal Threat Monitoring"
+        slug: personal-threat-monitoring
         monitoring:
           - "Online threats"
           - "Harassment"

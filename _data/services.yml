@@ -425,6 +425,31 @@
   capability: personal-intelligence
   has_copy: false
 
+- slug: relationship-monitoring
+  name: "Relationship Monitoring"
+  capability: personal-intelligence
+  has_copy: true
+
+- slug: identity-monitoring
+  name: "Identity Monitoring"
+  capability: personal-intelligence
+  has_copy: true
+
+- slug: personal-digital-exposure-monitoring
+  name: "Digital Exposure Monitoring"
+  capability: personal-intelligence
+  has_copy: true
+
+- slug: executive-protection-monitoring
+  name: "Executive Protection Monitoring"
+  capability: personal-intelligence
+  has_copy: true
+
+- slug: personal-threat-monitoring
+  name: "Personal Threat Monitoring"
+  capability: personal-intelligence
+  has_copy: true
+
 - slug: background-verification-diaspora
   name: "Background Verification"
   name_suffix: "(Diaspora)"
