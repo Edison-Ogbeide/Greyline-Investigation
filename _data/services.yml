@@ -357,6 +357,36 @@
   capability: litigation-intelligence
   has_copy: false
 
+- slug: evidence-monitoring
+  name: "Evidence Monitoring"
+  capability: litigation-intelligence
+  has_copy: true
+
+- slug: witness-intelligence-monitoring
+  name: "Witness Intelligence Monitoring"
+  capability: litigation-intelligence
+  has_copy: true
+
+- slug: defendant-monitoring
+  name: "Defendant Monitoring"
+  capability: litigation-intelligence
+  has_copy: true
+
+- slug: settlement-intelligence-monitoring
+  name: "Settlement Intelligence Monitoring"
+  capability: litigation-intelligence
+  has_copy: true
+
+- slug: international-litigation-monitoring
+  name: "International Litigation Monitoring"
+  capability: litigation-intelligence
+  has_copy: true
+
+- slug: continuous-litigation-intelligence
+  name: "Continuous Litigation Intelligence"
+  capability: litigation-intelligence
+  has_copy: true
+
 - slug: relationship-authenticity-verification
   name: "Relationship Authenticity Verification"
   capability: personal-intelligence

@@ -43,6 +43,7 @@ tiers:
     description: "Unlike one-off investigations, these subscription intelligence services provide ongoing evidence development, asset visibility and litigation support throughout the lifecycle of a dispute."
     items:
       - name: "Evidence Monitoring"
+        slug: evidence-monitoring
         monitoring:
           - "New digital evidence"
           - "Online activity"
@@ -51,6 +52,7 @@ tiers:
           - "Deleted or modified information"
           - "Public records"
       - name: "Witness Intelligence Monitoring"
+        slug: witness-intelligence-monitoring
         monitoring:
           - "Witness location changes"
           - "New business interests"
@@ -59,6 +61,7 @@ tiers:
           - "Court appearances"
           - "Adverse media"
       - name: "Defendant Monitoring"
+        slug: defendant-monitoring
         monitoring:
           - "Companies"
           - "Directors"
@@ -67,6 +70,7 @@ tiers:
           - "Court proceedings"
           - "Asset movements"
       - name: "Settlement Intelligence Monitoring"
+        slug: settlement-intelligence-monitoring
         monitoring:
           - "Financial position"
           - "Asset disposals"
@@ -75,6 +79,7 @@ tiers:
           - "Enforcement opportunities"
           - "Changes affecting settlement prospects"
       - name: "International Litigation Monitoring"
+        slug: international-litigation-monitoring
         monitoring:
           - "Overseas assets"
           - "Company records"
@@ -83,6 +88,7 @@ tiers:
           - "Business relationships"
           - "Jurisdiction-specific intelligence"
       - name: "Continuous Litigation Intelligence"
+        slug: continuous-litigation-intelligence
         list_label: "A fully managed service combining"
         monitoring:
           - "Evidence monitoring"
