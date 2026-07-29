@@ -1,16 +1,16 @@
 ---
 layout: default
-title: "Training"
-description: "Structured training programmes that turn intelligence insight into organisational resilience. Scheduled, not instructed, delivered by a named analyst."
+title: "Training & Exercises"
+description: "Develop organisational resilience through intelligence-led training, executive briefings and realistic cyber simulations."
 crumbs:
   - title: "Training"
     url: /training/
 ---
 <section class="page-hero">
 	<div>
-		<div class="hero-eyebrow">Intelligence &amp; Resilience Training</div>
+		<div class="hero-eyebrow">Training &amp; Exercises</div>
 		<h1>Training that comes from <em>real casework</em>, not a slide template.</h1>
-		<p>The only line on this site that is scheduled and recurring rather than instructed. Programmes and briefings, delivered by a named analyst, scoped to your organisation.</p>
+		<p>Develop organisational resilience through intelligence-led training, executive briefings and realistic cyber simulations. The only line on this site that is scheduled and recurring rather than instructed.</p>
 	</div>
 </section>
 
@@ -25,22 +25,79 @@ crumbs:
 	</div>
 </section>
 
+{% assign t_employee = site.training | where: "slug", "employee-cyber-awareness" | first %}
+{% assign t_exec = site.training | where: "slug", "executive-board-briefing" | first %}
+{% assign t_ai = site.training | where: "slug", "ai-threat-awareness" | first %}
+{% assign t_phishing = site.training | where: "slug", "phishing-social-engineering-simulation" | first %}
+{% assign t_ir = site.training | where: "slug", "incident-response-exercises" | first %}
+{% assign t_legal = site.training | where: "slug", "legal-sector-cpd" | first %}
+
 <section class="svc-overview">
 	<div class="container">
 		<div class="section-head">
-			<div class="section-eyebrow">Programmes</div>
-			<h2>Seven programmes, <em>one delivery standard</em>.</h2>
+			<div class="section-eyebrow">Awareness</div>
+			<p class="tier-description">Designed to build a strong security culture across your organisation.</p>
 			<hr class="gold-rule">
 		</div>
 		<div class="svc-grid">
-			{% assign programmes = site.training | where: "published", true %}
-			{% for prog in programmes %}
-			<a href="{{ prog.url | relative_url }}" class="svc-card">
-				<h3>{{ prog.title }}</h3>
-				<p>{{ prog.description }}</p>
-				<span class="svc-link">Learn more &rarr;</span>
+			<a href="{{ t_employee.url | relative_url }}" class="svc-card">
+				<div class="svc-num">01</div>
+				<h3>{{ t_employee.title }}</h3>
+				<span class="svc-link">Explore &rarr;</span>
 			</a>
-			{% endfor %}
+			<a href="{{ t_exec.url | relative_url }}" class="svc-card">
+				<div class="svc-num">02</div>
+				<h3>{{ t_exec.title }}</h3>
+				<span class="svc-link">Explore &rarr;</span>
+			</a>
+			<a href="{{ t_ai.url | relative_url }}" class="svc-card">
+				<div class="svc-num">03</div>
+				<h3>{{ t_ai.title }}</h3>
+				<span class="svc-link">Explore &rarr;</span>
+			</a>
+		</div>
+	</div>
+</section>
+
+<section class="svc-overview">
+	<div class="container">
+		<div class="section-head">
+			<div class="section-eyebrow">Test &amp; Exercise</div>
+			<p class="tier-description">Practical exercises that evaluate how your people respond to real-world threats.</p>
+			<hr class="gold-rule">
+		</div>
+		<div class="svc-grid">
+			<a href="{{ t_phishing.url | relative_url }}" class="svc-card">
+				<div class="svc-num">04</div>
+				<h3>{{ t_phishing.title }}</h3>
+				<span class="svc-link">Explore &rarr;</span>
+			</a>
+			<a href="{{ t_ir.url | relative_url }}" class="svc-card">
+				<div class="svc-num">05</div>
+				<h3>{{ t_ir.title }}</h3>
+				<span class="svc-link">Explore &rarr;</span>
+			</a>
+		</div>
+	</div>
+</section>
+
+<section class="svc-overview">
+	<div class="container">
+		<div class="section-head">
+			<div class="section-eyebrow">Professional Development</div>
+			<p class="tier-description">Specialist learning for regulated sectors and organisations with specific compliance or operational requirements.</p>
+			<hr class="gold-rule">
+		</div>
+		<div class="svc-grid">
+			<a href="{{ t_legal.url | relative_url }}" class="svc-card">
+				<div class="svc-num">06</div>
+				<h3>{{ t_legal.title }}</h3>
+				<span class="svc-link">Explore &rarr;</span>
+			</a>
+			<div class="svc-card svc-card-static">
+				<div class="svc-num">07</div>
+				<h3>Schools &amp; Young People</h3>
+			</div>
 		</div>
 	</div>
 </section>
