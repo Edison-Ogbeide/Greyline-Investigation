@@ -16,6 +16,15 @@ crumbs:
 
 {% include breadcrumb.html crumbs=page.crumbs %}
 
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Filters</div>
+		<h2>Intelligence brief &middot; Threat report &middot; <em>Methodology note &middot; White paper</em></h2>
+		<hr class="gold-rule">
+		<p>Every article carries a named author linked to <a href="{{ '/about/' | relative_url }}">/about</a>, a publication date, and type/topic tags driving the filters above. Engagement summaries live separately at <a href="{{ '/case-studies/' | relative_url }}">/case-studies</a>, different job, different reader.</p>
+	</div>
+</section>
+
 {% if site.research.size > 0 %}
 <section class="svc-overview">
 	<div class="container">
@@ -35,10 +44,7 @@ crumbs:
 {% else %}
 <section class="service-intro">
 	<div class="container-narrow">
-		<div class="section-eyebrow">Filters</div>
-		<h2>Intelligence brief &middot; Threat report &middot; <em>Methodology note &middot; White paper</em></h2>
-		<hr class="gold-rule">
-		<p>The first pieces of published analysis are in preparation. Every article, once published, will carry a named author linked to <a href="{{ '/about/' | relative_url }}">/about</a>, a publication date, and type/topic tags driving the filters above. Engagement summaries live separately at <a href="{{ '/case-studies/' | relative_url }}">/case-studies</a>, different job, different reader.</p>
+		<p>The first pieces of published analysis are in preparation. <em>First articles: Q3 2026.</em></p>
 	</div>
 </section>
 {% endif %}
