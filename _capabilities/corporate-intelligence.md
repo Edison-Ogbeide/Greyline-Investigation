@@ -11,7 +11,7 @@ crumbs:
 tiers:
   - name: "Investigate"
     style: cards
-    description: "Focused, one-off investigations into a specific counterparty, candidate, vendor or matter, delivering a defensible finding before a decision is made."
+    description: "Focused, one-off investigations before a decision is made: pre-hire vetting, vendor and supply-chain due diligence, pre-investment and M&A diligence, and workplace investigations into a specific matter."
     items:
       - name: "Counterparty Intelligence Report"
         slug: counterparty-intelligence-report
@@ -30,7 +30,7 @@ tiers:
   - name: "Monitor"
     subtitle: "(Managed Intelligence Services)"
     style: detail
-    description: "Unlike one-off investigations, these subscription intelligence services provide continuous monitoring of vendors, candidates, workplaces and litigation risk as they develop."
+    description: "Unlike one-off investigations, these subscription intelligence services provide continuous oversight of vendors, candidates, portfolios, workplaces and litigation risk as they develop over the life of a relationship."
     items:
       - name: "Executive Exposure Profile"
         slug: executive-exposure-profile
@@ -51,7 +51,7 @@ tiers:
   - name: "Advise"
     subtitle: "(Strategic Intelligence)"
     style: detail
-    description: "Strategic intelligence support at board level, informing decisions that go beyond a single instructed report."
+    description: "Ongoing strategic intelligence for board-level decisions: M&A support, risk workshops, and standing intelligence and reporting that go beyond a single instructed report."
     items:
       - name: "Intelligence briefings"
         slug: intelligence-briefings
@@ -64,4 +64,4 @@ tiers:
       - name: "Quarterly strategic risk assessments"
         slug: quarterly-strategic-risk-assessments
 ---
-Greyline's Corporate Intelligence capability supports the decisions where being wrong is expensive. Pre-hire vetting that exposes what compliance-tier checks miss. Vendor and supply-chain risk assessments that go beyond a director-search screenshot. Insider threat and workplace investigations conducted to evidential standard. The progression is deliberate: investigate a single matter, move to ongoing monitoring where the risk is continuous, and draw on strategic advice at board level where the decision is bigger than one report.
+Greyline's Corporate Intelligence capability supports the decisions where being wrong is expensive: pre-hire vetting that goes beyond standard background checks and database searches, vendor and supply-chain due diligence, pre-investment and M&A diligence for corporate development and private equity, and insider threat or workplace investigations conducted to evidential standard. These are three distinct ways to engage, not a required sequence. Instruct a single investigation where a specific decision needs a defensible answer, subscribe to ongoing monitoring where the risk does not end with one report, or draw on strategic advice at board level where the decision is bigger than one relationship.
