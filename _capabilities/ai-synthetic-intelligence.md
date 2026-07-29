@@ -39,12 +39,14 @@ tiers:
     description: "Unlike one-off investigations, these subscription services continuously monitor for AI-enabled threats targeting your organisation or executives across public platforms and social media. Subscriptions include monthly threat briefings and priority intelligence alerts across every discipline below."
     items:
       - name: "Synthetic Media & Executive Impersonation"
+        slug: synthetic-media-executive-impersonation-monitoring
         monitoring:
           - "Deepfake video and voice cloning"
           - "AI-generated images and synthetic audio"
           - "Fake executive profiles"
           - "Social media impersonation"
       - name: "AI-Enabled Fraud & BEC"
+        slug: ai-enabled-fraud-bec-monitoring
         monitoring:
           - "Lookalike domains"
           - "AI-generated phishing"
@@ -52,11 +54,13 @@ tiers:
           - "Email fraud campaigns"
           - "Fake customer support agents"
       - name: "Narrative & Reputation Intelligence"
+        slug: narrative-reputation-intelligence-monitoring
         monitoring:
           - "Coordinated influence campaigns"
           - "AI-generated misinformation"
           - "Brand disinformation and amplification"
       - name: "AI Agent & Identity Monitoring"
+        slug: ai-agent-identity-monitoring
         monitoring:
           - "Unauthorised AI agents"
           - "Autonomous bot activity"

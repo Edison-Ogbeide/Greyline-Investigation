@@ -185,6 +185,26 @@
   capability: ai-synthetic-intelligence
   has_copy: true
 
+- slug: synthetic-media-executive-impersonation-monitoring
+  name: "Synthetic Media & Executive Impersonation Monitoring"
+  capability: ai-synthetic-intelligence
+  has_copy: true
+
+- slug: ai-enabled-fraud-bec-monitoring
+  name: "AI-Enabled Fraud & BEC Monitoring"
+  capability: ai-synthetic-intelligence
+  has_copy: true
+
+- slug: narrative-reputation-intelligence-monitoring
+  name: "Narrative & Reputation Intelligence Monitoring"
+  capability: ai-synthetic-intelligence
+  has_copy: true
+
+- slug: ai-agent-identity-monitoring
+  name: "AI Agent & Identity Monitoring"
+  capability: ai-synthetic-intelligence
+  has_copy: true
+
 - slug: cpr-part-35-expert-report
   name: "CPR Part 35 Expert Report"
   capability: litigation-intelligence
