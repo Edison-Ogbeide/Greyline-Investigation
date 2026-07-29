@@ -5,12 +5,80 @@
 [build.environment]
   RUBY_VERSION = "3.3.11"
 
-# Temporary diagnostic: testing whether toml-defined redirects behave
-# differently from the _redirects file for paths that are currently
-# failing there. Remove once resolved.
+# Redirects for every legacy URL from the old site (spec section 15).
+# Defined here rather than in _redirects: that file's rules were not
+# being honoured on this site/plan for most paths (only a handful
+# worked), while netlify.toml [[redirects]] blocks work correctly.
+
 [[redirects]]
-  from = "/pricing"
-  to = "/engagement/"
+  from = "/greyline-pre-hire-intelligence.html"
+  to = "/services/candidate-risk-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/greyline-pre-hire-intelligence"
+  to = "/services/candidate-risk-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/greyline-digital-footprint-analysis.html"
+  to = "/services/digital-exposure-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/greyline-digital-footprint-analysis"
+  to = "/services/digital-exposure-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dark-web-sweep.html"
+  to = "/services/dark-web-exposure-report/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dark-web-sweep"
+  to = "/services/dark-web-exposure-report/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/greyline-continuous-intelligence.html"
+  to = "/services/continuous-subject-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/greyline-continuous-intelligence"
+  to = "/services/continuous-subject-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/greyline-romance-fraud-investigation.html"
+  to = "/services/ai-romance-fraud-verification/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/greyline-romance-fraud-investigation"
+  to = "/services/ai-romance-fraud-verification/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/greyline-pre-commitment-vetting.html"
+  to = "/services/pre-commitment-intelligence-assessment/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/greyline-pre-commitment-vetting"
+  to = "/services/pre-commitment-intelligence-assessment/"
   status = 301
   force = true
 
@@ -21,7 +89,343 @@
   force = true
 
 [[redirects]]
+  from = "/corporate-intelligence"
+  to = "/capabilities/corporate-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/corporate-intelligence"
+  to = "/capabilities/corporate-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/corporate-intelligence.html"
+  to = "/capabilities/corporate-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/osint-digital-intelligence.html"
+  to = "/capabilities/cyber-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/osint-digital-intelligence"
+  to = "/capabilities/cyber-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cybersecurity.html"
+  to = "/capabilities/cyber-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cybersecurity"
+  to = "/capabilities/cyber-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/osint-digital-intelligence"
+  to = "/capabilities/cyber-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/osint-digital-intelligence.html"
+  to = "/capabilities/cyber-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/cybersecurity-offensive-security"
+  to = "/capabilities/cyber-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/cybersecurity-offensive-security.html"
+  to = "/capabilities/cyber-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fraud-financial-investigations.html"
+  to = "/capabilities/fraud-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fraud-financial-investigations"
+  to = "/capabilities/fraud-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/fraud-investigations"
+  to = "/capabilities/fraud-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/fraud-investigations.html"
+  to = "/capabilities/fraud-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/litigation-legal-support.html"
+  to = "/capabilities/litigation-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/litigation-legal-support"
+  to = "/capabilities/litigation-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/litigation-legal-support"
+  to = "/capabilities/litigation-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/litigation-legal-support.html"
+  to = "/capabilities/litigation-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/relationship-intelligence.html"
+  to = "/capabilities/personal-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/relationship-intelligence"
+  to = "/capabilities/personal-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/relationship-intelligence"
+  to = "/capabilities/personal-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/relationship-intelligence.html"
+  to = "/capabilities/personal-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about-us"
+  to = "/about/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about-us.html"
+  to = "/about/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/case-studies.html"
+  to = "/case-studies/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services.html"
+  to = "/capabilities/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services"
+  to = "/capabilities/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pricing"
+  to = "/engagement/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pricing.html"
+  to = "/engagement/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights"
+  to = "/research/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights.html"
+  to = "/research/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights/*"
+  to = "/research/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/disclaimer.html"
+  to = "/disclaimer/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms-of-use.html"
+  to = "/terms-of-use/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy-policy.html"
+  to = "/privacy-policy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cookie-policy.html"
+  to = "/cookie-policy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/inquiry.html"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/inquiry"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/start"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/start.html"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/checkout"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/checkout.html"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cart"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cart.html"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/order"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/order.html"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/order/*"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/intake.html"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/intake/intake.html"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/intake/received.html"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/received.html"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/thank-you.html"
+  to = "/submit-inquiry/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/services/polygraph-examination-nigeria/"
+  to = "/capabilities/personal-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/polygraph-examination-nigeria"
   to = "/capabilities/personal-intelligence/"
   status = 301
   force = true

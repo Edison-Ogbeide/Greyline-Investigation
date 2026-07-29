@@ -16,12 +16,10 @@ company:
 
 permalink: /:path/
 
-# Jekyll excludes dotfiles and underscore-prefixed files by default.
-# .well-known/security.txt and _redirects need an explicit include or
-# they never reach _site.
+# Jekyll excludes dotfiles by default. .well-known/security.txt needs
+# an explicit include or it never reaches _site.
 include:
   - .well-known
-  - _redirects
 
 collections:
   capabilities:
