@@ -147,17 +147,17 @@
 - slug: synthetic-media-authenticity-report
   name: "Synthetic Media Authenticity Report"
   capability: ai-synthetic-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: ai-enhanced-bec-forensic-analysis
   name: "AI-Enhanced BEC Forensic Analysis"
   capability: ai-synthetic-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: document-authenticity-assessment
   name: "Document Authenticity Assessment"
   capability: ai-synthetic-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: ai-romance-fraud-verification
   name: "AI Romance Fraud Verification"
@@ -168,22 +168,22 @@
 - slug: ai-generated-evidence-detection
   name: "AI-Generated Evidence Detection & Rebuttal"
   capability: ai-synthetic-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: synthetic-narrative-intelligence
   name: "Synthetic Narrative Intelligence"
   capability: ai-synthetic-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: voice-authentication-vishing-detection
   name: "Voice Authentication & Vishing Detection"
   capability: ai-synthetic-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: non-human-identity-ai-agent-risk
   name: "Non-Human Identity & AI Agent Risk Assessment"
   capability: ai-synthetic-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: cpr-part-35-expert-report
   name: "CPR Part 35 Expert Report"
