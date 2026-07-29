@@ -2,7 +2,7 @@
 title: "AI & Synthetic Intelligence"
 slug: ai-synthetic-intelligence
 description: "Detection, analysis and defence against AI-generated threats, from deepfakes to synthetic narratives to AI-enhanced fraud."
-subhead: "Detection, analysis and defence against AI-generated threats."
+subhead: "What this capability covers"
 crumbs:
   - title: "Capabilities"
     url: /capabilities/
@@ -36,53 +36,30 @@ tiers:
   - name: "Monitor"
     subtitle: "(Managed Intelligence Services)"
     style: detail
-    description: "Unlike one-off investigations, these subscription intelligence services continuously monitor for AI-generated threats, impersonation campaigns and synthetic media targeting your organisation or executives."
+    description: "Unlike one-off investigations, these subscription services continuously monitor for AI-enabled threats targeting your organisation or executives across public platforms and social media. Subscriptions include monthly threat briefings and priority intelligence alerts across every discipline below."
     items:
-      - name: "Synthetic Media Monitoring"
+      - name: "Synthetic Media & Executive Impersonation"
         monitoring:
-          - "Deepfake videos"
-          - "AI-generated images"
-          - "Synthetic audio"
-          - "Executive impersonation"
-          - "Viral misinformation"
-          - "Public platforms"
-      - name: "Executive Impersonation Monitoring"
-        monitoring:
+          - "Deepfake video and voice cloning"
+          - "AI-generated images and synthetic audio"
           - "Fake executive profiles"
-          - "Voice cloning attempts"
-          - "Deepfake appearances"
           - "Social media impersonation"
-          - "Executive identity abuse"
-      - name: "Business Email Compromise (BEC) Monitoring"
+      - name: "AI-Enabled Fraud & BEC"
         monitoring:
-          - "Executive impersonation"
           - "Lookalike domains"
           - "AI-generated phishing"
           - "Supplier impersonation"
           - "Email fraud campaigns"
-      - name: "Synthetic Narrative Monitoring"
+          - "Fake customer support agents"
+      - name: "Narrative & Reputation Intelligence"
         monitoring:
           - "Coordinated influence campaigns"
           - "AI-generated misinformation"
-          - "Brand disinformation"
-          - "Coordinated social amplification"
-          - "Reputation manipulation"
-      - name: "AI Identity & Agent Monitoring"
+          - "Brand disinformation and amplification"
+      - name: "AI Agent & Identity Monitoring"
         monitoring:
           - "Unauthorised AI agents"
           - "Autonomous bot activity"
-          - "Fake customer support agents"
           - "Identity spoofing"
-          - "AI-enabled fraud activity"
-      - name: "Continuous AI Threat Intelligence"
-        list_label: "A fully managed intelligence service combining"
-        monitoring:
-          - "Synthetic media monitoring"
-          - "Executive impersonation monitoring"
-          - "AI-enabled fraud detection"
-          - "Narrative intelligence"
-          - "AI identity monitoring"
-          - "Monthly threat briefings"
-          - "Priority intelligence alerts"
 ---
-Greyline's AI & Synthetic Intelligence capability detects, analyses and defends against AI-generated threats, synthetic media, AI-enhanced business email compromise, fabricated documents, and synthetic narratives deployed at scale. This is a fast-moving discipline where detection tooling is probabilistic rather than absolute, which shapes how we word every finding on every page in this capability. The work runs across three stages: verify a specific piece of content or identity, investigate a broader deception, and monitor on a continuous basis where the threat is ongoing.
+Greyline's AI & Synthetic Intelligence capability detects, analyses and defends against AI-generated threats, synthetic media, AI-enabled fraud, and fabricated narratives deployed at scale. The work runs across three stages: verify a specific piece of content or identity, investigate a broader deception, and monitor on a continuous basis where the threat is ongoing.

@@ -37,6 +37,7 @@
 - slug: ai-synthetic-intelligence
   name: "AI & Synthetic Intelligence"
   short_name: "AI & Synthetic"
+  article: "an"
   overview: >-
     Detection, analysis and defence against AI-generated threats, from
     deepfakes to synthetic narratives to AI-enhanced fraud.
@@ -45,9 +46,9 @@
   training_slug: ai-threat-awareness
   copy_constraint: >-
     Findings are worded as "consistent with synthetic generation" rather than
-    "is a deepfake", detection tooling is probabilistic, and the stronger
-    phrasing will not survive cross-examination. Applies in headings, body copy
-    and meta descriptions on every page in this capability.
+    "is a deepfake". Detection tooling is probabilistic, and the stronger
+    phrasing will not survive cross-examination. This applies in headings,
+    body copy and meta descriptions on every page in this capability.
   order: 4
 
 - slug: litigation-intelligence

@@ -20,9 +20,6 @@ layout: default
 		<h2>{{ page.subhead | default: "Overview" }}</h2>
 		<hr class="gold-rule">
 		{{ content }}
-		{% if cap.copy_constraint %}
-		<p class="copy-constraint-note"><strong>A note on findings:</strong> {{ cap.copy_constraint }}</p>
-		{% endif %}
 	</div>
 </section>
 
@@ -62,7 +59,7 @@ layout: default
 			<div class="tier-detail-card">
 				<h3>{% if item.slug %}<a href="{{ '/services/' | append: item.slug | append: '/' | relative_url }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</h3>
 				{% if item.monitoring %}
-				<div class="tier-detail-label">{{ item.list_label | default: "Continuous monitoring of" }}</div>
+				{% if item.list_label %}<div class="tier-detail-label">{{ item.list_label }}</div>{% endif %}
 				<ul class="tier-detail-list">
 					{% for m in item.monitoring %}<li>{{ m }}</li>{% endfor %}
 				</ul>
@@ -120,6 +117,9 @@ layout: default
 			<h2>Held to <em>the Greyline Verification Standard</em></h2>
 			<hr class="gold-rule">
 			<p>Every engagement in this capability follows the same evidential discipline described in full at <a href="{{ cap.method_link | relative_url }}">our method</a>{% if cap.method_link != '/method/' %}, in particular {{ cap.method_link }}{% endif %}.</p>
+			{% if cap.copy_constraint %}
+			<p class="copy-constraint-note"><strong>A note on findings:</strong> {{ cap.copy_constraint }}</p>
+			{% endif %}
 		</div>
 	</div>
 </section>
@@ -132,7 +132,7 @@ layout: default
 			<div class="section-eyebrow">Related Training</div>
 			<h2>{{ related_training.name }}</h2>
 			<hr class="gold-rule">
-			<p>Related organisational training programme for {{ cap.short_name | downcase }} risk: <a href="{{ '/training/' | append: related_training.slug | append: '/' | relative_url }}">{{ related_training.name }} &rarr;</a></p>
+			<p>Related organisational training programme for {{ cap.short_name }} risk: <a href="{{ '/training/' | append: related_training.slug | append: '/' | relative_url }}">{{ related_training.name }} &rarr;</a></p>
 		</div>
 	</div>
 </section>
@@ -141,7 +141,7 @@ layout: default
 <section class="cta-panel">
 	<div class="container-narrow">
 		<div class="hero-eyebrow">Begin an Engagement</div>
-		<h2>Discuss a <em>{{ cap.short_name | downcase }} matter</em>.</h2>
+		<h2>Discuss {{ cap.article | default: "a" }} <em>{{ cap.short_name }} matter</em>.</h2>
 		<p>Every engagement begins with a confidential inquiry and proceeds to a written scope before any work is committed.</p>
 		<div class="cta-panel-actions">
 			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
