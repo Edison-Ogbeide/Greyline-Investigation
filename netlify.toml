@@ -4,3 +4,24 @@
 
 [build.environment]
   RUBY_VERSION = "3.3.11"
+
+# Temporary diagnostic: testing whether toml-defined redirects behave
+# differently from the _redirects file for paths that are currently
+# failing there. Remove once resolved.
+[[redirects]]
+  from = "/pricing"
+  to = "/engagement/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/corporate-intelligence.html"
+  to = "/capabilities/corporate-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/polygraph-examination-nigeria/"
+  to = "/capabilities/personal-intelligence/"
+  status = 301
+  force = true
