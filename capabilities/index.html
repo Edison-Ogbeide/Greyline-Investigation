@@ -19,7 +19,7 @@ crumbs:
 <section class="svc-overview">
 	<div class="container">
 		<div class="svc-grid">
-			{% assign caps = site.data.capabilities | sort: "order" %}
+			{% assign caps = site.data.capabilities | sort: "name" %}
 			{% for cap in caps %}
 			{% assign n = site.data.services | where: "capability", cap.slug | size %}
 			<a href="{{ '/capabilities/' | append: cap.slug | append: '/' | relative_url }}" class="svc-card">
