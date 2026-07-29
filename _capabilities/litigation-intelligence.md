@@ -8,5 +8,89 @@ crumbs:
     url: /capabilities/
   - title: "Litigation Intelligence"
     url: /capabilities/litigation-intelligence/
+tiers:
+  - name: "Prepare"
+    style: cards
+    description: "Gather, preserve and verify evidence before proceedings begin, ensuring legal teams enter disputes with credible, defensible intelligence."
+    items:
+      - name: "Pre-Litigation Investigation Pack"
+        slug: pre-litigation-investigation-pack
+      - name: "Digital Evidence Preservation"
+        slug: digital-evidence-preservation
+      - name: "Witness Location & Credibility Verification"
+        slug: witness-location-credibility-verification
+      - name: "Defamation Pre-Action Evidence Pack"
+        slug: defamation-pre-action-evidence-pack
+      - name: "Family Financial Disclosure Verification"
+        slug: family-financial-disclosure-verification
+  - name: "Support"
+    style: cards
+    description: "Specialist intelligence and expert services that strengthen litigation strategy throughout legal proceedings."
+    items:
+      - name: "CPR Part 35 Expert Report"
+        slug: cpr-part-35-expert-report
+      - name: "Expert Witness Rebuttal"
+        slug: expert-witness-rebuttal
+      - name: "Process Serving (Merseyside, Lancashire & Greater Manchester)"
+        slug: process-serving
+      - name: "International Service of Process (Nigeria & West Africa)"
+        slug: international-service-of-process
+      - name: "Settlement Intelligence"
+        slug: settlement-intelligence
+  - name: "Monitor"
+    subtitle: "(Managed Litigation Intelligence)"
+    style: detail
+    description: "Unlike one-off investigations, these subscription intelligence services provide ongoing evidence development, asset visibility and litigation support throughout the lifecycle of a dispute."
+    items:
+      - name: "Evidence Monitoring"
+        monitoring:
+          - "New digital evidence"
+          - "Online activity"
+          - "Website changes"
+          - "Social media content"
+          - "Deleted or modified information"
+          - "Public records"
+      - name: "Witness Intelligence Monitoring"
+        monitoring:
+          - "Witness location changes"
+          - "New business interests"
+          - "Public statements"
+          - "Credibility indicators"
+          - "Court appearances"
+          - "Adverse media"
+      - name: "Defendant Monitoring"
+        monitoring:
+          - "Companies"
+          - "Directors"
+          - "Property acquisitions"
+          - "Insolvency"
+          - "Court proceedings"
+          - "Asset movements"
+      - name: "Settlement Intelligence Monitoring"
+        monitoring:
+          - "Financial position"
+          - "Asset disposals"
+          - "New business interests"
+          - "Cross-border activities"
+          - "Enforcement opportunities"
+          - "Changes affecting settlement prospects"
+      - name: "International Litigation Monitoring"
+        monitoring:
+          - "Overseas assets"
+          - "Company records"
+          - "Court filings"
+          - "Local regulatory changes"
+          - "Business relationships"
+          - "Jurisdiction-specific intelligence"
+      - name: "Continuous Litigation Intelligence"
+        list_label: "A fully managed service combining"
+        monitoring:
+          - "Evidence monitoring"
+          - "Witness monitoring"
+          - "Asset visibility"
+          - "Defendant intelligence"
+          - "Settlement intelligence"
+          - "Periodic litigation briefings"
+          - "Immediate alerts on significant developments"
 ---
-Greyline's Litigation Intelligence capability provides investigative support for solicitors, barristers and family offices, asset tracing, CPR Part 35 expert reporting, witness location and credibility verification, and pre-litigation viability work. Every deliverable is prepared to the evidential and procedural standard the proceedings actually require, with chain-of-custody documentation as standard.
+Greyline's Litigation Intelligence capability provides investigative support for solicitors, barristers and family offices, asset tracing, CPR Part 35 expert reporting, witness location and credibility verification, and pre-litigation viability work. Every deliverable is prepared to the evidential and procedural standard the proceedings actually require, with chain-of-custody documentation as standard. The work runs across three stages: prepare the evidence base before proceedings begin, support the case through specialist expert input, and monitor on a continuous basis where a dispute runs over time.

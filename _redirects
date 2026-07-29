@@ -79,3 +79,7 @@
 /intake/received.html                        /submit-inquiry/ 301
 /received.html                                 /submit-inquiry/ 301
 /thank-you.html                                  /submit-inquiry/ 301
+
+# Discontinued service
+/services/polygraph-examination-nigeria/ /capabilities/personal-intelligence/ 301
+/services/polygraph-examination-nigeria  /capabilities/personal-intelligence/ 301

@@ -280,9 +280,3 @@
   name_suffix: "(Diaspora)"
   capability: personal-intelligence
   has_copy: false
-
-- slug: polygraph-examination-nigeria
-  name: "Polygraph Examination"
-  name_suffix: "(Nigeria-based)"
-  capability: personal-intelligence
-  has_copy: false

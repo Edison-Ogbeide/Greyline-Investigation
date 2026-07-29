@@ -60,9 +60,9 @@ layout: default
 		<div class="tier-detail-grid">
 			{% for item in tier.items %}
 			<div class="tier-detail-card">
-				<h3>{{ item.name }}</h3>
+				<h3>{% if item.slug %}<a href="{{ '/services/' | append: item.slug | append: '/' | relative_url }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</h3>
 				{% if item.monitoring %}
-				<div class="tier-detail-label">Continuous monitoring of</div>
+				<div class="tier-detail-label">{{ item.list_label | default: "Continuous monitoring of" }}</div>
 				<ul class="tier-detail-list">
 					{% for m in item.monitoring %}<li>{{ m }}</li>{% endfor %}
 				</ul>
