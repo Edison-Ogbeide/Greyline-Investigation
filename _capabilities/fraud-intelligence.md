@@ -41,6 +41,7 @@ tiers:
     description: "Unlike traditional investigations, these are continuous intelligence services delivered on subscription to detect emerging fraud risks, monitor assets and support recovery strategies."
     items:
       - name: "Asset Visibility Monitoring"
+        slug: asset-visibility-monitoring
         monitoring:
           - "Property acquisitions"
           - "Companies"
@@ -49,6 +50,7 @@ tiers:
           - "Court proceedings"
           - "Asset transfers"
       - name: "Source of Wealth Monitoring"
+        slug: source-of-wealth-monitoring
         monitoring:
           - "Wealth changes"
           - "New business interests"
@@ -57,6 +59,7 @@ tiers:
           - "Sanctions"
           - "Adverse media"
       - name: "Fraud Network Monitoring"
+        slug: fraud-network-monitoring
         monitoring:
           - "Fraud rings"
           - "Known suspects"
@@ -67,6 +70,7 @@ tiers:
           - "Domains"
           - "Emerging fraud patterns"
       - name: "Blockchain Intelligence Monitoring"
+        slug: blockchain-intelligence-monitoring
         monitoring:
           - "Cryptocurrency wallets"
           - "Transaction flows"

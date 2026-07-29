@@ -49,6 +49,61 @@
   capability: corporate-intelligence
   has_copy: false
 
+- slug: vendor-intelligence-monitoring
+  name: "Vendor Intelligence Monitoring"
+  capability: corporate-intelligence
+  has_copy: true
+
+- slug: continuous-candidate-monitoring
+  name: "Continuous Candidate Monitoring"
+  capability: corporate-intelligence
+  has_copy: true
+
+- slug: insider-risk-monitoring
+  name: "Insider Risk Monitoring"
+  capability: corporate-intelligence
+  has_copy: true
+
+- slug: portfolio-intelligence-monitoring
+  name: "Portfolio Intelligence Monitoring"
+  capability: corporate-intelligence
+  has_copy: true
+
+- slug: workplace-intelligence-programme
+  name: "Workplace Intelligence Programme"
+  capability: corporate-intelligence
+  has_copy: true
+
+- slug: litigation-watch
+  name: "Litigation Watch"
+  capability: corporate-intelligence
+  has_copy: true
+
+- slug: intelligence-briefings
+  name: "Intelligence Briefings"
+  capability: corporate-intelligence
+  has_copy: true
+
+- slug: board-reporting
+  name: "Board Reporting"
+  capability: corporate-intelligence
+  has_copy: true
+
+- slug: risk-workshops
+  name: "Risk Workshops"
+  capability: corporate-intelligence
+  has_copy: true
+
+- slug: executive-intelligence-reviews
+  name: "Executive Intelligence Reviews"
+  capability: corporate-intelligence
+  has_copy: true
+
+- slug: quarterly-strategic-risk-assessments
+  name: "Quarterly Strategic Risk Assessments"
+  capability: corporate-intelligence
+  has_copy: true
+
 - slug: asset-visibility-report
   name: "Asset Visibility Report"
   name_suffix: "(pre-litigation)"
@@ -96,6 +151,26 @@
   name: "Organised Fraud Network Mapping"
   capability: fraud-intelligence
   has_copy: false
+
+- slug: asset-visibility-monitoring
+  name: "Asset Visibility Monitoring"
+  capability: fraud-intelligence
+  has_copy: true
+
+- slug: source-of-wealth-monitoring
+  name: "Source of Wealth Monitoring"
+  capability: fraud-intelligence
+  has_copy: true
+
+- slug: fraud-network-monitoring
+  name: "Fraud Network Monitoring"
+  capability: fraud-intelligence
+  has_copy: true
+
+- slug: blockchain-intelligence-monitoring
+  name: "Blockchain Intelligence Monitoring"
+  capability: fraud-intelligence
+  has_copy: true
 
 - slug: digital-exposure-intelligence
   name: "Digital Exposure Intelligence"

@@ -35,11 +35,17 @@ tiers:
       - name: "Executive Exposure Profile"
         slug: executive-exposure-profile
       - name: "Vendor Intelligence Monitoring"
+        slug: vendor-intelligence-monitoring
       - name: "Continuous Candidate Monitoring"
+        slug: continuous-candidate-monitoring
       - name: "Insider Risk Monitoring"
+        slug: insider-risk-monitoring
       - name: "Portfolio Intelligence Monitoring"
+        slug: portfolio-intelligence-monitoring
       - name: "Workplace Intelligence Programme"
+        slug: workplace-intelligence-programme
       - name: "Litigation Watch"
+        slug: litigation-watch
       - name: "Third-Party Risk Management as a Service"
         slug: tprm-as-a-service
   - name: "Advise"
@@ -48,9 +54,14 @@ tiers:
     description: "Strategic intelligence support at board level, informing decisions that go beyond a single instructed report."
     items:
       - name: "Intelligence briefings"
+        slug: intelligence-briefings
       - name: "Board reporting"
+        slug: board-reporting
       - name: "Risk workshops"
+        slug: risk-workshops
       - name: "Executive intelligence reviews"
+        slug: executive-intelligence-reviews
       - name: "Quarterly strategic risk assessments"
+        slug: quarterly-strategic-risk-assessments
 ---
 Greyline's Corporate Intelligence capability supports the decisions where being wrong is expensive. Pre-hire vetting that exposes what compliance-tier checks miss. Vendor and supply-chain risk assessments that go beyond a director-search screenshot. Insider threat and workplace investigations conducted to evidential standard. The progression is deliberate: investigate a single matter, move to ongoing monitoring where the risk is continuous, and draw on strategic advice at board level where the decision is bigger than one report.
