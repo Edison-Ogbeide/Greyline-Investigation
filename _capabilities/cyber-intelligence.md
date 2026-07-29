@@ -37,6 +37,7 @@ tiers:
     description: "Unlike one-off assessments, these subscription intelligence services provide continuous monitoring of your organisation's digital risk landscape, alerting you to new threats, exposures and emerging attack activity."
     items:
       - name: "Continuous Digital Exposure Monitoring"
+        slug: continuous-digital-exposure-monitoring
         monitoring:
           - "Domains"
           - "Subdomains"
@@ -46,6 +47,7 @@ tiers:
           - "SSL/TLS changes"
           - "DNS changes"
       - name: "Dark Web Intelligence Monitoring"
+        slug: dark-web-intelligence-monitoring
         monitoring:
           - "Employee credentials"
           - "Company email addresses"
@@ -54,6 +56,7 @@ tiers:
           - "Criminal marketplaces"
           - "Data breach notifications"
       - name: "Executive Exposure Monitoring"
+        slug: executive-exposure-monitoring
         monitoring:
           - "Executive digital footprints"
           - "Credential exposure"
@@ -62,6 +65,7 @@ tiers:
           - "High-risk social media exposure"
           - "Personal information leaks"
       - name: "Brand Protection Intelligence"
+        slug: brand-protection-intelligence
         monitoring:
           - "Typosquatted domains"
           - "Fake websites"
@@ -70,6 +74,7 @@ tiers:
           - "Mobile application abuse"
           - "Phishing campaigns"
       - name: "Supply Chain Intelligence Monitoring"
+        slug: supply-chain-intelligence-monitoring
         monitoring:
           - "Critical suppliers"
           - "Third-party breaches"
@@ -77,6 +82,7 @@ tiers:
           - "Exposed partner infrastructure"
           - "Supply chain vulnerabilities"
       - name: "Incident Response Intelligence"
+        slug: incident-response-intelligence-monitoring
         monitoring:
           - "Indicators of compromise (IOCs)"
           - "Threat actor activity"

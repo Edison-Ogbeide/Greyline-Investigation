@@ -207,7 +207,7 @@
 - slug: brand-protection-intelligence
   name: "Brand Protection Intelligence"
   capability: cyber-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: supply-chain-cyber-intelligence
   name: "Supply Chain Cyber Intelligence"
@@ -218,6 +218,31 @@
   name: "Incident Response Intelligence"
   capability: cyber-intelligence
   has_copy: false
+
+- slug: continuous-digital-exposure-monitoring
+  name: "Continuous Digital Exposure Monitoring"
+  capability: cyber-intelligence
+  has_copy: true
+
+- slug: dark-web-intelligence-monitoring
+  name: "Dark Web Intelligence Monitoring"
+  capability: cyber-intelligence
+  has_copy: true
+
+- slug: executive-exposure-monitoring
+  name: "Executive Exposure Monitoring"
+  capability: cyber-intelligence
+  has_copy: true
+
+- slug: supply-chain-intelligence-monitoring
+  name: "Supply Chain Intelligence Monitoring"
+  capability: cyber-intelligence
+  has_copy: true
+
+- slug: incident-response-intelligence-monitoring
+  name: "Incident Response Intelligence Monitoring"
+  capability: cyber-intelligence
+  has_copy: true
 
 - slug: synthetic-media-authenticity-report
   name: "Synthetic Media Authenticity Report"
