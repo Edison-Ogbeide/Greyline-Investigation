@@ -11,7 +11,7 @@ crumbs:
 tiers:
   - name: "Assess"
     style: cards
-    description: "Gain a clear understanding of your digital exposure, attack surface and cyber risks before they become incidents."
+    description: "A clear, point-in-time picture of your digital exposure before it becomes an incident: digital footprint and adverse media mapping, executive exposure profiling, and dark web exposure sweeps."
     items:
       - name: "Digital Exposure Intelligence"
         slug: digital-exposure-intelligence
@@ -21,7 +21,7 @@ tiers:
         slug: dark-web-exposure-report
   - name: "Protect"
     style: cards
-    description: "Validate security controls and identify exploitable weaknesses through intelligence-led assessments and adversary simulation."
+    description: "Turn exposure findings into hardened defences, delivered as intelligence rather than active exploitation: attack surface control validation, social engineering awareness testing, supply chain risk review and incident response readiness."
     items:
       - name: "Attack Surface Validation"
         slug: attack-surface-validation
@@ -103,4 +103,4 @@ tiers:
           - "Monthly intelligence reports"
           - "Immediate critical alerts"
 ---
-Greyline's Cyber & Digital Risk Intelligence capability combines open-source intelligence, dark web exposure monitoring, adverse media screening and attack surface work into a single discipline. This is the digital trace work that underpins every other capability on this site, from vetting a candidate to tracing a fraud to preparing evidence for litigation, offered here as a standalone capability for CISOs, security teams and general counsel managing digital exposure directly. The work runs across three stages: assess current exposure, protect against exploitable weaknesses, and monitor on a continuous basis where risk does not end with one assessment.
+Greyline's Cyber & Digital Risk Intelligence capability combines open-source intelligence, dark web exposure monitoring, adverse media screening and attack surface work into a single discipline, offered here as a standalone capability for CISOs, security teams and general counsel managing digital exposure directly. The same work also underpins vetting a candidate, tracing a fraud, or preparing evidence for litigation elsewhere on this site. The work runs across three stages: assess current exposure, protect against exploitable weaknesses, and monitor on a continuous basis where risk does not end with one assessment.
