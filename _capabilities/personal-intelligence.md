@@ -1,7 +1,7 @@
 ---
 title: "Personal Intelligence"
 slug: personal-intelligence
-description: "Quiet, documented inquiry into the people who matter most, partners, prospective spouses, those targeting you online, and those threatening your safety."
+description: "Quiet, documented inquiry into the people who matter most: partners, prospective spouses, online harassers, and personal threats."
 subhead: "Quiet, documented inquiry into the people who matter most."
 crumbs:
   - title: "Capabilities"
@@ -23,7 +23,7 @@ tiers:
         slug: background-verification-diaspora
   - name: "Protect"
     style: cards
-    description: "Assess and reduce personal digital risks, helping individuals, executives and high-profile clients understand and manage their exposure."
+    description: "Assess and reduce personal digital risks, helping individuals, executives and high-profile clients understand and manage their exposure. Where the risk is ongoing rather than a single point in time, findings here typically continue as a Monitor subscription."
     items:
       - name: "Digital Exposure Profile"
         slug: digital-exposure-profile-personal
@@ -34,53 +34,53 @@ tiers:
   - name: "Monitor"
     subtitle: "(Managed Personal Intelligence)"
     style: detail
-    description: "Unlike one-off investigations, these subscription intelligence services provide continuous monitoring of personal, digital and reputational risks, alerting clients to significant changes as they occur."
+    description: "Ongoing intelligence for when a single report is not enough: continuous oversight of a relationship, an identity, or a threat for as long as the concern remains live."
     items:
       - name: "Relationship Monitoring"
         slug: relationship-monitoring
         monitoring:
-          - "Public records"
-          - "Social media activity"
-          - "Identity changes"
-          - "New online profiles"
-          - "Adverse media"
-          - "Significant digital developments"
+          - "Tracking changes in public records"
+          - "Watching for new social media activity"
+          - "Flagging identity inconsistencies as they emerge"
+          - "Identifying new online profiles"
+          - "Screening for adverse media"
+          - "Alerting on significant digital developments"
       - name: "Identity Monitoring"
         slug: identity-monitoring
         monitoring:
-          - "Identity misuse"
-          - "Personal data exposure"
-          - "Credential breaches"
-          - "Fraud indicators"
-          - "New public records"
-          - "Identity-related risks"
+          - "Detecting identity misuse"
+          - "Tracking personal data exposure"
+          - "Screening for credential breaches"
+          - "Flagging emerging fraud indicators"
+          - "Watching for new public records"
+          - "Alerting on identity-related risks"
       - name: "Digital Exposure Monitoring"
         slug: personal-digital-exposure-monitoring
         monitoring:
-          - "Email addresses"
-          - "Phone numbers"
-          - "Social media accounts"
-          - "Data breaches"
-          - "Dark web exposure"
-          - "Personal information leaks"
+          - "Monitoring email addresses for exposure"
+          - "Monitoring phone numbers for exposure"
+          - "Watching social media accounts for compromise"
+          - "Screening new data breaches"
+          - "Sweeping the dark web for exposure"
+          - "Alerting on personal information leaks"
       - name: "Executive Protection Monitoring"
         slug: executive-protection-monitoring
         monitoring:
-          - "Executive exposure"
-          - "Impersonation attempts"
-          - "Doxxing activity"
-          - "Threat indicators"
-          - "Public mentions"
-          - "Reputation risks"
+          - "Tracking executive digital footprint exposure"
+          - "Detecting impersonation attempts"
+          - "Screening for doxxing activity"
+          - "Flagging emerging threat indicators"
+          - "Monitoring public mentions"
+          - "Alerting on reputation risks"
       - name: "Personal Threat Monitoring"
         slug: personal-threat-monitoring
         monitoring:
-          - "Online threats"
-          - "Harassment"
-          - "Stalking indicators"
-          - "Doxxing attempts"
-          - "Coordinated abuse"
-          - "Emerging security concerns"
+          - "Tracking online threats"
+          - "Monitoring for harassment"
+          - "Flagging stalking indicators"
+          - "Detecting doxxing attempts"
+          - "Identifying coordinated abuse"
+          - "Alerting on emerging security concerns"
       - name: "Continuous Subject Monitoring"
         slug: continuous-subject-monitoring
         list_label: "A fully managed intelligence service combining"
@@ -93,4 +93,4 @@ tiers:
           - "Monthly intelligence summaries"
           - "Immediate alerts on significant developments"
 ---
-Greyline's Personal Intelligence capability is quiet, documented inquiry into the people who matter most, partners, prospective spouses, those targeting you online, and those threatening your safety. This work is conducted lawfully and discreetly, on publicly available information and lawfully obtained records, with a named analyst accountable for every finding. The work runs across three stages: verify a specific person or relationship, protect against ongoing digital and reputational risk, and monitor on a continuous basis where the concern does not end with one report.
+Greyline's Personal Intelligence capability is quiet, documented inquiry into the people who matter most: partners, prospective spouses, online harassers, and personal threats. This work is conducted lawfully and discreetly, on publicly available information and lawfully obtained records, with a named analyst accountable for every finding. The work runs across three stages: verify a specific person or relationship, protect against ongoing digital and reputational risk, and monitor on a continuous basis where the concern does not end with one report.

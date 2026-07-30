@@ -1,7 +1,7 @@
 ---
 title: "Litigation Intelligence"
 slug: litigation-intelligence
-description: "Investigative support for solicitors and family offices, asset tracing, expert witness work, witness location and pre-investment due diligence."
+description: "Investigative support for solicitors and family offices, expert witness work, witness location, and continuous monitoring once a dispute is underway."
 subhead: "Investigative support built for the proceedings it will end up in."
 crumbs:
   - title: "Capabilities"
@@ -40,7 +40,7 @@ tiers:
   - name: "Monitor"
     subtitle: "(Managed Litigation Intelligence)"
     style: detail
-    description: "Unlike one-off investigations, these subscription intelligence services provide ongoing evidence development, asset visibility and litigation support throughout the lifecycle of a dispute."
+    description: "Continuous evidence development and opponent monitoring for disputes that run over months or years, so a legal team is not relying on a single snapshot taken at the start of proceedings."
     items:
       - name: "Evidence Monitoring"
         slug: evidence-monitoring
@@ -99,4 +99,4 @@ tiers:
           - "Periodic litigation briefings"
           - "Immediate alerts on significant developments"
 ---
-Greyline's Litigation Intelligence capability provides investigative support for solicitors, barristers and family offices, asset tracing, CPR Part 35 expert reporting, witness location and credibility verification, and pre-litigation viability work. Every deliverable is prepared to the evidential and procedural standard the proceedings actually require, with chain-of-custody documentation as standard. The work runs across three stages: prepare the evidence base before proceedings begin, support the case through specialist expert input, and monitor on a continuous basis where a dispute runs over time.
+Greyline's Litigation Intelligence capability provides investigative support for solicitors, barristers and family offices: CPR Part 35 expert reporting, witness location and credibility verification, and pre-litigation viability work. Locating hidden assets for the first time sits under our <a href="/capabilities/fraud-intelligence/">Fraud & Asset Intelligence</a> capability; once a dispute is underway, Defendant Monitoring keeps a named defendant's known assets and companies under continuous watch for the life of the proceedings. Every deliverable is prepared to the evidential and procedural standard the proceedings actually require, with chain-of-custody documentation as standard. The work runs across three stages: prepare the evidence base before proceedings begin, support the case through specialist expert input, and monitor on a continuous basis where a dispute runs over time.

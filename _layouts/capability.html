@@ -116,7 +116,7 @@ layout: default
 			<div class="section-eyebrow">How This Work Is Produced</div>
 			<h2>Held to <em>the Greyline Verification Standard</em></h2>
 			<hr class="gold-rule">
-			<p>Every engagement in this capability follows the same evidential discipline described in full at <a href="{{ cap.method_link | relative_url }}">our method</a>{% if cap.method_link != '/method/' %}, in particular {{ cap.method_link }}{% endif %}.</p>
+			<p>Every engagement in this capability follows the same evidential discipline described in full at <a href="{{ cap.method_link | relative_url }}">our method</a>{% if cap.method_link != '/method/' %}, in particular {{ cap.method_link }}{% endif %}.{% if cap.method_note %} {{ cap.method_note }}{% endif %}</p>
 			{% if cap.copy_constraint %}
 			<p class="copy-constraint-note"><strong>A note on findings:</strong> {{ cap.copy_constraint }}</p>
 			{% endif %}
@@ -142,7 +142,7 @@ layout: default
 	<div class="container-narrow">
 		<div class="hero-eyebrow">Begin an Engagement</div>
 		<h2>Discuss {{ cap.article | default: "a" }} <em>{{ cap.short_name }} matter</em>.</h2>
-		<p>Every engagement begins with a confidential inquiry and proceeds to a written scope before any work is committed.</p>
+		<p>{{ cap.engagement_note | default: "Every engagement begins with a confidential inquiry and proceeds to a written scope before any work is committed." }}</p>
 		<div class="cta-panel-actions">
 			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
 			<a href="{{ '/engagement/' | relative_url }}" class="btn-outline-w">How Engagement Works</a>

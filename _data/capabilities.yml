@@ -55,21 +55,33 @@
   name: "Litigation Intelligence"
   short_name: "Litigation"
   overview: >-
-    Investigative support for solicitors and family offices, asset tracing,
-    expert witness work, witness location and pre-investment due diligence.
+    Investigative support for solicitors and family offices, expert witness
+    work, witness location, and continuous monitoring once a dispute is
+    underway.
   buyers: "Solicitors, barristers, general counsel, commercial litigators, family law practitioners."
   method_link: /method/reporting/
   training_slug: legal-sector-cpd
+  engagement_note: >-
+    Every engagement begins with a confidential review of the proceedings,
+    the evidential gap, and the required disclosure standard.
+  method_note: >-
+    Deliverables are prepared to CPR-compliant standards with chain-of-custody
+    documentation and expert witness readiness as required.
   order: 5
 
 - slug: personal-intelligence
   name: "Personal Intelligence"
   short_name: "Personal"
   overview: >-
-    Quiet, documented inquiry into the people who matter most, partners,
-    prospective spouses, those targeting you online, and those threatening
-    your safety.
+    Quiet, documented inquiry into the people who matter most: partners,
+    prospective spouses, online harassers, and personal threats.
   buyers: "Individuals, family offices, executives, diaspora community."
   method_link: /method/disciplines/
   training_slug: null
+  engagement_note: >-
+    Every engagement begins with a confidential scoping call to define the
+    subject, the risk, and the reporting rhythm.
+  method_note: >-
+    Findings are sourced from public records and lawfully obtained data, with
+    a named analyst and full provenance for every claim.
   order: 6
