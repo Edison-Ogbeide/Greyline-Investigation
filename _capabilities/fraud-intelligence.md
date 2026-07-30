@@ -11,7 +11,7 @@ crumbs:
 tiers:
   - name: "Investigate"
     style: cards
-    description: "Intelligence-led investigations into fraud, hidden assets, financial crime and complex disputes, providing evidence before litigation, regulatory action or recovery efforts."
+    description: "Intelligence-led investigations into fraud, hidden assets, financial crime and complex disputes, covering scams, investment fraud, lifestyle discrepancies and organised fraud networks, providing evidence before litigation, regulatory action or recovery efforts."
     items:
       - name: "Asset Visibility Report (Pre-Litigation)"
         slug: asset-visibility-report
@@ -25,7 +25,7 @@ tiers:
         slug: organised-fraud-network-mapping
   - name: "Recover"
     style: cards
-    description: "Asset tracing and financial intelligence to identify, locate and support the recovery of assets across the UK and international jurisdictions."
+    description: "Asset tracing and financial intelligence to identify, locate and document assets across the UK and international jurisdictions, supporting subrogation claims, freezing orders, pre-judgment security and post-judgment enforcement action."
     items:
       - name: "Asset Recovery Intelligence (Post-Judgment)"
         slug: asset-recovery-intelligence
@@ -38,7 +38,7 @@ tiers:
   - name: "Monitor"
     subtitle: "(Managed Intelligence Services)"
     style: detail
-    description: "Unlike traditional investigations, these are continuous intelligence services delivered on subscription to detect emerging fraud risks, monitor assets and support recovery strategies."
+    description: "Unlike traditional investigations, these are continuous intelligence services delivered on subscription, tracking assets, wealth changes, fraud networks and cryptocurrency movement for as long as a risk remains live."
     items:
       - name: "Asset Visibility Monitoring"
         slug: asset-visibility-monitoring
@@ -61,14 +61,10 @@ tiers:
       - name: "Fraud Network Monitoring"
         slug: fraud-network-monitoring
         monitoring:
-          - "Fraud rings"
-          - "Known suspects"
-          - "Linked companies"
-          - "Phone numbers"
-          - "Email addresses"
-          - "Cryptocurrency wallets"
-          - "Domains"
-          - "Emerging fraud patterns"
+          - "Known fraud rings, suspects and linked companies"
+          - "Phone numbers, email addresses and domains connected to the network"
+          - "Cryptocurrency wallets connected to the network"
+          - "New patterns consistent with the network's known methodology"
       - name: "Blockchain Intelligence Monitoring"
         slug: blockchain-intelligence-monitoring
         monitoring:
@@ -79,4 +75,4 @@ tiers:
           - "Mixing services"
           - "Newly associated wallets"
 ---
-Greyline's Fraud & Asset Intelligence capability investigates fraud, hidden assets and financial deception for individuals targeted by scams, businesses defending against loss, insurers pursuing subrogation, and litigators tracing assets before or after judgment, with cross-border reach into the Nigeria and West Africa corridor through named in-country partners. The work runs across three stages: investigate a specific matter, recover what is traceable, and monitor on a continuous basis where the risk does not end with one report.
+Greyline's Fraud & Asset Intelligence capability investigates fraud, hidden assets and financial deception, including investment scams, romance fraud and financial misrepresentation, for individuals targeted by scams, businesses defending against loss, insurers pursuing subrogation, and litigators tracing assets before or after judgment. We maintain cross-border reach into the Nigeria and West Africa corridor through established in-country networks. The work runs across three stages: investigate a specific matter, trace and document assets for recovery, and monitor on a continuous basis where the risk does not end with one report.
