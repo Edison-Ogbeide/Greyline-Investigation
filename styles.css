@@ -1334,6 +1334,8 @@ footer,
 .compare-head { background: var(--ink); }
 .compare-head > div { color: var(--white); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; padding: 0.9rem 1.25rem; }
 .compare-head > div:first-child { background: var(--ink); }
+.compare-grid .compare-head > div:nth-child(2),
+.compare-grid .compare-head > div:nth-child(3) { color: var(--white); font-weight: 500; }
 
 /* ---------- WHAT'S INCLUDED (VISUAL CARDS) ---------- */
 .included-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
