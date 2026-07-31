@@ -308,54 +308,54 @@
 - slug: cpr-part-35-expert-report
   name: "CPR Part 35 Expert Report"
   capability: litigation-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: digital-evidence-preservation
   name: "Digital Evidence Preservation"
   capability: litigation-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: witness-location-credibility-verification
   name: "Witness Location & Credibility Verification"
   capability: litigation-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: defamation-pre-action-evidence-pack
   name: "Defamation Pre-Action Evidence Pack"
   capability: litigation-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: family-financial-disclosure-verification
   name: "Family Financial Disclosure Verification"
   capability: litigation-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: pre-litigation-investigation-pack
   name: "Pre-Litigation Investigation Pack"
   capability: litigation-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: expert-witness-rebuttal
   name: "Expert Witness Rebuttal"
   capability: litigation-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: process-serving
   name: "Process Serving"
   name_suffix: "(Merseyside, Lancashire, Greater Manchester)"
   capability: litigation-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: international-service-of-process
   name: "International Service of Process"
   name_suffix: "(Nigeria / West Africa)"
   capability: litigation-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: settlement-intelligence
   name: "Settlement Intelligence"
   capability: litigation-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: evidence-monitoring
   name: "Evidence Monitoring"
