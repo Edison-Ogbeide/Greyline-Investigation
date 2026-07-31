@@ -1354,19 +1354,8 @@ footer,
 .faq-item[open] summary::after { content: '\2212'; }
 .faq-item p { font-size: 0.92rem; color: var(--text-2); line-height: 1.7; padding-bottom: 1.25rem; }
 
-/* ---------- FOOTER NEWSLETTER ---------- */
-.footer-newsletter { background: var(--navy-2); border-top: 1px solid rgba(255,255,255,0.08); padding: 2.5rem 2rem; }
-.footer-newsletter-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
-.footer-newsletter-inner h4 { font-family: var(--serif); font-size: 1.2rem; font-weight: 500; color: var(--white); margin-bottom: 0.4rem; }
-.footer-newsletter-inner p { font-family: var(--sans); font-size: 0.85rem; color: rgba(255,255,255,0.65); max-width: 420px; margin: 0; }
-.footer-newsletter-form { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-.footer-newsletter-form input[type="email"] { min-width: 240px; padding: 0.85rem 1rem; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); color: var(--white); font-family: var(--sans); font-size: 0.88rem; }
-.footer-newsletter-form input[type="email"]::placeholder { color: rgba(255,255,255,0.45); }
-.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
-
 @media (max-width: 900px) {
 	.pathways-grid { grid-template-columns: 1fr; }
 	.compare-row { grid-template-columns: 1fr; }
 	.compare-row > div:first-child { background: var(--ink); color: var(--white); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; }
-	.footer-newsletter-inner { flex-direction: column; align-items: flex-start; }
 }
