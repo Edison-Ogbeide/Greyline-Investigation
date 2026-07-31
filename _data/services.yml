@@ -390,12 +390,12 @@
 - slug: relationship-authenticity-verification
   name: "Relationship Authenticity Verification"
   capability: personal-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: identity-consistency-verification
   name: "Identity Consistency Verification"
   capability: personal-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: pre-commitment-intelligence-assessment
   name: "Pre-Commitment Intelligence Assessment"
@@ -413,17 +413,17 @@
   name: "Digital Exposure Profile"
   name_suffix: "(personal)"
   capability: personal-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: personal-threat-intelligence
   name: "Personal Threat Intelligence"
   capability: personal-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: executive-exposure-intelligence
   name: "Executive Exposure Intelligence"
   capability: personal-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: relationship-monitoring
   name: "Relationship Monitoring"
@@ -454,4 +454,4 @@
   name: "Background Verification"
   name_suffix: "(Diaspora)"
   capability: personal-intelligence
-  has_copy: false
+  has_copy: true
