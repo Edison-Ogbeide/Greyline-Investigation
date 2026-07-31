@@ -1271,7 +1271,10 @@ footer,
 .svc-card-static:hover { border-color: var(--rule); }
 
 .tier-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 1.5rem; }
-.tier-detail-card { border: 1px solid var(--rule); padding: 1.75rem; }
+.tier-detail-card { display: block; border: 1px solid var(--rule); padding: 1.75rem; text-decoration: none; color: inherit; transition: border-color 0.2s ease; }
+.tier-detail-card:hover { border-color: var(--accent); }
+.tier-detail-card-static { cursor: default; }
+.tier-detail-card-static:hover { border-color: var(--rule); }
 .tier-detail-card h3 { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; margin-bottom: 1rem; color: var(--ink); }
 .tier-detail-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 0.6rem; }
 .tier-detail-list { list-style: none; padding: 0; margin: 0; columns: 2; column-gap: 1.5rem; }

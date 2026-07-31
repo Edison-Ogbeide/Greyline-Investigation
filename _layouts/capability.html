@@ -56,8 +56,19 @@ layout: default
 		{% if tier.style == "detail" %}
 		<div class="tier-detail-grid">
 			{% for item in tier.items %}
-			<div class="tier-detail-card">
-				<h3>{% if item.slug %}<a href="{{ '/services/' | append: item.slug | append: '/' | relative_url }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</h3>
+			{% if item.slug %}
+			<a href="{{ '/services/' | append: item.slug | append: '/' | relative_url }}" class="tier-detail-card">
+				<h3>{{ item.name }}</h3>
+				{% if item.monitoring %}
+				{% if item.list_label %}<div class="tier-detail-label">{{ item.list_label }}</div>{% endif %}
+				<ul class="tier-detail-list">
+					{% for m in item.monitoring %}<li>{{ m }}</li>{% endfor %}
+				</ul>
+				{% endif %}
+			</a>
+			{% else %}
+			<div class="tier-detail-card tier-detail-card-static">
+				<h3>{{ item.name }}</h3>
 				{% if item.monitoring %}
 				{% if item.list_label %}<div class="tier-detail-label">{{ item.list_label }}</div>{% endif %}
 				<ul class="tier-detail-list">
@@ -65,6 +76,7 @@ layout: default
 				</ul>
 				{% endif %}
 			</div>
+			{% endif %}
 			{% endfor %}
 		</div>
 
