@@ -181,7 +181,7 @@
 - slug: attack-surface-validation
   name: "Attack Surface Validation"
   capability: cyber-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: dark-web-exposure-report
   name: "Dark Web Exposure Report"
@@ -192,17 +192,17 @@
 - slug: continuous-intelligence-subscription
   name: "Continuous Intelligence Subscription"
   capability: cyber-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: executive-exposure-profile
   name: "Executive Exposure Profile"
   capability: cyber-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: social-engineering-simulation
   name: "Social Engineering Simulation"
   capability: cyber-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: brand-protection-intelligence
   name: "Brand Protection Intelligence"
@@ -212,12 +212,12 @@
 - slug: supply-chain-cyber-intelligence
   name: "Supply Chain Cyber Intelligence"
   capability: cyber-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: incident-response-intelligence
   name: "Incident Response Intelligence"
   capability: cyber-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: continuous-digital-exposure-monitoring
   name: "Continuous Digital Exposure Monitoring"
