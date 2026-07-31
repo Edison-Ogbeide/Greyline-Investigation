@@ -108,49 +108,49 @@
   name: "Asset Visibility Report"
   name_suffix: "(pre-litigation)"
   capability: fraud-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: asset-recovery-intelligence
   name: "Asset Recovery Intelligence"
   name_suffix: "(post-judgment)"
   capability: fraud-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: source-of-wealth-report
   name: "Source of Wealth Report"
   capability: fraud-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: investment-fraud-intelligence-brief
   name: "Investment Fraud Intelligence Brief"
   capability: fraud-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: cryptocurrency-tracing-recovery
   name: "Cryptocurrency Tracing & Recovery Intelligence"
   capability: fraud-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: subrogation-investigation
   name: "Subrogation Investigation"
   capability: fraud-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: lifestyle-evidence-report
   name: "Lifestyle Evidence Report"
   capability: fraud-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: cross-border-asset-tracing-nigeria
   name: "Cross-Border Asset Tracing"
   name_suffix: "(Nigeria / West Africa)"
   capability: fraud-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: organised-fraud-network-mapping
   name: "Organised Fraud Network Mapping"
   capability: fraud-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: asset-visibility-monitoring
   name: "Asset Visibility Monitoring"
