@@ -144,7 +144,7 @@ layout: default
 		<h2>Discuss {{ cap.article | default: "a" }} <em>{{ cap.short_name }} matter</em>.</h2>
 		<p>{{ cap.engagement_note | default: "Every engagement begins with a confidential inquiry and proceeds to a written scope before any work is committed." }}</p>
 		<div class="cta-panel-actions">
-			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
+			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">{{ page.cta_label | default: "Submit Inquiry" }}</a>
 			<a href="{{ '/engagement/' | relative_url }}" class="btn-outline-w">How Engagement Works</a>
 		</div>
 	</div>

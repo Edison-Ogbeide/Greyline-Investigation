@@ -1,6 +1,7 @@
 ---
 title: "AI Romance Fraud Verification"
 slug: ai-romance-fraud-verification
+cta_label: "Start Your Investigation"
 description: "A focused, analyst-led investigation into a single individual met online, is the relationship real, and does the pattern match known romance fraud typologies?"
 problem_headline: "Is the person you're talking to who they say they are?"
 problem_statement: >-

@@ -32,7 +32,7 @@ layout: default
 		<div class="hero-eyebrow">Discuss This Analysis</div>
 		<h2>Submit a <em>confidential inquiry</em>.</h2>
 		<div class="cta-panel-actions">
-			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
+			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">{{ page.cta_label | default: "Submit Inquiry" }}</a>
 			<a href="{{ '/research/' | relative_url }}" class="btn-outline-w">All Research</a>
 		</div>
 	</div>

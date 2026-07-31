@@ -28,7 +28,7 @@ layout: default
 		<h2>Explore the rest of <em>our method</em>.</h2>
 		<div class="cta-panel-actions">
 			<a href="{{ '/method/' | relative_url }}" class="btn-primary">Back to Method</a>
-			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-outline-w">Submit Inquiry</a>
+			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-outline-w">{{ page.cta_label | default: "Submit Inquiry" }}</a>
 		</div>
 	</div>
 </section>
