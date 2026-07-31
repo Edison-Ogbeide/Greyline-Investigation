@@ -15,7 +15,7 @@ Hello [First Name],
 
 Thank you for reaching out to Greyline Investigations. Your enquiry
 about a romance fraud concern has been received and will be reviewed
-personally by an analyst within two business days.
+personally by an analyst within 24 hours.
 
 While you wait, here are resources that may help right now, regardless
 of what our review finds:
