@@ -4,7 +4,7 @@ layout: default
 {% assign svc = site.data.services | where: "slug", page.slug | first %}
 {% assign cap = site.data.capabilities | where: "slug", svc.capability | first %}
 {% assign siblings = site.data.services | where: "capability", svc.capability | where_exp: "s", "s.slug != page.slug" %}
-{% assign related = siblings | first %}
+{% assign related_services = siblings | slice: 0, 3 %}
 
 <section class="page-hero">
 	<div>
@@ -26,22 +26,46 @@ layout: default
 	</div>
 </section>
 
-<div class="offering-grid two-up">
-	<div class="offering">
-		<h3>What You Receive</h3>
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">What's Included</div>
+		<h2>What you <em>receive</em>.</h2>
+		<hr class="gold-rule">
 		<p class="lead">{{ page.deliverable }}</p>
-		{% if page.features %}
-		<ul class="features">
-			{% for f in page.features %}<li>{{ f }}</li>{% endfor %}
-		</ul>
-		{% endif %}
 	</div>
-	<div class="offering">
-		<h3>Methodology</h3>
+	{% if page.features %}
+	<div class="container">
+		<div class="included-grid">
+			{% for f in page.features %}
+			<div class="included-card">
+				<svg class="included-check" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.2"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+				<p>{{ f }}</p>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	{% endif %}
+</section>
+
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Methodology</div>
+		<h2>How it's <em>produced</em>.</h2>
+		<hr class="gold-rule">
 		<p class="lead">{{ page.methodology }}</p>
+	</div>
+</section>
+
+<section class="svc-overview">
+	<div class="container-narrow">
+		<div class="section-head">
+			<div class="section-eyebrow">Timeline</div>
+			<h2>What to <em>expect, and when</em>.</h2>
+			<hr class="gold-rule">
+		</div>
 		<div class="suited"><strong>Typical turnaround:</strong> {{ page.turnaround }}</div>
 	</div>
-</div>
+</section>
 
 {% if page.sample_output %}
 <section class="service-intro">
@@ -61,12 +85,12 @@ layout: default
 		<div class="section-eyebrow">Frequently Asked</div>
 		<h2>Questions we're <em>asked most</em></h2>
 		<hr class="gold-rule">
-		<div class="faq-list">
+		<div class="faq-accordion">
 			{% for item in page.faq %}
-			<div class="faq-item">
-				<h3>{{ item.q }}</h3>
+			<details class="faq-item"{% if forloop.first %} open{% endif %}>
+				<summary><h3>{{ item.q }}</h3></summary>
 				<p>{{ item.a }}</p>
-			</div>
+			</details>
 			{% endfor %}
 		</div>
 	</div>
@@ -92,12 +116,29 @@ layout: default
 			<div class="section-eyebrow">Part Of</div>
 			<h2><a href="{{ '/capabilities/' | append: cap.slug | append: '/' | relative_url }}">{{ cap.name }} &rarr;</a></h2>
 			<hr class="gold-rule">
-			{% if related %}
-			<p>Related service: <a href="{{ '/services/' | append: related.slug | append: '/' | relative_url }}">{{ related.name }} &rarr;</a></p>
-			{% endif %}
 		</div>
 	</div>
 </section>
+
+{% if related_services.size > 0 %}
+<section class="svc-overview">
+	<div class="container">
+		<div class="section-head">
+			<div class="section-eyebrow">Related Services</div>
+			<h2>You may also <em>need</em>.</h2>
+			<hr class="gold-rule">
+		</div>
+		<div class="svc-grid">
+			{% for r in related_services %}
+			<a href="{{ '/services/' | append: r.slug | append: '/' | relative_url }}" class="svc-card">
+				<h3>{{ r.name }}</h3>
+				<span class="svc-link">Explore &rarr;</span>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+{% endif %}
 
 <section class="cta-panel">
 	<div class="container-narrow">
@@ -110,6 +151,8 @@ layout: default
 		</div>
 	</div>
 </section>
+
+{% include schema-professional-service.html %}
 
 {% if page.faq %}
 <script type="application/ld+json">

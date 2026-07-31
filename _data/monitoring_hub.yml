@@ -1,0 +1,45 @@
+# Curated list of subscription / retainer service slugs shown on
+# /monitoring-retainer/. Cross-references _data/services.yml for
+# name and capability. Add a slug here when a new Monitor or Advise
+# tier service is built.
+
+- executive-exposure-profile
+- vendor-intelligence-monitoring
+- continuous-candidate-monitoring
+- insider-risk-monitoring
+- portfolio-intelligence-monitoring
+- workplace-intelligence-programme
+- litigation-watch
+- tprm-as-a-service
+- intelligence-briefings
+- board-reporting
+- risk-workshops
+- executive-intelligence-reviews
+- quarterly-strategic-risk-assessments
+- asset-visibility-monitoring
+- source-of-wealth-monitoring
+- fraud-network-monitoring
+- blockchain-intelligence-monitoring
+- continuous-digital-exposure-monitoring
+- dark-web-intelligence-monitoring
+- executive-exposure-monitoring
+- brand-protection-intelligence
+- supply-chain-intelligence-monitoring
+- incident-response-intelligence-monitoring
+- continuous-intelligence-subscription
+- synthetic-media-executive-impersonation-monitoring
+- ai-enabled-fraud-bec-monitoring
+- narrative-reputation-intelligence-monitoring
+- ai-agent-identity-monitoring
+- evidence-monitoring
+- witness-intelligence-monitoring
+- defendant-monitoring
+- settlement-intelligence-monitoring
+- international-litigation-monitoring
+- continuous-litigation-intelligence
+- relationship-monitoring
+- identity-monitoring
+- personal-digital-exposure-monitoring
+- executive-protection-monitoring
+- personal-threat-monitoring
+- continuous-subject-monitoring

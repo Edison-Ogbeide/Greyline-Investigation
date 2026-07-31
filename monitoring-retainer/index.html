@@ -1,0 +1,64 @@
+---
+layout: default
+title: "Monitoring & Retainer Services"
+description: "Every continuous, subscription and retainer intelligence service Greyline offers, across corporate, fraud, cyber, AI, litigation and personal intelligence, in one place."
+crumbs:
+  - title: "Monitoring & Retainer Services"
+    url: /monitoring-retainer/
+---
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">Monitoring & Retainer Services</div>
+		<h1>Intelligence that doesn't <em>stop at one report</em>.</h1>
+		<p>Some risks end with a single instructed report. Others do not. Where the risk is continuous, an asset that could move, a relationship that could change, a network that could re-emerge, Greyline offers a matching subscription service across every capability line. Every service below is delivered on the same evidential standard as a one-off investigation, on a recurring basis.</p>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+{% assign hub_slugs = site.data.monitoring_hub %}
+{% assign caps = site.data.capabilities | sort: "order" %}
+
+{% for cap in caps %}
+{% assign cap_items = "" | split: "" %}
+{% for slug in hub_slugs %}
+{% assign svc = site.data.services | where: "slug", slug | first %}
+{% if svc and svc.capability == cap.slug %}
+{% assign cap_items = cap_items | push: svc %}
+{% endif %}
+{% endfor %}
+{% if cap_items.size > 0 %}
+<section class="svc-overview">
+	<div class="container">
+		<div class="section-head">
+			<div class="section-eyebrow">{{ cap.name }}</div>
+			<h2>{{ cap_items.size }} <em>subscription service{% if cap_items.size != 1 %}s{% endif %}</em></h2>
+			<hr class="gold-rule">
+		</div>
+		<div class="svc-grid">
+			{% for svc in cap_items %}
+			<a href="{{ '/services/' | append: svc.slug | append: '/' | relative_url }}" class="svc-card">
+				<h3>{{ svc.name }}</h3>
+				<span class="svc-link">Explore &rarr;</span>
+			</a>
+			{% endfor %}
+		</div>
+		<div style="margin-top:1.5rem;">
+			<a href="{{ '/capabilities/' | append: cap.slug | append: '/' | relative_url }}" class="text-link">All {{ cap.name }} services &rarr;</a>
+		</div>
+	</div>
+</section>
+{% endif %}
+{% endfor %}
+
+<section class="cta-panel">
+	<div class="container-narrow">
+		<div class="hero-eyebrow">Ready to Begin</div>
+		<h2>Discuss a <em>continuous risk</em>.</h2>
+		<p>Every engagement, one-off or subscription, begins with a confidential inquiry and proceeds to a written scope before any work is committed.</p>
+		<div class="cta-panel-actions">
+			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
+			<a href="{{ '/engagement/' | relative_url }}" class="btn-outline-w">How Engagement Works</a>
+		</div>
+	</div>
+</section>

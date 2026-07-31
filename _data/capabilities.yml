@@ -10,6 +10,9 @@
   buyers: "C-suite and board members for strategic intelligence and risk oversight, HR directors for pre-hire vetting, procurement for vendor and supply-chain risk, general counsel for workplace investigations, and corporate development or private equity for pre-investment and M&A diligence."
   method_link: /method/analysis/
   training_slug: null
+  resource_link: /capabilities/corporate-intelligence/checklist/
+  resource_label: "A free working resource"
+  resource_title: "Pre-Investment Due Diligence Checklist"
   order: 1
 
 - slug: fraud-intelligence

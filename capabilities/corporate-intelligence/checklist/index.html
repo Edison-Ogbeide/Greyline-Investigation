@@ -1,0 +1,110 @@
+---
+layout: default
+title: "Pre-Investment Due Diligence Checklist"
+description: "A working checklist of the intelligence gaps standard financial and legal due diligence typically misses before a corporate investment or acquisition closes."
+crumbs:
+  - title: "Capabilities"
+    url: /capabilities/
+  - title: "Corporate Intelligence"
+    url: /capabilities/corporate-intelligence/
+  - title: "Pre-Investment Due Diligence Checklist"
+    url: /capabilities/corporate-intelligence/checklist/
+---
+<style>
+	.checklist-wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1.5rem 2rem; }
+	.checklist-group { margin-bottom: 2.5rem; }
+	.checklist-group h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 500; color: var(--ink); margin-bottom: 1rem; }
+	.checklist-group ul { list-style: none; padding: 0; margin: 0; }
+	.checklist-group li { display: flex; gap: 0.75rem; align-items: flex-start; padding: 0.65rem 0; border-bottom: 1px solid var(--rule-soft); font-size: 0.95rem; line-height: 1.6; color: var(--text-2); }
+	.checklist-group li:last-child { border-bottom: none; }
+	.checklist-box { flex-shrink: 0; width: 16px; height: 16px; margin-top: 0.2rem; border: 1px solid var(--ink-muted); }
+	.checklist-request { background: var(--ice); border: 1px solid var(--border); padding: 2.5rem; margin: 3rem auto; max-width: 900px; }
+	.checklist-request .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+	.checklist-request label { display: block; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.4rem; }
+	.checklist-request input { width: 100%; background: #fff; border: 1px solid var(--border-2); font-family: var(--sans); font-size: 0.9rem; padding: 0.7rem 0.9rem; box-sizing: border-box; }
+	@media (max-width: 640px) { .checklist-request .form-row-2 { grid-template-columns: 1fr; } }
+</style>
+
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">Corporate Intelligence &middot; Free Resource</div>
+		<h1>Pre-Investment Due Diligence <em>Checklist</em>.</h1>
+		<p>Financial and legal due diligence answers whether the numbers and the contracts hold up. It rarely answers whether the people behind them, and the risks around them, do too. This checklist covers the intelligence gaps we most often find still open at the point a deal is meant to close.</p>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+<div class="checklist-wrap">
+	<div class="checklist-group">
+		<h3>Leadership &amp; Key Individuals</h3>
+		<ul>
+			<li><span class="checklist-box"></span>Undisclosed directorships, past or present, at connected or competing entities</li>
+			<li><span class="checklist-box"></span>Prior insolvencies, disqualifications, or regulatory sanctions against key individuals</li>
+			<li><span class="checklist-box"></span>Litigation history involving founders or executives, settled or ongoing</li>
+			<li><span class="checklist-box"></span>Discrepancies between claimed credentials and verifiable public record</li>
+			<li><span class="checklist-box"></span>Adverse media, in any jurisdiction the individual has operated in</li>
+		</ul>
+	</div>
+	<div class="checklist-group">
+		<h3>Corporate Structure</h3>
+		<ul>
+			<li><span class="checklist-box"></span>Beneficial ownership traced through every intermediate holding entity</li>
+			<li><span class="checklist-box"></span>Related-party transactions not fully disclosed in the data room</li>
+			<li><span class="checklist-box"></span>Offshore entities in the ownership chain, and the reason for their use</li>
+			<li><span class="checklist-box"></span>Prior corporate names, mergers, or restructurings not reflected in current filings</li>
+		</ul>
+	</div>
+	<div class="checklist-group">
+		<h3>Counterparties &amp; Supply Chain</h3>
+		<ul>
+			<li><span class="checklist-box"></span>Sanctions and watchlist screening on major customers and suppliers, not just the target</li>
+			<li><span class="checklist-box"></span>Concentration risk in undisclosed related-party suppliers</li>
+			<li><span class="checklist-box"></span>Court proceedings or insolvency risk at key counterparties</li>
+		</ul>
+	</div>
+	<div class="checklist-group">
+		<h3>Digital &amp; Reputational Exposure</h3>
+		<ul>
+			<li><span class="checklist-box"></span>Data breach or credential exposure history for the target company</li>
+			<li><span class="checklist-box"></span>Unresolved cyber incidents not disclosed in warranties</li>
+			<li><span class="checklist-box"></span>Social media and public statements by key individuals that create reputational risk</li>
+		</ul>
+	</div>
+</div>
+
+<div class="checklist-request">
+	<div class="section-eyebrow">Get The Full Working Version</div>
+	<h2>Request the <em>formatted checklist</em>.</h2>
+	<hr class="gold-rule">
+	<p style="margin: 1rem 0 1.5rem; color: var(--text-2); font-size: 0.95rem; line-height: 1.7;">Leave your details and we will send the formatted, printable version of this checklist directly, along with a short note on how to use it during a live deal.</p>
+	<form name="checklist-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+		<input type="hidden" name="form-name" value="checklist-request">
+		<p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+		<div class="form-row-2">
+			<div>
+				<label for="cl-name">Full name</label>
+				<input type="text" id="cl-name" name="full-name" autocomplete="name" required>
+			</div>
+			<div>
+				<label for="cl-email">Work email</label>
+				<input type="email" id="cl-email" name="email" autocomplete="email" required>
+			</div>
+		</div>
+		<div class="cta-panel-actions" style="margin-top:1.5rem;">
+			<button type="submit" class="btn-primary">Send Me The Checklist</button>
+		</div>
+	</form>
+</div>
+
+<section class="cta-panel">
+	<div class="container-narrow">
+		<div class="hero-eyebrow">Beyond The Checklist</div>
+		<h2>When the gap needs <em>closing, not just flagging</em>.</h2>
+		<p>A checklist tells you what to look for. An M&amp;A Integrity Intelligence engagement closes the gap itself, before you sign.</p>
+		<div class="cta-panel-actions">
+			<a href="{{ '/services/ma-integrity-intelligence/' | relative_url }}" class="btn-primary">Explore M&amp;A Integrity Intelligence</a>
+			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-outline-w">Submit Inquiry</a>
+		</div>
+	</div>
+</section>

@@ -110,6 +110,19 @@ layout: default
 	</div>
 </section>
 
+{% if cap.resource_link %}
+<section class="engagement">
+	<div class="container">
+		<div class="engagement-head">
+			<div class="section-eyebrow">Free Resource</div>
+			<h2>{{ cap.resource_label | default: "A free working resource" }}</h2>
+			<hr class="gold-rule">
+			<p><a href="{{ cap.resource_link | relative_url }}">{{ cap.resource_title | default: "View the resource" }} &rarr;</a></p>
+		</div>
+	</div>
+</section>
+{% endif %}
+
 <section class="svc-overview">
 	<div class="container-narrow">
 		<div class="section-head">

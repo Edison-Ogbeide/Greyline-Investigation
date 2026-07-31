@@ -1,0 +1,60 @@
+---
+layout: default
+title: "Private Intelligence in Manchester"
+description: "Greyline Investigations is registered and based in Manchester. Corporate, fraud, cyber, litigation and personal intelligence services, led personally from our registered office."
+crumbs:
+  - title: "Locations"
+    url: /locations/
+  - title: "Manchester"
+    url: /locations/manchester/
+---
+<section class="page-hero">
+	<div>
+		<div class="hero-eyebrow">Manchester</div>
+		<h1>Our registered office, <em>and where the work is led from</em>.</h1>
+		<p>{{ site.company.legal_name }} is registered in England and Wales, Company No. {{ site.company.company_number }}, with its office at {{ site.company.registered_office }}. The firm's principal is based here, and every engagement, wherever the matter itself sits, is led personally from this office.</p>
+	</div>
+</section>
+
+{% include breadcrumb.html crumbs=page.crumbs %}
+
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">What We Do From Manchester</div>
+		<h2>The full <em>capability stack</em>.</h2>
+		<hr class="gold-rule">
+		<p>Manchester's mix of financial services, professional services firms and a large university sector generates the same intelligence needs seen nationally: pre-hire and pre-investment vetting, fraud and asset tracing, digital exposure and dark web monitoring, and litigation support for the city's solicitors and barristers. Every capability on this site is available to Manchester-based clients, delivered from the office where the firm is registered.</p>
+	</div>
+</section>
+
+<section class="svc-overview">
+	<div class="container">
+		<div class="svc-grid">
+			<a href="{{ '/capabilities/corporate-intelligence/' | relative_url }}" class="svc-card">
+				<h3>Corporate Intelligence</h3>
+				<span class="svc-link">Explore &rarr;</span>
+			</a>
+			<a href="{{ '/capabilities/fraud-intelligence/' | relative_url }}" class="svc-card">
+				<h3>Fraud &amp; Asset Intelligence</h3>
+				<span class="svc-link">Explore &rarr;</span>
+			</a>
+			<a href="{{ '/capabilities/litigation-intelligence/' | relative_url }}" class="svc-card">
+				<h3>Litigation Intelligence</h3>
+				<span class="svc-link">Explore &rarr;</span>
+			</a>
+		</div>
+	</div>
+</section>
+
+<section class="cta-panel">
+	<div class="container-narrow">
+		<div class="hero-eyebrow">Ready to Begin</div>
+		<h2>Discuss a <em>Manchester matter</em>.</h2>
+		<div class="cta-panel-actions">
+			<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary">Submit Inquiry</a>
+			<a href="{{ '/contact/' | relative_url }}" class="btn-outline-w">Contact Us</a>
+		</div>
+	</div>
+</section>
+
+{% include schema-professional-service.html %}

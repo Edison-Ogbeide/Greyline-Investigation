@@ -46,6 +46,21 @@
 			</ul>
 		</div>
 	</div>
+	<div class="footer-newsletter">
+		<div class="footer-newsletter-inner">
+			<div>
+				<h4>Monthly Intelligence Briefs</h4>
+				<p>A short monthly note on emerging fraud, cyber and AI-enabled threats, sent to solicitors, security teams and family offices. No sales content.</p>
+			</div>
+			<form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate class="footer-newsletter-form">
+				<input type="hidden" name="form-name" value="newsletter">
+				<p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+				<label for="newsletter-email" class="visually-hidden">Email address</label>
+				<input type="email" id="newsletter-email" name="email" placeholder="Your email address" autocomplete="email" required>
+				<button type="submit" class="btn-primary">Sign Up</button>
+			</form>
+		</div>
+	</div>
 	<div class="footer-bottom">
 		<p>&copy; {{ 'now' | date: "%Y" }} {{ site.company.legal_name }}. All Rights Reserved. Company No. {{ site.company.company_number }}.</p>
 		<div class="social-links">
