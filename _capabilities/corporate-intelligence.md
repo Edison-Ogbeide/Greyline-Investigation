@@ -23,6 +23,8 @@ tiers:
         slug: executive-intelligence-brief
       - name: "Workplace Investigation"
         slug: workplace-investigation
+      - name: "Insider Threat Intelligence Brief"
+        slug: insider-threat-intelligence-brief
       - name: "Pre-Litigation Viability Assessment"
         slug: pre-litigation-viability-assessment
       - name: "M&A Integrity Intelligence"

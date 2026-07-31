@@ -6,12 +6,12 @@
 - slug: counterparty-intelligence-report
   name: "Counterparty Intelligence Report"
   capability: corporate-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: vendor-intelligence-report
   name: "Vendor Intelligence Report"
   capability: corporate-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: candidate-risk-intelligence
   name: "Candidate Risk Intelligence"
@@ -22,32 +22,32 @@
 - slug: insider-threat-intelligence-brief
   name: "Insider Threat Intelligence Brief"
   capability: corporate-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: ma-integrity-intelligence
   name: "M&A Integrity Intelligence"
   capability: corporate-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: executive-intelligence-brief
   name: "Executive Intelligence Brief"
   capability: corporate-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: tprm-as-a-service
   name: "Third-Party Risk Management as a Service"
   capability: corporate-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: workplace-investigation
   name: "Workplace Investigation"
   capability: corporate-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: pre-litigation-viability-assessment
   name: "Pre-Litigation Viability Assessment"
   capability: corporate-intelligence
-  has_copy: false
+  has_copy: true
 
 - slug: vendor-intelligence-monitoring
   name: "Vendor Intelligence Monitoring"
