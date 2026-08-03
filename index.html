@@ -59,6 +59,44 @@ no_brand_suffix: true
 	</div>
 </section>
 
+<section class="svc-overview">
+	<div class="container">
+		<div class="section-head">
+			<div class="section-eyebrow">Named Engagements</div>
+			<h2>Some matters need <em>a fixed answer</em>, not a bespoke scope.</h2>
+			<hr class="gold-rule">
+			<p>Recurring or fixed-scope engagements with a defined deliverable and a set cadence, for situations that recur or need a fixed answer by a fixed date.</p>
+		</div>
+		<div class="products-grid">
+			{% assign products = site.data.products | sort: "order" %}
+			{% for prod in products %}
+			<a href="{{ '/products/' | append: prod.slug | append: '/' | relative_url }}" class="svc-card product-card" aria-label="Explore {{ prod.name }}">
+				<h3>{{ prod.name }}</h3>
+				<p>{{ prod.descriptor }}</p>
+				<div class="product-meta-strip">
+					<div class="product-meta-item">
+						<span class="label">For</span>
+						<span class="value">{{ prod.for }}</span>
+					</div>
+					<div class="product-meta-item">
+						<span class="label">Shape</span>
+						<span class="value">{{ prod.shape }}</span>
+					</div>
+					<div class="product-meta-item">
+						<span class="label">Cadence</span>
+						<span class="value">{{ prod.cadence }}</span>
+					</div>
+				</div>
+				<span class="svc-link" aria-hidden="true">Explore &rarr;</span>
+			</a>
+			{% endfor %}
+		</div>
+		<div style="text-align:center;margin-top:2rem;">
+			<a href="{{ '/products/' | relative_url }}" class="text-link">Explore all engagements &rarr;</a>
+		</div>
+	</div>
+</section>
+
 <section class="engagement">
 	<div class="container">
 		<div class="engagement-head">
