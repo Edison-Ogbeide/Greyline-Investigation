@@ -611,3 +611,110 @@
   to = "/services/incident-response-intelligence/"
   status = 301
   force = true
+
+# Fraud & Asset Intelligence service consolidation (2026-08): Lifestyle
+# Evidence Report was absorbed into Asset Visibility Report as an optional
+# module; Investment Fraud Intelligence Brief was broadened and renamed to
+# Fraud Intelligence Brief; Subrogation Investigation was absorbed into
+# Asset Recovery Intelligence; Cross-Border Asset Tracing (Nigeria & West
+# Africa) was renamed to drop the region from the title; Asset Visibility
+# Monitoring and Source of Wealth Monitoring were merged into Asset &
+# Wealth Monitoring; Organised Fraud Network Mapping and Fraud Network
+# Monitoring were retired outright (no standing network-analysis
+# capability to support them as their own product line).
+
+[[redirects]]
+  from = "/services/lifestyle-evidence-report/"
+  to = "/services/asset-visibility-report/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/lifestyle-evidence-report"
+  to = "/services/asset-visibility-report/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/investment-fraud-intelligence-brief/"
+  to = "/services/fraud-intelligence-brief/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/investment-fraud-intelligence-brief"
+  to = "/services/fraud-intelligence-brief/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/subrogation-investigation/"
+  to = "/services/asset-recovery-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/subrogation-investigation"
+  to = "/services/asset-recovery-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/cross-border-asset-tracing-nigeria/"
+  to = "/services/cross-border-asset-tracing/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/cross-border-asset-tracing-nigeria"
+  to = "/services/cross-border-asset-tracing/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/asset-visibility-monitoring/"
+  to = "/services/asset-wealth-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/asset-visibility-monitoring"
+  to = "/services/asset-wealth-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/source-of-wealth-monitoring/"
+  to = "/services/asset-wealth-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/source-of-wealth-monitoring"
+  to = "/services/asset-wealth-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/organised-fraud-network-mapping/"
+  to = "/capabilities/fraud-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/organised-fraud-network-mapping"
+  to = "/capabilities/fraud-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/fraud-network-monitoring/"
+  to = "/capabilities/fraud-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/fraud-network-monitoring"
+  to = "/capabilities/fraud-intelligence/"
+  status = 301
+  force = true

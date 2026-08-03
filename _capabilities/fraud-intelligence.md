@@ -11,18 +11,14 @@ crumbs:
 tiers:
   - name: "Investigate"
     style: cards
-    description: "Intelligence-led investigations into fraud, hidden assets, financial crime and complex disputes, covering scams, investment fraud, lifestyle discrepancies and organised fraud networks, providing evidence before litigation, regulatory action or recovery efforts."
+    description: "Intelligence-led investigations into fraud, hidden assets and complex disputes, covering scams, investment and romance-linked fraud, and lifestyle discrepancies, providing evidence before litigation, regulatory action or recovery efforts."
     items:
       - name: "Asset Visibility Report (Pre-Litigation)"
         slug: asset-visibility-report
       - name: "Source of Wealth Report"
         slug: source-of-wealth-report
-      - name: "Investment Fraud Intelligence Brief"
-        slug: investment-fraud-intelligence-brief
-      - name: "Lifestyle Evidence Report"
-        slug: lifestyle-evidence-report
-      - name: "Organised Fraud Network Mapping"
-        slug: organised-fraud-network-mapping
+      - name: "Fraud Intelligence Brief"
+        slug: fraud-intelligence-brief
   - name: "Recover"
     style: cards
     description: "Asset tracing and financial intelligence to identify, locate and document assets across the UK and international jurisdictions, supporting subrogation claims, freezing orders, pre-judgment security and post-judgment enforcement action."
@@ -31,40 +27,22 @@ tiers:
         slug: asset-recovery-intelligence
       - name: "Cryptocurrency Tracing & Recovery Intelligence"
         slug: cryptocurrency-tracing-recovery
-      - name: "Cross-Border Asset Tracing (Nigeria & West Africa)"
-        slug: cross-border-asset-tracing-nigeria
-      - name: "Subrogation Investigation"
-        slug: subrogation-investigation
+      - name: "Cross-Border Asset Tracing"
+        slug: cross-border-asset-tracing
   - name: "Monitor"
     subtitle: "(Managed Intelligence Services)"
     style: detail
-    description: "Unlike traditional investigations, these are continuous intelligence services delivered on subscription, tracking assets, wealth changes, fraud networks and cryptocurrency movement for as long as a risk remains live."
+    description: "Unlike traditional investigations, these are continuous intelligence services delivered on subscription, tracking assets, wealth changes and cryptocurrency movement for as long as a risk remains live."
     items:
-      - name: "Asset Visibility Monitoring"
-        slug: asset-visibility-monitoring
+      - name: "Asset & Wealth Monitoring"
+        slug: asset-wealth-monitoring
         monitoring:
-          - "Property acquisitions"
-          - "Companies"
-          - "Directors"
-          - "Insolvency"
-          - "Court proceedings"
-          - "Asset transfers"
-      - name: "Source of Wealth Monitoring"
-        slug: source-of-wealth-monitoring
-        monitoring:
-          - "Wealth changes"
-          - "New business interests"
-          - "Property acquisitions"
-          - "Offshore entities"
-          - "Sanctions"
-          - "Adverse media"
-      - name: "Fraud Network Monitoring"
-        slug: fraud-network-monitoring
-        monitoring:
-          - "Known fraud rings, suspects and linked companies"
-          - "Phone numbers, email addresses and domains connected to the network"
-          - "Cryptocurrency wallets connected to the network"
-          - "New patterns consistent with the network's known methodology"
+          - "Property acquisitions and disposals"
+          - "Companies and directorships"
+          - "Insolvency and court proceedings"
+          - "Asset transfers between connected parties"
+          - "Wealth and business interest changes"
+          - "Sanctions and adverse media"
       - name: "Blockchain Intelligence Monitoring"
         slug: blockchain-intelligence-monitoring
         monitoring:
