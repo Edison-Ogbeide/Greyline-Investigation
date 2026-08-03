@@ -75,6 +75,26 @@ layout: default
 </section>
 {% endif %}
 
+{% if page.sample_record %}
+<section class="sample-report">
+	<div class="sample-report-inner">
+		<div class="section-eyebrow">Sample Record</div>
+		<h2>What a <em>{{ short_name }}</em> record looks like.</h2>
+		<hr class="gold-rule">
+		<p class="lead">{{ page.sample_record.intro }}</p>
+		<div class="sample-record-list">
+			{% for item in page.sample_record.items %}
+			<figure class="sample-record-item">
+				<img src="{{ item.src | relative_url }}" alt="{{ item.alt }}" loading="lazy">
+				<figcaption>{{ item.caption }}</figcaption>
+			</figure>
+			{% endfor %}
+		</div>
+		{% if page.sample_record.note %}<p class="sample-report-redaction-note">{{ page.sample_record.note }}</p>{% endif %}
+	</div>
+</section>
+{% endif %}
+
 {% if page.excluded %}
 <section class="service-intro">
 	<div class="container-narrow">

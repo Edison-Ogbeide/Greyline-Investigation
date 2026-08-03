@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1000" width="1500" height="1000" role="img" aria-label="BuildWatch month on month comparison from a single fixed vantage point">
+  <style>
+    svg { --ink:#16181A; --concrete:#6E7276; --paper:#EDEEEC; --laterite:#A8452A; --hairline:#C9CBC7; }
+    .mono { font-family:"SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; }
+    .serif{ font-family: Georgia, "Times New Roman", serif; }
+    .eyebrow { font-size:13px; letter-spacing:3.4px; fill:#6E7276; }
+    .h1 { font-size:34px; fill:#16181A; }
+    .cap-lbl { font-size:12px; letter-spacing:2px; fill:#6E7276; }
+    .cap-val { font-size:16px; fill:#16181A; }
+    .delta { font-size:17px; fill:#16181A; }
+    .note { font-size:13px; fill:#6E7276; }
+  </style>
+
+  <defs>
+    <pattern id="hatch2" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="14" height="14" fill="#3A3E41"/>
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#44494C" stroke-width="6"/>
+    </pattern>
+  </defs>
+
+  <rect width="1500" height="1000" fill="#EDEEEC"/>
+
+  <!-- header -->
+  <text class="mono eyebrow" x="60" y="72">FIXED VANTAGE V2 · NORTH-EAST · SAME POSITION, SAME BEARING</text>
+  <text class="serif h1" x="60" y="122">Two months, one viewpoint</text>
+  <line x1="60" y1="152" x2="1440" y2="152" stroke="#C9CBC7" stroke-width="1"/>
+
+  <!-- LEFT FRAME -->
+  <g>
+    <rect x="60" y="196" width="640" height="427" fill="url(#hatch2)"/>
+    <text class="mono" x="380" y="404" text-anchor="middle" font-size="14" letter-spacing="3" fill="#8C9296">SITE PHOTOGRAPH</text>
+    <text class="mono" x="380" y="430" text-anchor="middle" font-size="12" letter-spacing="1.5" fill="#70767A">PRIOR RECORD</text>
+    <rect x="60" y="196" width="640" height="427" fill="none" stroke="#C9CBC7" stroke-width="1"/>
+
+    <text class="mono cap-lbl" x="60" y="654">RECORD</text>
+    <text class="mono cap-val" x="60" y="678">BW-2417 / 06 / V2 / 004</text>
+    <text class="mono cap-lbl" x="380" y="654">CAPTURED</text>
+    <text class="mono cap-val" x="380" y="678">2026-06-12  10:05 WAT</text>
+  </g>
+
+  <!-- centre divider -->
+  <line x1="750" y1="196" x2="750" y2="700" stroke="#C9CBC7" stroke-width="1"/>
+  <rect x="732" y="396" width="36" height="36" fill="#EDEEEC"/>
+  <text class="mono" x="750" y="420" text-anchor="middle" font-size="15" fill="#A8452A">-&gt;</text>
+
+  <!-- RIGHT FRAME -->
+  <g>
+    <rect x="800" y="196" width="640" height="427" fill="url(#hatch2)"/>
+    <text class="mono" x="1120" y="404" text-anchor="middle" font-size="14" letter-spacing="3" fill="#8C9296">SITE PHOTOGRAPH</text>
+    <text class="mono" x="1120" y="430" text-anchor="middle" font-size="12" letter-spacing="1.5" fill="#70767A">CURRENT RECORD</text>
+    <rect x="800" y="196" width="640" height="427" fill="none" stroke="#16181A" stroke-width="2"/>
+
+    <text class="mono cap-lbl" x="800" y="654">RECORD</text>
+    <text class="mono cap-val" x="800" y="678">BW-2417 / 07 / V2 / 004</text>
+    <text class="mono cap-lbl" x="1120" y="654">CAPTURED</text>
+    <text class="mono cap-val" x="1120" y="678">2026-07-14  09:42 WAT</text>
+  </g>
+
+  <!-- observed change strip -->
+  <line x1="60" y1="742" x2="1440" y2="742" stroke="#16181A" stroke-width="2"/>
+  <text class="mono eyebrow" x="60" y="782">OBSERVED CHANGE, 12 JUN TO 14 JUL</text>
+
+  <g class="serif delta">
+    <circle cx="66" cy="820" r="4" fill="#16181A"/>
+    <text x="88" y="826">Blockwork to ground floor raised from lintel level to roof plate, front and east elevations.</text>
+
+    <circle cx="66" cy="862" r="4" fill="#16181A"/>
+    <text x="88" y="868">Roof trusses delivered and stacked on site. Not installed at date of attendance.</text>
+
+    <circle cx="66" cy="904" r="4" fill="#A8452A"/>
+    <text x="88" y="910">Boundary wall shown on the June schedule not commenced. Recorded as an exception.</text>
+  </g>
+
+  <text class="mono note" x="60" y="962">Progress is recorded as observed on the date of attendance, against the schedule supplied by the client. This is not a valuation, a certification of works, or a survey.</text>
+</svg>

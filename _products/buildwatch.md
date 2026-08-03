@@ -2,6 +2,9 @@
 title: "BuildWatch: Overseas Construction Verification"
 slug: buildwatch
 description: "Independent, documented verification of construction progress on overseas property projects, with geotagged site records and title searches at outset."
+og_image: /media/buildwatch/og-card.svg
+og_image_width: 1200
+og_image_height: 630
 standfirst: "Independent verification of what is actually happening on your building site, documented to an evidential standard, every month."
 what_this_is:
   - "Owners funding construction from abroad rely on progress reports from the people spending the money. That arrangement works well when it is honest, and poorly when it is not."
@@ -19,6 +22,19 @@ excluded:
   - "A legal opinion on title or ownership"
   - "Engineering, structural or building-standards inspection"
   - "Covert observation of any individual"
+sample_record:
+  intro: "Every monthly record follows the same fixed-vantage protocol. These specimens show what that produces in practice, with all client, site and personal details redacted or replaced with placeholder figures."
+  items:
+    - src: /media/buildwatch/evidence-frame.svg
+      alt: "A BuildWatch capture frame showing the fixed vantage index and full capture metadata: position, bearing, scale reference, file integrity hash and reviewing principal."
+      caption: "Every frame carries fixed-vantage positioning and unaltered capture metadata."
+    - src: /media/buildwatch/comparison-pair.svg
+      alt: "A month-on-month comparison of two site photographs captured from the same fixed vantage point, showing observed construction progress and one flagged exception."
+      caption: "The same fixed vantage point, compared month to month, so progress is seen rather than described."
+    - src: /media/buildwatch/report-specimen.svg
+      alt: "A specimen page from a redacted BuildWatch monthly site record, showing attendance, progress against schedule, materials observed, exceptions and the limitations of the record."
+      caption: "One page from a redacted specimen monthly report."
+  note: "These are illustrative specimens with placeholder figures, not a real client record. Client, site and personal details on a live engagement are never disclosed to a third party."
 who_for:
   - "Property owners resident in the UK, United States, Canada or Australia funding construction in Nigeria most commonly instruct this work. Family offices and executors managing overseas estates also instruct it."
 how_it_runs:

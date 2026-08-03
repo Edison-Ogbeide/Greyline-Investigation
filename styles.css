@@ -1426,6 +1426,27 @@ footer,
 }
 .steps-list li p { margin: 0; color: var(--text-2); font-size: 0.95rem; line-height: 1.6; padding-top: 0.2rem; }
 
+/* Sample Record — illustrative specimen imagery inside the existing
+   dark .sample-report section treatment */
+.sample-record-list { display: flex; flex-direction: column; gap: 2rem; margin-top: 2rem; }
+.sample-record-item {
+	background: var(--white);
+	border-top: 3px solid var(--accent);
+	box-shadow: 0 1px 0 rgba(0,0,0,0.4), 0 24px 60px rgba(0,0,0,0.45);
+	overflow: hidden;
+	max-width: 900px;
+	margin: 0 auto;
+}
+.sample-record-item img { display: block; width: 100%; height: auto; }
+.sample-record-item figcaption {
+	padding: 0.9rem 1.25rem;
+	font-family: var(--sans);
+	font-size: 0.78rem;
+	color: var(--ink-muted);
+	background: var(--ice);
+	border-top: 1px solid var(--rule);
+}
+
 /* Limitations and scope — mandatory boundary/liability box */
 .limitations-box { background: var(--ice); border-left: 3px solid var(--accent); padding: 0.5rem 1.75rem; margin-top: 1.5rem; }
 .limitations-box ul { list-style: none; padding: 0; margin: 0; }

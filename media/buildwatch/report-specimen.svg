@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 794 1123" width="794" height="1123" role="img" aria-label="Specimen BuildWatch monthly site record, redacted">
+  <style>
+    svg { --ink:#16181A; --concrete:#6E7276; --paper:#EDEEEC; --laterite:#A8452A; --hairline:#C9CBC7; }
+    .mono { font-family:"SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; }
+    .serif{ font-family: Georgia, "Times New Roman", serif; }
+    .rail-lbl { font-size:8px; letter-spacing:1.4px; fill:#9BA0A3; }
+    .rail-val { font-size:10px; fill:#16181A; }
+    .sec { font-size:9px; letter-spacing:2.6px; fill:#A8452A; }
+    .h  { font-size:15px; fill:#16181A; }
+    .b  { font-size:11px; fill:#2A2E31; }
+    .t  { font-size:10px; fill:#2A2E31; }
+    .th { font-size:8px; letter-spacing:1.4px; fill:#6E7276; }
+    .fine { font-size:8.5px; fill:#6E7276; }
+  </style>
+
+  <rect width="794" height="1123" fill="#FFFFFF"/>
+
+  <!-- left metadata rail -->
+  <rect x="0" y="0" width="168" height="1123" fill="#EDEEEC"/>
+  <line x1="168" y1="0" x2="168" y2="1123" stroke="#C9CBC7" stroke-width="1"/>
+
+  <g class="mono">
+    <text class="rail-lbl" x="22" y="52">DOCUMENT</text>
+    <text class="rail-val" x="22" y="66">Monthly site record</text>
+
+    <text class="rail-lbl" x="22" y="98">REFERENCE</text>
+    <text class="rail-val" x="22" y="112">BW-2417 / 07</text>
+
+    <text class="rail-lbl" x="22" y="144">PERIOD</text>
+    <text class="rail-val" x="22" y="158">June - July 2026</text>
+
+    <text class="rail-lbl" x="22" y="190">ATTENDANCE</text>
+    <text class="rail-val" x="22" y="204">14 July 2026</text>
+    <text class="rail-val" x="22" y="218">09:38 - 10:24 WAT</text>
+
+    <text class="rail-lbl" x="22" y="250">SITE</text>
+    <rect x="22" y="256" width="112" height="11" fill="#16181A"/>
+    <rect x="22" y="271" width="86" height="11" fill="#16181A"/>
+
+    <text class="rail-lbl" x="22" y="314">INSTRUCTED BY</text>
+    <rect x="22" y="320" width="104" height="11" fill="#16181A"/>
+
+    <text class="rail-lbl" x="22" y="362">FRAMES CAPTURED</text>
+    <text class="rail-val" x="22" y="376">24 across V1 - V4</text>
+
+    <text class="rail-lbl" x="22" y="408">ISSUE</text>
+    <text class="rail-val" x="22" y="422">18 July 2026</text>
+  </g>
+
+  <!-- rail vantage plan -->
+  <g>
+    <line x1="22" y1="452" x2="146" y2="452" stroke="#C9CBC7" stroke-width="1"/>
+    <text class="mono rail-lbl" x="22" y="472">FIXED VANTAGE INDEX</text>
+    <rect x="30" y="486" width="108" height="88" fill="none" stroke="#9BA0A3" stroke-width="1" stroke-dasharray="4 3"/>
+    <rect x="60" y="508" width="48" height="44" fill="#16181A" fill-opacity="0.08" stroke="#16181A" stroke-width="1"/>
+    <circle cx="40" cy="496" r="3.5" fill="#6E7276"/>
+    <circle cx="128" cy="496" r="4.5" fill="#A8452A"/>
+    <circle cx="40" cy="564" r="3.5" fill="#6E7276"/>
+    <circle cx="128" cy="564" r="3.5" fill="#6E7276"/>
+    <text class="mono" x="30" y="492" font-size="7" fill="#6E7276">V1</text>
+    <text class="mono" x="116" y="492" font-size="7" fill="#16181A">V2</text>
+    <text class="mono" x="30" y="578" font-size="7" fill="#6E7276">V3</text>
+    <text class="mono" x="116" y="578" font-size="7" fill="#6E7276">V4</text>
+    <text class="mono fine" x="22" y="596">Positions fixed at</text>
+    <text class="mono fine" x="22" y="607">commencement and</text>
+    <text class="mono fine" x="22" y="618">unchanged since.</text>
+  </g>
+
+  <!-- rail footer -->
+  <g class="mono">
+    <line x1="22" y1="1010" x2="146" y2="1010" stroke="#C9CBC7" stroke-width="1"/>
+    <text class="rail-lbl" x="22" y="1030">GREYLINE</text>
+    <text class="rail-lbl" x="22" y="1042">INVESTIGATIONS LTD</text>
+    <text class="fine" x="22" y="1062">Page 1 of 6</text>
+  </g>
+
+  <!-- ============ MAIN COLUMN ============ -->
+  <text class="mono" x="200" y="52" font-size="9" letter-spacing="3.4" fill="#6E7276">GREYLINE BUILDWATCH</text>
+  <text class="serif" x="200" y="86" font-size="26" fill="#16181A">Monthly Site Record</text>
+  <line x1="200" y1="104" x2="756" y2="104" stroke="#16181A" stroke-width="2"/>
+
+  <!-- 1 attendance -->
+  <text class="mono sec" x="200" y="136">01 — ATTENDANCE</text>
+  <text class="serif b" x="200" y="158">Attendance was made on 14 July 2026 by a verified in-country associate</text>
+  <text class="serif b" x="200" y="174">(ref A-118), with the authority of the site owner. Twenty-four frames were</text>
+  <text class="serif b" x="200" y="190">captured from the four fixed vantage points recorded at commencement.</text>
+  <text class="serif b" x="200" y="206">All frames carry unaltered capture metadata and a file integrity hash.</text>
+
+  <!-- 2 progress table -->
+  <text class="mono sec" x="200" y="248">02 — PROGRESS OBSERVED AGAINST SCHEDULE</text>
+  <line x1="200" y1="262" x2="756" y2="262" stroke="#C9CBC7" stroke-width="1"/>
+  <g class="mono th">
+    <text x="200" y="278">SCHEDULED ITEM</text>
+    <text x="512" y="278">DUE</text>
+    <text x="590" y="278">OBSERVED</text>
+    <text x="700" y="278">FRAME</text>
+  </g>
+  <line x1="200" y1="286" x2="756" y2="286" stroke="#C9CBC7" stroke-width="1"/>
+
+  <g class="mono t">
+    <text x="200" y="306">Ground floor blockwork to roof plate</text>
+    <text x="512" y="306">Jul</text>
+    <text x="590" y="306">Complete</text>
+    <text x="700" y="306">V2/004</text>
+
+    <text x="200" y="328">Lintel casting, front elevation</text>
+    <text x="512" y="328">Jun</text>
+    <text x="590" y="328">Complete</text>
+    <text x="700" y="328">V1/002</text>
+
+    <text x="200" y="350">Roof trusses installed</text>
+    <text x="512" y="350">Jul</text>
+    <text x="590" y="350">Delivered only</text>
+    <text x="700" y="350">V3/011</text>
+
+    <text x="200" y="372" fill="#A8452A">Boundary wall, phase one</text>
+    <text x="512" y="372" fill="#A8452A">Jun</text>
+    <text x="590" y="372" fill="#A8452A">Not commenced</text>
+    <text x="700" y="372" fill="#A8452A">V4/019</text>
+  </g>
+  <line x1="200" y1="386" x2="756" y2="386" stroke="#C9CBC7" stroke-width="1"/>
+
+  <!-- 3 materials -->
+  <text class="mono sec" x="200" y="424">03 — MATERIALS OBSERVED ON SITE</text>
+  <text class="serif b" x="200" y="446">Recorded as counted or estimated on the date of attendance, against the</text>
+  <text class="serif b" x="200" y="462">delivery schedule supplied by the client.</text>
+  <g class="mono t">
+    <text x="200" y="486">Cement, 50 kg bags</text>
+    <text x="512" y="486">Stated 120</text>
+    <text x="640" y="486">Counted 86</text>
+    <text x="200" y="506">Reinforcement bar, 12 mm lengths</text>
+    <text x="512" y="506">Stated 200</text>
+    <text x="640" y="506">Counted 194</text>
+    <text x="200" y="526">Roof trusses, fabricated</text>
+    <text x="512" y="526">Stated 18</text>
+    <text x="640" y="526">Counted 18</text>
+  </g>
+
+  <!-- 4 exceptions -->
+  <text class="mono sec" x="200" y="568">04 — EXCEPTIONS</text>
+  <rect x="200" y="580" width="556" height="88" fill="#A8452A" fill-opacity="0.06"/>
+  <line x1="200" y1="580" x2="200" y2="668" stroke="#A8452A" stroke-width="3"/>
+  <text class="serif b" x="216" y="604">One exception is raised this period. Phase one of the boundary wall was</text>
+  <text class="serif b" x="216" y="620">scheduled for June and had not commenced at the date of attendance.</text>
+  <text class="serif b" x="216" y="636">Cement counted on site is below the quantity stated as delivered. Both</text>
+  <text class="serif b" x="216" y="652">matters were put to the site contact, whose response is at section 05.</text>
+
+  <!-- 5 limitations -->
+  <text class="mono sec" x="200" y="712">06 — LIMITATIONS OF THIS RECORD</text>
+  <g class="serif" font-size="10.5" fill="#2A2E31">
+    <text x="200" y="734">This record states what was observed at a single point in time from fixed</text>
+    <text x="200" y="750">positions. It is not a valuation, a quantity survey, a certification of works,</text>
+    <text x="200" y="766">or a structural or building-standards inspection.</text>
+    <text x="200" y="790">Quantities are counted or estimated visually. Materials stored off site, or</text>
+    <text x="200" y="806">enclosed within completed work, cannot be verified by this method.</text>
+    <text x="200" y="830">Title searches reported at commencement state what available records</text>
+    <text x="200" y="846">showed at the date of search. They are not a legal opinion on title.</text>
+    <text x="200" y="870">Identifiable third parties appearing incidentally in frames are obscured</text>
+    <text x="200" y="886">before release.</text>
+  </g>
+
+  <!-- sign-off -->
+  <line x1="200" y1="930" x2="756" y2="930" stroke="#16181A" stroke-width="2"/>
+  <text class="mono sec" x="200" y="954">REVIEW AND RELEASE</text>
+  <text class="serif b" x="200" y="978">Frames, metadata and integrity hashes reviewed against the capture</text>
+  <text class="serif b" x="200" y="994">protocol. This record is released on the authority of the principal.</text>
+  <rect x="200" y="1012" width="150" height="13" fill="#16181A"/>
+  <text class="mono fine" x="200" y="1042">Principal Investigator, Greyline Investigations Limited</text>
+  <text class="mono fine" x="200" y="1056">18 July 2026</text>
+
+  <!-- specimen watermark -->
+  <g transform="rotate(-32 480 620)" opacity="0.09">
+    <text class="mono" x="480" y="620" text-anchor="middle" font-size="96" letter-spacing="16" fill="#16181A">SPECIMEN</text>
+  </g>
+  <text class="mono fine" x="756" y="1090" text-anchor="end" fill="#9BA0A3">Specimen extract. Client, site and personal details redacted.</text>
+</svg>
