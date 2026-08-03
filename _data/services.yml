@@ -274,11 +274,6 @@
   capability: personal-intelligence
   has_copy: true
 
-- slug: identity-consistency-verification
-  name: "Identity Consistency Verification"
-  capability: personal-intelligence
-  has_copy: true
-
 - slug: pre-commitment-intelligence-assessment
   name: "Pre-Commitment Intelligence Assessment"
   capability: personal-intelligence
@@ -302,38 +297,17 @@
   capability: personal-intelligence
   has_copy: true
 
-- slug: executive-exposure-intelligence
-  name: "Executive Exposure Intelligence"
-  capability: personal-intelligence
-  has_copy: true
-
 - slug: relationship-monitoring
   name: "Relationship Monitoring"
   capability: personal-intelligence
   has_copy: true
 
-- slug: identity-monitoring
-  name: "Identity Monitoring"
-  capability: personal-intelligence
-  has_copy: true
-
-- slug: personal-digital-exposure-monitoring
-  name: "Digital Exposure Monitoring"
-  capability: personal-intelligence
-  has_copy: true
-
-- slug: executive-protection-monitoring
-  name: "Executive Protection Monitoring"
-  capability: personal-intelligence
-  has_copy: true
-
-- slug: personal-threat-monitoring
-  name: "Personal Threat Monitoring"
+- slug: digital-identity-threat-monitoring
+  name: "Digital Identity & Threat Monitoring"
   capability: personal-intelligence
   has_copy: true
 
 - slug: background-verification-diaspora
-  name: "Background Verification"
-  name_suffix: "(Diaspora)"
+  name: "Diaspora Background Verification"
   capability: personal-intelligence
   has_copy: true

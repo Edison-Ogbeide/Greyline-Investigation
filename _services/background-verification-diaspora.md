@@ -1,7 +1,6 @@
 ---
-title: "Background Verification"
+title: "Diaspora Background Verification"
 slug: background-verification-diaspora
-name_suffix: "(Diaspora)"
 description: "Background verification for a prospective partner or spouse based in Nigeria or West Africa, through named in-country partners, for diaspora families."
 problem_headline: "Verifying someone you have never met in person, in a country you cannot easily visit, needs more than a video call."
 problem_statement: >-
@@ -46,6 +45,6 @@ crumbs:
     url: /capabilities/
   - title: "Personal Intelligence"
     url: /capabilities/personal-intelligence/
-  - title: "Background Verification"
+  - title: "Diaspora Background Verification"
     url: /services/background-verification-diaspora/
 ---

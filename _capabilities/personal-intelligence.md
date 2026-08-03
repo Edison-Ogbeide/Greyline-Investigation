@@ -15,11 +15,9 @@ tiers:
     items:
       - name: "Relationship Authenticity Verification"
         slug: relationship-authenticity-verification
-      - name: "Identity Consistency Verification"
-        slug: identity-consistency-verification
       - name: "Pre-Commitment Intelligence Assessment"
         slug: pre-commitment-intelligence-assessment
-      - name: "Background Verification (Diaspora)"
+      - name: "Diaspora Background Verification"
         slug: background-verification-diaspora
   - name: "Protect"
     style: cards
@@ -29,8 +27,6 @@ tiers:
         slug: digital-exposure-profile-personal
       - name: "Personal Threat Intelligence"
         slug: personal-threat-intelligence
-      - name: "Executive Exposure Intelligence"
-        slug: executive-exposure-intelligence
   - name: "Monitor"
     subtitle: "(Managed Personal Intelligence)"
     style: detail
@@ -45,52 +41,23 @@ tiers:
           - "Identifying new online profiles"
           - "Screening for adverse media"
           - "Alerting on significant digital developments"
-      - name: "Identity Monitoring"
-        slug: identity-monitoring
+      - name: "Digital Identity & Threat Monitoring"
+        slug: digital-identity-threat-monitoring
         monitoring:
-          - "Detecting identity misuse"
-          - "Tracking personal data exposure"
-          - "Screening for credential breaches"
-          - "Flagging emerging fraud indicators"
-          - "Watching for new public records"
-          - "Alerting on identity-related risks"
-      - name: "Digital Exposure Monitoring"
-        slug: personal-digital-exposure-monitoring
-        monitoring:
-          - "Monitoring email addresses for exposure"
-          - "Monitoring phone numbers for exposure"
-          - "Watching social media accounts for compromise"
-          - "Screening new data breaches"
-          - "Sweeping the dark web for exposure"
-          - "Alerting on personal information leaks"
-      - name: "Executive Protection Monitoring"
-        slug: executive-protection-monitoring
-        monitoring:
-          - "Tracking executive digital footprint exposure"
-          - "Detecting impersonation attempts"
-          - "Screening for doxxing activity"
-          - "Flagging emerging threat indicators"
-          - "Monitoring public mentions"
-          - "Alerting on reputation risks"
-      - name: "Personal Threat Monitoring"
-        slug: personal-threat-monitoring
-        monitoring:
-          - "Tracking online threats"
-          - "Monitoring for harassment"
-          - "Flagging stalking indicators"
-          - "Detecting doxxing attempts"
-          - "Identifying coordinated abuse"
-          - "Alerting on emerging security concerns"
+          - "Identity misuse and credential breaches"
+          - "Data breach and dark web exposure"
+          - "Online threats, harassment and stalking indicators"
+          - "Executive tier: impersonation and doxxing activity"
+          - "Executive tier: reputational public mentions"
+          - "Alerting on identity, exposure and threat risks"
       - name: "Continuous Subject Monitoring"
         slug: continuous-subject-monitoring
         list_label: "A fully managed intelligence service combining"
         monitoring:
-          - "Identity monitoring"
           - "Relationship monitoring"
-          - "Digital exposure monitoring"
-          - "Personal threat intelligence"
-          - "Executive exposure monitoring"
-          - "Monthly intelligence summaries"
+          - "Digital identity & threat monitoring"
+          - "Configurable focus areas, including sensitive categories handled to a safeguarding-first standard"
+          - "End-of-period intelligence digest"
           - "Immediate alerts on significant developments"
 ---
 Greyline's Personal Intelligence capability is quiet, documented inquiry into the people who matter most: partners, prospective spouses, online harassers, and personal threats. This work is conducted lawfully and discreetly, on publicly available information and lawfully obtained records, with a named analyst accountable for every finding. The work runs across three stages: verify a specific person or relationship, protect against ongoing digital and reputational risk, and monitor on a continuous basis where the concern does not end with one report.

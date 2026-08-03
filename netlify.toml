@@ -829,3 +829,87 @@
   to = "/services/defendant-asset-monitoring/"
   status = 301
   force = true
+
+# Personal Intelligence service consolidation (2026-08): Identity
+# Consistency Verification was absorbed into Relationship Authenticity
+# Verification as a core methodology component; Executive Exposure
+# Intelligence was absorbed into Digital Exposure Profile as an executive
+# tier; Identity Monitoring, Personal Digital Exposure Monitoring,
+# Executive Protection Monitoring and Personal Threat Monitoring were
+# merged into a single Digital Identity & Threat Monitoring subscription
+# with standard and executive tiers, removing four overlapping monitoring
+# products that used near-identical sources and alerting infrastructure.
+# Background Verification (Diaspora) was renamed to Diaspora Background
+# Verification; its URL is unchanged so no redirect is required.
+
+[[redirects]]
+  from = "/services/identity-consistency-verification/"
+  to = "/services/relationship-authenticity-verification/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/identity-consistency-verification"
+  to = "/services/relationship-authenticity-verification/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/executive-exposure-intelligence/"
+  to = "/services/digital-exposure-profile-personal/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/executive-exposure-intelligence"
+  to = "/services/digital-exposure-profile-personal/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/identity-monitoring/"
+  to = "/services/digital-identity-threat-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/identity-monitoring"
+  to = "/services/digital-identity-threat-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/personal-digital-exposure-monitoring/"
+  to = "/services/digital-identity-threat-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/personal-digital-exposure-monitoring"
+  to = "/services/digital-identity-threat-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/executive-protection-monitoring/"
+  to = "/services/digital-identity-threat-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/executive-protection-monitoring"
+  to = "/services/digital-identity-threat-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/personal-threat-monitoring/"
+  to = "/services/digital-identity-threat-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/personal-threat-monitoring"
+  to = "/services/digital-identity-threat-monitoring/"
+  status = 301
+  force = true
