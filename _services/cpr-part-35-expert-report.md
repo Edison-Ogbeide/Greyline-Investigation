@@ -12,25 +12,38 @@ problem_statement: >-
   their opinion, and a report structure the court and opposing counsel
   can properly test. A technically sound analysis prepared without
   attention to those requirements can be challenged or excluded on
-  procedural grounds alone, regardless of its substance.
+  procedural grounds alone, regardless of its substance. The same
+  discipline applies in reverse: when an opposing party serves an
+  expert report on the same class of evidence, it needs to be tested on
+  its actual substance, methodology, assumptions, and the confidence
+  level claimed against what the underlying data supports, not
+  dismissed on general scepticism alone.
 deliverable: >-
   A CPR Part 35 compliant expert report addressing the specific digital
   or intelligence question in your matter, prepared with full
   procedural compliance, a clear statement of methodology and
   qualifications, and a conclusion structured to withstand
-  cross-examination.
+  cross-examination. Where an opposing expert has already reported, the
+  same service covers an independent rebuttal, addressing that report's
+  methodology, assumptions and conclusions directly and re-examining
+  the underlying evidence where accessible.
 features:
   - "Full CPR Part 35 procedural compliance, including the statement of truth"
   - "Clear statement of the expert's qualifications and independence"
   - "Methodology disclosed in enough detail to be properly tested"
   - "Findings stated with appropriate confidence levels, not overstated"
   - "Available for a single joint expert instruction or party-appointed instruction"
+  - "Independent rebuttal of an opposing expert's report, point-by-point, where one has already been served"
 methodology: >-
   Analysis conducted to the specific technical question instructed,
   documented with full chain of custody and methodology disclosure,
-  and drafted to CPR Part 35 procedural requirements throughout, with
-  the report reviewed for compliance before delivery.
-turnaround: "Scoped to your case timetable and the complexity of the underlying analysis; typically 2 to 4 weeks from confirmed instruction."
+  and drafted to CPR Part 35 procedural requirements throughout. Where
+  the instruction is a rebuttal, the same underlying evidence and data
+  the opposing report relies on is independently re-examined and tested
+  against our own methodology, with discrepancies and unsupported
+  claims identified specifically rather than through general critique.
+  Every report is reviewed for compliance before delivery.
+turnaround: "Scoped to your case timetable and the complexity of the underlying analysis; typically 2 to 4 weeks from confirmed instruction for an original report, or scoped to the court timetable for service of rebuttal evidence, typically 2 to 3 weeks, for a rebuttal."
 faq:
   - q: "Can you act as a single joint expert?"
     a: "Yes, where both parties agree, and the same independence and procedural discipline applies whether instructed jointly or by a single party."
@@ -41,7 +54,9 @@ faq:
   - q: "How is independence maintained if we are instructing the report?"
     a: "The expert's duty is to the court, not to the instructing party, and the report is drafted and conclusions reached independently of what any party might prefer the finding to be."
   - q: "Can this rebut an expert report from the other side?"
-    a: "Yes, this is covered separately under our Expert Witness Rebuttal service, which specifically addresses a report already served by an opposing expert."
+    a: "Yes. Where an opposing party has served an expert report on digital evidence, a cyber incident, or an open-source finding, we can independently re-examine the underlying evidence where accessible and test the report's methodology and conclusions, prepared to the same CPR Part 35 procedural standard as the report it responds to."
+  - q: "What if the opposing report turns out to be sound?"
+    a: "That is reported honestly. Our duty is to the accuracy of our own findings, not to producing a rebuttal that supports your position regardless of what the evidence shows."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

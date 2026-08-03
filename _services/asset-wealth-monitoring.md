@@ -37,6 +37,8 @@ faq:
     a: "Family offices and private individuals maintaining an ongoing relationship, litigators tracking a party through an active dispute, and organisations with a continuing due-diligence obligation on a counterparty or investor."
   - q: "Can scope be narrowed to just asset visibility or just source of wealth?"
     a: "Yes, scope is confirmed at the outset based on what your matter actually needs, though most clients find value in tracking both together since a change in one often signals a change in the other."
+  - q: "How is this different from Defendant & Asset Monitoring in your Litigation Intelligence capability?"
+    a: "Both track a subject's companies and assets over time using similar sources. This service applies pre-litigation or where the focus is asset recovery rather than an active dispute. Defendant & Asset Monitoring applies once a dispute is tied to named proceedings, and adds case-timetable reporting and a settlement layer. Where a matter moves from one context into the other, coverage can transition between the two capabilities without a gap."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

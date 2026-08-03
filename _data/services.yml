@@ -229,18 +229,8 @@
   capability: litigation-intelligence
   has_copy: true
 
-- slug: digital-evidence-preservation
-  name: "Digital Evidence Preservation"
-  capability: litigation-intelligence
-  has_copy: true
-
 - slug: witness-location-credibility-verification
   name: "Witness Location & Credibility Verification"
-  capability: litigation-intelligence
-  has_copy: true
-
-- slug: defamation-pre-action-evidence-pack
-  name: "Defamation Pre-Action Evidence Pack"
   capability: litigation-intelligence
   has_copy: true
 
@@ -251,23 +241,6 @@
 
 - slug: pre-litigation-investigation-pack
   name: "Pre-Litigation Investigation Pack"
-  capability: litigation-intelligence
-  has_copy: true
-
-- slug: expert-witness-rebuttal
-  name: "Expert Witness Rebuttal"
-  capability: litigation-intelligence
-  has_copy: true
-
-- slug: process-serving
-  name: "Process Serving"
-  name_suffix: "(Merseyside, Lancashire, Greater Manchester)"
-  capability: litigation-intelligence
-  has_copy: true
-
-- slug: international-service-of-process
-  name: "International Service of Process"
-  name_suffix: "(Nigeria / West Africa)"
   capability: litigation-intelligence
   has_copy: true
 
@@ -286,18 +259,8 @@
   capability: litigation-intelligence
   has_copy: true
 
-- slug: defendant-monitoring
-  name: "Defendant Monitoring"
-  capability: litigation-intelligence
-  has_copy: true
-
-- slug: settlement-intelligence-monitoring
-  name: "Settlement Intelligence Monitoring"
-  capability: litigation-intelligence
-  has_copy: true
-
-- slug: international-litigation-monitoring
-  name: "International Litigation Monitoring"
+- slug: defendant-asset-monitoring
+  name: "Defendant & Asset Monitoring"
   capability: litigation-intelligence
   has_copy: true
 

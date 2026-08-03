@@ -718,3 +718,114 @@
   to = "/capabilities/fraud-intelligence/"
   status = 301
   force = true
+
+# Litigation Intelligence service consolidation (2026-08): Digital Evidence
+# Preservation and Defamation Pre-Action Evidence Pack were absorbed into
+# Pre-Litigation Investigation Pack as technical/specialist modules; Expert
+# Witness Rebuttal was absorbed into CPR Part 35 Expert Report; Process
+# Serving (Merseyside, Lancashire & Greater Manchester) and International
+# Service of Process (Nigeria & West Africa) were retired as standalone
+# services (both are commodity, non-intelligence-led work that undersold
+# the firm's positioning) and demoted to an operational add-on mentioned
+# in capability/location page copy rather than a headline service;
+# Defendant Monitoring, Settlement Intelligence Monitoring and
+# International Litigation Monitoring were merged into a single
+# Defendant & Asset Monitoring subscription with modular UK, international
+# and settlement scope, removing duplication with Fraud & Asset
+# Intelligence's Asset & Wealth Monitoring.
+
+[[redirects]]
+  from = "/services/digital-evidence-preservation/"
+  to = "/services/pre-litigation-investigation-pack/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/digital-evidence-preservation"
+  to = "/services/pre-litigation-investigation-pack/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/defamation-pre-action-evidence-pack/"
+  to = "/services/pre-litigation-investigation-pack/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/defamation-pre-action-evidence-pack"
+  to = "/services/pre-litigation-investigation-pack/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/expert-witness-rebuttal/"
+  to = "/services/cpr-part-35-expert-report/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/expert-witness-rebuttal"
+  to = "/services/cpr-part-35-expert-report/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/process-serving/"
+  to = "/capabilities/litigation-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/process-serving"
+  to = "/capabilities/litigation-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/international-service-of-process/"
+  to = "/capabilities/litigation-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/international-service-of-process"
+  to = "/capabilities/litigation-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/defendant-monitoring/"
+  to = "/services/defendant-asset-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/defendant-monitoring"
+  to = "/services/defendant-asset-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/settlement-intelligence-monitoring/"
+  to = "/services/defendant-asset-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/settlement-intelligence-monitoring"
+  to = "/services/defendant-asset-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/international-litigation-monitoring/"
+  to = "/services/defendant-asset-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/international-litigation-monitoring"
+  to = "/services/defendant-asset-monitoring/"
+  status = 301
+  force = true
