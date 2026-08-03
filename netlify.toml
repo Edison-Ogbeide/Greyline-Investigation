@@ -443,3 +443,83 @@
   to = "/capabilities/personal-intelligence/"
   status = 301
   force = true
+
+# AI & Synthetic Intelligence service consolidation (2026-08): Voice
+# Authentication and AI-Generated Evidence Detection were absorbed into
+# Synthetic Media Authenticity Report; Synthetic Media & Executive
+# Impersonation Monitoring and Narrative & Reputation Intelligence
+# Monitoring were merged into Executive & Brand Impersonation Monitoring;
+# Non-Human Identity & AI Agent Risk Assessment and AI Agent & Identity
+# Monitoring were retired outright.
+
+[[redirects]]
+  from = "/services/voice-authentication-vishing-detection/"
+  to = "/services/synthetic-media-authenticity-report/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/voice-authentication-vishing-detection"
+  to = "/services/synthetic-media-authenticity-report/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ai-generated-evidence-detection/"
+  to = "/services/synthetic-media-authenticity-report/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ai-generated-evidence-detection"
+  to = "/services/synthetic-media-authenticity-report/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/non-human-identity-ai-agent-risk/"
+  to = "/capabilities/ai-synthetic-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/non-human-identity-ai-agent-risk"
+  to = "/capabilities/ai-synthetic-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/synthetic-media-executive-impersonation-monitoring/"
+  to = "/services/executive-brand-impersonation-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/synthetic-media-executive-impersonation-monitoring"
+  to = "/services/executive-brand-impersonation-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/narrative-reputation-intelligence-monitoring/"
+  to = "/services/executive-brand-impersonation-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/narrative-reputation-intelligence-monitoring"
+  to = "/services/executive-brand-impersonation-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ai-agent-identity-monitoring/"
+  to = "/capabilities/ai-synthetic-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ai-agent-identity-monitoring"
+  to = "/capabilities/ai-synthetic-intelligence/"
+  status = 301
+  force = true

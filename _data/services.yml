@@ -265,28 +265,8 @@
   has_copy: true
   featured_as: "Romance Fraud Investigation"
 
-- slug: ai-generated-evidence-detection
-  name: "AI-Generated Evidence Detection & Rebuttal"
-  capability: ai-synthetic-intelligence
-  has_copy: true
-
 - slug: synthetic-narrative-intelligence
   name: "Synthetic Narrative Intelligence"
-  capability: ai-synthetic-intelligence
-  has_copy: true
-
-- slug: voice-authentication-vishing-detection
-  name: "Voice Authentication & Vishing Detection"
-  capability: ai-synthetic-intelligence
-  has_copy: true
-
-- slug: non-human-identity-ai-agent-risk
-  name: "Non-Human Identity & AI Agent Risk Assessment"
-  capability: ai-synthetic-intelligence
-  has_copy: true
-
-- slug: synthetic-media-executive-impersonation-monitoring
-  name: "Synthetic Media & Executive Impersonation Monitoring"
   capability: ai-synthetic-intelligence
   has_copy: true
 
@@ -295,13 +275,8 @@
   capability: ai-synthetic-intelligence
   has_copy: true
 
-- slug: narrative-reputation-intelligence-monitoring
-  name: "Narrative & Reputation Intelligence Monitoring"
-  capability: ai-synthetic-intelligence
-  has_copy: true
-
-- slug: ai-agent-identity-monitoring
-  name: "AI Agent & Identity Monitoring"
+- slug: executive-brand-impersonation-monitoring
+  name: "Executive & Brand Impersonation Monitoring"
   capability: ai-synthetic-intelligence
   has_copy: true
 

@@ -17,8 +17,6 @@ tiers:
         slug: synthetic-media-authenticity-report
       - name: "Document Authenticity Assessment"
         slug: document-authenticity-assessment
-      - name: "Voice Authentication & Vishing Detection"
-        slug: voice-authentication-vishing-detection
       - name: "AI Romance Fraud Verification"
         slug: ai-romance-fraud-verification
   - name: "Investigate"
@@ -27,24 +25,22 @@ tiers:
     items:
       - name: "AI-Enhanced BEC Forensic Analysis"
         slug: ai-enhanced-bec-forensic-analysis
-      - name: "AI-Generated Evidence Detection & Rebuttal"
-        slug: ai-generated-evidence-detection
       - name: "Synthetic Narrative Intelligence"
         slug: synthetic-narrative-intelligence
-      - name: "Non-Human Identity & AI Agent Risk Assessment"
-        slug: non-human-identity-ai-agent-risk
   - name: "Monitor"
     subtitle: "(Managed Intelligence Services)"
     style: detail
     description: "Unlike one-off investigations, these subscription services continuously monitor for AI-enabled threats targeting your organisation or executives across public platforms and social media. Subscriptions include monthly threat briefings and priority intelligence alerts across every discipline below."
     items:
-      - name: "Synthetic Media & Executive Impersonation"
-        slug: synthetic-media-executive-impersonation-monitoring
+      - name: "Executive & Brand Impersonation Monitoring"
+        slug: executive-brand-impersonation-monitoring
         monitoring:
           - "Deepfake video and voice cloning"
-          - "AI-generated images and synthetic audio"
           - "Fake executive profiles"
+          - "AI-generated images and synthetic audio"
           - "Social media impersonation"
+          - "Coordinated influence campaigns"
+          - "AI-generated misinformation and brand disinformation"
       - name: "AI-Enabled Fraud & BEC"
         slug: ai-enabled-fraud-bec-monitoring
         monitoring:
@@ -53,17 +49,5 @@ tiers:
           - "Supplier impersonation"
           - "Email fraud campaigns"
           - "Fake customer support agents"
-      - name: "Narrative & Reputation Intelligence"
-        slug: narrative-reputation-intelligence-monitoring
-        monitoring:
-          - "Coordinated influence campaigns"
-          - "AI-generated misinformation"
-          - "Brand disinformation and amplification"
-      - name: "AI Agent & Identity Monitoring"
-        slug: ai-agent-identity-monitoring
-        monitoring:
-          - "Unauthorised AI agents"
-          - "Autonomous bot activity"
-          - "Identity spoofing"
 ---
 Greyline's AI & Synthetic Intelligence capability detects, analyses and defends against AI-generated threats, synthetic media, AI-enabled fraud, and fabricated narratives deployed at scale. The work runs across three stages: verify a specific piece of content or identity, investigate a broader deception, and monitor on a continuous basis where the threat is ongoing.

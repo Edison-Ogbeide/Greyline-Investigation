@@ -27,7 +27,7 @@ methodology: >-
   document's claimed origin can be checked independently. Findings involving
   AI-generated content are worded as consistent with, not proof of, AI
   generation, in line with our standard across this capability.
-turnaround: "3 to 7 business days, depending on the number of documents and whether issuing-authority verification is required."
+turnaround: "3 to 7 business days, depending on the number of documents and whether issuing-authority verification is required. A litigation-grade tier is available for a document in dispute, adding CPR Part 35 compliant formatting, a formal rebuttal statement, and expert witness availability, typically extending turnaround to 5 to 15 business days depending on complexity."
 faq:
   - q: "Can you verify a document with a foreign or overseas issuing authority?"
     a: "Often, yes, including in our UK to Nigeria corridor work, though verification depends on the records being accessible in the relevant jurisdiction. Any limitation is stated in the report rather than left implicit."
@@ -35,6 +35,8 @@ faq:
     a: "That is reported as plainly as a finding of fabrication would be. A clean result is a result, not a failure to find something."
   - q: "Do you need the original document?"
     a: "A high-quality scan or the original digital file is usually sufficient. Where the physical original matters to the outcome, this is confirmed at scoping."
+  - q: "Can this be used as evidence in a dispute?"
+    a: "Yes. Where a document submitted by another party is in question, request the litigation-grade tier: the assessment is prepared to CPR Part 35 standard, cross-referenced against the case timeline, with chain-of-custody documentation and the analyst available to provide an expert witness statement or a formal rebuttal statement."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/
