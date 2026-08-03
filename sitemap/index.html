@@ -47,6 +47,15 @@ crumbs:
 		</ul>
 		{% endfor %}
 
+		<h2>Products</h2>
+		<ul>
+			<li><a href="{{ '/products/' | relative_url }}">Products (hub)</a></li>
+			{% assign products = site.data.products | sort: "order" %}
+			{% for prod in products %}
+			<li><a href="{{ '/products/' | append: prod.slug | append: '/' | relative_url }}">{{ prod.name }}</a></li>
+			{% endfor %}
+		</ul>
+
 		<h2>Training</h2>
 		<ul>
 			<li><a href="{{ '/training/' | relative_url }}">Training (hub)</a></li>

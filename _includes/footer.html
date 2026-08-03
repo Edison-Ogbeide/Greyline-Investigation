@@ -14,7 +14,16 @@
 			</ul>
 		</div>
 		<div class="footer-col">
-			<h4>Featured Services</h4>
+			<h4>Products</h4>
+				<ul>
+					{% assign products = site.data.products | sort: "order" %}
+					{% for prod in products %}
+					<li><a href="{{ '/products/' | append: prod.slug | append: '/' | relative_url }}">{{ prod.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>Featured Services</h4>
 			<ul>
 				{% assign featured = site.data.services | where_exp: "s", "s.featured_as" %}
 				{% for svc in featured %}

@@ -451,28 +451,46 @@
 # Monitoring were merged into Executive & Brand Impersonation Monitoring;
 # Non-Human Identity & AI Agent Risk Assessment and AI Agent & Identity
 # Monitoring were retired outright.
+#
+# Products launch (2026-08): Synthetic Media Authenticity Report is
+# itself superseded by the Greyline Provenance product, which supersedes
+# both it and the earlier AI-Generated Evidence Detection redirect below
+# (repointed directly to Provenance rather than chaining through the now
+# retired service page).
 
 [[redirects]]
   from = "/services/voice-authentication-vishing-detection/"
-  to = "/services/synthetic-media-authenticity-report/"
+  to = "/products/provenance/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/services/voice-authentication-vishing-detection"
-  to = "/services/synthetic-media-authenticity-report/"
+  to = "/products/provenance/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/services/ai-generated-evidence-detection/"
-  to = "/services/synthetic-media-authenticity-report/"
+  to = "/products/provenance/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/services/ai-generated-evidence-detection"
-  to = "/services/synthetic-media-authenticity-report/"
+  to = "/products/provenance/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/synthetic-media-authenticity-report/"
+  to = "/products/provenance/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/synthetic-media-authenticity-report"
+  to = "/products/provenance/"
   status = 301
   force = true
 

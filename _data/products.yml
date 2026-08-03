@@ -1,0 +1,41 @@
+# Named engagements: fixed-scope or recurring offerings with a defined
+# deliverable and cadence, distinct from the bespoke, individually scoped
+# work described under _capabilities / _services. order drives hub and
+# footer display order (spec: BuildWatch, Provenance, Mirror, Shield;
+# not alphabetical, not by price).
+
+- slug: buildwatch
+  name: "Greyline BuildWatch"
+  descriptor: "Independent verification of overseas construction projects"
+  for: "Diaspora property owners"
+  shape: "Ongoing"
+  cadence: "Monthly"
+  related_capability: fraud-intelligence
+  order: 1
+
+- slug: provenance
+  name: "Greyline Provenance"
+  descriptor: "Authenticity assessment of contested audio, video and images"
+  for: "Solicitors and instructing parties"
+  shape: "Fixed scope"
+  cadence: "Single engagement"
+  related_capability: ai-synthetic-intelligence
+  order: 2
+
+- slug: mirror
+  name: "Greyline Mirror"
+  descriptor: "A pre-emptive audit of your own public exposure"
+  for: "Executives, public figures, family offices"
+  shape: "Fixed scope"
+  cadence: "Annual re-scan"
+  related_capability: personal-intelligence
+  order: 3
+
+- slug: shield
+  name: "Greyline Shield"
+  descriptor: "Continuous monitoring for impersonation and exposure"
+  for: "Individuals and families"
+  shape: "Ongoing"
+  cadence: "Monthly"
+  related_capability: personal-intelligence
+  order: 4

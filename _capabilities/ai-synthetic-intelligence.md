@@ -13,8 +13,6 @@ tiers:
     style: cards
     description: "Determine whether digital content, identities and communications are authentic or artificially generated before decisions are made."
     items:
-      - name: "Synthetic Media Authenticity Report"
-        slug: synthetic-media-authenticity-report
       - name: "Document Authenticity Assessment"
         slug: document-authenticity-assessment
       - name: "AI Romance Fraud Verification"
@@ -50,4 +48,4 @@ tiers:
           - "Email fraud campaigns"
           - "Fake customer support agents"
 ---
-Greyline's AI & Synthetic Intelligence capability detects, analyses and defends against AI-generated threats, synthetic media, AI-enabled fraud, and fabricated narratives deployed at scale. The work runs across three stages: verify a specific piece of content or identity, investigate a broader deception, and monitor on a continuous basis where the threat is ongoing.
+Greyline's AI & Synthetic Intelligence capability detects, analyses and defends against AI-generated threats, synthetic media, AI-enabled fraud, and fabricated narratives deployed at scale. The work runs across three stages: verify a specific piece of content or identity, investigate a broader deception, and monitor on a continuous basis where the threat is ongoing. Assessing whether a specific contested recording, image or file is authentic is now handled as a fixed-scope engagement under <a href="/products/provenance/">Greyline Provenance</a>.

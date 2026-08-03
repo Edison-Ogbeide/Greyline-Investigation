@@ -1,0 +1,14 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ site.company.legal_name }}"
+  },
+  "areaServed": "GB",
+  "url": "{{ site.url }}{{ page.url | relative_url }}"
+}
+</script>

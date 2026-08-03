@@ -40,6 +40,9 @@ collections:
   case_studies:
     output: true
     permalink: /case-studies/:path/
+  products:
+    output: true
+    permalink: /products/:path/
 
 defaults:
   - scope:
@@ -47,6 +50,11 @@ defaults:
       type: capabilities
     values:
       layout: capability
+  - scope:
+      path: ""
+      type: products
+    values:
+      layout: product
   - scope:
       path: ""
       type: services

@@ -188,11 +188,6 @@
   capability: cyber-intelligence
   has_copy: true
 
-- slug: synthetic-media-authenticity-report
-  name: "Synthetic Media Authenticity Report"
-  capability: ai-synthetic-intelligence
-  has_copy: true
-
 - slug: ai-enhanced-bec-forensic-analysis
   name: "AI-Enhanced BEC Forensic Analysis"
   capability: ai-synthetic-intelligence
