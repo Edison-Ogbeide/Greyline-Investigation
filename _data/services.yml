@@ -214,11 +214,6 @@
   capability: cyber-intelligence
   has_copy: true
 
-- slug: incident-response-intelligence-monitoring
-  name: "Incident Response Intelligence Monitoring"
-  capability: cyber-intelligence
-  has_copy: true
-
 - slug: synthetic-media-authenticity-report
   name: "Synthetic Media Authenticity Report"
   capability: ai-synthetic-intelligence

@@ -81,15 +81,6 @@ tiers:
           - "Vendor security incidents"
           - "Exposed partner infrastructure"
           - "Supply chain vulnerabilities"
-      - name: "Incident Response Intelligence"
-        slug: incident-response-intelligence-monitoring
-        monitoring:
-          - "Indicators of compromise (IOCs)"
-          - "Threat actor activity"
-          - "Malware campaigns"
-          - "Vulnerability exploitation"
-          - "Industry-specific threats"
-          - "Active attack campaigns"
       - name: "Continuous Intelligence Subscription"
         slug: continuous-intelligence-subscription
         list_label: "A fully managed intelligence service combining"

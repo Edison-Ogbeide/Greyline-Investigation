@@ -36,7 +36,7 @@ faq:
   - q: "Can you tell us definitively who is behind the attack?"
     a: "Attribution is reported with honest confidence levels, consistent with the evidential discipline applied across our AI & Synthetic Intelligence work. Certainty varies by incident, and we report what the evidence actually supports."
   - q: "Can this continue after the immediate incident is resolved?"
-    a: "Yes, through our Incident Response Intelligence Monitoring subscription, which provides ongoing threat intelligence tailored to your sector independent of any single incident."
+    a: "This engagement is scoped to the active incident and the period immediately around it. For genuinely ambient, ongoing threat intelligence, continuous IOC correlation and malware campaign tracking across your full technology stack, that is a managed threat intelligence feed service best sourced from a dedicated provider, and we are candid about that boundary rather than overselling continuous coverage we are not resourced to maintain."
   - q: "How quickly can you start once an incident is confirmed?"
     a: "Engagement begins immediately on confirmed scope, with initial findings targeted within 24 hours, reflecting the pace an active incident actually demands."
 crumbs:

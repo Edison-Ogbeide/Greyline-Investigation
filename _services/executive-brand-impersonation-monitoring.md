@@ -46,6 +46,8 @@ faq:
     a: "We provide the intelligence, what is happening, its scale, and its likely coordination, so you or your communications team can decide on and shape the response. That decision sits with you."
   - q: "Does this cover personal, non-executive social media impersonation too?"
     a: "This service is scoped to the organisation and its named executives. Personal impersonation and digital exposure for individuals outside that scope sits under our Personal Intelligence capability."
+  - q: "Does this cover typosquatted domains and fake websites impersonating our brand?"
+    a: "This service focuses on AI-generated and synthetic impersonation specifically. Infrastructure-level brand abuse, typosquatted domains, fake websites and fraudulent apps, regardless of AI involvement, sits under our Cyber & Digital Risk Intelligence capability's Brand Protection Intelligence, which the two are commonly instructed alongside."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/
