@@ -36,7 +36,7 @@ faq:
   - q: "Can this integrate with our existing procurement process?"
     a: "Yes. Scope and workflow are confirmed on your scoping call and built around your existing onboarding and renewal process, rather than replacing it."
   - q: "How many vendors can this cover?"
-    a: "The programme scales to your supplier base, however large, with risk-tiering used to focus the deepest scrutiny on your most critical vendors."
+    a: "Programmes covering up to around 50 vendors are managed directly by a named analyst. Larger supplier bases are scoped with automated tiering for lower-risk vendors, reserving direct analyst attention for your most critical relationships, confirmed with you at scoping rather than assumed."
   - q: "Who typically owns this relationship internally?"
     a: "Procurement and risk teams jointly, in our experience, with the risk register giving both functions the same current picture rather than each working from a different, aging snapshot."
 crumbs:

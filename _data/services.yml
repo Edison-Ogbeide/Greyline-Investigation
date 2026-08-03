@@ -29,11 +29,6 @@
   capability: corporate-intelligence
   has_copy: true
 
-- slug: executive-intelligence-brief
-  name: "Executive Intelligence Brief"
-  capability: corporate-intelligence
-  has_copy: true
-
 - slug: tprm-as-a-service
   name: "Third-Party Risk Management as a Service"
   capability: corporate-intelligence
@@ -59,11 +54,6 @@
   capability: corporate-intelligence
   has_copy: true
 
-- slug: insider-risk-monitoring
-  name: "Insider Risk Monitoring"
-  capability: corporate-intelligence
-  has_copy: true
-
 - slug: portfolio-intelligence-monitoring
   name: "Portfolio Intelligence Monitoring"
   capability: corporate-intelligence
@@ -84,23 +74,8 @@
   capability: corporate-intelligence
   has_copy: true
 
-- slug: board-reporting
-  name: "Board Reporting"
-  capability: corporate-intelligence
-  has_copy: true
-
 - slug: risk-workshops
   name: "Risk Workshops"
-  capability: corporate-intelligence
-  has_copy: true
-
-- slug: executive-intelligence-reviews
-  name: "Executive Intelligence Reviews"
-  capability: corporate-intelligence
-  has_copy: true
-
-- slug: quarterly-strategic-risk-assessments
-  name: "Quarterly Strategic Risk Assessments"
   capability: corporate-intelligence
   has_copy: true
 

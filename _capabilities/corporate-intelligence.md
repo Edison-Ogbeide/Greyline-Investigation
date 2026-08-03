@@ -19,8 +19,6 @@ tiers:
         slug: vendor-intelligence-report
       - name: "Candidate Risk Intelligence"
         slug: candidate-risk-intelligence
-      - name: "Executive Intelligence Brief"
-        slug: executive-intelligence-brief
       - name: "Workplace Investigation"
         slug: workplace-investigation
       - name: "Insider Threat Intelligence Brief"
@@ -40,8 +38,6 @@ tiers:
         slug: vendor-intelligence-monitoring
       - name: "Continuous Candidate Monitoring"
         slug: continuous-candidate-monitoring
-      - name: "Insider Risk Monitoring"
-        slug: insider-risk-monitoring
       - name: "Portfolio Intelligence Monitoring"
         slug: portfolio-intelligence-monitoring
       - name: "Workplace Intelligence Programme"
@@ -57,13 +53,7 @@ tiers:
     items:
       - name: "Intelligence briefings"
         slug: intelligence-briefings
-      - name: "Board reporting"
-        slug: board-reporting
       - name: "Risk workshops"
         slug: risk-workshops
-      - name: "Executive intelligence reviews"
-        slug: executive-intelligence-reviews
-      - name: "Quarterly strategic risk assessments"
-        slug: quarterly-strategic-risk-assessments
 ---
 Greyline's Corporate Intelligence capability supports the decisions where being wrong is expensive: pre-hire vetting that goes beyond standard background checks and database searches, vendor and supply-chain due diligence, pre-investment and M&A diligence for corporate development and private equity, and insider threat or workplace investigations conducted to evidential standard. These are three distinct ways to engage, not a required sequence. Instruct a single investigation where a specific decision needs a defensible answer, subscribe to ongoing monitoring where the risk does not end with one report, or draw on strategic advice at board level where the decision is bigger than one relationship.

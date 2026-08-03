@@ -29,8 +29,13 @@ methodology: >-
   Conducted entirely by an assigned analyst, no automated tools, no
   outsourced components. Every finding is sourced, dated and risk-scored,
   and the lead analyst reviews the complete picture in context before the
-  report is finalised, rather than as a compliance checklist.
-turnaround: "10 to 14 business days from completed candidate intake, plus a 60-minute debrief call with the lead analyst."
+  report is finalised, rather than as a compliance checklist. A Senior
+  Hire & Board Appointment tier is available on the same backbone, adding
+  deeper reputational exposure analysis, board-level conflict-of-interest
+  mapping, and reporting formatted for a board or nominations committee,
+  for appointments where the cost of an undisclosed conflict or a
+  reputational surprise is highest.
+turnaround: "10 to 14 business days from completed candidate intake, plus a 60-minute debrief call with the lead analyst. The Senior Hire & Board Appointment tier typically adds 2 to 3 business days for the deeper reputational and conflict-of-interest work."
 faq:
   - q: "What roles is this built for?"
     a: "Senior, trust-critical and exposure-significant appointments, C-suite, finance leadership, partner-level legal and accounting roles, household and personal staff for HNW families, regulated-firm hires, and any role where a wrong hire is expensive."
@@ -38,6 +43,10 @@ faq:
     a: "Yes. Output sent to the instructing employer is filtered to remove protected-characteristic information that is not role-relevant, per our Equality Act 2010 principle, who someone is on a protected basis is not the employer's business unless the role specifically requires it."
   - q: "Do you handle volume hiring programmes?"
     a: "Yes, for organisations commissioning multiple reports a month, submit an inquiry before instructing so we can scope a volume arrangement, including embedded intake and dedicated account handling."
+  - q: "What does the Senior Hire & Board Appointment tier add for a C-suite or board candidate?"
+    a: "A stronger focus on reputational exposure, undisclosed conflicts of interest, competing business relationships, and public statements or history that could become a problem after the appointment is announced, formatted for a board or nominations committee rather than an HR file."
+  - q: "How is the board tier different from a standard executive reference check?"
+    a: "A reference check relies on referees the candidate has chosen. This tier independently verifies employment and directorship history and screens for undisclosed conflicts and adverse media that references would not surface, conducted discreetly ahead of an offer being made."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

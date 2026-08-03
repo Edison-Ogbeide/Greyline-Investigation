@@ -21,6 +21,7 @@ features:
   - "Assessment against recognised insider threat behavioural indicators"
   - "Corporate and financial interest checks for undisclosed conflicts"
   - "A clear recommendation on next steps, proportionate to the finding"
+  - "An optional follow-up monitoring period where a concern is stood down but not entirely closed"
 methodology: >-
   Lawful open-source and public record research combined with a
   structured insider threat indicator framework, conducted discreetly
@@ -36,6 +37,8 @@ faq:
     a: "Yes, where findings warrant it. This brief is deliberately proportionate and often the step before a full Workplace Investigation is commissioned, once there is a documented basis for one."
   - q: "What kinds of signals typically trigger this brief?"
     a: "Unusual data access patterns, a resignation shortly before or after a competitor approach, a tip from a colleague, or access privileges that no longer match a departing employee's role are the most common triggers."
+  - q: "What if the concern is lower-level but you want to keep watching?"
+    a: "Where a finding does not warrant escalation but the underlying concern has not fully resolved, we can agree a follow-up monitoring period on the same named individual, publicly available information only, rather than instructing a fresh brief each time something changes."
 crumbs:
   - title: "Capabilities"
     url: /capabilities/

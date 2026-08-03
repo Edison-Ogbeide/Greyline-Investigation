@@ -523,3 +523,72 @@
   to = "/capabilities/ai-synthetic-intelligence/"
   status = 301
   force = true
+
+# Corporate Intelligence service consolidation (2026-08): Executive
+# Intelligence Brief was absorbed into Candidate Risk Intelligence as a
+# Senior Hire & Board Appointment tier; Executive Intelligence Reviews was
+# merged into Cyber's Executive Exposure Monitoring; Board Reporting was
+# merged into Intelligence Briefings as a board-ready format; Insider Risk
+# Monitoring was retired in favour of a follow-up monitoring option on
+# Insider Threat Intelligence Brief; Quarterly Strategic Risk Assessments
+# was retired outright.
+
+[[redirects]]
+  from = "/services/executive-intelligence-brief/"
+  to = "/services/candidate-risk-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/executive-intelligence-brief"
+  to = "/services/candidate-risk-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/executive-intelligence-reviews/"
+  to = "/services/executive-exposure-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/executive-intelligence-reviews"
+  to = "/services/executive-exposure-monitoring/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/board-reporting/"
+  to = "/services/intelligence-briefings/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/board-reporting"
+  to = "/services/intelligence-briefings/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/insider-risk-monitoring/"
+  to = "/services/insider-threat-intelligence-brief/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/insider-risk-monitoring"
+  to = "/services/insider-threat-intelligence-brief/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/quarterly-strategic-risk-assessments/"
+  to = "/capabilities/corporate-intelligence/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/quarterly-strategic-risk-assessments"
+  to = "/capabilities/corporate-intelligence/"
+  status = 301
+  force = true
