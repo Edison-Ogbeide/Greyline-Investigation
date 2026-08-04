@@ -4,12 +4,12 @@
 # footer display order (spec: BuildWatch, Provenance, Mirror, Shield;
 # not alphabetical, not by price).
 
-- slug: buildwatch
-  name: "Greyline BuildWatch"
-  descriptor: "Independent verification of overseas construction projects"
-  for: "Diaspora property owners"
-  shape: "Ongoing"
-  cadence: "Monthly"
+- slug: siteverify
+  name: "Greyline SiteVerify"
+  descriptor: "Independent on-site verification of property, business, land and assets"
+  for: "Diaspora owners & overseas investors"
+  shape: "Fixed scope or ongoing"
+  cadence: "Single visit or monthly"
   related_capability: fraud-intelligence
   order: 1
 

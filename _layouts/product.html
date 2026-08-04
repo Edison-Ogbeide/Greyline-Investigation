@@ -28,6 +28,44 @@ layout: default
 </section>
 {% endif %}
 
+{% if page.service_categories %}
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Service Categories</div>
+		<h2>Where <em>{{ short_name }}</em> applies.</h2>
+		<hr class="gold-rule">
+	</div>
+	<div class="container-narrow">
+		{% for cat in page.service_categories %}
+		<div class="category-block">
+			<h3>{{ forloop.index }}. {{ cat.name }}</h3>
+			{% if cat.intro %}<p>{{ cat.intro }}</p>{% endif %}
+			{% if cat.scenario %}<p class="category-scenario">{{ cat.scenario }}</p>{% endif %}
+			{% if cat.table_rows %}
+			<div class="table-scroll">
+				<table>
+					<thead>
+						<tr>{% for h in cat.table_headers %}<th>{{ h }}</th>{% endfor %}</tr>
+					</thead>
+					<tbody>
+						{% for row in cat.table_rows %}
+						<tr>{% for cell in row %}<td>{{ cell }}</td>{% endfor %}</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+			{% elsif cat.list_items %}
+			<ul class="what-included">
+				{% for li in cat.list_items %}<li>{{ li }}</li>{% endfor %}
+			</ul>
+			{% endif %}
+			{% if cat.note %}<p class="category-note">{{ cat.note }}</p>{% endif %}
+		</div>
+		{% endfor %}
+	</div>
+</section>
+{% endif %}
+
 {% if page.mode_compare %}
 <section class="service-intro">
 	<div class="container-narrow">
@@ -143,6 +181,25 @@ layout: default
 </section>
 {% endif %}
 
+{% if page.illustrative_examples %}
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Illustrative Examples</div>
+		<h2>How this looks <em>in practice</em>.</h2>
+		<hr class="gold-rule">
+		{% if page.illustrative_examples.intro %}<p><em>{{ page.illustrative_examples.intro }}</em></p>{% endif %}
+		<div class="example-list">
+			{% for ex in page.illustrative_examples.items %}
+			<div class="example-item">
+				<h3>{{ ex.title }}</h3>
+				<p>{{ ex.body }}</p>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+{% endif %}
+
 {% if page.cadence %}
 <section class="service-intro">
 	<div class="container-narrow">
@@ -160,6 +217,26 @@ layout: default
 			<dt>Review</dt>
 			<dd>{{ page.cadence.review }}</dd>
 		</dl>
+	</div>
+</section>
+{% endif %}
+
+{% if page.deliverable_structure %}
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Report Structure</div>
+		<h2>What the <em>report contains</em>.</h2>
+		<hr class="gold-rule">
+		<div class="table-scroll">
+			<table>
+				<thead><tr><th>Section</th><th>Content</th></tr></thead>
+				<tbody>
+					{% for row in page.deliverable_structure %}
+					<tr><td>{{ row.section }}</td><td>{{ row.content }}</td></tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
 	</div>
 </section>
 {% endif %}

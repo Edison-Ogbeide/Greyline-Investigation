@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 794 1123" width="794" height="1123" role="img" aria-label="Specimen BuildWatch monthly site record, redacted">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 794 1123" width="794" height="1123" role="img" aria-label="Specimen SiteVerify construction monitoring site record, redacted">
   <style>
     svg { --ink:#16181A; --concrete:#6E7276; --paper:#EDEEEC; --laterite:#A8452A; --hairline:#C9CBC7; }
     .mono { font-family:"SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; }
@@ -24,7 +24,7 @@
     <text class="rail-val" x="22" y="66">Monthly site record</text>
 
     <text class="rail-lbl" x="22" y="98">REFERENCE</text>
-    <text class="rail-val" x="22" y="112">BW-2417 / 07</text>
+    <text class="rail-val" x="22" y="112">SV-2417 / 07</text>
 
     <text class="rail-lbl" x="22" y="144">PERIOD</text>
     <text class="rail-val" x="22" y="158">June - July 2026</text>
@@ -75,7 +75,7 @@
   </g>
 
   <!-- ============ MAIN COLUMN ============ -->
-  <text class="mono" x="200" y="52" font-size="9" letter-spacing="3.4" fill="#6E7276">GREYLINE BUILDWATCH</text>
+  <text class="mono" x="200" y="52" font-size="9" letter-spacing="3.4" fill="#6E7276">GREYLINE SITEVERIFY</text>
   <text class="serif" x="200" y="86" font-size="26" fill="#16181A">Monthly Site Record</text>
   <line x1="200" y1="104" x2="756" y2="104" stroke="#16181A" stroke-width="2"/>
 

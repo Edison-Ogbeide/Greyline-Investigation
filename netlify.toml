@@ -931,3 +931,20 @@
   to = "/services/digital-identity-threat-monitoring/"
   status = 301
   force = true
+
+# BuildWatch renamed and expanded to SiteVerify (2026-08): construction
+# monitoring is now one of six verification categories (construction,
+# property, business, commercial due diligence, asset, land) under a
+# single, broader engagement.
+
+[[redirects]]
+  from = "/products/buildwatch/"
+  to = "/products/siteverify/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/products/buildwatch"
+  to = "/products/siteverify/"
+  status = 301
+  force = true

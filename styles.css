@@ -1447,6 +1447,35 @@ footer,
 	border-top: 1px solid var(--rule);
 }
 
+/* Service categories — repeating category blocks, each with either a
+   table or a bulleted list, an optional scenario paragraph and an
+   optional note callout. */
+.category-block { padding: 2rem 0; border-top: 1px solid var(--rule-soft); }
+.category-block:first-child { padding-top: 0; border-top: none; }
+.category-block h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; margin-bottom: 0.75rem; color: var(--ink); }
+.category-scenario { font-style: italic; color: var(--text-2); }
+.category-note {
+	background: var(--ice);
+	border-left: 3px solid var(--accent);
+	padding: 0.85rem 1.1rem;
+	font-size: 0.85rem;
+	color: var(--text-2);
+	line-height: 1.6;
+	margin-top: 1.25rem;
+}
+
+/* Any data table introduced on a product page scrolls on narrow
+   viewports instead of overflowing the page. */
+.table-scroll { overflow-x: auto; margin: 1.5rem 0; }
+.table-scroll table { width: 100%; min-width: 480px; }
+
+/* Illustrative examples */
+.example-list { margin-top: 1.5rem; }
+.example-item { padding: 1.5rem 0; border-bottom: 1px solid var(--rule-soft); }
+.example-item:last-child { border-bottom: none; }
+.example-item h3 { font-family: var(--serif); font-size: 1.15rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--ink); }
+.example-item p { margin: 0; }
+
 /* Limitations and scope — mandatory boundary/liability box */
 .limitations-box { background: var(--ice); border-left: 3px solid var(--accent); padding: 0.5rem 1.75rem; margin-top: 1.5rem; }
 .limitations-box ul { list-style: none; padding: 0; margin: 0; }
