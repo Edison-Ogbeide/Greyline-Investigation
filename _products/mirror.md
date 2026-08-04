@@ -73,6 +73,26 @@ cadence:
   cadence: "Annual re-scan"
   deliverable: "Written exposure audit with a prioritised reduction plan"
   review: "Principal-reviewed before release"
+deliverable_structure:
+  - section: "Executive summary"
+    content: "The headline findings and what they mean in practice"
+  - section: "Scope and identifiers"
+    content: "The identifiers researched, confirmed with you at scoping"
+  - section: "Method"
+    content: "How the research was conducted and logged"
+  - section: "Findings: public records and directories"
+    content: "What official and semi-official records show, risk-rated"
+  - section: "Findings: social and digital footprint"
+    content: "What a search of your name actually surfaces, risk-rated"
+  - section: "Findings: brokers, search results and breach exposure"
+    content: "Data broker listings, search result accuracy, and breach exposure"
+  - section: "Reduction plan"
+    content: "A named route and expected timescale for every reducible finding"
+  - section: "Limitations and scope"
+    content: "What this audit does, and does not, establish"
+specimen_report:
+  path: /media/mirror/specimen-report.pdf
+  note: "The specimen below shows a full baseline exposure audit, illustrating the report structure above section by section. The client, the findings and the reduction plan are fictitious."
 limitations_intro: "This work is scoped narrowly and deliberately, for reasons worth stating plainly."
 limitations:
   - "Mirror is commissioned by, and reports on, the client. Greyline verifies the identity of the client and will not accept instruction to compile this assessment about a third party."

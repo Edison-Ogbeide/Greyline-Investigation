@@ -163,6 +163,9 @@ deliverable_structure:
     content: "Overall assessment against the verification objective"
   - section: "Supporting evidence appendix"
     content: "Raw imagery, maps and supplementary material"
+specimen_report:
+  path: /media/verify/specimen-report.pdf
+  note: "The specimen below shows a full monthly Construction & Development record, illustrating the report structure above section by section. The case, the site, the client and every finding are fictitious."
 limitations_intro: "This work has defined boundaries, stated plainly so a client knows exactly what a Verify report does, and does not, establish."
 limitations:
   - "In jurisdictions where public records may be incomplete, document checks report what is available at the date of search. Gaps in the public record do not necessarily indicate irregularity."

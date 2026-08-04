@@ -241,6 +241,18 @@ layout: default
 </section>
 {% endif %}
 
+{% if page.specimen_report %}
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">Specimen Report</div>
+		<h2>See a full <em>specimen report</em>.</h2>
+		<hr class="gold-rule">
+		<p>{{ page.specimen_report.note }}</p>
+		<a href="{{ page.specimen_report.path | relative_url }}" class="btn-outline" target="_blank" rel="noopener">Download the specimen report (PDF) &rarr;</a>
+	</div>
+</section>
+{% endif %}
+
 {% if page.limitations %}
 <section class="service-intro">
 	<div class="container-narrow">
