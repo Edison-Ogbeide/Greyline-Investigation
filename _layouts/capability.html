@@ -91,10 +91,12 @@ layout: default
 		<div class="svc-grid">
 			{% for item in tier.items %}
 			{% assign tier_counter = tier_counter | plus: 1 %}
+			{% assign item_svc = site.data.services | where: "slug", item.slug | first %}
 			{% if item.slug %}
 			<a href="{{ '/services/' | append: item.slug | append: '/' | relative_url }}" class="svc-card">
 				<div class="svc-num">{{ tier_counter | prepend: '00' | slice: -2, 2 }}</div>
 				<h3>{{ item.name }}</h3>
+				{% if item_svc.description %}<p>{{ item_svc.description }}</p>{% endif %}
 				<span class="svc-link">Explore &rarr;</span>
 			</a>
 			{% else %}

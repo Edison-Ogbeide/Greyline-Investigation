@@ -5,27 +5,32 @@
 
 - slug: counterparty-intelligence-report
   name: "Counterparty Intelligence Report"
+  description: "Analyst-led due diligence on a business counterparty, joint venture partner, or new supplier, before you sign, invest, or extend credit."
   capability: corporate-intelligence
   has_copy: true
 
 - slug: vendor-intelligence-report
   name: "Vendor Intelligence Report"
+  description: "Due diligence on a new or existing vendor before you sign a contract, extend credit terms, or become dependent on their supply."
   capability: corporate-intelligence
   has_copy: true
 
 - slug: candidate-risk-intelligence
   name: "Candidate Risk Intelligence"
+  description: "Pre-employment vetting that goes meaningfully beyond compliance-tier screening, identity, criminal, employment, digital footprint and behavioural intelligence in a single risk-scored report."
   capability: corporate-intelligence
   has_copy: true
   featured_as: "Pre-Hire Intelligence"
 
 - slug: insider-threat-intelligence-brief
   name: "Insider Threat Intelligence Brief"
+  description: "A focused intelligence assessment of insider risk connected to a specific employee, role, or department, before it becomes a confirmed incident."
   capability: corporate-intelligence
   has_copy: true
 
 - slug: ma-integrity-intelligence
   name: "M&A Integrity Intelligence"
+  description: "Integrity due diligence on the people and structure behind a target company, running alongside financial and legal due diligence before a deal closes."
   capability: corporate-intelligence
   has_copy: true
 
@@ -36,11 +41,13 @@
 
 - slug: workplace-investigation
   name: "Workplace Investigation"
+  description: "An independent, evidential-standard investigation into a formal workplace complaint, grievance, or allegation of misconduct."
   capability: corporate-intelligence
   has_copy: true
 
 - slug: pre-litigation-viability-assessment
   name: "Pre-Litigation Viability Assessment"
+  description: "An intelligence-led assessment of whether a prospective defendant is worth pursuing, before legal costs are committed."
   capability: corporate-intelligence
   has_copy: true
 
@@ -82,32 +89,38 @@
 - slug: asset-visibility-report
   name: "Asset Visibility Report"
   name_suffix: "(pre-litigation)"
+  description: "A snapshot of a named individual or company's visible assets, property, business interests and lifestyle spending, before proceedings begin or a dispute escalates."
   capability: fraud-intelligence
   has_copy: true
 
 - slug: asset-recovery-intelligence
   name: "Asset Recovery Intelligence"
   name_suffix: "(post-judgment)"
+  description: "Locating and documenting a judgment debtor's assets across the UK and internationally, to support enforcement action, including subrogated recovery for insurers."
   capability: fraud-intelligence
   has_copy: true
 
 - slug: source-of-wealth-report
   name: "Source of Wealth Report"
+  description: "Independent verification of a person's claimed source of wealth, for family offices, investors, and individuals entering a significant financial relationship."
   capability: fraud-intelligence
   has_copy: true
 
 - slug: fraud-intelligence-brief
   name: "Fraud Intelligence Brief"
+  description: "An intelligence assessment of a suspected fraud, an investment scam, a romance-linked scheme, or general financial misrepresentation, before or after money has been sent."
   capability: fraud-intelligence
   has_copy: true
 
 - slug: cryptocurrency-tracing-recovery
   name: "Cryptocurrency Tracing & Recovery Intelligence"
+  description: "Blockchain analysis to trace stolen or fraudulently obtained cryptocurrency to the point where recovery becomes possible."
   capability: fraud-intelligence
   has_copy: true
 
 - slug: cross-border-asset-tracing
   name: "Cross-Border Asset Tracing"
+  description: "Locating and documenting assets held outside the UK, through named in-country partners, with particular strength in the Nigeria and West Africa corridor."
   capability: fraud-intelligence
   has_copy: true
 
@@ -123,17 +136,20 @@
 
 - slug: digital-exposure-intelligence
   name: "Digital Exposure Intelligence"
+  description: "A comprehensive, analyst-led sweep of a named subject's entire online presence, mapped, cross-referenced, and delivered as a risk-scored report."
   capability: cyber-intelligence
   has_copy: true
   featured_as: "Digital Footprint Analysis"
 
 - slug: attack-surface-validation
   name: "Attack Surface Validation"
+  description: "Independent validation of your external security controls, confirming what an attacker can actually see and reach, not just what your tooling reports."
   capability: cyber-intelligence
   has_copy: true
 
 - slug: dark-web-exposure-report
   name: "Dark Web Exposure Report"
+  description: "A structured, analyst-led investigation of dark web markets, paste sites, breach corpora and threat-actor channels, not an automated scrape."
   capability: cyber-intelligence
   has_copy: true
   featured_as: "Dark Web Sweep"
@@ -145,11 +161,13 @@
 
 - slug: executive-exposure-profile
   name: "Executive Exposure Profile"
+  description: "A point-in-time assessment of a named executive's digital footprint and exposure, before it is exploited by an attacker."
   capability: cyber-intelligence
   has_copy: true
 
 - slug: social-engineering-simulation
   name: "Social Engineering Simulation"
+  description: "A controlled, intelligence-led simulation of phishing attacks, to measure and improve real-world employee resilience, with phone and in-person social engineering available as a scoped extension."
   capability: cyber-intelligence
   has_copy: true
 
@@ -160,11 +178,13 @@
 
 - slug: supply-chain-cyber-intelligence
   name: "Supply Chain Cyber Intelligence"
+  description: "Assessing the cyber risk your critical suppliers and vendors carry into your organisation, before it becomes your incident."
   capability: cyber-intelligence
   has_copy: true
 
 - slug: incident-response-intelligence
   name: "Incident Response Intelligence"
+  description: "Threat intelligence support for an active security incident, identifying the threat actor, their infrastructure, and their likely intent."
   capability: cyber-intelligence
   has_copy: true
 
@@ -190,22 +210,26 @@
 
 - slug: ai-enhanced-bec-forensic-analysis
   name: "AI-Enhanced BEC Forensic Analysis"
+  description: "Forensic reconstruction of a Business Email Compromise incident where AI-generated messaging, voice, or impersonation played a part, with remediation recommendations."
   capability: ai-synthetic-intelligence
   has_copy: true
 
 - slug: document-authenticity-assessment
   name: "Document Authenticity Assessment"
+  description: "A structured examination of a contract, certificate, ID or financial document, assessing whether it is genuine, altered, or fabricated, including with AI assistance."
   capability: ai-synthetic-intelligence
   has_copy: true
 
 - slug: ai-romance-fraud-verification
   name: "AI Romance Fraud Verification"
+  description: "A focused, analyst-led investigation into a single individual met online, is the relationship real, and does the pattern match known romance fraud typologies?"
   capability: ai-synthetic-intelligence
   has_copy: true
   featured_as: "Romance Fraud Investigation"
 
 - slug: synthetic-narrative-intelligence
   name: "Synthetic Narrative Intelligence"
+  description: "Mapping a coordinated disinformation or reputation-attack campaign, including AI-generated content and bot amplification, and assessing how to respond."
   capability: ai-synthetic-intelligence
   has_copy: true
 
@@ -221,26 +245,31 @@
 
 - slug: cpr-part-35-expert-report
   name: "CPR Part 35 Expert Report"
+  description: "A CPR Part 35 compliant expert report on digital evidence, cyber incidents, or OSINT findings, prepared for use in civil proceedings."
   capability: litigation-intelligence
   has_copy: true
 
 - slug: witness-location-credibility-verification
   name: "Witness Location & Credibility Verification"
+  description: "Locating a witness who has gone quiet, and independently verifying their background and credibility before they are relied on."
   capability: litigation-intelligence
   has_copy: true
 
 - slug: family-financial-disclosure-verification
   name: "Family Financial Disclosure Verification"
+  description: "Independent verification of a spouse's financial disclosure in divorce proceedings, checking it against publicly available and lawfully obtained records."
   capability: litigation-intelligence
   has_copy: true
 
 - slug: pre-litigation-investigation-pack
   name: "Pre-Litigation Investigation Pack"
+  description: "A consolidated evidence and intelligence pack assembled before proceedings are issued, so a legal team enters a dispute with a defensible factual base."
   capability: litigation-intelligence
   has_copy: true
 
 - slug: settlement-intelligence
   name: "Settlement Intelligence"
+  description: "Intelligence on a counterparty's true financial position and settlement leverage, before you decide what to accept or offer."
   capability: litigation-intelligence
   has_copy: true
 
@@ -266,11 +295,13 @@
 
 - slug: relationship-authenticity-verification
   name: "Relationship Authenticity Verification"
+  description: "A structured, discreet investigation into whether a relationship, and the person in it, is what it appears to be."
   capability: personal-intelligence
   has_copy: true
 
 - slug: pre-commitment-intelligence-assessment
   name: "Pre-Commitment Intelligence Assessment"
+  description: "Our most comprehensive pre-commitment investigation, for the moment before marriage, cohabitation, joint property purchase, or relocation."
   capability: personal-intelligence
   has_copy: true
   featured_as: "Pre-Commitment Vetting"
@@ -284,11 +315,13 @@
 - slug: digital-exposure-profile-personal
   name: "Digital Exposure Profile"
   name_suffix: "(personal)"
+  description: "A personal digital exposure assessment covering data breaches, dark web exposure, and what is publicly discoverable about you."
   capability: personal-intelligence
   has_copy: true
 
 - slug: personal-threat-intelligence
   name: "Personal Threat Intelligence"
+  description: "An intelligence assessment of a specific online threat, harassment, or stalking concern, to understand who is behind it and what risk it carries."
   capability: personal-intelligence
   has_copy: true
 
@@ -304,5 +337,6 @@
 
 - slug: background-verification-diaspora
   name: "Diaspora Background Verification"
+  description: "Background verification for a prospective partner or spouse based in Nigeria or West Africa, through named in-country partners, for diaspora families."
   capability: personal-intelligence
   has_copy: true
