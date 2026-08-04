@@ -7,6 +7,37 @@ what_this_is:
   - "Where a recording or image is disputed, the question is rarely answerable with a simple yes or no. A finding needs to explain what was tested and why it points where it does."
   - "The assessment examines integrity and origin: file metadata, container and encoding history, and content credentials where present. It also reviews evidence of re-encoding or editing, device and codec consistency, and internal plausibility. Findings are expressed as consistent with, not consistent with, or indeterminate, with the reasoning and its limits stated in full."
   - "Two engagement modes are available, Standard and Litigation, set out below."
+service_categories:
+  - name: "Image Verification"
+    intro: "Applied to a contested photograph, screenshot, or still image."
+    table_headers: ["Verification Area", "What We Examine"]
+    table_rows:
+      - ["Metadata and EXIF data", "Camera model, capture date, GPS data, and editing software signatures"]
+      - ["Reverse image search", "Prior appearances, stock or stolen content, and earlier versions"]
+      - ["Compression and artefact analysis", "Signs of re-encoding, cloning, or splicing"]
+      - ["Lighting and shadow consistency", "Physical plausibility of light sources and shadows"]
+      - ["Facial and object consistency", "Anatomical or geometric inconsistencies associated with synthetic generation"]
+      - ["Content credentials", "Embedded provenance signals where present"]
+  - name: "Video Verification"
+    intro: "Applied to a contested video clip or recorded call."
+    table_headers: ["Verification Area", "What We Examine"]
+    table_rows:
+      - ["Frame-by-frame analysis", "Temporal consistency across frames"]
+      - ["Compression history", "Evidence of re-encoding, transcoding, or multiple exports"]
+      - ["Audio-visual synchronisation", "Alignment between lip movement and the audio track"]
+      - ["Motion and physics plausibility", "Consistency of movement with physical expectation"]
+      - ["Source and container metadata", "Codec, container format, and editing software traces"]
+      - ["Synthesis indicator screening", "Known artefacts associated with face-swap and synthetic media tooling"]
+  - name: "Audio Verification"
+    intro: "Applied to a contested voice recording, voicemail, or call."
+    table_headers: ["Verification Area", "What We Examine"]
+    table_rows:
+      - ["Spectral analysis", "Frequency patterns inconsistent with natural speech or splicing"]
+      - ["Voice sample comparison", "Comparison against a genuine voice sample of the claimed speaker, where available"]
+      - ["Background consistency", "Ambient noise and acoustic environment plausibility"]
+      - ["Compression artefacts", "Evidence of re-recording or synthetic generation"]
+      - ["Vishing pattern cross-reference", "The circumstances checked against known social engineering scripts"]
+    note: "Where a submission is a suspicious call or voice message rather than a standalone clip, the circumstances are cross-referenced against documented vishing patterns as a matter of course, since a genuine voice can still be used in a scripted deception."
 mode_compare:
   - name: "Standard"
     deliverable: "Written assessment with reasoning and stated limitations"
@@ -35,6 +66,17 @@ how_it_runs:
   - "Metadata, encoding history, content credentials and internal consistency are examined against the original files."
   - "Findings are reviewed by the principal and expressed as consistent with, not consistent with, or indeterminate, with reasoning stated in full."
   - "The report is delivered. Written clarification, or availability to answer questions under the Litigation mode, follows afterward."
+illustrative_examples:
+  intro: "The following are illustrative examples of how Provenance is typically used, not accounts of specific client engagements."
+  items:
+    - title: "Contested recording in a family matter"
+      body: "A party to a family dispute submits an audio recording said to capture an admission by the other side. Provenance assesses the file for splicing, re-recording and compression artefacts before either party relies on it in negotiation or proceedings."
+    - title: "Workplace investigation"
+      body: "An employer receives a video alleged to show misconduct by an employee. Provenance assesses the file's integrity and internal consistency before it informs a disciplinary decision."
+    - title: "Insurance claim review"
+      body: "An insurer receives photographic evidence supporting a claim. Provenance checks the metadata, compression history and internal consistency of the image before the claim is assessed further."
+    - title: "Rebutting an opponent's expert evidence"
+      body: "An opposing party serves an expert report relying on a contested image. Under the Litigation mode, Provenance independently re-examines the same file and tests the opposing report's methodology and conclusions."
 delivery_note: >-
   Turnaround for a single-file assessment is three working days from receipt
   of usable source material, not from the date of instruction. Volume or

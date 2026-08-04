@@ -7,6 +7,28 @@ what_this_is:
   - "Impersonation and exposure develop over time. A single point-in-time report does not catch a new impersonating account created six months later."
   - "Shield monitors continuously for a defined set of signals, assesses each hit, and alerts only where there is something worth acting on. The differentiator is the assessment layer: automated tools generate volume; Shield delivers assessed, prioritised findings with an evidence record attached."
   - "Where escalation beyond assessment is needed, Greyline refers to specialist counsel or providers and supports that referral with its evidence record. Greyline does not itself provide content removal, platform enforcement, or public relations."
+service_categories:
+  - name: "Impersonation Monitoring"
+    intro: "Accounts and content created to imitate you."
+    table_headers: ["Signal", "What We Watch For"]
+    table_rows:
+      - ["Fake social profiles", "New accounts using your name, photographs, or likeness"]
+      - ["Lookalike domains", "Domains registered to imitate you or your representation"]
+      - ["Fraudulent messaging", "Impersonation used to solicit money or information from your contacts"]
+  - name: "Identity & Credential Exposure"
+    intro: "Whether your identifiers have newly surfaced somewhere they should not have."
+    table_headers: ["Signal", "What We Watch For"]
+    table_rows:
+      - ["New data breaches", "Your identifiers appearing in newly disclosed breach data"]
+      - ["Dark web listings", "Credentials or personal data offered for sale"]
+      - ["Credential reuse indicators", "Signs of your details circulating in fraud-adjacent databases"]
+  - name: "Public Exposure Monitoring"
+    intro: "New publication of your personal details or presence."
+    table_headers: ["Signal", "What We Watch For"]
+    table_rows:
+      - ["New public mentions", "Fresh media, forum, or public record appearances"]
+      - ["Doxxing activity", "Publication of your address, phone number, or family details"]
+      - ["Search result changes", "New content appearing prominently against your name"]
 included:
   - "Continuous monitoring for accounts and profiles impersonating the client"
   - "Monitoring for the client's identifiers appearing in breach and credential exposure data"
@@ -29,6 +51,17 @@ how_it_runs:
   - "Monitoring runs continuously across the agreed public sources, breach data, and impersonation signals."
   - "Each hit is assessed and rated for severity before it is added to the record."
   - "A monthly summary is delivered, with priority alerts issued directly whenever something warrants immediate attention."
+illustrative_examples:
+  intro: "The following are illustrative examples of how Shield is typically used, not accounts of specific client engagements."
+  items:
+    - title: "Continuing coverage after a Mirror audit"
+      body: "Following a Mirror exposure audit, a public figure subscribes to Shield so a new impersonating account or a fresh breach is caught between the annual re-scans rather than sitting undetected for months."
+    - title: "Corporate cover for a named executive"
+      body: "A company commissions Shield for a named executive following a public appointment or announcement, with the executive's written consent confirmed before monitoring begins."
+    - title: "Extended family office coverage"
+      body: "A family office extends Shield coverage to a family member alongside a principal, so impersonation or exposure affecting either is caught and assessed under the same subscription."
+    - title: "Ongoing visibility after a contentious matter"
+      body: "Following a contentious personal or legal matter, an individual wants ongoing visibility into any renewed impersonation or exposure connected to their name."
 cadence:
   shape: "Ongoing"
   cadence: "Monthly"
