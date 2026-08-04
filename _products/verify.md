@@ -92,19 +92,6 @@ included:
   - "Findings reviewed and signed off by the principal before release"
   - "A named point of contact for questions before and after delivery"
   - "Document checks against available public records, where formally instructed"
-sample_record:
-  intro: "Every construction-monitoring visit, one of Verify's six categories, follows the same fixed-vantage protocol. These specimens show what that produces in practice, with all client, site and personal details redacted or replaced with placeholder figures."
-  items:
-    - src: /media/verify/evidence-frame.svg
-      alt: "A Verify construction monitoring capture frame showing the fixed vantage index and full capture metadata: position, bearing, scale reference, file integrity hash and reviewing principal."
-      caption: "Construction & Development: every frame carries fixed-vantage positioning and unaltered capture metadata."
-    - src: /media/verify/comparison-pair.svg
-      alt: "A month-on-month comparison of two site photographs captured from the same fixed vantage point, showing observed construction progress and one flagged exception."
-      caption: "Construction & Development: the same fixed vantage point, compared month to month, so progress is seen rather than described."
-    - src: /media/verify/report-specimen.svg
-      alt: "A specimen page from a redacted Verify construction monitoring site record, showing attendance, progress against schedule, materials observed, exceptions and the limitations of the record."
-      caption: "One page from a redacted specimen monthly construction-monitoring report."
-  note: "These are illustrative specimens with placeholder figures from the Construction & Development category, not a real client record. Client, site and personal details on a live engagement are never disclosed to a third party."
 excluded:
   - "Valuation, quantity surveying, or engineering certification"
   - "A legal opinion on title, ownership, or contractual rights"
