@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1000" width="1500" height="1000" role="img" aria-label="SiteVerify construction monitoring month on month comparison from a single fixed vantage point">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1000" width="1500" height="1000" role="img" aria-label="Verify construction monitoring month on month comparison from a single fixed vantage point">
   <style>
     svg { --ink:#16181A; --concrete:#6E7276; --paper:#EDEEEC; --laterite:#A8452A; --hairline:#C9CBC7; }
     .mono { font-family:"SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; }
@@ -33,7 +33,7 @@
     <rect x="60" y="196" width="640" height="427" fill="none" stroke="#C9CBC7" stroke-width="1"/>
 
     <text class="mono cap-lbl" x="60" y="654">RECORD</text>
-    <text class="mono cap-val" x="60" y="678">SV-2417 / 06 / V2 / 004</text>
+    <text class="mono cap-val" x="60" y="678">GV-2417 / 06 / V2 / 004</text>
     <text class="mono cap-lbl" x="380" y="654">CAPTURED</text>
     <text class="mono cap-val" x="380" y="678">2026-06-12  10:05 WAT</text>
   </g>
@@ -51,7 +51,7 @@
     <rect x="800" y="196" width="640" height="427" fill="none" stroke="#16181A" stroke-width="2"/>
 
     <text class="mono cap-lbl" x="800" y="654">RECORD</text>
-    <text class="mono cap-val" x="800" y="678">SV-2417 / 07 / V2 / 004</text>
+    <text class="mono cap-val" x="800" y="678">GV-2417 / 07 / V2 / 004</text>
     <text class="mono cap-lbl" x="1120" y="654">CAPTURED</text>
     <text class="mono cap-val" x="1120" y="678">2026-07-14  09:42 WAT</text>
   </g>

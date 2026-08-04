@@ -1,14 +1,14 @@
 ---
-title: "SiteVerify: Independent On-Site Verification"
-slug: siteverify
+title: "Verify: Independent On-Site Verification"
+slug: verify
 description: "Independent, on-the-ground verification of property, business, land and other physical assets, documented before an important decision is made."
-og_image: /media/siteverify/og-card.svg
+og_image: /media/verify/og-card.svg
 og_image_width: 1200
 og_image_height: 630
 standfirst: "Independent, documented verification of people, places, projects, businesses and physical assets, before an important decision is made."
 what_this_is:
   - "Owners, investors and lenders relying on reports from a distance face the same basic problem: someone with a financial interest in the outcome is often the only source of information. That arrangement works well when it is honest, and poorly when it is not."
-  - "SiteVerify provides an independent, on-the-ground record. A verified field investigator attends the property, project, business or asset in question and documents what is actually there, working to a standardised protocol agreed at the outset. Every report is reviewed and signed off by the principal before it is released."
+  - "Verify provides an independent, on-the-ground record. A verified field investigator attends the property, project, business or asset in question and documents what is actually there, working to a standardised protocol agreed at the outset. Every report is reviewed and signed off by the principal before it is released."
   - "This is documented verification, not surveillance, and it is not an accusation of wrongdoing against anyone involved. It exists to give a decision-maker a reliable, independent account alongside whatever else they have been told."
 service_categories:
   - name: "Construction & Development"
@@ -37,7 +37,7 @@ service_categories:
     note: "Document checks report what available records show at the date of search. They do not constitute a legal opinion on title. A qualified local solicitor should be instructed for any matter of ownership certainty."
   - name: "Business Verification"
     intro: "Independent operational assessment for acquisitions, investments, or lending decisions."
-    scenario: "Consider an investor weighing a hospitality business purchase where the seller states a specific, high occupancy figure. SiteVerify independently assesses whether on-the-ground operations appear consistent with what has been represented."
+    scenario: "Consider an investor weighing a hospitality business purchase where the seller states a specific, high occupancy figure. Verify independently assesses whether on-the-ground operations appear consistent with what has been represented."
     table_headers: ["Check", "Method"]
     table_rows:
       - ["Operating status", "Whether the business is open and functioning"]
@@ -93,16 +93,16 @@ included:
   - "A named point of contact for questions before and after delivery"
   - "Document checks against available public records, where formally instructed"
 sample_record:
-  intro: "Every construction-monitoring visit, one of SiteVerify's six categories, follows the same fixed-vantage protocol. These specimens show what that produces in practice, with all client, site and personal details redacted or replaced with placeholder figures."
+  intro: "Every construction-monitoring visit, one of Verify's six categories, follows the same fixed-vantage protocol. These specimens show what that produces in practice, with all client, site and personal details redacted or replaced with placeholder figures."
   items:
-    - src: /media/siteverify/evidence-frame.svg
-      alt: "A SiteVerify construction monitoring capture frame showing the fixed vantage index and full capture metadata: position, bearing, scale reference, file integrity hash and reviewing principal."
+    - src: /media/verify/evidence-frame.svg
+      alt: "A Verify construction monitoring capture frame showing the fixed vantage index and full capture metadata: position, bearing, scale reference, file integrity hash and reviewing principal."
       caption: "Construction & Development: every frame carries fixed-vantage positioning and unaltered capture metadata."
-    - src: /media/siteverify/comparison-pair.svg
+    - src: /media/verify/comparison-pair.svg
       alt: "A month-on-month comparison of two site photographs captured from the same fixed vantage point, showing observed construction progress and one flagged exception."
       caption: "Construction & Development: the same fixed vantage point, compared month to month, so progress is seen rather than described."
-    - src: /media/siteverify/report-specimen.svg
-      alt: "A specimen page from a redacted SiteVerify construction monitoring site record, showing attendance, progress against schedule, materials observed, exceptions and the limitations of the record."
+    - src: /media/verify/report-specimen.svg
+      alt: "A specimen page from a redacted Verify construction monitoring site record, showing attendance, progress against schedule, materials observed, exceptions and the limitations of the record."
       caption: "One page from a redacted specimen monthly construction-monitoring report."
   note: "These are illustrative specimens with placeholder figures from the Construction & Development category, not a real client record. Client, site and personal details on a live engagement are never disclosed to a third party."
 excluded:
@@ -123,16 +123,16 @@ how_it_runs:
   - "The report is reviewed and signed off by the principal before release."
   - "The report is delivered securely, with a named point of contact available for questions."
 illustrative_examples:
-  intro: "The following are illustrative examples of how SiteVerify is typically used, not accounts of specific client engagements."
+  intro: "The following are illustrative examples of how Verify is typically used, not accounts of specific client engagements."
   items:
     - title: "Monthly construction monitoring"
-      body: "A family funding a house build overseas instructs monthly SiteVerify attendance. Each visit checks stage completion against the architectural plan, materials on site, workmanship and contractor attendance, giving the family independent oversight between their own visits, and advance warning before releasing a payment tied to a stage that later turns out to be incomplete."
+      body: "A family funding a house build overseas instructs monthly Verify attendance. Each visit checks stage completion against the architectural plan, materials on site, workmanship and contractor attendance, giving the family independent oversight between their own visits, and advance warning before releasing a payment tied to a stage that later turns out to be incomplete."
     - title: "Pre-acquisition business assessment"
-      body: "An investor considering a hospitality business acquisition has been given a specific occupancy figure by the seller. SiteVerify independently observes customer traffic, operational activity, facility condition and local reputation over several days, so the investor can weigh the seller's claim against what was actually observed before agreeing a price."
+      body: "An investor considering a hospitality business acquisition has been given a specific occupancy figure by the seller. Verify independently observes customer traffic, operational activity, facility condition and local reputation over several days, so the investor can weigh the seller's claim against what was actually observed before agreeing a price."
     - title: "Pre-contract land purchase"
-      body: "A buyer preparing to acquire land instructs SiteVerify to confirm the physical boundary against the survey, check for encroachment or undocumented occupation, and review available ownership records, before instructing local counsel to proceed."
+      body: "A buyer preparing to acquire land instructs Verify to confirm the physical boundary against the survey, check for encroachment or undocumented occupation, and review available ownership records, before instructing local counsel to proceed."
     - title: "Asset finance verification"
-      body: "A lender financing heavy machinery instructs SiteVerify to confirm the equipment exists at the stated location, matches its serial numbers and documentation, and shows evidence of active use rather than sitting idle, before releasing funds."
+      body: "A lender financing heavy machinery instructs Verify to confirm the equipment exists at the stated location, matches its serial numbers and documentation, and shows evidence of active use rather than sitting idle, before releasing funds."
 cadence:
   shape: "Fixed scope or ongoing"
   cadence: "Single visit, or monthly for ongoing monitoring"
@@ -163,7 +163,7 @@ deliverable_structure:
     content: "Overall assessment against the verification objective"
   - section: "Supporting evidence appendix"
     content: "Raw imagery, maps and supplementary material"
-limitations_intro: "This work has defined boundaries, stated plainly so a client knows exactly what a SiteVerify report does, and does not, establish."
+limitations_intro: "This work has defined boundaries, stated plainly so a client knows exactly what a Verify report does, and does not, establish."
 limitations:
   - "In jurisdictions where public records may be incomplete, document checks report what is available at the date of search. Gaps in the public record do not necessarily indicate irregularity."
   - "Findings are based on observation on the date of attendance and information available at that time. They support a client's own decision-making and do not replace legal, financial or engineering advice."
@@ -171,6 +171,6 @@ limitations:
 crumbs:
   - title: "Products"
     url: /products/
-  - title: "Greyline SiteVerify"
-    url: /products/siteverify/
+  - title: "Greyline Verify"
+    url: /products/verify/
 ---

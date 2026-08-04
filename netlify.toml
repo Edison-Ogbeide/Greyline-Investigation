@@ -932,19 +932,33 @@
   status = 301
   force = true
 
-# BuildWatch renamed and expanded to SiteVerify (2026-08): construction
-# monitoring is now one of six verification categories (construction,
-# property, business, commercial due diligence, asset, land) under a
-# single, broader engagement.
+# BuildWatch renamed and expanded to SiteVerify, then renamed again to
+# Verify (2026-08): construction monitoring is now one of six
+# verification categories (construction, property, business, commercial
+# due diligence, asset, land) under a single, broader engagement. Both
+# retired URLs redirect directly to the current page, not through each
+# other, to avoid a double hop.
 
 [[redirects]]
   from = "/products/buildwatch/"
-  to = "/products/siteverify/"
+  to = "/products/verify/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/products/buildwatch"
-  to = "/products/siteverify/"
+  to = "/products/verify/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/products/siteverify/"
+  to = "/products/verify/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/products/siteverify"
+  to = "/products/verify/"
   status = 301
   force = true

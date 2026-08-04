@@ -4,8 +4,8 @@
 # footer display order (spec: BuildWatch, Provenance, Mirror, Shield;
 # not alphabetical, not by price).
 
-- slug: siteverify
-  name: "Greyline SiteVerify"
+- slug: verify
+  name: "Greyline Verify"
   descriptor: "Independent on-site verification of property, business, land and assets"
   for: "Diaspora owners & overseas investors"
   shape: "Fixed scope or ongoing"
