@@ -1,0 +1,109 @@
+<style>
+  #cookie-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 500;
+    background: var(--navy);
+    color: rgba(255,255,255,0.85);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.25);
+  }
+  #cookie-banner[hidden] { display: none; }
+  .cookie-banner-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .cookie-banner-text { flex: 1 1 420px; font-size: 0.88rem; line-height: 1.6; }
+  .cookie-banner-text a { color: var(--accent); border-bottom: 1px solid var(--accent); }
+  .cookie-banner-actions { display: flex; gap: 0.85rem; flex-wrap: wrap; }
+  .cookie-banner-actions button {
+    font-family: var(--sans);
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.45);
+    background: transparent;
+    color: var(--white);
+    transition: all 0.2s ease;
+  }
+  #cookie-accept { background: var(--accent); border-color: var(--accent); }
+  #cookie-accept:hover { background: var(--accent-dk); border-color: var(--accent-dk); }
+  #cookie-reject:hover { background: var(--white); color: var(--navy); }
+  @media (max-width: 640px) {
+    #cookie-banner { padding: 1.25rem 1.25rem; }
+    .cookie-banner-actions { width: 100%; }
+    .cookie-banner-actions button { flex: 1; }
+  }
+</style>
+
+<div id="cookie-banner" hidden role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <div class="cookie-banner-inner">
+    <p class="cookie-banner-text">
+      We use Google Analytics to understand how visitors use this site. It only runs if you accept, and you can withdraw consent at any time from the "Cookie preferences" link in the footer. See our <a href="{{ '/cookie-policy/' | relative_url }}">Cookie Policy</a> for detail.
+    </p>
+    <div class="cookie-banner-actions">
+      <button type="button" id="cookie-reject">Necessary only</button>
+      <button type="button" id="cookie-accept">Accept analytics</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var CONSENT_KEY = 'greyline-cookie-consent';
+  var GA_ID = '{{ site.company.ga_id }}';
+  var banner = document.getElementById('cookie-banner');
+
+  function loadAnalytics() {
+    if (window.__glAnalyticsLoaded) return;
+    window.__glAnalyticsLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+
+  function showBanner() { banner.removeAttribute('hidden'); }
+  function hideBanner() { banner.setAttribute('hidden', ''); }
+
+  var stored = null;
+  try { stored = window.localStorage.getItem(CONSENT_KEY); } catch (e) {}
+
+  if (stored === 'accepted') {
+    loadAnalytics();
+  } else if (stored !== 'rejected') {
+    showBanner();
+  }
+
+  document.getElementById('cookie-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(CONSENT_KEY, 'accepted'); } catch (e) {}
+    hideBanner();
+    loadAnalytics();
+  });
+
+  document.getElementById('cookie-reject').addEventListener('click', function () {
+    try { window.localStorage.setItem(CONSENT_KEY, 'rejected'); } catch (e) {}
+    hideBanner();
+  });
+
+  window.GreylineCookiePreferences = function () {
+    try { window.localStorage.removeItem(CONSENT_KEY); } catch (e) {}
+    showBanner();
+  };
+})();
+</script>
