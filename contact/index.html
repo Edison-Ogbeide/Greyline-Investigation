@@ -8,9 +8,9 @@ crumbs:
 ---
 <style>
 	.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
-	.redirect-box { border:1.5px solid var(--border-2); padding:2.5rem; background:var(--ice-2); margin-bottom:3rem; }
-	.redirect-box h3 { margin-bottom:0.75rem; }
-	.redirect-box p { font-size:0.92rem; margin-bottom:1.5rem; }
+	.redirect-note { border-left:3px solid var(--accent); background:var(--ice-2); padding:1.25rem 1.5rem; margin-top:3rem; }
+	.redirect-note p { font-size:0.88rem; margin:0; }
+	.redirect-note a { color: var(--accent); border-bottom:1px solid var(--accent); }
 	@media(max-width:960px){ .contact-grid{grid-template-columns:1fr;gap:2.5rem;} }
 </style>
 
@@ -25,18 +25,12 @@ crumbs:
 {% include breadcrumb.html crumbs=page.crumbs %}
 
 <section>
-	<div class="redirect-box">
-		<h3>Have a case to discuss?</h3>
-		<p>For all case-related inquiries, please use our Confidential Inquiry process. This ensures your information is handled securely and that a confidentiality agreement is in place before any detailed discussion.</p>
-		<a href="{{ '/submit-inquiry/' | relative_url }}" class="btn-primary" style="font-size:0.72rem;padding:0.7rem 1.6rem;">Go to Confidential Inquiry &rarr;</a>
-	</div>
-
 	<div class="contact-grid">
 		<div>
 			<div class="section-eyebrow">General Contact</div>
 			<h2>Reach us directly</h2>
 			<div class="gold-rule"></div>
-			<p>For non-case-related questions, partnerships, media inquiries, collaboration, or general information about our services.</p>
+			<p>This page is for partnerships, media inquiries, collaboration, training enquiries, and general questions about our services. Use the form, or the details below, and a message reaches us directly, not a sales inbox.</p>
 
 			<div style="margin-top:2rem;">
 				<div class="cd-row" style="border-bottom:1px solid var(--border);padding-bottom:1rem;">
@@ -91,6 +85,10 @@ crumbs:
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<div class="redirect-note">
+		<p><strong>Have a case to discuss?</strong> Case-related matters go through our <a href="{{ '/submit-inquiry/' | relative_url }}">Confidential Inquiry</a> process instead, so your information is handled securely and a confidentiality agreement is in place before any detailed discussion.</p>
 	</div>
 </section>
 

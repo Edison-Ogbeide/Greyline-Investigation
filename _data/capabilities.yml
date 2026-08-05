@@ -8,6 +8,14 @@
     Pre-hire vetting, vendor and supply-chain risk, pre-investment diligence, and
     the intelligence businesses need before they commit capital or trust.
   buyers: "C-suite and board members for strategic intelligence and risk oversight, HR directors for pre-hire vetting, procurement for vendor and supply-chain risk, general counsel for workplace investigations, and corporate development or private equity for pre-investment and M&A diligence."
+  what_it_is: >-
+    Investigative and advisory intelligence for the decisions where being wrong
+    is expensive: pre-hire vetting, vendor and supply-chain due diligence,
+    pre-investment and M&A diligence, and workplace investigations, backed by
+    continuous monitoring and board-level advisory work where the risk does
+    not end with one report.
+  typical_deliverable: "A written, sourced report for a one-off investigation; a monthly intelligence briefing with priority alerts for a Monitor-tier subscription; a briefing pack and live presentation for Advise-tier work."
+  typical_timeline: "One-off investigations typically run 3 to 10 business days from confirmed scope. Monitor subscriptions run continuously, with a first briefing at the close of the initial monitoring period. Advise engagements are scoped to the decision or board cycle they support."
   method_link: /method/analysis/
   training_slug: null
   resource_link: /capabilities/corporate-intelligence/checklist/
@@ -22,6 +30,13 @@
     Investigation into fraud, hidden assets and financial deception, for
     individuals targeted by scams, businesses defending against loss, and litigation.
   buyers: "Insurers, law firms, high-net-worth individuals, family solicitors, commercial litigators."
+  what_it_is: >-
+    Investigation into fraud, hidden assets and financial deception, and the
+    tracing, documentation and recovery of assets before or after judgment,
+    backed by continuous monitoring where a risk or recovery effort remains
+    live.
+  typical_deliverable: "A written, sourced report for a one-off investigation or asset-tracing exercise; a monthly intelligence briefing with priority alerts for a Monitor-tier subscription."
+  typical_timeline: "One-off reports typically run 3 to 7 business days from confirmed scope; cross-border asset tracing can extend to several weeks depending on jurisdiction. Monitor subscriptions run continuously."
   method_link: /method/evidential/
   training_slug: null
   order: 2
@@ -33,6 +48,12 @@
     Open-source intelligence, dark web exposure monitoring, adverse media
     screening, and the digital trace work that underpins every other discipline.
   buyers: "CISO, security awareness teams, general counsel, marketing, procurement."
+  what_it_is: >-
+    Open-source intelligence, dark web exposure monitoring, adverse media
+    screening and attack-surface validation, delivered as a point-in-time
+    assessment, a protective test, or continuous monitoring.
+  typical_deliverable: "A written, risk-scored report for a one-off assessment; a monthly threat briefing with priority alerts for a Monitor-tier subscription."
+  typical_timeline: "One-off assessments typically run 3 to 5 business days from confirmed scope. Monitor subscriptions run continuously, with a first briefing at the close of the initial monitoring period."
   method_link: /method/disciplines/
   training_slug: phishing-social-engineering-simulation
   order: 3
@@ -45,6 +66,13 @@
     Detection, analysis and defence against AI-generated threats, from
     deepfakes to synthetic narratives to AI-enhanced fraud.
   buyers: "CISO, general counsel, insurers, solicitors, barristers, individuals, family offices."
+  what_it_is: >-
+    Detection, analysis and defence against AI-generated threats: verifying
+    whether content, identities or communications are authentic, investigating
+    AI-enabled deception at scale, and monitoring for AI-enabled fraud and
+    impersonation on a continuous basis.
+  typical_deliverable: "A written finding, worded to what the evidence actually supports, for a one-off verification or investigation; a monthly threat briefing with priority alerts for a Monitor-tier subscription."
+  typical_timeline: "One-off verification and investigation work typically runs 3 to 5 business days from confirmed scope. Monitor subscriptions run continuously."
   method_link: /method/analysis/
   training_slug: ai-threat-awareness
   copy_constraint: >-
@@ -62,6 +90,13 @@
     work, witness location, and continuous monitoring once a dispute is
     underway.
   buyers: "Solicitors, barristers, general counsel, commercial litigators, family law practitioners."
+  what_it_is: >-
+    Investigative support for solicitors, barristers and family offices:
+    pre-litigation evidence gathering, expert witness reporting, witness
+    location, and settlement intelligence, backed by continuous monitoring
+    once a dispute is underway.
+  typical_deliverable: "A written, evidential-standard report or pack for one-off work; a CPR Part 35 compliant expert report where instructed; a monthly intelligence briefing with priority alerts for a Monitor-tier subscription."
+  typical_timeline: "One-off reports typically run 3 to 10 business days from confirmed scope, scoped to your pre-action or case timetable. Expert reports typically take 2 to 4 weeks. Monitor subscriptions run continuously."
   method_link: /method/reporting/
   training_slug: legal-sector-cpd
   engagement_note: >-
@@ -79,6 +114,12 @@
     Quiet, documented inquiry into the people who matter most: partners,
     prospective spouses, online harassers, and personal threats.
   buyers: "Individuals, family offices, executives, diaspora community."
+  what_it_is: >-
+    Quiet, documented inquiry into the people who matter most: verifying a
+    relationship or identity, assessing and reducing personal digital risk,
+    and continuous monitoring where a concern does not end with one report.
+  typical_deliverable: "A written, sourced finding for a one-off verification or assessment; a monthly intelligence briefing with priority alerts for a Monitor-tier subscription."
+  typical_timeline: "One-off verification and assessment work typically runs 3 to 5 business days from confirmed scope, with more comprehensive pre-commitment work taking 10 to 14 business days. Monitor subscriptions run continuously."
   method_link: /method/disciplines/
   training_slug: null
   engagement_note: >-

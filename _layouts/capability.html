@@ -23,6 +23,25 @@ layout: default
 	</div>
 </section>
 
+{% if cap.what_it_is %}
+<section class="service-intro">
+	<div class="container-narrow">
+		<div class="section-eyebrow">At a Glance</div>
+		<h2>What this <em>capability covers</em>.</h2>
+		<hr class="gold-rule">
+		<p>{{ cap.what_it_is }}</p>
+		<dl class="cs-meta">
+			<dt>Who it's for</dt>
+			<dd>{{ cap.buyers }}</dd>
+			<dt>Typical deliverable</dt>
+			<dd>{{ cap.typical_deliverable }}</dd>
+			<dt>Typical timeline</dt>
+			<dd>{{ cap.typical_timeline }}</dd>
+		</dl>
+	</div>
+</section>
+{% endif %}
+
 {% unless page.tiers %}
 <section class="svc-overview">
 	<div class="container">
