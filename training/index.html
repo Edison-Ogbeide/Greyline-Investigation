@@ -31,6 +31,7 @@ crumbs:
 {% assign t_phishing = site.training | where: "slug", "phishing-social-engineering-simulation" | first %}
 {% assign t_ir = site.training | where: "slug", "incident-response-exercises" | first %}
 {% assign t_legal = site.training | where: "slug", "legal-sector-cpd" | first %}
+{% assign t_schools = site.training | where: "slug", "schools-young-people" | first %}
 
 <section class="svc-overview">
 	<div class="container">
@@ -43,16 +44,19 @@ crumbs:
 			<a href="{{ t_employee.url | relative_url }}" class="svc-card">
 				<div class="svc-num">01</div>
 				<h3>{{ t_employee.title }}</h3>
+				<p>{{ t_employee.description }}</p>
 				<span class="svc-link">Explore &rarr;</span>
 			</a>
 			<a href="{{ t_exec.url | relative_url }}" class="svc-card">
 				<div class="svc-num">02</div>
 				<h3>{{ t_exec.title }}</h3>
+				<p>{{ t_exec.description }}</p>
 				<span class="svc-link">Explore &rarr;</span>
 			</a>
 			<a href="{{ t_ai.url | relative_url }}" class="svc-card">
 				<div class="svc-num">03</div>
 				<h3>{{ t_ai.title }}</h3>
+				<p>{{ t_ai.description }}</p>
 				<span class="svc-link">Explore &rarr;</span>
 			</a>
 		</div>
@@ -70,11 +74,13 @@ crumbs:
 			<a href="{{ t_phishing.url | relative_url }}" class="svc-card">
 				<div class="svc-num">04</div>
 				<h3>{{ t_phishing.title }}</h3>
+				<p>{{ t_phishing.description }}</p>
 				<span class="svc-link">Explore &rarr;</span>
 			</a>
 			<a href="{{ t_ir.url | relative_url }}" class="svc-card">
 				<div class="svc-num">05</div>
 				<h3>{{ t_ir.title }}</h3>
+				<p>{{ t_ir.description }}</p>
 				<span class="svc-link">Explore &rarr;</span>
 			</a>
 		</div>
@@ -92,11 +98,13 @@ crumbs:
 			<a href="{{ t_legal.url | relative_url }}" class="svc-card">
 				<div class="svc-num">06</div>
 				<h3>{{ t_legal.title }}</h3>
+				<p>{{ t_legal.description }}</p>
 				<span class="svc-link">Explore &rarr;</span>
 			</a>
 			<div class="svc-card svc-card-static">
 				<div class="svc-num">07</div>
 				<h3>Schools &amp; Young People</h3>
+				<p>{{ t_schools.description }}</p>
 			</div>
 		</div>
 	</div>
