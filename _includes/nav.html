@@ -1,6 +1,9 @@
 <nav id="nav">
 	<a href="{{ '/' | relative_url }}" class="nav-logo">Greyline <span>Investigations</span></a>
-	<ul class="nav-links">
+	<button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+		<span></span><span></span><span></span>
+	</button>
+	<ul class="nav-links" id="nav-links">
 		<li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a></li>
 		<li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about/' %} class="active"{% endif %}>About</a></li>
 		<li><a href="{{ '/capabilities/' | relative_url }}"{% if page.url contains '/capabilities/' or page.url contains '/services/' %} class="active"{% endif %}>Capabilities</a></li>
@@ -10,6 +13,40 @@
 		<li><a href="{{ '/research/' | relative_url }}"{% if page.url contains '/research/' %} class="active"{% endif %}>Research</a></li>
 		<li><a href="{{ '/case-studies/' | relative_url }}"{% if page.url contains '/case-studies/' %} class="active"{% endif %}>Case Studies</a></li>
 		<li><a href="{{ '/contact/' | relative_url }}"{% if page.url contains '/contact/' %} class="active"{% endif %}>Contact</a></li>
+		<li class="nav-links-cta"><a href="{{ '/submit-inquiry/' | relative_url }}" class="nav-cta hot{% if page.url contains '/submit-inquiry/' %} active{% endif %}">Submit Inquiry</a></li>
 	</ul>
-	<a href="{{ '/submit-inquiry/' | relative_url }}" class="nav-cta hot{% if page.url contains '/submit-inquiry/' %} active{% endif %}">Submit Inquiry</a>
+	<a href="{{ '/submit-inquiry/' | relative_url }}" class="nav-cta hot nav-cta-desktop{% if page.url contains '/submit-inquiry/' %} active{% endif %}">Submit Inquiry</a>
 </nav>
+<script>
+(function () {
+	var nav = document.getElementById('nav');
+	if (!nav) return;
+	var toggle = nav.querySelector('.nav-toggle');
+	var links = document.getElementById('nav-links');
+	if (!toggle || !links) return;
+
+	function closeMenu() {
+		nav.classList.remove('nav-open');
+		toggle.setAttribute('aria-expanded', 'false');
+		toggle.setAttribute('aria-label', 'Open menu');
+	}
+	function openMenu() {
+		nav.classList.add('nav-open');
+		toggle.setAttribute('aria-expanded', 'true');
+		toggle.setAttribute('aria-label', 'Close menu');
+	}
+
+	toggle.addEventListener('click', function () {
+		if (nav.classList.contains('nav-open')) { closeMenu(); } else { openMenu(); }
+	});
+	links.addEventListener('click', function (e) {
+		if (e.target.tagName === 'A') closeMenu();
+	});
+	document.addEventListener('keydown', function (e) {
+		if (e.key === 'Escape') closeMenu();
+	});
+	window.addEventListener('resize', function () {
+		if (window.innerWidth > 1180) closeMenu();
+	});
+})();
+</script>
