@@ -5,9 +5,10 @@
 [build.environment]
   RUBY_VERSION = "3.3.11"
 
-# Security headers, applied to every response, plus a noindex directive
-# while the site is a holding page: search engines should not index or
-# follow anything here until the business resumes trading.
+# Security headers, applied to every response, plus a noindex/noarchive
+# directive while the site is a holding page: search engines should not
+# index, follow, or cache a copy of anything here until the business
+# resumes trading.
 [[headers]]
   for = "/*"
   [headers.values]
@@ -16,12 +17,22 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-    X-Robots-Tag = "noindex, nofollow"
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+
+# The holding page itself stays a normal 200. This rule must come before
+# the catch-all below so the homepage isn't swept into the 410 response.
+[[redirects]]
+  from = "/"
+  to = "/"
+  status = 200
 
 # Every previously published URL (services, capabilities, enquiry forms,
-# locations, legal pages, etc.) now resolves to the holding page instead
-# of a 404, for as long as the company is not trading.
+# locations, legal pages, etc.) now returns 410 Gone: a permanent-removal
+# signal telling crawlers and browsers this content no longer exists and
+# should not be retried, re-indexed, or cached, rather than a disguised
+# 200 that looks like the page is still live at that address.
 [[redirects]]
   from = "/*"
   to = "/"
-  status = 200
+  status = 410
+  force = true
