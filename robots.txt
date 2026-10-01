@@ -1,9 +1,6 @@
-# Greyline Investigations — robots.txt
-# Allows crawling of all published content.
+# Greyline Investigations - robots.txt
+# Site is a holding page while the company is not trading.
+# Disallow all crawling until normal operation resumes.
 
 User-agent: *
-Allow: /
-Disallow: /training/schools-young-people/
-
-# Sitemap location
-Sitemap: https://greylineinvestigations.co.uk/sitemap.xml
+Disallow: /
